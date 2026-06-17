@@ -11,7 +11,7 @@
     background: #0f0f0f;
     color: #e0e0e0;
     padding: 16px 16px 80px;
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -22,25 +22,46 @@
     color: #fff;
     margin: 8px 0 4px;
   }
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #ffa94d;
-    margin: 28px 0 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #2a2a2a;
-  }
-  h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ccc;
-    margin: 20px 0 8px;
-  }
   .subtitle {
     color: #999;
     font-size: 0.85rem;
     margin-bottom: 20px;
   }
+
+  /* ===== TABS ===== */
+  .tab-bar {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 24px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 4px;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tab-btn.active {
+    background: #2d4a2d;
+    color: #7ddf7d;
+  }
+  .tab-btn.active-stretch {
+    background: #3a2d4a;
+    color: #b07ddf;
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ===== SCHEDULE ===== */
   .schedule-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -58,7 +79,7 @@
   .day-stretch { background: #3a2d4a; color: #b07ddf; }
   .day-rest { background: #2a2a2a; color: #888; }
 
-  /* Exercise cards */
+  /* ===== EXERCISE CARDS (KB) ===== */
   .exercise {
     background: #1a1a1a;
     border-radius: 12px;
@@ -71,6 +92,8 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 4px;
   }
   .exercise-name {
     font-weight: 700;
@@ -121,23 +144,55 @@
     color: #ddd;
   }
   .big-note strong { color: #ffa94d; }
+  .big-note-stretch {
+    background: #2a1d2d;
+    border: 1px solid #4a2d4a;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #ddd;
+  }
+  .big-note-stretch strong { color: #b07ddf; }
   hr {
     border: none;
     border-top: 1px solid #2a2a2a;
     margin: 28px 0;
   }
-  .stretch-exercise {
+
+  /* ===== STRETCH CARDS ===== */
+  .stretch-card {
     background: #1a1a1a;
     border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
     border-left: 4px solid #b07ddf;
+  }
+  .stretch-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 6px;
   }
-  .stretch-name { font-weight: 600; color: #ddd; }
-  .stretch-duration { color: #b07ddf; font-weight: 600; }
+  .stretch-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ddd;
+  }
+  .stretch-duration {
+    color: #b07ddf;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .stretch-desc {
+    color: #999;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* ===== PROGRESS TABLE ===== */
   .progress-table {
     width: 100%;
     border-collapse: collapse;
@@ -155,12 +210,21 @@
     padding: 8px 10px;
     border-bottom: 1px solid #2a2a2a;
   }
-  .top-link {
-    display: inline-block;
+
+  /* ===== ANCHOR ===== */
+  .anchor {
+    scroll-margin-top: 20px;
+  }
+
+  /* ===== HOME BUTTON ===== */
+  .back-to-top {
+    display: block;
+    text-align: center;
     color: #ffa94d;
     text-decoration: none;
     font-size: 0.8rem;
-    margin-top: 8px;
+    margin-top: 24px;
+    padding: 8px;
   }
 </style>
 </head>
@@ -169,160 +233,293 @@
 <h1>🏋️ 3-Day KB Full Body</h1>
 <p class="subtitle">Dwayne • Fat loss + muscle preservation • ~30 min sessions</p>
 
-<!-- Schedule -->
-<h2>📅 Weekly Schedule</h2>
-<div class="schedule-grid">
-  <div class="day-kb">M<br>KB</div>
-  <div class="day-stretch">T<br>Str</div>
-  <div class="day-kb">W<br>KB</div>
-  <div class="day-stretch">T<br>Str</div>
-  <div class="day-kb">F<br>KB</div>
-  <div class="day-rest">S<br>—</div>
-  <div class="day-rest">S<br>—</div>
+<!-- TABS -->
+<div class="tab-bar" role="tablist">
+  <button class="tab-btn active" data-tab="kb" role="tab" aria-selected="true">🏋️ KB Workout</button>
+  <button class="tab-btn" data-tab="stretch" role="tab" aria-selected="false">🧘 Stretching</button>
 </div>
 
-<!-- Setup note -->
-<div class="big-note">
-  <strong>⚡ Start here every session:</strong> 3-min warmup — jumping jacks, bodyweight squats, arm circles, leg swings. Just get blood moving. Then hit the circuit below.<br><br>
-  <strong>Rule:</strong> Last 2 reps of every set should be genuinely hard. If they're not, go heavier or add a rep next time. Rest 60s between sets.
+<!-- ============================================================ -->
+<!-- TAB 1: KB WORKOUT -->
+<!-- ============================================================ -->
+<div id="tab-kb" class="tab-content active">
+
+  <!-- Week view -->
+  <h2>📅 Weekly Schedule</h2>
+  <div class="schedule-grid">
+    <div class="day-kb">M<br>KB</div>
+    <div class="day-stretch">T<br>Str</div>
+    <div class="day-kb">W<br>KB</div>
+    <div class="day-stretch">T<br>Str</div>
+    <div class="day-kb">F<br>KB</div>
+    <div class="day-rest">S<br>—</div>
+    <div class="day-rest">S<br>—</div>
+  </div>
+
+  <!-- Start here -->
+  <div class="big-note">
+    <strong>⚡ Start here every session:</strong> 3-min warmup — jumping jacks, bodyweight squats, arm circles, leg swings. Then hit the circuit below.<br><br>
+    <strong>Rule:</strong> Last 2 reps of every set should be genuinely hard. If not, go heavier or add a rep next time. Rest 60s between sets.
+  </div>
+
+  <hr>
+
+  <h2 id="exercises">🏋️ The 5 Exercises</h2>
+
+  <!-- 1. Goblet Squat -->
+  <div class="exercise anchor" id="goblet-squat">
+    <div class="exercise-header">
+      <span class="exercise-name">1. Goblet Squat</span>
+      <span class="exercise-dosage">3 × 10-12 · 60s rest</span>
+    </div>
+    <div class="exercise-why">
+      <strong>Why:</strong> Main leg builder. Hits quads, glutes, core. Biggest muscle groups = most calorie burn per minute.
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/0eW8av1WC4g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="notes">Hold bell by the horns at your chest. Elbows tucked. Sit back like reaching for a low chair. Heels down. Go below parallel if you can.</div>
+  </div>
+
+  <!-- 2. Single Arm Row -->
+  <div class="exercise anchor" id="row">
+    <div class="exercise-header">
+      <span class="exercise-name">2. Single Arm Row</span>
+      <span class="exercise-dosage">3 × 10-12/arm · 60s rest</span>
+    </div>
+    <div class="exercise-why">
+      <strong>Why:</strong> Biggest upper body muscle group (back). Counteracts desk posture. Unilateral forces core to work harder.
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/l5qelXL5nfs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="notes">Hinge at hip. Brace free hand on thigh or chair. Pull bell to your hip, not armpit. Squeeze back at top. Don't twist your torso.</div>
+  </div>
+
+  <!-- 3. Overhead Press -->
+  <div class="exercise anchor" id="press">
+    <div class="exercise-header">
+      <span class="exercise-name">3. Overhead Press</span>
+      <span class="exercise-dosage">3 × 8-10/arm · 60s rest</span>
+    </div>
+    <div class="exercise-why">
+      <strong>Why:</strong> Only vertical push. Preserves shoulder strength and upper chest. Key for long-term shoulder health.
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/6fUrgob01UQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="notes"><strong>First: clean the bell to rack position.</strong> <a href="https://www.youtube.com/watch?v=wkr29bju4bo" target="_blank" style="color:#7ddf7d;">Watch the clean here</a> if needed. From rack (bell on forearm at chest), press straight up. Wrist straight. Don't flare elbows. Brace core.</div>
+  </div>
+
+  <!-- 4. KB Swing -->
+  <div class="exercise anchor" id="swing">
+    <div class="exercise-header">
+      <span class="exercise-name">4. Two-Handed KB Swing</span>
+      <span class="exercise-dosage">3 × 15-20 · 45s rest</span>
+    </div>
+    <div class="exercise-why">
+      <strong>Why:</strong> Fat-loss weapon. Full-body explosive movement. Torches calories, builds hamstrings, glutes, lower back, grip.
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/1Qi0NQW89Oc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="notes"><strong>This is a hip hinge, NOT a squat.</strong> Hips go back, knees barely bend. Power comes from snapping hips forward. Arms are just ropes. Back stays flat.</div>
+  </div>
+
+  <!-- 5. Reverse Lunge -->
+  <div class="exercise anchor" id="lunge">
+    <div class="exercise-header">
+      <span class="exercise-name">5. Reverse Lunge</span>
+      <span class="exercise-dosage">2 × 8-10/leg · 60s rest</span>
+    </div>
+    <div class="exercise-why">
+      <strong>Why:</strong> Exposes imbalances. Builds hip stability. Easier on knees than forward lunges. Each leg works harder pound-for-pound.
+    </div>
+    <div class="video-wrap">
+      <iframe src="https://www.youtube.com/embed/y2jz7ot6r2I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div class="notes">Hold bell at chest. Step back — not forward. Front knee behind toes. Both knees bend to 90°. Drive through front heel to return. Keep torso upright.</div>
+  </div>
+
+  <hr>
+
+  <h2>📋 Progression</h2>
+  <table class="progress-table">
+    <tr><th>Phase</th><th>Duration</th><th>Focus</th></tr>
+    <tr><td>Foundation</td><td>Weeks 1-2</td><td>Learn form. Find starting weights.</td></tr>
+    <tr><td>Build</td><td>Weeks 3-6</td><td>Add weight or reps each session.</td></tr>
+    <tr><td>Consolidate</td><td>Weeks 7-8</td><td>Maintain, assess, reset if needed.</td></tr>
+  </table>
+
+  <div class="big-note">
+    <strong>🔑 The one-sentence summary:</strong> Wake up. Warm up 3 min. Hit 5 exercises hard with 60s rest. Walk away knowing you did something most people won't.
+  </div>
 </div>
+<!-- end tab-kb -->
 
-<hr>
+<!-- ============================================================ -->
+<!-- TAB 2: STRETCHING -->
+<!-- ============================================================ -->
+<div id="tab-stretch" class="tab-content">
 
-<!-- Exercises -->
-<h2>🏋️ The 5 Exercises</h2>
+  <h2>🧘 Pelvic Floor Stretching</h2>
+  <p style="color:#999;font-size:0.9rem;margin-bottom:16px;">
+    <strong>When:</strong> Tuesday & Thursday · 20 min total<br>
+    <strong>Key:</strong> Breathe deep and slow throughout. This is recovery, not training.
+  </p>
 
-<!-- 1. Goblet Squat -->
-<div class="exercise" id="goblet">
-  <div class="exercise-header">
-    <span class="exercise-name">1. Goblet Squat</span>
-    <span class="exercise-dosage">3 x 10-12 • 60s rest</span>
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  EDITING NOTE: To update or reorder stretches, just modify  ║
+    ║  the .stretch-card divs below. Keep the format:             ║
+    ║    <div class="stretch-card" id="your-id">                  ║
+    ║      <div class="stretch-header">                           ║
+    ║        <span class="stretch-name">Name</span>               ║
+    ║        <span class="stretch-duration">Time</span>           ║
+    ║      </div>                                                 ║
+    ║      <div class="stretch-desc">Description</div>            ║
+    ║    </div>                                                   ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+
+  <div class="big-note-stretch">
+    <strong>🧘 How to work this:</strong> Do these in order. 7 stretches. No rushing. Focus on your breathing — slow belly breaths. If your pelvic floor feels different (better, looser, less ache), that's the goal.
   </div>
-  <div class="exercise-why">
-    <strong>Why:</strong> Main leg builder. Hits quads, glutes, core. Biggest muscle groups = most calorie burn per minute.
+
+  <div class="stretch-card anchor" id="deep-squat">
+    <div class="stretch-header">
+      <span class="stretch-name">1. Deep Squat Hold (Malasana)</span>
+      <span class="stretch-duration">2 min</span>
+    </div>
+    <div class="stretch-desc">Feet wider than hip-width, toes pointed out slightly. Lower into a deep squat. Heels down if you can — sit on a block or rolled towel if not. Elbows press gently against inner thighs to open the hips. Breathe deep.</div>
   </div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/0eW8av1WC4g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+
+  <div class="stretch-card anchor" id="childs-pose">
+    <div class="stretch-header">
+      <span class="stretch-name">2. Child's Pose — Knees Wide</span>
+      <span class="stretch-duration">2 min</span>
+    </div>
+    <div class="stretch-desc">Knees wide, big toes touching. Sit hips back toward heels. Arms extended forward or resting by your sides. Breathe into your lower back and belly. Relax the pelvic floor on each exhale.</div>
   </div>
-  <div class="notes">Hold bell by the horns at your chest. Elbows tucked. Sit back like you're reaching for a low chair. Heels down. Go below parallel if you can.</div>
+
+  <div class="stretch-card anchor" id="happy-baby">
+    <div class="stretch-header">
+      <span class="stretch-name">3. Happy Baby</span>
+      <span class="stretch-duration">2 min</span>
+    </div>
+    <div class="stretch-desc">Lying on your back. Grab the outsides of your feet or shins. Knees wide toward your armpits. Rock gently side to side. This releases inner thighs and the pelvic floor. Breathe.</div>
+  </div>
+
+  <div class="stretch-card anchor" id="hip-flexor">
+    <div class="stretch-header">
+      <span class="stretch-name">4. Half-Kneeling Hip Flexor</span>
+      <span class="stretch-duration">90 sec / side</span>
+    </div>
+    <div class="stretch-desc">Right knee down. Left foot forward at 90°. Squeeze right glute gently and push hips forward until you feel a stretch in the front of the right hip. Hands on left knee for balance. Switch sides.</div>
+  </div>
+
+  <div class="stretch-card anchor" id="figure-four">
+    <div class="stretch-header">
+      <span class="stretch-name">5. Figure 4 Glute Stretch</span>
+      <span class="stretch-duration">90 sec / side</span>
+    </div>
+    <div class="stretch-desc">Lying on your back. Cross right ankle over left knee. Pull left thigh toward your chest. Feel the stretch in your right glute and outer hip. Switch sides.</div>
+  </div>
+
+  <div class="stretch-card anchor" id="cat-cow">
+    <div class="stretch-header">
+      <span class="stretch-name">6. Cat-Cow</span>
+      <span class="stretch-duration">10 slow breaths</span>
+    </div>
+    <div class="stretch-desc">On hands and knees. Inhale — drop belly, lift head and tailbone (cow). Exhale — round spine, tuck chin and pelvis (cat). Move with your breath. Mobilizes pelvis and spine together.</div>
+  </div>
+
+  <div class="stretch-card" id="diaphragmatic-breathing" style="border-left-color:#dda94d;">
+    <div class="stretch-header">
+      <span class="stretch-name">⭐ 7. Diaphragmatic Breathing</span>
+      <span class="stretch-duration">5 min</span>
+    </div>
+    <div class="stretch-desc">
+      <strong>This is the most important one.</strong> Lie on your back. Hands on lower belly. Inhale slowly through your nose — belly expands like a balloon. Exhale slowly through your mouth — belly falls. The pelvic floor should relax and lower on the inhale. Do this daily even on KB days.
+    </div>
+  </div>
+
+  <div class="big-note-stretch">
+    <strong>💡 Don't skip the breathing.</strong> The first 6 stretches prepare your body. The 5 minutes of diaphragmatic breathing is where the pelvic floor actually releases. This is not optional.
+  </div>
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  TO UPDATE THIS ROUTINE:                                    ║
+    ║  1. Copy the HTML you want from your physio/expert source   ║
+    ║  2. Replace any stretch-card block above                    ║
+    ║  3. Email me the new content and I'll update it for you     ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+
 </div>
+<!-- end tab-stretch -->
 
-<!-- 2. Single Arm Row -->
-<div class="exercise" id="row">
-  <div class="exercise-header">
-    <span class="exercise-name">2. Single Arm Row</span>
-    <span class="exercise-dosage">3 x 10-12/arm • 60s rest</span>
-  </div>
-  <div class="exercise-why">
-    <strong>Why:</strong> Biggest upper body muscle group (back). Counteracts desk posture. Unilateral forces core to work harder.
-  </div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/l5qelXL5nfs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <div class="notes">Hinge at hip. Brace free hand on thigh or chair. Pull bell to your hip, not armpit. Squeeze back at top. Don't twist your torso.</div>
-</div>
+<a href="#" class="back-to-top">↑ Back to top</a>
 
-<!-- 3. Overhead Press -->
-<div class="exercise" id="press">
-  <div class="exercise-header">
-    <span class="exercise-name">3. Overhead Press</span>
-    <span class="exercise-dosage">3 x 8-10/arm • 60s rest</span>
-  </div>
-  <div class="exercise-why">
-    <strong>Why:</strong> Only vertical push in the program. Preserves shoulder strength and upper chest. Key for long-term shoulder health.
-  </div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/6fUrgob01UQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <div class="notes"><strong>First: clean the bell to rack position.</strong> <a href="https://www.youtube.com/watch?v=wkr29bju4bo" target="_blank" style="color:#7ddf7d;">Watch the clean here</a> if you're unsure. From rack (bell resting on forearm at chest), press straight up. Wrist straight. Don't flare elbows. Brace core.</div>
-</div>
-
-<!-- 4. KB Swing -->
-<div class="exercise" id="swing">
-  <div class="exercise-header">
-    <span class="exercise-name">4. Two-Handed KB Swing</span>
-    <span class="exercise-dosage">3 x 15-20 • 45s rest</span>
-  </div>
-  <div class="exercise-why">
-    <strong>Why:</strong> Fat-loss weapon. Full-body explosive movement. Torches calories, builds hamstrings, glutes, lower back, grip. No separate cardio needed.
-  </div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/1Qi0NQW89Oc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <div class="notes"><strong>This is a hip hinge, NOT a squat.</strong> Hips go back, knees barely bend. Power comes from snapping your hips forward. Arms are just ropes — bell floats up from hip drive. Your back stays flat the whole time.</div>
-</div>
-
-<!-- 5. Reverse Lunge -->
-<div class="exercise" id="lunge">
-  <div class="exercise-header">
-    <span class="exercise-name">5. Reverse Lunge</span>
-    <span class="exercise-dosage">2 x 8-10/leg • 60s rest</span>
-  </div>
-  <div class="exercise-why">
-    <strong>Why:</strong> Exposes strength imbalances. Builds hip stability. Easier on knees than forward lunges. Each leg works harder pound-for-pound.
-  </div>
-  <div class="video-wrap">
-    <iframe src="https://www.youtube.com/embed/y2jz7ot6r2I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <div class="notes">Hold bell at chest (goblet position). Step back — don't step forward. Front knee stays behind toes. Both knees bend to 90°. Drive through front heel to return. Keep torso upright.</div>
-</div>
-
-<hr>
-
-<!-- Stretching routine -->
-<h2>🧘 Pelvic Floor Stretching (Tue / Thu)</h2>
-<p style="font-size:0.85rem;color:#999;margin-bottom:12px;">15-20 min. Deep breathing throughout. Go slow — this is recovery, not training.</p>
-
-<div class="stretch-exercise">
-  <span class="stretch-name">Deep Squat Hold (Malasana)</span>
-  <span class="stretch-duration">2 min</span>
-</div>
-<div class="stretch-exercise">
-  <span class="stretch-name">Child's Pose — knees wide</span>
-  <span class="stretch-duration">2 min</span>
-</div>
-<div class="stretch-exercise">
-  <span class="stretch-name">Happy Baby — rock gently</span>
-  <span class="stretch-duration">2 min</span>
-</div>
-<div class="stretch-exercise">
-  <span class="stretch-name">Half-Kneeling Hip Flexor — squeeze back glute</span>
-  <span class="stretch-duration">90s/side</span>
-</div>
-<div class="stretch-exercise">
-  <span class="stretch-name">Figure 4 Glute Stretch (lying)</span>
-  <span class="stretch-duration">90s/side</span>
-</div>
-<div class="stretch-exercise">
-  <span class="stretch-name">Cat-Cow — 10 slow breaths</span>
-  <span class="stretch-duration">~2 min</span>
-</div>
-<div class="stretch-exercise" style="border-left-color:#dda94d;">
-  <span class="stretch-name"><strong>⭐ Diaphragmatic Breathing</strong> — hands on belly, inhale belly rises</span>
-  <span class="stretch-duration">5 min</span>
-</div>
-
-<p style="margin-top:12px;font-size:0.8rem;color:#888;">👆 The breathing exercise is the most important one. Inhale → belly expands → pelvic floor relaxes. Exhale slow. Do this daily even on KB days.</p>
-
-<hr>
-
-<!-- Quick reference -->
-<h2>📋 Quick Reference</h2>
-<table class="progress-table">
-  <tr><th>Phase</th><th>Duration</th><th>Focus</th></tr>
-  <tr><td>Foundation</td><td>Weeks 1-2</td><td>Learn form. Find starting weights.</td></tr>
-  <tr><td>Build</td><td>Weeks 3-6</td><td>Add weight or reps each session.</td></tr>
-  <tr><td>Consolidate</td><td>Weeks 7-8</td><td>Maintain, assess, reset if needed.</td></tr>
-</table>
-
-<div class="big-note">
-  <strong>🔑 The one-sentence summary for each session:</strong><br>
-  Wake up. Warm up 3 min. Hit 5 exercises hard with 60s rest. Walk away knowing you did something most people won't.
-</div>
-
-<p style="text-align:center;color:#555;font-size:0.75rem;margin-top:40px;">
-  Saved to Obsidian Health vault — KB Workout Guide.html
+<p style="text-align:center;color:#555;font-size:0.7rem;margin-top:20px;">
+  Saved to Obsidian Health vault &middot; Updated June 2026
 </p>
+
+<script>
+(function() {
+  'use strict';
+  const tabs = document.querySelectorAll('.tab-btn');
+  const contents = {
+    kb: document.getElementById('tab-kb'),
+    stretch: document.getElementById('tab-stretch')
+  };
+
+  function switchTab(name) {
+    // Update button styles
+    tabs.forEach(function(btn) {
+      btn.classList.remove('active', 'active-stretch');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    var activeBtn = document.querySelector('.tab-btn[data-tab="' + name + '"]');
+    if (!activeBtn) return;
+    activeBtn.classList.add(name === 'stretch' ? 'active-stretch' : 'active');
+    activeBtn.setAttribute('aria-selected', 'true');
+
+    // Show/hide content
+    Object.keys(contents).forEach(function(key) {
+      contents[key].classList.toggle('active', key === name);
+    });
+
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Update URL hash without jumping
+    history.replaceState(null, '', '#' + name);
+  }
+
+  // Click handlers
+  tabs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchTab(this.getAttribute('data-tab'));
+    });
+  });
+
+  // On page load, check URL hash
+  var hash = window.location.hash.replace('#', '');
+  if (hash === 'stretch' || hash === 'kb') {
+    switchTab(hash);
+  }
+
+  // Handle back/forward button hash changes
+  window.addEventListener('hashchange', function() {
+    var h = window.location.hash.replace('#', '');
+    if (h === 'stretch' || h === 'kb') {
+      switchTab(h);
+    }
+  });
+})();
+</script>
 
 </body>
 </html>
