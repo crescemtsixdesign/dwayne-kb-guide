@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dwayne's KB Full Body Program</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    padding: 16px 16px 80px;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 8px 0 4px;
+  }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffa94d;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #2a2a2a;
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ccc;
+    margin: 20px 0 8px;
+  }
+  .subtitle {
+    color: #999;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin: 16px 0 20px;
+  }
+  .schedule-grid div {
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  .day-kb { background: #2d4a2d; color: #7ddf7d; }
+  .day-stretch { background: #3a2d4a; color: #b07ddf; }
+  .day-rest { background: #2a2a2a; color: #888; }
+
+  /* Exercise cards */
+  .exercise {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-left: 4px solid #ffa94d;
+  }
+  .exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .exercise-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #fff;
+  }
+  .exercise-dosage {
+    color: #7ddf7d;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .exercise-why {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .notes {
+    background: #1f1f1f;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: #bbb;
+    margin-top: 6px;
+    border-left: 3px solid #555;
+  }
+  .big-note {
+    background: #2a2d1a;
+    border: 1px solid #4a4d2a;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #ddd;
+  }
+  .big-note strong { color: #ffa94d; }
+  hr {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 28px 0;
+  }
+  .stretch-exercise {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid #b07ddf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .stretch-name { font-weight: 600; color: #ddd; }
+  .stretch-duration { color: #b07ddf; font-weight: 600; }
+  .progress-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 12px 0;
+  }
+  .progress-table th {
+    text-align: left;
+    padding: 8px 10px;
+    background: #2a2a2a;
+    color: #ffa94d;
+    font-weight: 600;
+  }
+  .progress-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  .top-link {
+    display: inline-block;
+    color: #ffa94d;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🏋️ 3-Day KB Full Body</h1>
+<p class="subtitle">Dwayne • Fat loss + muscle preservation • ~30 min sessions</p>
+
+<!-- Schedule -->
+<h2>📅 Weekly Schedule</h2>
+<div class="schedule-grid">
+  <div class="day-kb">M<br>KB</div>
+  <div class="day-stretch">T<br>Str</div>
+  <div class="day-kb">W<br>KB</div>
+  <div class="day-stretch">T<br>Str</div>
+  <div class="day-kb">F<br>KB</div>
+  <div class="day-rest">S<br>—</div>
+  <div class="day-rest">S<br>—</div>
+</div>
+
+<!-- Setup note -->
+<div class="big-note">
+  <strong>⚡ Start here every session:</strong> 3-min warmup — jumping jacks, bodyweight squats, arm circles, leg swings. Just get blood moving. Then hit the circuit below.<br><br>
+  <strong>Rule:</strong> Last 2 reps of every set should be genuinely hard. If they're not, go heavier or add a rep next time. Rest 60s between sets.
+</div>
+
+<hr>
+
+<!-- Exercises -->
+<h2>🏋️ The 5 Exercises</h2>
+
+<!-- 1. Goblet Squat -->
+<div class="exercise" id="goblet">
+  <div class="exercise-header">
+    <span class="exercise-name">1. Goblet Squat</span>
+    <span class="exercise-dosage">3 x 10-12 • 60s rest</span>
+  </div>
+  <div class="exercise-why">
+    <strong>Why:</strong> Main leg builder. Hits quads, glutes, core. Biggest muscle groups = most calorie burn per minute.
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/0eW8av1WC4g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="notes">Hold bell by the horns at your chest. Elbows tucked. Sit back like you're reaching for a low chair. Heels down. Go below parallel if you can.</div>
+</div>
+
+<!-- 2. Single Arm Row -->
+<div class="exercise" id="row">
+  <div class="exercise-header">
+    <span class="exercise-name">2. Single Arm Row</span>
+    <span class="exercise-dosage">3 x 10-12/arm • 60s rest</span>
+  </div>
+  <div class="exercise-why">
+    <strong>Why:</strong> Biggest upper body muscle group (back). Counteracts desk posture. Unilateral forces core to work harder.
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/l5qelXL5nfs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="notes">Hinge at hip. Brace free hand on thigh or chair. Pull bell to your hip, not armpit. Squeeze back at top. Don't twist your torso.</div>
+</div>
+
+<!-- 3. Overhead Press -->
+<div class="exercise" id="press">
+  <div class="exercise-header">
+    <span class="exercise-name">3. Overhead Press</span>
+    <span class="exercise-dosage">3 x 8-10/arm • 60s rest</span>
+  </div>
+  <div class="exercise-why">
+    <strong>Why:</strong> Only vertical push in the program. Preserves shoulder strength and upper chest. Key for long-term shoulder health.
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/6fUrgob01UQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="notes"><strong>First: clean the bell to rack position.</strong> <a href="https://www.youtube.com/watch?v=wkr29bju4bo" target="_blank" style="color:#7ddf7d;">Watch the clean here</a> if you're unsure. From rack (bell resting on forearm at chest), press straight up. Wrist straight. Don't flare elbows. Brace core.</div>
+</div>
+
+<!-- 4. KB Swing -->
+<div class="exercise" id="swing">
+  <div class="exercise-header">
+    <span class="exercise-name">4. Two-Handed KB Swing</span>
+    <span class="exercise-dosage">3 x 15-20 • 45s rest</span>
+  </div>
+  <div class="exercise-why">
+    <strong>Why:</strong> Fat-loss weapon. Full-body explosive movement. Torches calories, builds hamstrings, glutes, lower back, grip. No separate cardio needed.
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/1Qi0NQW89Oc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="notes"><strong>This is a hip hinge, NOT a squat.</strong> Hips go back, knees barely bend. Power comes from snapping your hips forward. Arms are just ropes — bell floats up from hip drive. Your back stays flat the whole time.</div>
+</div>
+
+<!-- 5. Reverse Lunge -->
+<div class="exercise" id="lunge">
+  <div class="exercise-header">
+    <span class="exercise-name">5. Reverse Lunge</span>
+    <span class="exercise-dosage">2 x 8-10/leg • 60s rest</span>
+  </div>
+  <div class="exercise-why">
+    <strong>Why:</strong> Exposes strength imbalances. Builds hip stability. Easier on knees than forward lunges. Each leg works harder pound-for-pound.
+  </div>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/y2jz7ot6r2I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <div class="notes">Hold bell at chest (goblet position). Step back — don't step forward. Front knee stays behind toes. Both knees bend to 90°. Drive through front heel to return. Keep torso upright.</div>
+</div>
+
+<hr>
+
+<!-- Stretching routine -->
+<h2>🧘 Pelvic Floor Stretching (Tue / Thu)</h2>
+<p style="font-size:0.85rem;color:#999;margin-bottom:12px;">15-20 min. Deep breathing throughout. Go slow — this is recovery, not training.</p>
+
+<div class="stretch-exercise">
+  <span class="stretch-name">Deep Squat Hold (Malasana)</span>
+  <span class="stretch-duration">2 min</span>
+</div>
+<div class="stretch-exercise">
+  <span class="stretch-name">Child's Pose — knees wide</span>
+  <span class="stretch-duration">2 min</span>
+</div>
+<div class="stretch-exercise">
+  <span class="stretch-name">Happy Baby — rock gently</span>
+  <span class="stretch-duration">2 min</span>
+</div>
+<div class="stretch-exercise">
+  <span class="stretch-name">Half-Kneeling Hip Flexor — squeeze back glute</span>
+  <span class="stretch-duration">90s/side</span>
+</div>
+<div class="stretch-exercise">
+  <span class="stretch-name">Figure 4 Glute Stretch (lying)</span>
+  <span class="stretch-duration">90s/side</span>
+</div>
+<div class="stretch-exercise">
+  <span class="stretch-name">Cat-Cow — 10 slow breaths</span>
+  <span class="stretch-duration">~2 min</span>
+</div>
+<div class="stretch-exercise" style="border-left-color:#dda94d;">
+  <span class="stretch-name"><strong>⭐ Diaphragmatic Breathing</strong> — hands on belly, inhale belly rises</span>
+  <span class="stretch-duration">5 min</span>
+</div>
+
+<p style="margin-top:12px;font-size:0.8rem;color:#888;">👆 The breathing exercise is the most important one. Inhale → belly expands → pelvic floor relaxes. Exhale slow. Do this daily even on KB days.</p>
+
+<hr>
+
+<!-- Quick reference -->
+<h2>📋 Quick Reference</h2>
+<table class="progress-table">
+  <tr><th>Phase</th><th>Duration</th><th>Focus</th></tr>
+  <tr><td>Foundation</td><td>Weeks 1-2</td><td>Learn form. Find starting weights.</td></tr>
+  <tr><td>Build</td><td>Weeks 3-6</td><td>Add weight or reps each session.</td></tr>
+  <tr><td>Consolidate</td><td>Weeks 7-8</td><td>Maintain, assess, reset if needed.</td></tr>
+</table>
+
+<div class="big-note">
+  <strong>🔑 The one-sentence summary for each session:</strong><br>
+  Wake up. Warm up 3 min. Hit 5 exercises hard with 60s rest. Walk away knowing you did something most people won't.
+</div>
+
+<p style="text-align:center;color:#555;font-size:0.75rem;margin-top:40px;">
+  Saved to Obsidian Health vault — KB Workout Guide.html
+</p>
+
+</body>
+</html>
