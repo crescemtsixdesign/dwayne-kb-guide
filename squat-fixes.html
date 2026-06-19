@@ -7,73 +7,96 @@
 <style>
   :root {
     --bg: #0f0f0f;
-    --panel: #1a1a1a;
-    --panel-2: #202020;
-    --text: #e8e8e8;
-    --muted: #a2a2a2;
+    --panel: #171717;
+    --panel-2: #1f1f1f;
+    --text: #ececec;
+    --muted: #a7a7a7;
     --accent: #ffa94d;
     --accent-2: #7ddf7d;
-    --danger: #ff7d7d;
+    --danger: #ff8080;
     --border: #2a2a2a;
   }
   *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
-    background: var(--bg);
+    background: radial-gradient(circle at top, #181818 0%, var(--bg) 55%);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
   .wrap {
-    max-width: 820px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 18px 16px 48px;
+    padding: 16px 16px 56px;
   }
   .topbar {
     display: flex;
     justify-content: space-between;
     gap: 12px;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     flex-wrap: wrap;
   }
-  .home-link, .pill-link, .video-link, .back-link {
-    color: var(--accent);
+  a { color: var(--accent); }
+  .home-link, .chip-link, .video-link, .back-link {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
   }
-  .home-link { font-size: 0.9rem; }
+  .hero {
+    background: linear-gradient(180deg, rgba(255,169,77,0.12), rgba(255,169,77,0.04));
+    border: 1px solid rgba(255,169,77,0.25);
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 16px;
+  }
   h1 {
-    margin: 6px 0 8px;
-    font-size: 2rem;
-    line-height: 1.1;
+    margin: 0 0 6px;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    line-height: 1.05;
   }
   .subtitle {
+    margin: 0;
     color: var(--muted);
-    margin: 0 0 18px;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
   }
-  .callout, .card, .note {
+  .navchips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .chip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    font-size: 0.9rem;
+  }
+  .chip-link:hover { border-color: rgba(255,169,77,0.55); }
+  .callout, .card, .note, .mini-card {
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 14px;
+    border-radius: 16px;
   }
   .callout {
     padding: 14px 16px;
-    margin: 14px 0 18px;
+    margin: 16px 0 18px;
     border-left: 4px solid var(--accent);
   }
   .callout strong { color: var(--accent); }
-  .section {
-    margin-top: 18px;
-  }
+  .section { margin-top: 18px; }
   h2 {
     font-size: 1.2rem;
     margin: 0 0 10px;
   }
-  .cards {
+  .grid {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
   }
   .card {
@@ -88,37 +111,52 @@
     margin-bottom: 6px;
   }
   .card-title {
-    font-weight: 700;
-    font-size: 1.02rem;
+    font-weight: 800;
+    font-size: 1.03rem;
   }
   .tag {
     color: var(--accent-2);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.84rem;
   }
   .desc {
     color: var(--muted);
-    margin: 6px 0 10px;
+    margin: 6px 0 12px;
     font-size: 0.92rem;
   }
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #2d2d2d;
+  }
+  .video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
   .video-link {
-    display: inline-block;
-    padding: 10px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 9px 12px;
     border-radius: 999px;
     background: #241b10;
     border: 1px solid #4a3721;
     font-size: 0.88rem;
   }
+  .stack { display: grid; gap: 12px; }
   .table {
     width: 100%;
     border-collapse: collapse;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 16px;
     background: var(--panel);
     border: 1px solid var(--border);
   }
@@ -131,32 +169,30 @@
   }
   .table th {
     color: var(--accent);
-    font-size: 0.82rem;
-    letter-spacing: 0.02em;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    background: #181818;
+    letter-spacing: 0.03em;
+    background: #141414;
   }
   .table tr:last-child td { border-bottom: none; }
   .rules {
     margin: 0;
     padding-left: 18px;
-    color: var(--text);
   }
   .rules li { margin: 8px 0; }
-  .good { color: var(--accent-2); font-weight: 700; }
-  .bad { color: var(--danger); font-weight: 700; }
+  .good { color: var(--accent-2); font-weight: 800; }
+  .bad { color: var(--danger); font-weight: 800; }
   .note {
     padding: 14px 16px;
     margin-top: 18px;
     color: var(--muted);
   }
-  .back-link {
-    display: inline-block;
-    margin-top: 12px;
-  }
-  .small {
-    font-size: 0.82rem;
-    color: var(--muted);
+  .note strong { color: var(--text); }
+  .small { font-size: 0.82rem; color: var(--muted); }
+  .back-link { display: inline-block; margin-top: 12px; }
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: 1fr; }
+    .table th, .table td { padding: 10px; }
   }
 </style>
 </head>
@@ -167,63 +203,67 @@
       <a class="home-link" href="https://crescemtsixdesign.github.io/dwayne-kb-guide/" target="_blank" rel="noopener">Open live site</a>
     </div>
 
-    <h1>Squat Fixes</h1>
-    <p class="subtitle">Use this when squat mechanics feel ugly or your shins start talking. Clean reps first. Load later.</p>
+    <section class="hero">
+      <h1>Squat Fixes</h1>
+      <p class="subtitle">Use this when squat mechanics feel off, your shins complain, or you need a fast reset before training.</p>
+      <div class="navchips">
+        <a class="chip-link" href="#reset">5-min reset</a>
+        <a class="chip-link" href="#cues">Squat cues</a>
+        <a class="chip-link" href="#swap">Best swaps</a>
+        <a class="chip-link" href="#rules">Pain rules</a>
+      </div>
+    </section>
 
     <div class="callout">
-      <strong>Read this straight:</strong> mild leg stiffness after a new KB session is normal. <strong>Front shin pain</strong> in goblet squats is a sign to regress the movement, not force through it.
+      <strong>Bottom line:</strong> mild leg stiffness after a new KB session is normal. <strong>Front shin pain</strong> in goblet squats means regress the movement and clean up the pattern.
     </div>
 
-    <div class="section">
+    <section id="reset" class="section">
       <h2>5-minute pre-squat reset</h2>
-      <div class="cards">
-        <div class="card">
+      <div class="grid">
+        <article class="card">
           <div class="card-head">
             <div class="card-title">1) Ankle rocks</div>
             <div class="tag">10 reps/side</div>
           </div>
-          <div class="desc">Get the ankle moving before you ask for a deep squat. Helps if your heels pop up or you feel stuck at the bottom.</div>
-          <div class="links">
-            <a class="video-link" href="https://www.youtube.com/watch?v=QmqVoWqXe8w" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-        </div>
+          <div class="desc">Wake up the ankle before you ask for squat depth. Good first move if heels want to lift.</div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/QmqVoWqXe8w" title="Ankle rocker" loading="lazy" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=QmqVoWqXe8w" target="_blank" rel="noopener">Open YouTube video</a>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <div class="card-head">
             <div class="card-title">2) Bodyweight box squat</div>
             <div class="tag">2 x 5 slow reps</div>
           </div>
-          <div class="desc">Use a chair or box. Sit back, stay tall, and stop before pain shows up. This is your form reset.</div>
-          <div class="links">
-            <a class="video-link" href="https://www.youtube.com/watch?v=AVOS2JYsgrs" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-        </div>
+          <div class="desc">Use a chair or box. Sit back, stay tall, and stop before pain shows up. This is the squat pattern reset.</div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/AVOS2JYsgrs" title="Bodyweight box squat" loading="lazy" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=AVOS2JYsgrs" target="_blank" rel="noopener">Open YouTube video</a>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <div class="card-head">
             <div class="card-title">3) Hip hinge drill</div>
             <div class="tag">10 reps</div>
           </div>
-          <div class="desc">Groove the hinge so your squat doesn’t turn into a knee-dominant mess. Also helps if you’re mixing up squat and hinge patterns.</div>
-          <div class="links">
-            <a class="video-link" href="https://www.youtube.com/watch?v=5qhy8-pX8Yw" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-        </div>
+          <div class="desc">Groove the hinge so the squat doesn’t turn into a knee-dominant mess. Also helps separate squat vs hinge in your head.</div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/5qhy8-pX8Yw" title="Hip hinge drill" loading="lazy" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=5qhy8-pX8Yw" target="_blank" rel="noopener">Open YouTube video</a>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <div class="card-head">
             <div class="card-title">4) Paused goblet squat to box</div>
             <div class="tag">1-2 light sets x 5</div>
           </div>
-          <div class="desc">Last step before loaded squats. Light bell, controlled descent, brief pause, no pain chase.</div>
-          <div class="links">
-            <a class="video-link" href="https://www.youtube.com/watch?v=5Qb9ZnsnQ2s" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-        </div>
+          <div class="desc">Last step before loaded squats. Light bell, controlled descent, brief pause, no depth chasing.</div>
+          <div class="video"><iframe src="https://www.youtube.com/embed/5Qb9ZnsnQ2s" title="Goblet box squat" loading="lazy" allowfullscreen></iframe></div>
+          <a class="video-link" href="https://www.youtube.com/watch?v=5Qb9ZnsnQ2s" target="_blank" rel="noopener">Open YouTube video</a>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section id="cues" class="section">
       <h2>Squat cues</h2>
       <table class="table">
         <tr><th>Do this</th><th>Not this</th></tr>
@@ -250,9 +290,9 @@
           </td>
         </tr>
       </table>
-    </div>
+    </section>
 
-    <div class="section">
+    <section id="swap" class="section">
       <h2>Best swaps for now</h2>
       <table class="table">
         <tr><th>Swap</th><th>Why it works</th></tr>
@@ -261,11 +301,31 @@
         <tr><td>Glute bridge</td><td>Low-skill option when legs are tired or form is off.</td></tr>
         <tr><td>Box squat</td><td>Gives you a depth target and keeps reps consistent.</td></tr>
       </table>
-    </div>
+    </section>
+
+    <section id="rules" class="section">
+      <h2>Pain rules</h2>
+      <div class="stack">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">What’s okay</div>
+            <div class="tag">Normal adaptation</div>
+          </div>
+          <div class="desc">Mild stiffness in the back of the legs after a new leg session usually just means the tissue got a stimulus it isn’t used to yet.</div>
+        </div>
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">What is not okay</div>
+            <div class="tag">Regress immediately</div>
+          </div>
+          <div class="desc"><span class="bad">Sharp, pinpoint, or worsening pain</span> means stop, shorten the range, lighten the load, or swap the exercise.</div>
+        </div>
+      </div>
+    </section>
 
     <div class="note">
-      <strong>Rule:</strong> mild muscle stiffness later is usually fine. If pain is sharp, pinpoint, or getting worse, stop and regress.
-      <div class="small">Keep the squat easy and clean until the pattern is there. Then add load.</div>
+      <strong>Next session rule:</strong> keep the squat easy and clean until the pattern is there. Then add load.
+      <div class="small">If you want, I can also turn this into a cleaner 2-page site: one page for the full KB plan and one page just for squat troubleshooting.</div>
       <a class="back-link" href="index.html">← Back to the full KB guide</a>
     </div>
   </div>
