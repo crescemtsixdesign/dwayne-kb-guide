@@ -236,7 +236,7 @@
             <div class="label">Today</div>
             <h2 id="today-title" style="margin:0;font-size:1.3rem;">Readiness snapshot</h2>
           </div>
-          <div class="pill" id="coach-score">Score —</div>
+          <div class="pill" id="coach-score">Score — / 100</div>
         </div>
 
         <div class="hero-grid" id="todayStats"></div>
@@ -428,11 +428,13 @@
       document.getElementById('slipText').textContent = state.slip;
       document.getElementById('nextAction').textContent = state.adjustment + ' ' + state.next;
       document.getElementById('trendText').textContent = `Workouts are ${state.week.workouts}, the scale trend is ${state.week.weightTrend}, and the streak is ${state.week.streak}.`;
-      document.getElementById('scoreLabel').textContent = scoreLabel(state.score);
-      document.getElementById('coach-score').textContent = `Score ${state.score}`;
+      document.getElementById('scoreLabel').textContent = `${scoreLabel(state.score)} • ${state.score}/100`;
+      document.getElementById('coach-score').textContent = `Score ${state.score}/100`;
       document.getElementById('scoreFill').style.width = `${state.score}%`;
+
       document.getElementById('lastUpdated').textContent = `Updated ${fmtTime(state.updated || defaultState.updated)}`;
       document.getElementById('footerMeta').textContent = `GitHub Pages dashboard • local check-in enabled • ${new Date().getFullYear()}`;
+
       saveState(state);
     }
 
