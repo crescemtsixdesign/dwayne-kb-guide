@@ -85,6 +85,7 @@
       font-size: .84rem;
       white-space: nowrap;
     }
+    a.pill { text-decoration: none; }
 
     .score {
       margin-top: 16px;
@@ -222,7 +223,10 @@
         <h1>Health Dashboard</h1>
         <p class="sub">Mobile-first coaching view for workout status, food/calories, weigh-in, weekly trend, and the one next action that matters today.</p>
       </div>
-      <div class="pill" id="lastUpdated">Updated —</div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <div class="pill" id="lastUpdated">Updated —</div>
+        <a class="pill" href="help.html">How to use</a>
+      </div>
     </section>
 
     <section class="score">
