@@ -124,6 +124,15 @@
     .label { color: var(--muted); font-size: .78rem; margin-bottom: 6px; }
     .value { font-size: 1.1rem; font-weight: 800; line-height: 1.15; }
     .helper { color: var(--muted); font-size: .8rem; margin-top: 4px; }
+    .light-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 8px; width: fit-content; padding: 6px 9px; border-radius: 999px;
+      font-size: .72rem; font-weight: 800; border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+    }
+    .light-pill.good { color: var(--green); background: rgba(51,209,122,.08); border-color: rgba(51,209,122,.18); }
+    .light-pill.warn { color: var(--yellow); background: rgba(245,196,81,.08); border-color: rgba(245,196,81,.18); }
+    .light-pill.bad { color: var(--red); background: rgba(255,107,107,.08); border-color: rgba(255,107,107,.18); }
 
     .meter {
       margin-top: 14px;
@@ -420,6 +429,26 @@
       return new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(date);
     }
 
+    function foodLight(state) {
+      const text = `${state.calories?.label || ''} ${state.calories?.detail || ''}`.toLowerCase();
+      if (!text.trim() || text.includes('no food logged yet') || text.includes('nothing reported')) {
+        return { tone: 'warn', label: 'Yellow', detail: 'No food logged yet' };
+      }
+      if (state.calories?.tone === 'good' || text.includes('on target') || text.includes('aligned')) {
+        return { tone: 'good', label: 'Green', detail: 'Controlled / on target' };
+      }
+      if (/(chips?|cookie|cookies|candy|ice cream|pizza|fries|fried|soda|dessert|binge|fast food|takeout|burrito bowl|alcohol|beer)/.test(text)) {
+        return { tone: 'bad', label: 'Red', detail: 'Easy to overdo' };
+      }
+      if (/(celery|cucumber|pickles?|tomato|salad|broth|soup|egg|eggs|chicken|fish|steak|turkey|yogurt|cottage cheese|vegetable|veg)/.test(text)) {
+        return { tone: 'good', label: 'Green', detail: 'High-satiety / lower calorie' };
+      }
+      if (/(nuts?|almonds?|cashews?|peanuts?|hummus|popcorn|cheese|avocado|peanut butter|trail mix)/.test(text)) {
+        return { tone: 'warn', label: 'Yellow', detail: 'Portion matters' };
+      }
+      return { tone: state.calories?.tone || 'warn', label: (state.calories?.tone === 'good' ? 'Green' : state.calories?.tone === 'bad' ? 'Red' : 'Yellow'), detail: 'Use the meal-level light, not a perfect score' };
+    }
+
     async function fetchRemoteState() {
       try {
         const res = await fetch(`${STATE_URL}?v=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
@@ -489,14 +518,19 @@
         ['Sleep / energy', state.sleep.label, state.sleep.detail, state.sleep.tone]
       ];
 
+      const food = foodLight(state);
       const todayStats = document.getElementById('todayStats');
       todayStats.innerHTML = stats.map(([label, value, helper, tone]) => {
         const cls = toneMap[tone]?.cls || 'warn';
+        const foodChip = label === 'Calories'
+          ? `<div class="light-pill ${food.tone}">Food light: ${food.label} • ${food.detail}</div>`
+          : '';
         return `
           <div class="stat ${cls}">
             <div class="label">${label}</div>
             <div class="value">${value}</div>
             <div class="helper">${helper}</div>
+            ${foodChip}
           </div>`;
       }).join('');
 
