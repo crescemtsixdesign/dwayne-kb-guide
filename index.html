@@ -86,6 +86,10 @@
       white-space: nowrap;
     }
     a.pill { text-decoration: none; }
+    .pill.live {
+      background: rgba(51, 209, 122, .08);
+      border-color: rgba(51, 209, 122, .22);
+    }
 
     .score {
       margin-top: 16px;
@@ -198,6 +202,18 @@
       padding: 14px;
     }
     .note strong { display: block; margin-bottom: 5px; }
+    .note.good {
+      background: rgba(51,209,122,.08);
+      border-color: rgba(51,209,122,.18);
+    }
+    .note.warn {
+      background: rgba(245,196,81,.08);
+      border-color: rgba(245,196,81,.18);
+    }
+    .note.bad {
+      background: rgba(255,107,107,.08);
+      border-color: rgba(255,107,107,.18);
+    }
 
     .tiny { color: var(--muted); font-size: .78rem; }
     .footer {
@@ -224,6 +240,7 @@
         <p class="sub">Mobile-first coaching view for workout status, food/calories, weigh-in, weekly trend, and the one next action that matters today.</p>
       </div>
       <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <div class="pill live" id="currentTime">Now —</div>
         <div class="pill" id="lastUpdated">Updated —</div>
         <a class="pill" href="help.html">How to use</a>
       </div>
@@ -247,6 +264,11 @@
             <span class="tiny" id="scoreLabel">—</span>
           </div>
           <div class="meter-bar"><div class="meter-fill" id="scoreFill"></div></div>
+        </div>
+
+        <div class="note warn" id="coachVerdict" aria-live="polite">
+          <strong>Coach verdict</strong>
+          <div id="coachVerdictText" class="tiny"></div>
         </div>
 
         <div class="actions" aria-label="Quick actions">
@@ -299,9 +321,9 @@
       </article>
     </section>
 
-    <div class="note">
+    <div class="note good">
       <strong>Quick setup</strong>
-      <div class="tiny">This page saves quick taps in your browser only. Open it on your phone and use it as a simple daily check-in. <a href="squat-fixes.html">Squat fixes</a> stays available in the repo.</div>
+      <div class="tiny">This page saves quick taps in your browser only. Open it on your phone and use it as a simple daily check-in. It refreshes automatically so the date, week, and time stay current.</div>
     </div>
 
     <div class="footer" id="footerMeta"></div>
@@ -393,8 +415,48 @@
       return new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
     }
 
+    function fmtNow(date = new Date()) {
+      return new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(date);
+    }
+
+    function coachVerdict(state) {
+      if (state.workout.tone === 'bad' && state.calories.label === 'No food logged yet') {
+        return {
+          tone: 'bad',
+          text: 'Rescue mode: you missed the morning workout and have not logged food yet. Finish the after-work session, then log food honestly.'
+        };
+      }
+      if (state.score >= 85) {
+        return {
+          tone: 'good',
+          text: 'Good day. Keep the routine tight and do not let dinner or snacking undo the progress.'
+        };
+      }
+      if (state.score >= 70) {
+        return {
+          tone: 'warn',
+          text: 'Mixed day. Stay disciplined and do not let one miss turn into two.'
+        };
+      }
+      return {
+        tone: 'bad',
+        text: 'Behind today. Fix the next action, not the whole week.'
+      };
+    }
+
+    function weeklyReadout(state) {
+      if (state.week.completedWorkouts === 0) {
+        return 'No workout logged this week yet. The week is still early, but the first useful move is to get the session done.';
+      }
+      if (state.week.completedWorkouts < 2) {
+        return `${state.week.completedWorkouts} workout${state.week.completedWorkouts === 1 ? '' : 's'} logged. You are behind pace; protect the next session.`;
+      }
+      return `You have ${state.week.completedWorkouts} workouts logged. Keep the trend alive and avoid a late-week collapse.`;
+    }
+
     function render() {
       const state = loadState();
+      document.getElementById('currentTime').textContent = `Now ${fmtNow()}`;
       document.getElementById('weekWindow').textContent = `Week of ${formatWeekRange()} • starts Sunday`;
       const stats = [
         ['Workout', state.workout.label, state.workout.detail, state.workout.tone],
@@ -427,13 +489,18 @@
 
       document.getElementById('slipText').textContent = state.slip;
       document.getElementById('nextAction').textContent = state.adjustment + ' ' + state.next;
-      document.getElementById('trendText').textContent = `Workouts are ${state.week.workouts}, the scale trend is ${state.week.weightTrend}, and the streak is ${state.week.streak}.`;
+      document.getElementById('trendText').textContent = weeklyReadout(state);
       document.getElementById('scoreLabel').textContent = `${scoreLabel(state.score)} • ${state.score}/100`;
       document.getElementById('coach-score').textContent = `Score ${state.score}/100`;
       document.getElementById('scoreFill').style.width = `${state.score}%`;
 
+      const verdict = coachVerdict(state);
+      const verdictEl = document.getElementById('coachVerdict');
+      verdictEl.className = `note ${verdict.tone}`;
+      document.getElementById('coachVerdictText').textContent = verdict.text;
+
       document.getElementById('lastUpdated').textContent = `Updated ${fmtTime(state.updated || defaultState.updated)}`;
-      document.getElementById('footerMeta').textContent = `GitHub Pages dashboard • local check-in enabled • ${new Date().getFullYear()}`;
+      document.getElementById('footerMeta').textContent = `GitHub Pages dashboard • local check-in enabled • auto-refresh every minute • ${new Date().getFullYear()}`;
 
       saveState(state);
     }
@@ -471,6 +538,7 @@
     });
 
     render();
+    setInterval(render, 60000);
   </script>
 </body>
 </html>
