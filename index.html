@@ -459,6 +459,10 @@
       }
     }
 
+    function isDefaultField(value, defaultValue) {
+      return JSON.stringify(value) === JSON.stringify(defaultValue);
+    }
+
     async function loadState() {
       let local;
       try {
@@ -468,7 +472,21 @@
       }
       const remote = await fetchRemoteState();
       if (!remote) return local;
-      return (Date.parse(remote.updated || '') > Date.parse(local.updated || '')) ? remote : local;
+
+      const merged = { ...local, ...remote };
+      const keys = ['workout', 'calories', 'weight', 'sleep', 'week', 'slip', 'adjustment', 'next'];
+      for (const key of keys) {
+        if (remote[key] === undefined) continue;
+        const remoteDefault = isDefaultField(remote[key], defaultState[key]);
+        const localHasRealValue = local[key] !== undefined && !isDefaultField(local[key], defaultState[key]);
+        if (!remoteDefault || !localHasRealValue) {
+          merged[key] = remote[key];
+        }
+      }
+      if (Date.parse(remote.updated || '') >= Date.parse(local.updated || '')) {
+        merged.updated = remote.updated;
+      }
+      return merged;
     }
 
     function coachVerdict(state) {
