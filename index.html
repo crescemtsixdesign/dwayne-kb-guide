@@ -203,10 +203,20 @@
     .card p { margin: 0; color: var(--muted); line-height: 1.45; font-size: .92rem; }
 
     .stack { display: grid; gap: 10px; }
+    .food-list { display: grid; gap: 10px; margin-top: 10px; }
+    .food-row {
+      display: flex; justify-content: space-between; gap: 12px; align-items: flex-start;
+      padding: 12px; border-radius: 14px; border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .food-row .meal { font-weight: 700; color: var(--text); }
+    .food-row .tiny { margin-top: 4px; }
+    .empty { color: var(--muted); font-size: .92rem; line-height: 1.45; }
+
     .note {
       margin-top: 12px;
-      background: rgba(103,183,255,.08);
       border: 1px solid rgba(103,183,255,.18);
+      background: rgba(103,183,255,.08);
       border-radius: 16px;
       padding: 14px;
     }
@@ -266,6 +276,17 @@
         </div>
 
         <div class="hero-grid" id="todayStats"></div>
+
+        <article class="card" id="foodLogCard" style="margin-top:12px;">
+          <div class="row">
+            <div>
+              <div class="label">Food log</div>
+              <h3 style="margin:0;">Today’s food</h3>
+            </div>
+            <div class="pill" id="foodCount">0 items</div>
+          </div>
+          <div class="food-list" id="foodList" aria-live="polite"></div>
+        </article>
 
         <div class="meter" aria-label="Coach score meter">
           <div class="meter-head">
@@ -343,7 +364,8 @@
     const STATE_URL = 'state.json';
     const defaultState = {
       workout: { label: 'Missed this morning', tone: 'bad', detail: 'Use the after-work rescue session.' },
-      calories: { label: 'No food logged yet', tone: 'warn', detail: 'Nothing reported today.' },
+      calories: { label: 'No food logged yet', tone: 'warn', detail: 'See the food card for entries.' },
+      foods: [],
       weight: { label: '216.6 lb', tone: 'warn', detail: 'Last recorded weigh-in.' },
       sleep: { label: 'Short night', tone: 'warn', detail: 'Stayed up too late last night.' },
       score: 41,
@@ -393,6 +415,7 @@
     function normalizeState(raw) {
       const state = Object.assign({}, defaultState, raw || {});
       state.week = Object.assign({}, defaultState.week, raw && raw.week ? raw.week : {});
+      state.foods = Array.isArray(raw && raw.foods) ? raw.foods : [];
       const currentWeek = weekAnchorKey();
       if (state.weekAnchor !== currentWeek) {
         state.weekAnchor = currentWeek;
@@ -474,7 +497,7 @@
       if (!remote) return local;
 
       const merged = { ...local, ...remote };
-      const keys = ['workout', 'calories', 'weight', 'sleep', 'week', 'slip', 'adjustment', 'next'];
+      const keys = ['workout', 'calories', 'foods', 'weight', 'sleep', 'week', 'slip', 'adjustment', 'next'];
       for (const key of keys) {
         if (remote[key] === undefined) continue;
         const remoteDefault = isDefaultField(remote[key], defaultState[key]);
@@ -551,6 +574,18 @@
             ${foodChip}
           </div>`;
       }).join('');
+
+      const foods = Array.isArray(state.foods) ? state.foods : [];
+      document.getElementById('foodCount').textContent = `${foods.length} item${foods.length === 1 ? '' : 's'}`;
+      document.getElementById('foodList').innerHTML = foods.length
+        ? foods.map((entry, i) => `
+            <div class="food-row">
+              <div>
+                <div class="meal">${entry}</div>
+                <div class="tiny">Logged item ${i + 1}</div>
+              </div>
+            </div>`).join('')
+        : `<div class="empty">No food logged yet. When you report meals, they show up here like a normal tracker app.</div>`;
 
       document.getElementById('weekStats').innerHTML = [
         ['Workouts completed', state.week.workouts],

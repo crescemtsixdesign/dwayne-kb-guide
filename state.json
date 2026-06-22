@@ -5,10 +5,14 @@
     "detail": "Use the after-work rescue session."
   },
   "calories": {
-    "label": "Lunch + almonds logged",
+    "label": "2 food entries logged",
     "tone": "warn",
-    "detail": "Grilled chicken salad with ranch, croutons, cheese, and a small avocado; plus about 1/2 cup wasabi almonds."
+    "detail": "See the food card for the day."
   },
+  "foods": [
+    "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
+    "Snack: wasabi almonds"
+  ],
   "weight": {
     "label": "216.6 lb",
     "tone": "warn",
