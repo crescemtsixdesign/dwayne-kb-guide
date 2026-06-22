@@ -1,0 +1,36 @@
+{
+  "workout": {
+    "label": "Missed this morning",
+    "tone": "bad",
+    "detail": "Use the after-work rescue session."
+  },
+  "calories": {
+    "label": "No food logged yet",
+    "tone": "warn",
+    "detail": "Nothing reported today."
+  },
+  "weight": {
+    "label": "216.6 lb",
+    "tone": "warn",
+    "detail": "Last recorded weigh-in."
+  },
+  "sleep": {
+    "label": "Short night",
+    "tone": "warn",
+    "detail": "Stayed up too late last night."
+  },
+  "score": 41,
+  "week": {
+    "workouts": "0 / 4 logged",
+    "avgCalories": "No food logged yet",
+    "weightTrend": "No weekly trend yet",
+    "streak": "0 days",
+    "completedWorkouts": 0
+  },
+  "weekAnchor": "2026-06-21",
+  "workoutLogKey": null,
+  "slip": "You skipped the morning workout and have not reported food yet. That is the current reality.",
+  "adjustment": "Do the after-work rescue workout and keep food honest: only log calories when you actually eat.",
+  "next": "Get the workout done after work. Do not mark the day as on track until the session is complete.",
+  "updated": "2026-06-22T16:23:42Z"
+}

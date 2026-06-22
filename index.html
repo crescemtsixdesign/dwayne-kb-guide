@@ -323,7 +323,7 @@
 
     <div class="note good">
       <strong>Quick setup</strong>
-      <div class="tiny">This page saves quick taps in your browser only. Open it on your phone and use it as a simple daily check-in. It refreshes automatically so the date, week, and time stay current.</div>
+      <div class="tiny">This page saves quick taps in your browser only. It also pulls the latest chat-synced state from the repo so the dashboard stays current after health updates. Open it on your phone and use it as a simple daily check-in.</div>
     </div>
 
     <div class="footer" id="footerMeta"></div>
@@ -331,6 +331,7 @@
 
   <script>
     const LS_KEY = 'dwayne-health-dashboard-v2';
+    const STATE_URL = 'state.json';
     const defaultState = {
       workout: { label: 'Missed this morning', tone: 'bad', detail: 'Use the after-work rescue session.' },
       calories: { label: 'No food logged yet', tone: 'warn', detail: 'Nothing reported today.' },
@@ -419,6 +420,28 @@
       return new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(date);
     }
 
+    async function fetchRemoteState() {
+      try {
+        const res = await fetch(`${STATE_URL}?v=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
+        if (!res.ok) return null;
+        return normalizeState(await res.json());
+      } catch {
+        return null;
+      }
+    }
+
+    async function loadState() {
+      let local;
+      try {
+        local = normalizeState(JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
+      } catch {
+        local = normalizeState(defaultState);
+      }
+      const remote = await fetchRemoteState();
+      if (!remote) return local;
+      return (Date.parse(remote.updated || '') > Date.parse(local.updated || '')) ? remote : local;
+    }
+
     function coachVerdict(state) {
       if (state.workout.tone === 'bad' && state.calories.label === 'No food logged yet') {
         return {
@@ -454,10 +477,11 @@
       return `You have ${state.week.completedWorkouts} workouts logged. Keep the trend alive and avoid a late-week collapse.`;
     }
 
-    function render() {
-      const state = loadState();
+    async function render() {
+      const state = await loadState();
       document.getElementById('currentTime').textContent = `Now ${fmtNow()}`;
       document.getElementById('weekWindow').textContent = `Week of ${formatWeekRange()} • starts Sunday`;
+
       const stats = [
         ['Workout', state.workout.label, state.workout.detail, state.workout.tone],
         ['Calories', state.calories.label, state.calories.detail, state.calories.tone],
@@ -505,8 +529,8 @@
       saveState(state);
     }
 
-    document.getElementById('doneWorkout').addEventListener('click', () => {
-      const state = loadState();
+    document.getElementById('doneWorkout').addEventListener('click', async () => {
+      const state = await loadState();
       state.workout = { label: 'Done', tone: 'good', detail: 'Workout check-in saved from this device.' };
       state.week.completedWorkouts = Number(state.week.completedWorkouts || 0) + 1;
       state.week.workouts = `${state.week.completedWorkouts} / 4 logged`;
@@ -516,8 +540,8 @@
       render();
     });
 
-    document.getElementById('onTargetCalories').addEventListener('click', () => {
-      const state = loadState();
+    document.getElementById('onTargetCalories').addEventListener('click', async () => {
+      const state = await loadState();
       state.calories = { label: 'On target', tone: 'good', detail: 'Calories are aligned with the target for fat loss.' };
       state.score = Math.min(100, state.score + 3);
       state.updated = new Date().toISOString();
@@ -525,9 +549,9 @@
       render();
     });
 
-    document.getElementById('saveWeighIn').addEventListener('click', () => {
-      const state = loadState();
-      const input = prompt('Enter today\'s weigh-in (lb)', state.weight.label.replace(' lb', ''));
+    document.getElementById('saveWeighIn').addEventListener('click', async () => {
+      const state = await loadState();
+      const input = prompt("Enter today's weigh-in (lb)", state.weight.label.replace(' lb', ''));
       if (!input) return;
       const value = Number(input);
       if (Number.isNaN(value)) return alert('Please enter a number.');
