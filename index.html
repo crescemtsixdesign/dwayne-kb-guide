@@ -260,7 +260,7 @@
 
     <div class="section-title">
       <h2>Coach notes</h2>
-      <span>What is slipping + the adjustment</span>
+      <span id="weekWindow">Sun–Sat week</span>
     </div>
 
     <section class="grid">
@@ -312,11 +312,13 @@
       sleep: { label: '6.8 h', tone: 'warn', detail: 'Energy is okay, but the bedtime window is still tight.' },
       score: 78,
       week: {
-        workouts: '3 / 4',
+        workouts: '0 / 4 logged',
         avgCalories: '1,815 / 1,900',
         weightTrend: '-1.2 lb',
-        streak: '5 days'
+        streak: '5 days',
+        completedWorkouts: 0
       },
+      weekAnchor: null,
       slip: 'Calories have been a little high on late evenings and sleep is still under 7 hours. That combination will slow fat loss if it keeps repeating.',
       adjustment: 'Pre-log dinner, close the kitchen by 8:30 PM, and protect a 7+ hour sleep window tonight.',
       next: 'Walk 20 minutes after dinner, drink water now, and send the workout check-in once the session is done.',
@@ -329,11 +331,47 @@
       bad: { text: 'Behind', cls: 'bad' }
     };
 
+    function startOfWeek(date) {
+      const d = new Date(date);
+      d.setHours(0, 0, 0, 0);
+      d.setDate(d.getDate() - d.getDay());
+      return d;
+    }
+
+    function weekAnchorKey(date = new Date()) {
+      const d = startOfWeek(date);
+      const year = d.getFullYear();
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    function formatWeekRange(date = new Date()) {
+      const start = startOfWeek(date);
+      const end = new Date(start);
+      end.setDate(start.getDate() + 6);
+      const fmt = new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric' });
+      return `${fmt.format(start)} — ${fmt.format(end)}`;
+    }
+
+    function normalizeState(raw) {
+      const state = Object.assign({}, defaultState, raw || {});
+      state.week = Object.assign({}, defaultState.week, raw && raw.week ? raw.week : {});
+      const currentWeek = weekAnchorKey();
+      if (state.weekAnchor !== currentWeek) {
+        state.weekAnchor = currentWeek;
+        state.week.completedWorkouts = 0;
+      }
+      state.week.completedWorkouts = Number(state.week.completedWorkouts || 0);
+      state.week.workouts = `${state.week.completedWorkouts} / 4 logged`;
+      return state;
+    }
+
     function loadState() {
       try {
-        return Object.assign({}, defaultState, JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
+        return normalizeState(JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
       } catch {
-        return defaultState;
+        return normalizeState(defaultState);
       }
     }
 
@@ -353,6 +391,7 @@
 
     function render() {
       const state = loadState();
+      document.getElementById('weekWindow').textContent = `Week of ${formatWeekRange()} • starts Sunday`;
       const stats = [
         ['Workout', state.workout.label, state.workout.detail, state.workout.tone],
         ['Calories', state.calories.label, state.calories.detail, state.calories.tone],
@@ -396,6 +435,8 @@
     document.getElementById('doneWorkout').addEventListener('click', () => {
       const state = loadState();
       state.workout = { label: 'Done', tone: 'good', detail: 'Workout check-in saved from this device.' };
+      state.week.completedWorkouts = Number(state.week.completedWorkouts || 0) + 1;
+      state.week.workouts = `${state.week.completedWorkouts} / 4 logged`;
       state.score = Math.min(100, state.score + 4);
       state.updated = new Date().toISOString();
       saveState(state);
