@@ -1,498 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dwayne's KB Full Body Program</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0f0f0f;
-    color: #e0e0e0;
-    padding: 16px 16px 80px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #fff;
-    margin: 8px 0 4px;
-  }
-  .subtitle {
-    color: #999;
-    font-size: 0.85rem;
-    margin-bottom: 20px;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Dwayne Health Dashboard</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-elev: #0f1a2f;
+      --card: #111c31;
+      --card-2: #15233d;
+      --text: #ecf2ff;
+      --muted: #92a0bf;
+      --line: rgba(255,255,255,.08);
+      --green: #33d17a;
+      --yellow: #f5c451;
+      --red: #ff6b6b;
+      --blue: #67b7ff;
+      --shadow: 0 16px 40px rgba(0,0,0,.28);
+      --radius: 18px;
+    }
 
-  /* ===== TABS ===== */
-  .tab-bar {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 24px;
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 4px;
-  }
-  .tab-btn {
-    flex: 1;
-    padding: 12px 8px;
-    border: none;
-    border-radius: 10px;
-    background: transparent;
-    color: #888;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .tab-btn.active {
-    background: #2d4a2d;
-    color: #7ddf7d;
-  }
-  .tab-btn.active-stretch {
-    background: #3a2d4a;
-    color: #b07ddf;
-  }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(103,183,255,.14), transparent 30%),
+        linear-gradient(180deg, #06101c 0%, var(--bg) 34%, #060b14 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      min-height: 100vh;
+    }
 
-  /* ===== SCHEDULE ===== */
-  .schedule-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
-    margin: 16px 0 20px;
-  }
-  .schedule-grid div {
-    text-align: center;
-    padding: 8px 4px;
-    border-radius: 8px;
-    font-size: 0.7rem;
-    font-weight: 600;
-  }
-  .day-kb { background: #2d4a2d; color: #7ddf7d; }
-  .day-stretch { background: #3a2d4a; color: #b07ddf; }
-  .day-rest { background: #2a2a2a; color: #888; }
+    .wrap {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      padding: 18px 14px 34px;
+    }
 
-  /* ===== EXERCISE CARDS (KB) ===== */
-  .exercise {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-left: 4px solid #ffa94d;
-  }
-  .exercise-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-  .exercise-name {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: #fff;
-  }
-  .exercise-dosage {
-    color: #7ddf7d;
-    font-weight: 600;
-    font-size: 0.85rem;
-  }
-  .exercise-why {
-    color: #aaa;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  .video-wrap {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    background: #000;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .video-wrap iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-  }
-  .notes {
-    background: #1f1f1f;
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    color: #bbb;
-    margin-top: 6px;
-    border-left: 3px solid #555;
-  }
-  .big-note {
-    background: #2a2d1a;
-    border: 1px solid #4a4d2a;
-    border-radius: 10px;
-    padding: 14px;
-    margin: 20px 0;
-    font-size: 0.85rem;
-    color: #ddd;
-  }
-  .big-note strong { color: #ffa94d; }
-  .big-note-stretch {
-    background: #2a1d2d;
-    border: 1px solid #4a2d4a;
-    border-radius: 10px;
-    padding: 14px;
-    margin: 20px 0;
-    font-size: 0.85rem;
-    color: #ddd;
-  }
-  .big-note-stretch strong { color: #b07ddf; }
-  hr {
-    border: none;
-    border-top: 1px solid #2a2a2a;
-    margin: 28px 0;
-  }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
 
-  /* ===== STRETCH CARDS ===== */
-  .stretch-card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 12px;
-    border-left: 4px solid #b07ddf;
-  }
-  .stretch-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-bottom: 6px;
-  }
-  .stretch-name {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #ddd;
-  }
-  .stretch-duration {
-    color: #b07ddf;
-    font-weight: 600;
-    font-size: 0.85rem;
-  }
-  .stretch-desc {
-    color: #999;
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      margin-bottom: 8px;
+    }
 
-  /* ===== PROGRESS TABLE ===== */
-  .progress-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.85rem;
-    margin: 12px 0;
-  }
-  .progress-table th {
-    text-align: left;
-    padding: 8px 10px;
-    background: #2a2a2a;
-    color: #ffa94d;
-    font-weight: 600;
-  }
-  .progress-table td {
-    padding: 8px 10px;
-    border-bottom: 1px solid #2a2a2a;
-  }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.05;
+    }
 
-  /* ===== ANCHOR ===== */
-  .anchor {
-    scroll-margin-top: 20px;
-  }
+    .sub {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.45;
+      max-width: 40rem;
+    }
 
-  /* ===== HOME BUTTON ===== */
-  .back-to-top {
-    display: block;
-    text-align: center;
-    color: #ffa94d;
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin-top: 24px;
-    padding: 8px;
-  }
-</style>
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-weight: 700;
+      font-size: .84rem;
+      white-space: nowrap;
+    }
+
+    .score {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 12px;
+    }
+
+    .hero, .mini, .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero { padding: 16px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .stat {
+      padding: 12px;
+      background: rgba(9,16,28,.75);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+    }
+
+    .label { color: var(--muted); font-size: .78rem; margin-bottom: 6px; }
+    .value { font-size: 1.1rem; font-weight: 800; line-height: 1.15; }
+    .helper { color: var(--muted); font-size: .8rem; margin-top: 4px; }
+
+    .meter {
+      margin-top: 14px;
+      padding: 14px;
+      background: rgba(7,12,22,.72);
+      border-radius: 16px;
+      border: 1px solid var(--line);
+    }
+    .meter-head {
+      display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .meter-bar {
+      height: 12px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden;
+    }
+    .meter-fill {
+      height: 100%; border-radius: inherit; width: 0%;
+      background: linear-gradient(90deg, var(--red), var(--yellow), var(--green));
+      transition: width .25s ease;
+    }
+
+    .actions {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    button {
+      appearance: none;
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 10px;
+      background: #16243e;
+      color: var(--text);
+      font-weight: 700;
+      font-size: .86rem;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    button:active { transform: translateY(1px); }
+    button.primary { background: linear-gradient(180deg, #1b335d, #13233e); }
+
+    .grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .section-title {
+      display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+      margin: 18px 2px 10px;
+    }
+    .section-title h2 { margin: 0; font-size: 1rem; letter-spacing: .01em; }
+    .section-title span { color: var(--muted); font-size: .82rem; }
+
+    .card { padding: 14px; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02)); }
+    .row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+    .status {
+      display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 800;
+      padding: 8px 10px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid var(--line);
+    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 4px rgba(245,196,81,.12); }
+    .good .dot { background: var(--green); box-shadow: 0 0 0 4px rgba(51,209,122,.12); }
+    .warn .dot { background: var(--yellow); box-shadow: 0 0 0 4px rgba(245,196,81,.12); }
+    .bad .dot { background: var(--red); box-shadow: 0 0 0 4px rgba(255,107,107,.12); }
+
+    .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.45; font-size: .92rem; }
+
+    .stack { display: grid; gap: 10px; }
+    .note {
+      margin-top: 12px;
+      background: rgba(103,183,255,.08);
+      border: 1px solid rgba(103,183,255,.18);
+      border-radius: 16px;
+      padding: 14px;
+    }
+    .note strong { display: block; margin-bottom: 5px; }
+
+    .tiny { color: var(--muted); font-size: .78rem; }
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .8rem;
+      text-align: center;
+    }
+    a { color: #8fc8ff; text-decoration: none; }
+
+    @media (max-width: 720px) {
+      .topbar, .score, .hero-grid, .actions { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; }
+      .pill { width: fit-content; }
+    }
+  </style>
 </head>
 <body>
+  <main class="wrap">
+    <section class="topbar">
+      <div>
+        <div class="eyebrow">Daily accountability</div>
+        <h1>Health Dashboard</h1>
+        <p class="sub">Mobile-first coaching view for workout status, food/calories, weigh-in, weekly trend, and the one next action that matters today.</p>
+      </div>
+      <div class="pill" id="lastUpdated">Updated —</div>
+    </section>
 
-<h1>🏋️ 3-Day KB Full Body</h1>
-<p class="subtitle">Dwayne • Fat loss + muscle preservation • ~30 min sessions</p>
-<p class="subtitle"><a href="squat-fixes.html" style="color:#ffa94d;text-decoration:none;font-weight:700;">New: Squat Fixes</a> • quick reset page with YouTube links</p>
+    <section class="score">
+      <article class="hero" aria-labelledby="today-title">
+        <div class="row">
+          <div>
+            <div class="label">Today</div>
+            <h2 id="today-title" style="margin:0;font-size:1.3rem;">Readiness snapshot</h2>
+          </div>
+          <div class="pill" id="coach-score">Score —</div>
+        </div>
 
-<!-- TABS -->
-<div class="tab-bar" role="tablist">
-  <button class="tab-btn active" data-tab="kb" role="tab" aria-selected="true">🏋️ KB Workout</button>
-  <button class="tab-btn" data-tab="stretch" role="tab" aria-selected="false">🧘 Stretching</button>
-</div>
+        <div class="hero-grid" id="todayStats"></div>
 
-<!-- ============================================================ -->
-<!-- TAB 1: KB WORKOUT -->
-<!-- ============================================================ -->
-<div id="tab-kb" class="tab-content active">
+        <div class="meter" aria-label="Coach score meter">
+          <div class="meter-head">
+            <strong>Coach score</strong>
+            <span class="tiny" id="scoreLabel">—</span>
+          </div>
+          <div class="meter-bar"><div class="meter-fill" id="scoreFill"></div></div>
+        </div>
 
-  <!-- Week view -->
-  <h2>📅 Weekly Schedule</h2>
-  <div class="schedule-grid">
-    <div class="day-kb">M<br>KB</div>
-    <div class="day-stretch">T<br>Str</div>
-    <div class="day-kb">W<br>KB</div>
-    <div class="day-stretch">T<br>Str</div>
-    <div class="day-kb">F<br>KB</div>
-    <div class="day-rest">S<br>—</div>
-    <div class="day-rest">S<br>—</div>
-  </div>
+        <div class="actions" aria-label="Quick actions">
+          <button class="primary" id="doneWorkout">Mark workout done</button>
+          <button id="onTargetCalories">Calories on target</button>
+          <button id="saveWeighIn">Save weigh-in</button>
+        </div>
+      </article>
 
-  <!-- Start here -->
-  <div class="big-note">
-    <strong>⚡ Start here every session:</strong> 3-min warmup — jumping jacks, bodyweight squats, arm circles, leg swings. Then hit the circuit below.<br><br>
-    <strong>Rule:</strong> Last 2 reps of every set should be genuinely hard. If not, go heavier or add a rep next time. Rest 60s between sets.
-  </div>
+      <aside class="mini card">
+        <div class="label">This week</div>
+        <div class="stack" id="weekStats" style="margin-top:10px;"></div>
+      </aside>
+    </section>
 
-  <hr>
-
-  <h2 id="exercises">🏋️ The 5 Exercises</h2>
-
-  <!-- 1. Goblet Squat -->
-  <div class="exercise anchor" id="goblet-squat">
-    <div class="exercise-header">
-      <span class="exercise-name">1. Goblet Squat</span>
-      <span class="exercise-dosage">3 × 10-12 · 60s rest</span>
+    <div class="section-title">
+      <h2>Coach notes</h2>
+      <span>What is slipping + the adjustment</span>
     </div>
-    <div class="exercise-why">
-      <strong>Why:</strong> Main leg builder. Hits quads, glutes, core. Biggest muscle groups = most calorie burn per minute.
+
+    <section class="grid">
+      <article class="card warn">
+        <div class="row">
+          <div>
+            <div class="status warn"><span class="dot"></span> Watch</div>
+            <h3 style="margin-top:10px;">Where it is slipping</h3>
+            <p id="slipText"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card good">
+        <div class="row">
+          <div>
+            <div class="status good"><span class="dot"></span> Next action</div>
+            <h3 style="margin-top:10px;">One move for today</h3>
+            <p id="nextAction"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="row">
+          <div>
+            <div class="status"><span class="dot"></span> Trend</div>
+            <h3 style="margin-top:10px;">Weekly readout</h3>
+            <p id="trendText"></p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="note">
+      <strong>Quick setup</strong>
+      <div class="tiny">This page saves quick taps in your browser only. Open it on your phone and use it as a simple daily check-in. <a href="squat-fixes.html">Squat fixes</a> stays available in the repo.</div>
     </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/0eW8av1WC4g" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="notes">Hold bell by the horns at your chest. Elbows tucked. Sit back like reaching for a low chair. Heels down. Go below parallel if you can.</div>
-  </div>
 
-  <!-- 2. Single Arm Row -->
-  <div class="exercise anchor" id="row">
-    <div class="exercise-header">
-      <span class="exercise-name">2. Single Arm Row</span>
-      <span class="exercise-dosage">3 × 10-12/arm · 60s rest</span>
-    </div>
-    <div class="exercise-why">
-      <strong>Why:</strong> Biggest upper body muscle group (back). Counteracts desk posture. Unilateral forces core to work harder.
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/l5qelXL5nfs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="notes">Hinge at hip. Brace free hand on thigh or chair. Pull bell to your hip, not armpit. Squeeze back at top. Don't twist your torso.</div>
-  </div>
+    <div class="footer" id="footerMeta"></div>
+  </main>
 
-  <!-- 3. Overhead Press -->
-  <div class="exercise anchor" id="press">
-    <div class="exercise-header">
-      <span class="exercise-name">3. Overhead Press</span>
-      <span class="exercise-dosage">3 × 8-10/arm · 60s rest</span>
-    </div>
-    <div class="exercise-why">
-      <strong>Why:</strong> Only vertical push. Preserves shoulder strength and upper chest. Key for long-term shoulder health.
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/6fUrgob01UQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="notes"><strong>First: clean the bell to rack position.</strong> <a href="https://www.youtube.com/watch?v=wkr29bju4bo" target="_blank" style="color:#7ddf7d;">Watch the clean here</a> if needed. From rack (bell on forearm at chest), press straight up. Wrist straight. Don't flare elbows. Brace core.</div>
-  </div>
+  <script>
+    const LS_KEY = 'dwayne-health-dashboard-v1';
+    const defaultState = {
+      workout: { label: 'Done', tone: 'good', detail: 'Kettlebell session completed this morning.' },
+      calories: { label: '1,780 / 1,900', tone: 'warn', detail: 'Slightly under target; keep protein high at dinner.' },
+      weight: { label: '214.8 lb', tone: 'good', detail: '-1.2 lb vs last week.' },
+      sleep: { label: '6.8 h', tone: 'warn', detail: 'Energy is okay, but the bedtime window is still tight.' },
+      score: 78,
+      week: {
+        workouts: '3 / 4',
+        avgCalories: '1,815 / 1,900',
+        weightTrend: '-1.2 lb',
+        streak: '5 days'
+      },
+      slip: 'Calories have been a little high on late evenings and sleep is still under 7 hours. That combination will slow fat loss if it keeps repeating.',
+      adjustment: 'Pre-log dinner, close the kitchen by 8:30 PM, and protect a 7+ hour sleep window tonight.',
+      next: 'Walk 20 minutes after dinner, drink water now, and send the workout check-in once the session is done.',
+      updated: new Date().toISOString()
+    };
 
-  <!-- 4. KB Swing -->
-  <div class="exercise anchor" id="swing">
-    <div class="exercise-header">
-      <span class="exercise-name">4. Two-Handed KB Swing</span>
-      <span class="exercise-dosage">3 × 15-20 · 45s rest</span>
-    </div>
-    <div class="exercise-why">
-      <strong>Why:</strong> Fat-loss weapon. Full-body explosive movement. Torches calories, builds hamstrings, glutes, lower back, grip.
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/1Qi0NQW89Oc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="notes"><strong>This is a hip hinge, NOT a squat.</strong> Hips go back, knees barely bend. Power comes from snapping hips forward. Arms are just ropes. Back stays flat.</div>
-  </div>
+    const toneMap = {
+      good: { text: 'On track', cls: 'good' },
+      warn: { text: 'Needs attention', cls: 'warn' },
+      bad: { text: 'Behind', cls: 'bad' }
+    };
 
-  <!-- 5. Reverse Lunge -->
-  <div class="exercise anchor" id="lunge">
-    <div class="exercise-header">
-      <span class="exercise-name">5. Reverse Lunge</span>
-      <span class="exercise-dosage">2 × 8-10/leg · 60s rest</span>
-    </div>
-    <div class="exercise-why">
-      <strong>Why:</strong> Exposes imbalances. Builds hip stability. Easier on knees than forward lunges. Each leg works harder pound-for-pound.
-    </div>
-    <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/y2jz7ot6r2I" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <div class="notes">Hold bell at chest. Step back — not forward. Front knee behind toes. Both knees bend to 90°. Drive through front heel to return. Keep torso upright.</div>
-  </div>
-
-  <hr>
-
-  <h2>📋 Progression</h2>
-  <table class="progress-table">
-    <tr><th>Phase</th><th>Duration</th><th>Focus</th></tr>
-    <tr><td>Foundation</td><td>Weeks 1-2</td><td>Learn form. Find starting weights.</td></tr>
-    <tr><td>Build</td><td>Weeks 3-6</td><td>Add weight or reps each session.</td></tr>
-    <tr><td>Consolidate</td><td>Weeks 7-8</td><td>Maintain, assess, reset if needed.</td></tr>
-  </table>
-
-  <div class="big-note">
-    <strong>🔑 The one-sentence summary:</strong> Wake up. Warm up 3 min. Hit 5 exercises hard with 60s rest. Walk away knowing you did something most people won't.
-  </div>
-</div>
-<!-- end tab-kb -->
-
-<!-- ============================================================ -->
-<!-- TAB 2: STRETCHING -->
-<!-- ============================================================ -->
-<div id="tab-stretch" class="tab-content">
-
-  <h2>🧘 Pelvic Floor Days</h2>
-  <p style="color:#999;font-size:0.9rem;margin-bottom:16px;">
-    <strong>When:</strong> Tuesday & Thursday · 10-20 min total<br>
-    <strong>Main goal:</strong> improve pelvic floor control and relaxation to support better sexual control.<br>
-    <strong>Bias:</strong> Relax first. Light strengthening only after you can actually let the area go.
-  </p>
-
-  <div class="big-note-stretch">
-    <strong>Read this first:</strong> Video 1 is your foundation. It is the down-training / relaxation day. Video 2 is the light control day. Do not turn Thursday into a hard ab workout or a max-Kegel session. If you feel more tight, urgent, or clenched afterward, back off and return to Day 1 only for a week.
-  </div>
-
-  <div class="stretch-card anchor" id="pelvic-day-1">
-    <div class="stretch-header">
-      <span class="stretch-name">Tuesday — Day 1: Relax + Lengthen</span>
-      <span class="stretch-duration">10-15 min</span>
-    </div>
-    <div class="stretch-desc">Use this as the main pelvic floor reset day. Focus on diaphragmatic breathing, pelvic floor drop, and hip opening. No active squeeze on the exhale.</div>
-    <div class="notes" style="margin-top:10px;">
-      <strong>Do this order:</strong><br>
-      1) Pelvic floor drop breathing — 10-15 breaths<br>
-      2) Supported deep squat or happy baby — 10-15 breaths<br>
-      3) Dynamic frog — 10 slow reps<br>
-      4) Kneeling adductor stretch — 8-10 breaths each side<br>
-      5) 90/90 hip switches — 6-8 reps each side<br><br>
-      <strong>Cue:</strong> Inhale = ribs and belly expand, pelvic floor drops. Exhale = just let it recoil. No forced Kegel.
-    </div>
-    <div class="video-wrap" style="margin-top:12px;">
-      <iframe src="https://www.youtube.com/embed/a4vfejND8J8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-
-  <div class="stretch-card anchor" id="pelvic-day-2">
-    <div class="stretch-header">
-      <span class="stretch-name">Thursday — Day 2: Relax + Light Control</span>
-      <span class="stretch-duration">10-15 min</span>
-    </div>
-    <div class="stretch-desc">Start with release work, then add a small dose of controlled pelvic floor strength. This day is not about going hard. It is about learning to contract and fully release.</div>
-    <div class="notes" style="margin-top:10px;">
-      <strong>Do this order:</strong><br>
-      1) Stir the pot — 45-60 sec each direction<br>
-      2) Happy baby breathing — 5-8 slow breaths<br>
-      3) Bridge + gentle contraction — 1 set of 5-8 reps<br>
-      4) Leg lowers or hover slides — 1 set of 5/side<br>
-      5) Windshield wipers — 45-60 sec<br>
-      6) Pelvic rocks — 1 set of 8-10 reps<br>
-      7) Butterfly lying down — 60 sec finish<br><br>
-      <strong>Rule:</strong> Every contraction is gentle and controlled. Full release between reps. If this makes you feel more tense, cut the strengthening in half or skip it.
-    </div>
-    <div class="video-wrap" style="margin-top:12px;">
-      <iframe src="https://www.youtube.com/embed/97jeMF0xCwU" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-
-  <div class="stretch-card anchor" id="daily-micro-dose" style="border-left-color:#dda94d;">
-    <div class="stretch-header">
-      <span class="stretch-name">⭐ Daily 2-Minute Reset</span>
-      <span class="stretch-duration">2 min</span>
-    </div>
-    <div class="stretch-desc">
-      On any day you feel tight or stressed: lie on your back, feet up, and do 10 slow breaths. Think belly + ribs expand, pelvic floor drops on the inhale, then just relax on the exhale. This is the fastest way to keep the habit alive even when the full routine doesn't happen.
-    </div>
-  </div>
-
-  <div class="big-note-stretch">
-    <strong>What success looks like:</strong> less clenching, easier belly breathing, better ability to relax on command, and gradually better control. What does <em>not</em> count as progress: just doing more Kegels. Relaxation first, control second.
-  </div>
-
-</div>
-<!-- end tab-stretch -->
-
-<a href="#" class="back-to-top">↑ Back to top</a>
-
-<p style="text-align:center;color:#555;font-size:0.7rem;margin-top:20px;">
-  Saved to Obsidian Health vault &middot; Updated June 2026
-</p>
-
-<script>
-(function() {
-  'use strict';
-  const tabs = document.querySelectorAll('.tab-btn');
-  const contents = {
-    kb: document.getElementById('tab-kb'),
-    stretch: document.getElementById('tab-stretch')
-  };
-
-  function switchTab(name) {
-    // Update button styles
-    tabs.forEach(function(btn) {
-      btn.classList.remove('active', 'active-stretch');
-      btn.setAttribute('aria-selected', 'false');
-    });
-    var activeBtn = document.querySelector('.tab-btn[data-tab="' + name + '"]');
-    if (!activeBtn) return;
-    activeBtn.classList.add(name === 'stretch' ? 'active-stretch' : 'active');
-    activeBtn.setAttribute('aria-selected', 'true');
-
-    // Show/hide content
-    Object.keys(contents).forEach(function(key) {
-      contents[key].classList.toggle('active', key === name);
-    });
-
-    // Scroll to top of content
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    // Update URL hash without jumping
-    history.replaceState(null, '', '#' + name);
-  }
-
-  // Click handlers
-  tabs.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      switchTab(this.getAttribute('data-tab'));
-    });
-  });
-
-  // On page load, check URL hash
-  var hash = window.location.hash.replace('#', '');
-  if (hash === 'stretch' || hash === 'kb') {
-    switchTab(hash);
-  }
-
-  // Handle back/forward button hash changes
-  window.addEventListener('hashchange', function() {
-    var h = window.location.hash.replace('#', '');
-    if (h === 'stretch' || h === 'kb') {
-      switchTab(h);
+    function loadState() {
+      try {
+        return Object.assign({}, defaultState, JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
+      } catch {
+        return defaultState;
+      }
     }
-  });
-})();
-</script>
 
+    function saveState(state) {
+      localStorage.setItem(LS_KEY, JSON.stringify(state));
+    }
+
+    function scoreLabel(score) {
+      if (score >= 85) return 'Strong day';
+      if (score >= 70) return 'Keep pushing';
+      return 'Reset and recover';
+    }
+
+    function fmtTime(iso) {
+      return new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+    }
+
+    function render() {
+      const state = loadState();
+      const stats = [
+        ['Workout', state.workout.label, state.workout.detail, state.workout.tone],
+        ['Calories', state.calories.label, state.calories.detail, state.calories.tone],
+        ['Weight', state.weight.label, state.weight.detail, state.weight.tone],
+        ['Sleep / energy', state.sleep.label, state.sleep.detail, state.sleep.tone]
+      ];
+
+      const todayStats = document.getElementById('todayStats');
+      todayStats.innerHTML = stats.map(([label, value, helper, tone]) => {
+        const cls = toneMap[tone]?.cls || 'warn';
+        return `
+          <div class="stat ${cls}">
+            <div class="label">${label}</div>
+            <div class="value">${value}</div>
+            <div class="helper">${helper}</div>
+          </div>`;
+      }).join('');
+
+      document.getElementById('weekStats').innerHTML = [
+        ['Workouts completed', state.week.workouts],
+        ['Avg calories vs target', state.week.avgCalories],
+        ['Weight trend', state.week.weightTrend],
+        ['Adherence streak', state.week.streak]
+      ].map(([k, v]) => `
+        <div class="stat" style="padding:12px 12px 11px;">
+          <div class="label">${k}</div>
+          <div class="value" style="font-size:1rem;">${v}</div>
+        </div>`).join('');
+
+      document.getElementById('slipText').textContent = state.slip;
+      document.getElementById('nextAction').textContent = state.adjustment + ' ' + state.next;
+      document.getElementById('trendText').textContent = `Workouts are ${state.week.workouts}, the scale trend is ${state.week.weightTrend}, and the streak is ${state.week.streak}.`;
+      document.getElementById('scoreLabel').textContent = scoreLabel(state.score);
+      document.getElementById('coach-score').textContent = `Score ${state.score}`;
+      document.getElementById('scoreFill').style.width = `${state.score}%`;
+      document.getElementById('lastUpdated').textContent = `Updated ${fmtTime(state.updated || defaultState.updated)}`;
+      document.getElementById('footerMeta').textContent = `GitHub Pages dashboard • local check-in enabled • ${new Date().getFullYear()}`;
+      saveState(state);
+    }
+
+    document.getElementById('doneWorkout').addEventListener('click', () => {
+      const state = loadState();
+      state.workout = { label: 'Done', tone: 'good', detail: 'Workout check-in saved from this device.' };
+      state.score = Math.min(100, state.score + 4);
+      state.updated = new Date().toISOString();
+      saveState(state);
+      render();
+    });
+
+    document.getElementById('onTargetCalories').addEventListener('click', () => {
+      const state = loadState();
+      state.calories = { label: 'On target', tone: 'good', detail: 'Calories are aligned with the target for fat loss.' };
+      state.score = Math.min(100, state.score + 3);
+      state.updated = new Date().toISOString();
+      saveState(state);
+      render();
+    });
+
+    document.getElementById('saveWeighIn').addEventListener('click', () => {
+      const state = loadState();
+      const input = prompt('Enter today\'s weigh-in (lb)', state.weight.label.replace(' lb', ''));
+      if (!input) return;
+      const value = Number(input);
+      if (Number.isNaN(value)) return alert('Please enter a number.');
+      state.weight = { label: `${value.toFixed(1)} lb`, tone: 'good', detail: 'Weigh-in saved from this device.' };
+      state.updated = new Date().toISOString();
+      saveState(state);
+      render();
+    });
+
+    render();
+  </script>
 </body>
 </html>
