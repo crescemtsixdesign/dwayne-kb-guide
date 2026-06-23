@@ -6,651 +6,90 @@
   <meta name="theme-color" content="#0b1020" />
   <title>Dwayne Health Dashboard</title>
   <style>
-    :root {
-      --bg: #07111f;
-      --bg-elev: #0f1a2f;
-      --card: #111c31;
-      --card-2: #15233d;
-      --text: #ecf2ff;
-      --muted: #92a0bf;
-      --line: rgba(255,255,255,.08);
-      --green: #33d17a;
-      --yellow: #f5c451;
-      --red: #ff6b6b;
-      --blue: #67b7ff;
-      --shadow: 0 16px 40px rgba(0,0,0,.28);
-      --radius: 18px;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(103,183,255,.14), transparent 30%),
-        linear-gradient(180deg, #06101c 0%, var(--bg) 34%, #060b14 100%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      min-height: 100vh;
-    }
-
-    .wrap {
-      width: min(980px, 100%);
-      margin: 0 auto;
-      padding: 18px 14px 34px;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 16px;
-    }
-
-    .eyebrow {
-      color: var(--blue);
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-size: .72rem;
-      margin-bottom: 8px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(1.7rem, 4vw, 2.5rem);
-      line-height: 1.05;
-    }
-
-    .sub {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: .94rem;
-      line-height: 1.45;
-      max-width: 40rem;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-      color: var(--text);
-      font-weight: 700;
-      font-size: .84rem;
-      white-space: nowrap;
-    }
-    a.pill { text-decoration: none; }
-    .pill.live {
-      background: rgba(51, 209, 122, .08);
-      border-color: rgba(51, 209, 122, .22);
-    }
-
-    .score {
-      margin-top: 16px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 12px;
-    }
-
-    .hero, .mini, .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .hero { padding: 16px; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .stat {
-      padding: 12px;
-      background: rgba(9,16,28,.75);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-    }
-
-    .label { color: var(--muted); font-size: .78rem; margin-bottom: 6px; }
-    .value { font-size: 1.1rem; font-weight: 800; line-height: 1.15; }
-    .helper { color: var(--muted); font-size: .8rem; margin-top: 4px; }
-    .light-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      margin-top: 8px; width: fit-content; padding: 6px 9px; border-radius: 999px;
-      font-size: .72rem; font-weight: 800; border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-    }
-    .light-pill.good { color: var(--green); background: rgba(51,209,122,.08); border-color: rgba(51,209,122,.18); }
-    .light-pill.warn { color: var(--yellow); background: rgba(245,196,81,.08); border-color: rgba(245,196,81,.18); }
-    .light-pill.bad { color: var(--red); background: rgba(255,107,107,.08); border-color: rgba(255,107,107,.18); }
-
-    .meter {
-      margin-top: 14px;
-      padding: 14px;
-      background: rgba(7,12,22,.72);
-      border-radius: 16px;
-      border: 1px solid var(--line);
-    }
-    .meter-head {
-      display: flex; justify-content: space-between; gap: 12px; align-items: baseline;
-      margin-bottom: 10px;
-    }
-    .meter-bar {
-      height: 12px; border-radius: 999px; background: rgba(255,255,255,.08); overflow: hidden;
-    }
-    .meter-fill {
-      height: 100%; border-radius: inherit; width: 0%;
-      background: linear-gradient(90deg, var(--red), var(--yellow), var(--green));
-      transition: width .25s ease;
-    }
-
-    .actions {
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-    }
-    button {
-      appearance: none;
-      border: 0;
-      border-radius: 14px;
-      padding: 12px 10px;
-      background: #16243e;
-      color: var(--text);
-      font-weight: 700;
-      font-size: .86rem;
-      cursor: pointer;
-      border: 1px solid rgba(255,255,255,.08);
-    }
-    button:active { transform: translateY(1px); }
-    button.primary { background: linear-gradient(180deg, #1b335d, #13233e); }
-
-    .grid {
-      display: grid;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    .section-title {
-      display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
-      margin: 18px 2px 10px;
-    }
-    .section-title h2 { margin: 0; font-size: 1rem; letter-spacing: .01em; }
-    .section-title span { color: var(--muted); font-size: .82rem; }
-
-    .card { padding: 14px; background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02)); }
-    .row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-    .status {
-      display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 800;
-      padding: 8px 10px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid var(--line);
-    }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); box-shadow: 0 0 0 4px rgba(245,196,81,.12); }
-    .good .dot { background: var(--green); box-shadow: 0 0 0 4px rgba(51,209,122,.12); }
-    .warn .dot { background: var(--yellow); box-shadow: 0 0 0 4px rgba(245,196,81,.12); }
-    .bad .dot { background: var(--red); box-shadow: 0 0 0 4px rgba(255,107,107,.12); }
-
-    .card h3 { margin: 0 0 6px; font-size: 1.02rem; }
-    .card p { margin: 0; color: var(--muted); line-height: 1.45; font-size: .92rem; }
-
-    .stack { display: grid; gap: 10px; }
-    .food-list { display: grid; gap: 10px; margin-top: 10px; }
-    .food-row {
-      display: flex; justify-content: space-between; gap: 12px; align-items: flex-start;
-      padding: 12px; border-radius: 14px; border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .food-row .meal { font-weight: 700; color: var(--text); }
-    .food-row .tiny { margin-top: 4px; }
-    .empty { color: var(--muted); font-size: .92rem; line-height: 1.45; }
-
-    .note {
-      margin-top: 12px;
-      border: 1px solid rgba(103,183,255,.18);
-      background: rgba(103,183,255,.08);
-      border-radius: 16px;
-      padding: 14px;
-    }
-    .note strong { display: block; margin-bottom: 5px; }
-    .note.good {
-      background: rgba(51,209,122,.08);
-      border-color: rgba(51,209,122,.18);
-    }
-    .note.warn {
-      background: rgba(245,196,81,.08);
-      border-color: rgba(245,196,81,.18);
-    }
-    .note.bad {
-      background: rgba(255,107,107,.08);
-      border-color: rgba(255,107,107,.18);
-    }
-
-    .tiny { color: var(--muted); font-size: .78rem; }
-    .footer {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: .8rem;
-      text-align: center;
-    }
-    a { color: #8fc8ff; text-decoration: none; }
-
-    @media (max-width: 720px) {
-      .topbar, .score, .hero-grid, .actions { grid-template-columns: 1fr; }
-      .topbar { flex-direction: column; }
-      .pill { width: fit-content; }
-    }
+    :root{--bg:#07111f;--card:#111c31;--card2:#15233d;--text:#ecf2ff;--muted:#92a0bf;--line:rgba(255,255,255,.09);--green:#33d17a;--yellow:#f5c451;--red:#ff6b6b;--blue:#67b7ff;--radius:18px;--shadow:0 16px 40px rgba(0,0,0,.28)}
+    *{box-sizing:border-box} html,body{margin:0;padding:0} body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(circle at top,rgba(103,183,255,.14),transparent 30%),linear-gradient(180deg,#06101c 0%,var(--bg) 34%,#060b14 100%);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}.wrap{width:min(980px,100%);margin:0 auto;padding:18px 14px 36px}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;margin-bottom:8px}h1{margin:0;font-size:clamp(1.7rem,4vw,2.45rem);line-height:1.05}.sub{margin:10px 0 0;color:var(--muted);font-size:.94rem;line-height:1.45;max-width:40rem}.nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.pill{display:inline-flex;align-items:center;gap:8px;padding:9px 11px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid var(--line);color:var(--text);font-weight:800;font-size:.82rem;white-space:nowrap}.pill.live{background:rgba(51,209,122,.08);border-color:rgba(51,209,122,.22)}a{color:#8fc8ff;text-decoration:none}.layout{display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:15px;overflow:hidden}.priority{border-color:rgba(103,183,255,.24);background:linear-gradient(180deg,rgba(103,183,255,.11),rgba(255,255,255,.025));margin-bottom:12px}.label{color:var(--muted);font-size:.78rem;margin-bottom:6px}.value{font-size:1.08rem;font-weight:850;line-height:1.18}.helper{color:var(--muted);font-size:.82rem;margin-top:5px;line-height:1.35}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}.stat{padding:12px;background:rgba(9,16,28,.75);border:1px solid var(--line);border-radius:16px}.status{display:inline-flex;align-items:center;gap:7px;padding:7px 9px;border-radius:999px;border:1px solid var(--line);font-size:.74rem;font-weight:900;margin-top:8px}.dot{width:9px;height:9px;border-radius:50%;background:var(--yellow)}.good .dot,.status.good .dot{background:var(--green)}.warn .dot,.status.warn .dot{background:var(--yellow)}.bad .dot,.status.bad .dot{background:var(--red)}.status.good{color:var(--green);background:rgba(51,209,122,.08);border-color:rgba(51,209,122,.2)}.status.warn{color:var(--yellow);background:rgba(245,196,81,.08);border-color:rgba(245,196,81,.2)}.status.bad{color:var(--red);background:rgba(255,107,107,.08);border-color:rgba(255,107,107,.2)}.section-title{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:18px 2px 10px}.section-title h2{margin:0;font-size:1rem}.section-title span{color:var(--muted);font-size:.82rem}.food-list{display:grid;gap:10px;margin-top:10px}.food-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start;padding:12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03)}.food-name{font-weight:800}.food-note{color:var(--muted);font-size:.8rem;margin-top:4px;line-height:1.35}.tag{font-size:.7rem;font-weight:900;border-radius:999px;padding:6px 8px;border:1px solid var(--line)}.tag.good{color:var(--green);background:rgba(51,209,122,.08);border-color:rgba(51,209,122,.2)}.tag.warn{color:var(--yellow);background:rgba(245,196,81,.08);border-color:rgba(245,196,81,.2)}.tag.bad{color:var(--red);background:rgba(255,107,107,.08);border-color:rgba(255,107,107,.2)}.empty{color:var(--muted);font-size:.92rem;line-height:1.45}.meter{margin-top:12px;padding:13px;background:rgba(7,12,22,.72);border-radius:16px;border:1px solid var(--line)}.meter-head{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:10px}.meter-bar{height:12px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}.meter-fill{height:100%;border-radius:inherit;width:0;background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));transition:width .25s ease}.stack{display:grid;gap:10px}.tiny{color:var(--muted);font-size:.78rem}.footer{margin-top:18px;color:var(--muted);font-size:.8rem;text-align:center}.chatbox{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:12px}.chatbox code{display:block;white-space:normal;color:#d7e8ff;margin-top:6px;font-size:.8rem}@media(max-width:720px){.topbar,.layout,.grid{grid-template-columns:1fr}.topbar{flex-direction:column}.nav{justify-content:flex-start}.pill{width:fit-content}.food-row{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <section class="topbar">
       <div>
-        <div class="eyebrow">Daily accountability</div>
+        <div class="eyebrow">Daily accountability · V3</div>
         <h1>Health Dashboard</h1>
-        <p class="sub">Mobile-first coaching view for workout status, food/calories, weigh-in, weekly trend, and the one next action that matters today.</p>
+        <p class="sub">Truth-first daily view. Today is separate from yesterday; chat logs update the shared state file.</p>
       </div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+      <div class="nav">
         <div class="pill live" id="currentTime">Now —</div>
         <div class="pill" id="lastUpdated">Updated —</div>
         <a class="pill" href="help.html">How to use</a>
-        <a class="pill" href="workout.html">Workout page</a>
+        <a class="pill" href="workout.html">Workout</a>
       </div>
     </section>
 
-    <section class="score">
-      <article class="hero" aria-labelledby="today-title">
-        <div class="row">
-          <div>
-            <div class="label">Today</div>
-            <h2 id="today-title" style="margin:0;font-size:1.3rem;">Readiness snapshot</h2>
-          </div>
-          <div class="pill" id="coach-score">Score — / 100</div>
+    <article class="card priority">
+      <div class="label">One move now</div>
+      <div class="value" id="oneMove">Loading…</div>
+      <div class="helper" id="oneMoveWhy"></div>
+    </article>
+
+    <section class="layout">
+      <article class="card">
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start">
+          <div><div class="label">Today</div><h2 style="margin:0;font-size:1.25rem">Readiness snapshot</h2></div>
+          <div class="pill" id="coachScore">Score —/100</div>
         </div>
-
-        <div class="hero-grid" id="todayStats"></div>
-
-        <article class="card" id="foodLogCard" style="margin-top:12px;">
-          <div class="row">
-            <div>
-              <div class="label">Food log</div>
-              <h3 style="margin:0;">Today’s food</h3>
-            </div>
-            <div class="pill" id="foodCount">0 items</div>
-          </div>
-          <div class="food-list" id="foodList" aria-live="polite"></div>
-        </article>
-
-        <div class="meter" aria-label="Coach score meter">
-          <div class="meter-head">
-            <strong>Coach score</strong>
-            <span class="tiny" id="scoreLabel">—</span>
-          </div>
-          <div class="meter-bar"><div class="meter-fill" id="scoreFill"></div></div>
-        </div>
-
-        <div class="note warn" id="coachVerdict" aria-live="polite">
-          <strong>Coach verdict</strong>
-          <div id="coachVerdictText" class="tiny"></div>
-        </div>
-
-        <div class="actions" aria-label="Quick actions">
-          <button class="primary" id="doneWorkout">Mark workout done</button>
-          <button id="onTargetCalories">Calories on target</button>
-          <button id="saveWeighIn">Save weigh-in</button>
-        </div>
+        <div class="grid" id="todayStats"></div>
+        <div class="meter" aria-label="Coach score meter"><div class="meter-head"><strong>Coach score</strong><span class="tiny" id="scoreLabel">—</span></div><div class="meter-bar"><div class="meter-fill" id="scoreFill"></div></div></div>
+        <div class="chatbox"><strong>Log by chat, not local-only buttons</strong><code>Food: chicken salad, almonds, dinner...</code><code>Workout: done / missed / modified...</code><code>Weight: 216.6 lb</code></div>
       </article>
 
-      <aside class="mini card">
+      <aside class="card">
         <div class="label">This week</div>
-        <div class="stack" id="weekStats" style="margin-top:10px;"></div>
+        <div class="stack" id="weekStats" style="margin-top:10px"></div>
       </aside>
     </section>
 
-    <div class="section-title">
-      <h2>Coach notes</h2>
-      <span id="weekWindow">Sun–Sat week</span>
-    </div>
+    <div class="section-title"><h2>Today’s food</h2><span id="foodCount">0 items</span></div>
+    <article class="card"><div class="food-list" id="foodList"></div></article>
 
+    <div class="section-title"><h2>Coach notes</h2><span id="weekWindow">Sun–Sat week</span></div>
     <section class="grid">
-      <article class="card warn">
-        <div class="row">
-          <div>
-            <div class="status warn"><span class="dot"></span> Watch</div>
-            <h3 style="margin-top:10px;">Where it is slipping</h3>
-            <p id="slipText"></p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card good">
-        <div class="row">
-          <div>
-            <div class="status good"><span class="dot"></span> Next action</div>
-            <h3 style="margin-top:10px;">One move for today</h3>
-            <p id="nextAction"></p>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="row">
-          <div>
-            <div class="status"><span class="dot"></span> Trend</div>
-            <h3 style="margin-top:10px;">Weekly readout</h3>
-            <p id="trendText"></p>
-          </div>
-        </div>
-      </article>
+      <article class="card"><div class="status warn"><span class="dot"></span> Watch</div><h3>Where it is slipping</h3><p class="helper" id="slipText"></p></article>
+      <article class="card"><div class="status good"><span class="dot"></span> Next action</div><h3>What to do</h3><p class="helper" id="nextAction"></p></article>
     </section>
 
-    <div class="note good">
-      <strong>Quick setup</strong>
-      <div class="tiny">This page saves quick taps in your browser only. It also pulls the latest chat-synced state from the repo so the dashboard stays current after health updates. Open it on your phone and use it as a simple daily check-in.</div>
-    </div>
+    <div class="section-title"><h2>Yesterday</h2><span>Preserved history</span></div>
+    <article class="card"><div id="yesterdayReadout" class="helper"></div></article>
 
     <div class="footer" id="footerMeta"></div>
   </main>
-
-  <script>
-    const LS_KEY = 'dwayne-health-dashboard-v2';
-    const STATE_URL = 'state.json';
-    const defaultState = {
-      workout: { label: 'Missed this morning', tone: 'bad', detail: 'Use the after-work rescue session.' },
-      calories: { label: 'No food logged yet', tone: 'warn', detail: 'See the food card for entries.' },
-      foods: [],
-      weight: { label: '216.6 lb', tone: 'warn', detail: 'Last recorded weigh-in.' },
-      sleep: { label: 'Short night', tone: 'warn', detail: 'Stayed up too late last night.' },
-      score: 41,
-      week: {
-        workouts: '0 / 4 logged',
-        avgCalories: 'No food logged yet',
-        weightTrend: 'No weekly trend yet',
-        streak: '0 days',
-        completedWorkouts: 0
-      },
-      weekAnchor: null,
-      slip: 'You skipped the morning workout and have not reported food yet. That is the current reality.',
-      adjustment: 'Do the after-work rescue workout and keep food honest: only log calories when you actually eat.',
-      next: 'Get the workout done after work. Do not mark the day as on track until the session is complete.',
-      updated: new Date().toISOString()
-    };
-
-    const toneMap = {
-      good: { text: 'On track', cls: 'good' },
-      warn: { text: 'Needs attention', cls: 'warn' },
-      bad: { text: 'Behind', cls: 'bad' }
-    };
-
-    function startOfWeek(date) {
-      const d = new Date(date);
-      d.setHours(0, 0, 0, 0);
-      d.setDate(d.getDate() - d.getDay());
-      return d;
-    }
-
-    function weekAnchorKey(date = new Date()) {
-      const d = startOfWeek(date);
-      const year = d.getFullYear();
-      const month = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      return `${year}-${month}-${day}`;
-    }
-
-    function formatWeekRange(date = new Date()) {
-      const start = startOfWeek(date);
-      const end = new Date(start);
-      end.setDate(start.getDate() + 6);
-      const fmt = new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric' });
-      return `${fmt.format(start)} — ${fmt.format(end)}`;
-    }
-
-    function normalizeState(raw) {
-      const state = Object.assign({}, defaultState, raw || {});
-      state.week = Object.assign({}, defaultState.week, raw && raw.week ? raw.week : {});
-      state.foods = Array.isArray(raw && raw.foods) ? raw.foods : [];
-      const currentWeek = weekAnchorKey();
-      if (state.weekAnchor !== currentWeek) {
-        state.weekAnchor = currentWeek;
-        state.week.completedWorkouts = 0;
-      }
-      state.week.completedWorkouts = Number(state.week.completedWorkouts || 0);
-      state.week.workouts = `${state.week.completedWorkouts} / 4 logged`;
-      return state;
-    }
-
-    function loadState() {
-      try {
-        return normalizeState(JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
-      } catch {
-        return normalizeState(defaultState);
-      }
-    }
-
-    function saveState(state) {
-      localStorage.setItem(LS_KEY, JSON.stringify(state));
-    }
-
-    function scoreLabel(score) {
-      if (score >= 85) return 'Strong day';
-      if (score >= 70) return 'Keep pushing';
-      return 'Reset and recover';
-    }
-
-    function fmtTime(iso) {
-      return new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
-    }
-
-    function fmtNow(date = new Date()) {
-      return new Intl.DateTimeFormat([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }).format(date);
-    }
-
-    function foodLight(state) {
-      const text = `${state.calories?.label || ''} ${state.calories?.detail || ''}`.toLowerCase();
-      if (!text.trim() || text.includes('no food logged yet') || text.includes('nothing reported')) {
-        return { tone: 'warn', label: 'Yellow', detail: 'No food logged yet' };
-      }
-      if (state.calories?.tone === 'good' || text.includes('on target') || text.includes('aligned')) {
-        return { tone: 'good', label: 'Green', detail: 'Controlled / on target' };
-      }
-      if (/(chips?|cookie|cookies|candy|ice cream|pizza|fries|fried|soda|dessert|binge|fast food|takeout|burrito bowl|alcohol|beer)/.test(text)) {
-        return { tone: 'bad', label: 'Red', detail: 'Easy to overdo' };
-      }
-      if (/(celery|cucumber|pickles?|tomato|salad|broth|soup|egg|eggs|chicken|fish|steak|turkey|yogurt|cottage cheese|vegetable|veg)/.test(text)) {
-        return { tone: 'good', label: 'Green', detail: 'High-satiety / lower calorie' };
-      }
-      if (/(nuts?|almonds?|cashews?|peanuts?|hummus|popcorn|cheese|avocado|peanut butter|trail mix)/.test(text)) {
-        return { tone: 'warn', label: 'Yellow', detail: 'Portion matters' };
-      }
-      return { tone: state.calories?.tone || 'warn', label: (state.calories?.tone === 'good' ? 'Green' : state.calories?.tone === 'bad' ? 'Red' : 'Yellow'), detail: 'Use the meal-level light, not a perfect score' };
-    }
-
-    async function fetchRemoteState() {
-      try {
-        const res = await fetch(`${STATE_URL}?v=${Math.floor(Date.now() / 60000)}`, { cache: 'no-store' });
-        if (!res.ok) return null;
-        return normalizeState(await res.json());
-      } catch {
-        return null;
-      }
-    }
-
-    function isDefaultField(value, defaultValue) {
-      return JSON.stringify(value) === JSON.stringify(defaultValue);
-    }
-
-    async function loadState() {
-      let local;
-      try {
-        local = normalizeState(JSON.parse(localStorage.getItem(LS_KEY) || '{}'));
-      } catch {
-        local = normalizeState(defaultState);
-      }
-      const remote = await fetchRemoteState();
-      if (!remote) return local;
-
-      const merged = { ...local, ...remote };
-      const keys = ['workout', 'calories', 'foods', 'weight', 'sleep', 'week', 'slip', 'adjustment', 'next'];
-      for (const key of keys) {
-        if (remote[key] === undefined) continue;
-        const remoteDefault = isDefaultField(remote[key], defaultState[key]);
-        const localHasRealValue = local[key] !== undefined && !isDefaultField(local[key], defaultState[key]);
-        if (!remoteDefault || !localHasRealValue) {
-          merged[key] = remote[key];
-        }
-      }
-      if (Date.parse(remote.updated || '') >= Date.parse(local.updated || '')) {
-        merged.updated = remote.updated;
-      }
-      return merged;
-    }
-
-    function coachVerdict(state) {
-      if (state.workout.tone === 'bad' && state.calories.label === 'No food logged yet') {
-        return {
-          tone: 'bad',
-          text: 'Rescue mode: you missed the morning workout and have not logged food yet. Finish the after-work session, then log food honestly.'
-        };
-      }
-      if (state.score >= 85) {
-        return {
-          tone: 'good',
-          text: 'Good day. Keep the routine tight and do not let dinner or snacking undo the progress.'
-        };
-      }
-      if (state.score >= 70) {
-        return {
-          tone: 'warn',
-          text: 'Mixed day. Stay disciplined and do not let one miss turn into two.'
-        };
-      }
-      return {
-        tone: 'bad',
-        text: 'Behind today. Fix the next action, not the whole week.'
-      };
-    }
-
-    function weeklyReadout(state) {
-      if (state.week.completedWorkouts === 0) {
-        return 'No workout logged this week yet. The week is still early, but the first useful move is to get the session done.';
-      }
-      if (state.week.completedWorkouts < 2) {
-        return `${state.week.completedWorkouts} workout${state.week.completedWorkouts === 1 ? '' : 's'} logged. You are behind pace; protect the next session.`;
-      }
-      return `You have ${state.week.completedWorkouts} workouts logged. Keep the trend alive and avoid a late-week collapse.`;
-    }
-
-    async function render() {
-      const state = await loadState();
-      document.getElementById('currentTime').textContent = `Now ${fmtNow()}`;
-      document.getElementById('weekWindow').textContent = `Week of ${formatWeekRange()} • starts Sunday`;
-
-      const stats = [
-        ['Workout', state.workout.label, state.workout.detail, state.workout.tone],
-        ['Calories', state.calories.label, state.calories.detail, state.calories.tone],
-        ['Weight', state.weight.label, state.weight.detail, state.weight.tone],
-        ['Sleep / energy', state.sleep.label, state.sleep.detail, state.sleep.tone]
-      ];
-
-      const food = foodLight(state);
-      const todayStats = document.getElementById('todayStats');
-      todayStats.innerHTML = stats.map(([label, value, helper, tone]) => {
-        const cls = toneMap[tone]?.cls || 'warn';
-        const foodChip = label === 'Calories'
-          ? `<div class="light-pill ${food.tone}">Food light: ${food.label} • ${food.detail}</div>`
-          : '';
-        return `
-          <div class="stat ${cls}">
-            <div class="label">${label}</div>
-            <div class="value">${value}</div>
-            <div class="helper">${helper}</div>
-            ${foodChip}
-          </div>`;
-      }).join('');
-
-      const foods = Array.isArray(state.foods) ? state.foods : [];
-      document.getElementById('foodCount').textContent = `${foods.length} item${foods.length === 1 ? '' : 's'}`;
-      document.getElementById('foodList').innerHTML = foods.length
-        ? foods.map((entry, i) => `
-            <div class="food-row">
-              <div>
-                <div class="meal">${entry}</div>
-                <div class="tiny">Logged item ${i + 1}</div>
-              </div>
-            </div>`).join('')
-        : `<div class="empty">No food logged yet. When you report meals, they show up here like a normal tracker app.</div>`;
-
-      document.getElementById('weekStats').innerHTML = [
-        ['Workouts completed', state.week.workouts],
-        ['Avg calories vs target', state.week.avgCalories],
-        ['Weight trend', state.week.weightTrend],
-        ['Adherence streak', state.week.streak]
-      ].map(([k, v]) => `
-        <div class="stat" style="padding:12px 12px 11px;">
-          <div class="label">${k}</div>
-          <div class="value" style="font-size:1rem;">${v}</div>
-        </div>`).join('');
-
-      document.getElementById('slipText').textContent = state.slip;
-      document.getElementById('nextAction').textContent = state.adjustment + ' ' + state.next;
-      document.getElementById('trendText').textContent = weeklyReadout(state);
-      document.getElementById('scoreLabel').textContent = `${scoreLabel(state.score)} • ${state.score}/100`;
-      document.getElementById('coach-score').textContent = `Score ${state.score}/100`;
-      document.getElementById('scoreFill').style.width = `${state.score}%`;
-
-      const verdict = coachVerdict(state);
-      const verdictEl = document.getElementById('coachVerdict');
-      verdictEl.className = `note ${verdict.tone}`;
-      document.getElementById('coachVerdictText').textContent = verdict.text;
-
-      document.getElementById('lastUpdated').textContent = `Updated ${fmtTime(state.updated || defaultState.updated)}`;
-      document.getElementById('footerMeta').textContent = `GitHub Pages dashboard • local check-in enabled • auto-refresh every minute • ${new Date().getFullYear()}`;
-
-      saveState(state);
-    }
-
-    document.getElementById('doneWorkout').addEventListener('click', async () => {
-      const state = await loadState();
-      state.workout = { label: 'Done', tone: 'good', detail: 'Workout check-in saved from this device.' };
-      state.week.completedWorkouts = Number(state.week.completedWorkouts || 0) + 1;
-      state.week.workouts = `${state.week.completedWorkouts} / 4 logged`;
-      state.score = Math.min(100, state.score + 4);
-      state.updated = new Date().toISOString();
-      saveState(state);
-      render();
-    });
-
-    document.getElementById('onTargetCalories').addEventListener('click', async () => {
-      const state = await loadState();
-      state.calories = { label: 'On target', tone: 'good', detail: 'Calories are aligned with the target for fat loss.' };
-      state.score = Math.min(100, state.score + 3);
-      state.updated = new Date().toISOString();
-      saveState(state);
-      render();
-    });
-
-    document.getElementById('saveWeighIn').addEventListener('click', async () => {
-      const state = await loadState();
-      const input = prompt("Enter today's weigh-in (lb)", state.weight.label.replace(' lb', ''));
-      if (!input) return;
-      const value = Number(input);
-      if (Number.isNaN(value)) return alert('Please enter a number.');
-      state.weight = { label: `${value.toFixed(1)} lb`, tone: 'good', detail: 'Weigh-in saved from this device.' };
-      state.updated = new Date().toISOString();
-      saveState(state);
-      render();
-    });
-
-    render();
-    setInterval(render, 60000);
-  </script>
+<script>
+const LS_KEY='dwayne-health-dashboard-v3';
+const STATE_URL='state.json';
+const TARGET_WORKOUTS=4;
+const TARGET_CALORIES=2100;
+function pad(n){return String(n).padStart(2,'0')}
+function dayKey(d=new Date()){return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`}
+function startOfWeek(date=new Date()){const d=new Date(date);d.setHours(0,0,0,0);d.setDate(d.getDate()-d.getDay());return d}
+function weekAnchorKey(date=new Date()){const d=startOfWeek(date);return dayKey(d)}
+function formatWeekRange(date=new Date()){const s=startOfWeek(date),e=new Date(s);e.setDate(s.getDate()+6);const f=new Intl.DateTimeFormat([],{weekday:'short',month:'short',day:'numeric'});return `${f.format(s)} — ${f.format(e)}`}
+function fmtNow(d=new Date()){return new Intl.DateTimeFormat([],{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}).format(d)}
+function fmtTime(iso){const d=Date.parse(iso||'');return Number.isFinite(d)?new Date(d).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):'—'}
+function emptyDay(){return {workout:{status:'not_logged',label:'No workout logged yet',tone:'warn',detail:'Use chat to log done, missed, or modified.'},foods:[],weight:null,sleep:{label:'Not logged',tone:'warn',detail:'No sleep update yet.'},notes:[]}}
+function legacyToV3(raw){if(raw&&raw.schemaVersion===3)return raw;const today=dayKey();const d=emptyDay();if(raw){d.workout=raw.workout||d.workout;d.foods=(raw.foods||[]).map(x=>typeof x==='string'?{name:x,tone:'warn',calories:null,note:'Migrated from old dashboard state.'}:x);d.weight=raw.weight?.label?{label:raw.weight.label,value:null,tone:raw.weight.tone||'warn',detail:raw.weight.detail||''}:null;d.sleep=raw.sleep||d.sleep}return {schemaVersion:3,currentDate:today,updated:raw?.updated||new Date().toISOString(),targets:{dailyCalories:TARGET_CALORIES,weeklyWorkouts:TARGET_WORKOUTS},week:{anchor:weekAnchorKey(),completedWorkouts:raw?.week?.completedWorkouts||0},days:{[today]:d}}}
+function normalize(raw){const s=legacyToV3(raw||{});const today=dayKey();s.schemaVersion=3;s.currentDate=today;s.targets={dailyCalories:TARGET_CALORIES,weeklyWorkouts:TARGET_WORKOUTS,...(s.targets||{})};s.days=s.days||{};if(!s.days[today])s.days[today]=emptyDay();const anchor=weekAnchorKey();s.week=s.week||{};if(s.week.anchor!==anchor){s.week.anchor=anchor;s.week.completedWorkouts=Object.entries(s.days).filter(([k,v])=>k>=anchor&&v?.workout?.status==='done').length}else{s.week.completedWorkouts=Number(s.week.completedWorkouts||0)}return s}
+async function fetchRemoteState(){try{const r=await fetch(`${STATE_URL}?v=${Math.floor(Date.now()/60000)}`,{cache:'no-store'});if(!r.ok)return null;return normalize(await r.json())}catch{return null}}
+async function loadState(){let local=null;try{local=normalize(JSON.parse(localStorage.getItem(LS_KEY)||'{}'))}catch{local=null}const remote=await fetchRemoteState();const chosen=remote||local||normalize({});localStorage.setItem(LS_KEY,JSON.stringify(chosen));return chosen}
+function toneLabel(t){return t==='good'?'Green':t==='bad'?'Red':'Yellow'}
+function scoreFor(day){let score=45;if(day.workout?.status==='done')score+=35;else if(day.workout?.status==='modified')score+=20;else if(day.workout?.status==='missed')score-=10;const foods=day.foods||[];if(foods.length)score+=15;if(foods.some(f=>f.tone==='good'))score+=5;if(foods.some(f=>f.tone==='bad'))score-=10;if(day.weight)score+=5;if(day.sleep?.tone==='good')score+=5;if(day.sleep?.tone==='bad')score-=5;return Math.max(0,Math.min(100,score))}
+function scoreLabel(s){if(s>=85)return'Strong day';if(s>=70)return'On track';if(s>=55)return'Mixed day';return'Reset and recover'}
+function caloriesSummary(day,target){const vals=(day.foods||[]).map(f=>Number(f.calories)).filter(n=>Number.isFinite(n));if(!vals.length)return {label:(day.foods||[]).length?'Food logged, estimate incomplete':'No food logged yet',detail:(day.foods||[]).length?'Add estimates if you want over/under verdict.':'Nothing reported for today.',tone:(day.foods||[]).length?'warn':'warn'};const total=vals.reduce((a,b)=>a+b,0);return {label:`~${total} cal logged`,detail:total<=target?`Under target so far vs ${target}.`:`Over target vs ${target}.`,tone:total<=target?'good':'bad'}}
+function oneMove(day){if(day.workout?.status==='missed')return ['Protect the reset','Do not turn a missed workout into a missed day. Use pelvic floor work or a pain-free walk if the bicep is irritated.'];if(day.workout?.status==='not_logged')return ['Get the workout decision made','Log done, missed, or modified in chat. No vague middle ground.'];if(!(day.foods||[]).length)return ['Log your first food honestly','Food drives fat loss. Report the meal; do not wait until memory gets fuzzy.'];return ['Keep the evening controlled','You have data logged. Do not let unplanned snacking create the problem.']}
+function weeklyStats(state){const anchor=state.week.anchor;const entries=Object.entries(state.days||{}).filter(([k])=>k>=anchor);const workouts=entries.filter(([,d])=>d.workout?.status==='done').length;const foodDays=entries.filter(([,d])=>(d.foods||[]).length).length;const weights=entries.map(([,d])=>d.weight?.label).filter(Boolean);return {workouts,foodDays,lastWeight:weights.at(-1)||'No weekly trend yet'}}
+function safe(el,text){el.textContent=text==null?'':String(text)}
+function renderFood(list,foods){list.innerHTML='';if(!foods.length){const e=document.createElement('div');e.className='empty';e.textContent='No food logged for today. Yesterday stays in history instead of leaking into today.';list.appendChild(e);return}foods.forEach(f=>{const row=document.createElement('div');row.className='food-row';const left=document.createElement('div');const name=document.createElement('div');name.className='food-name';name.textContent=f.name||String(f);const note=document.createElement('div');note.className='food-note';note.textContent=f.note||'';left.append(name,note);const tag=document.createElement('div');tag.className=`tag ${f.tone||'warn'}`;tag.textContent=toneLabel(f.tone);row.append(left,tag);list.appendChild(row)})}
+async function render(){const state=await loadState();const today=dayKey();const day=state.days[today]||emptyDay();const target=state.targets?.dailyCalories||TARGET_CALORIES;const calories=caloriesSummary(day,target);const score=scoreFor(day);const [move,why]=oneMove(day);safe(document.getElementById('currentTime'),`Now ${fmtNow()}`);safe(document.getElementById('lastUpdated'),`Updated ${fmtTime(state.updated)}`);safe(document.getElementById('weekWindow'),`Week of ${formatWeekRange()} • starts Sunday`);safe(document.getElementById('oneMove'),move);safe(document.getElementById('oneMoveWhy'),why);safe(document.getElementById('coachScore'),`Score ${score}/100`);safe(document.getElementById('scoreLabel'),`${scoreLabel(score)} • ${score}/100`);document.getElementById('scoreFill').style.width=`${score}%`;const stats=[['Workout',day.workout?.label||'No workout logged yet',day.workout?.detail||'',day.workout?.tone||'warn'],['Calories',calories.label,calories.detail,calories.tone],['Weight',day.weight?.label||'No new weigh-in',day.weight?.detail||'Last weight stays in history until you log today.',day.weight?.tone||'warn'],['Sleep / energy',day.sleep?.label||'Not logged',day.sleep?.detail||'No sleep update yet.',day.sleep?.tone||'warn']];const box=document.getElementById('todayStats');box.innerHTML='';stats.forEach(([k,v,h,t])=>{const s=document.createElement('div');s.className=`stat ${t}`;s.innerHTML='<div class="label"></div><div class="value"></div><div class="helper"></div><div class="status"><span class="dot"></span><span></span></div>';safe(s.children[0],k);safe(s.children[1],v);safe(s.children[2],h);s.querySelector('.status').className=`status ${t}`;safe(s.querySelector('.status span:last-child'),toneLabel(t));box.appendChild(s)});const foods=day.foods||[];safe(document.getElementById('foodCount'),`${foods.length} item${foods.length===1?'':'s'}`);renderFood(document.getElementById('foodList'),foods);const ws=weeklyStats(state);document.getElementById('weekStats').innerHTML='';[['Workouts completed',`${ws.workouts} / ${state.targets?.weeklyWorkouts||TARGET_WORKOUTS} logged`],['Food log days',`${ws.foodDays} day${ws.foodDays===1?'':'s'}`],['Weight trend',ws.lastWeight],['Current date',today]].forEach(([k,v])=>{const e=document.createElement('div');e.className='stat';e.innerHTML='<div class="label"></div><div class="value" style="font-size:1rem"></div>';safe(e.children[0],k);safe(e.children[1],v);document.getElementById('weekStats').appendChild(e)});safe(document.getElementById('slipText'),day.workout?.status==='missed'?'Workout is the constraint right now. The bicep issue means the next session needs a pain-free modification, not a grind.':foods.length?'Food is being logged. Keep portions honest and avoid drift.':'No food logged today yet. That is the first data gap.');safe(document.getElementById('nextAction'),why);const y=new Date();y.setDate(y.getDate()-1);const yd=state.days[dayKey(y)];safe(document.getElementById('yesterdayReadout'),yd?`${yd.foods?.length||0} food items • workout ${yd.workout?.status||'not logged'} • ${yd.weight?.label||'no weight'}`:'No preserved record for yesterday yet.');safe(document.getElementById('footerMeta'),`GitHub Pages dashboard • V3 structured daily state • auto-refresh every minute • ${new Date().getFullYear()}`)}
+render();setInterval(render,60000);
+</script>
 </body>
 </html>

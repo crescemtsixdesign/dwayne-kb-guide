@@ -1,41 +1,71 @@
 {
-  "workout": {
-    "label": "Missed workout",
-    "tone": "bad",
-    "detail": "You gave up because the kettlebell hold was bothering the left bicep."
+  "schemaVersion": 3,
+  "currentDate": "2026-06-23",
+  "updated": "2026-06-23T10:15:37-04:00",
+  "targets": {
+    "dailyCalories": 2100,
+    "weeklyWorkouts": 4
   },
-  "calories": {
-    "label": "Food reported",
-    "tone": "warn",
-    "detail": "See the food card for the day."
-  },
-  "foods": [
-    "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
-    "Snack: wasabi almonds",
-    "Dinner: cheese sandwich (bread, cheese, mayo) — ~380 cal"
-  ],
-  "weight": {
-    "label": "216.6 lb",
-    "tone": "warn",
-    "detail": "Last recorded weigh-in."
-  },
-  "sleep": {
-    "label": "Short night",
-    "tone": "warn",
-    "detail": "Stayed up too late last night."
-  },
-  "score": 43,
   "week": {
-    "workouts": "0 / 4 logged",
-    "avgCalories": "Food reported",
-    "weightTrend": "216.6 lb",
-    "streak": "0 days",
+    "anchor": "2026-06-21",
     "completedWorkouts": 0
   },
-  "weekAnchor": "2026-06-21",
-  "workoutLogKey": null,
-  "slip": "Nothing logged for the week yet.",
-  "adjustment": "Get the first useful win on the board.",
-  "next": "Complete one session today.",
-  "updated": "2026-06-23T06:04:21-04:00"
+  "days": {
+    "2026-06-22": {
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Started the KB workout but stopped after the kettlebell hold bothered the left bicep."
+      },
+      "foods": [
+        {
+          "name": "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
+          "tone": "warn",
+          "calories": null,
+          "note": "Good protein base; calorie-dense extras make portions matter."
+        },
+        {
+          "name": "Snack: wasabi almonds",
+          "tone": "warn",
+          "calories": null,
+          "note": "Better than chips, but calorie dense. Portion matters."
+        },
+        {
+          "name": "Dinner: cheese sandwich (bread, cheese, mayo)",
+          "tone": "warn",
+          "calories": 380,
+          "note": "Logged estimate. Lower protein; keep it controlled."
+        }
+      ],
+      "weight": {
+        "value": 216.6,
+        "label": "216.6 lb",
+        "tone": "warn",
+        "detail": "Last recorded weigh-in."
+      },
+      "sleep": {
+        "label": "Short night",
+        "tone": "warn",
+        "detail": "Stayed up too late."
+      },
+      "notes": []
+    },
+    "2026-06-23": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    }
+  }
 }
