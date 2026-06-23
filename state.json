@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-23",
-  "updated": "2026-06-23T15:01:53-04:00",
+  "updated": "2026-06-23T19:14:18-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -64,6 +64,12 @@
           "tone": "warn",
           "calories": 370,
           "note": "10g protein, 45g carbs, 18g fat, 6g fiber, 850mg sodium. Count this as a mini-meal."
+        },
+        {
+          "name": "Lunch: grilled chicken salad with ranch dressing, cheese, tomatoes, small avocado, croutons",
+          "tone": "warn",
+          "calories": null,
+          "note": "Good protein base from grilled chicken; ranch, cheese, avocado, and croutons add calories. Keep dinner lean/protein-forward."
         }
       ],
       "weight": null,
