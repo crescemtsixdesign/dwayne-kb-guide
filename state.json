@@ -1,45 +1,14 @@
 {
-  "workout": {
-    "label": "Missed this morning",
-    "tone": "bad",
-    "detail": "Use the after-work rescue session."
-  },
-  "calories": {
-    "label": "Food reported",
-    "tone": "warn",
-    "detail": "See the food card for the day."
-  },
-  "foods": [],
-  "weight": {
-    "label": "216.6 lb",
-    "tone": "warn",
-    "detail": "Last recorded weigh-in."
-  },
-  "sleep": {
-    "label": "Short night",
-    "tone": "warn",
-    "detail": "Stayed up too late last night."
-  },
-  "score": 42,
-  "week": {
-    "workouts": "0 / 4 logged",
-    "avgCalories": "Food reported",
-    "weightTrend": "216.6 lb",
-    "streak": "0 days",
-    "completedWorkouts": 0,
-    "anchor": "2026-06-21"
-  },
-  "weekAnchor": "2026-06-21",
-  "workoutLogKey": null,
-  "slip": "Nothing logged for the week yet.",
-  "adjustment": "Get the first useful win on the board.",
-  "next": "Complete one session today.",
-  "updated": "2026-06-23T14:38:22-04:00",
   "schemaVersion": 3,
   "currentDate": "2026-06-23",
+  "updated": "2026-06-23T15:01:53-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
+  },
+  "week": {
+    "anchor": "2026-06-21",
+    "completedWorkouts": 0
   },
   "days": {
     "2026-06-22": {
