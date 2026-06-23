@@ -5,13 +5,14 @@
     "detail": "Use the after-work rescue session."
   },
   "calories": {
-    "label": "2 food entries logged",
+    "label": "3 food entries logged",
     "tone": "warn",
-    "detail": "See the food card for the day."
+    "detail": "Dinner estimated around 380 cal."
   },
   "foods": [
     "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
-    "Snack: wasabi almonds"
+    "Snack: wasabi almonds",
+    "Dinner: cheese sandwich (bread, cheese, mayo) — ~380 cal"
   ],
   "weight": {
     "label": "216.6 lb",
@@ -36,5 +37,5 @@
   "slip": "You skipped the morning workout, but food is now logged.",
   "adjustment": "Do the after-work rescue workout and keep the rest of the day honest.",
   "next": "Get the workout done after work. Do not let the missed morning turn into a full miss.",
-  "updated": "2026-06-22T16:40:08Z"
+  "updated": "2026-06-23T01:00:33Z"
 }
