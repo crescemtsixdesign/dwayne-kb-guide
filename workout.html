@@ -47,13 +47,17 @@
     gap: 6px;
     margin: 16px 0 20px;
   }
+  .schedule-grid a,
   .schedule-grid div {
     text-align: center;
     padding: 8px 4px;
     border-radius: 8px;
     font-size: 0.7rem;
     font-weight: 600;
+    text-decoration: none;
+    color: inherit;
   }
+  .schedule-grid a { display: block; }
   .day-kb { background: #2d4a2d; color: #7ddf7d; }
   .day-stretch { background: #3a2d4a; color: #b07ddf; }
   .day-rest { background: #2a2a2a; color: #888; }
@@ -172,17 +176,22 @@
   <span class="subtitle" style="margin-top:0;">Open this page for the workout plan now</span>
 </div>
 
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px;">
+  <a href="#exercises" style="color:#ffa94d;text-decoration:none;font-size:0.8rem;font-weight:700;border:1px solid #2a2a2a;padding:6px 10px;border-radius:999px;">Jump to workouts</a>
+  <a href="#pelvic-floor-stretching" style="color:#b07ddf;text-decoration:none;font-size:0.8rem;font-weight:700;border:1px solid #2a2a2a;padding:6px 10px;border-radius:999px;">Jump to pelvic floor stretching</a>
+</div>
+
 <h1>🏋️ 3-Day KB Full Body</h1>
 <p class="subtitle">Dwayne • Fat loss + muscle preservation • ~30 min sessions</p>
 
 <!-- Schedule -->
 <h2>📅 Weekly Schedule</h2>
 <div class="schedule-grid">
-  <div class="day-kb">M<br>KB</div>
-  <div class="day-stretch">T<br>Str</div>
-  <div class="day-kb">W<br>KB</div>
-  <div class="day-stretch">T<br>Str</div>
-  <div class="day-kb">F<br>KB</div>
+  <a class="day-kb" href="#exercises">M<br>KB</a>
+  <a class="day-stretch" href="#pelvic-floor-stretching">T<br>Str</a>
+  <a class="day-kb" href="#exercises">W<br>KB</a>
+  <a class="day-stretch" href="#pelvic-floor-stretching">T<br>Str</a>
+  <a class="day-kb" href="#exercises">F<br>KB</a>
   <div class="day-rest">S<br>—</div>
   <div class="day-rest">S<br>—</div>
 </div>
@@ -196,7 +205,7 @@
 <hr>
 
 <!-- Exercises -->
-<h2>🏋️ The 5 Exercises</h2>
+<h2 id="exercises">🏋️ The 5 Exercises</h2>
 
 <!-- 1. Goblet Squat -->
 <div class="exercise" id="goblet">
@@ -276,7 +285,7 @@
 <hr>
 
 <!-- Stretching routine -->
-<h2>🧘 Pelvic Floor Stretching (Tue / Thu)</h2>
+<h2 id="pelvic-floor-stretching">🧘 Pelvic Floor Stretching (Tue / Thu)</h2>
 <p style="font-size:0.85rem;color:#999;margin-bottom:12px;">15-20 min. Deep breathing throughout. Go slow — this is recovery, not training.</p>
 
 <div class="stretch-exercise">
@@ -313,7 +322,7 @@
 <hr>
 
 <!-- Quick reference -->
-<h2>📋 Quick Reference</h2>
+<h2 id="quick-reference">📋 Quick Reference</h2>
 <table class="progress-table">
   <tr><th>Phase</th><th>Duration</th><th>Focus</th></tr>
   <tr><td>Foundation</td><td>Weeks 1-2</td><td>Learn form. Find starting weights.</td></tr>
