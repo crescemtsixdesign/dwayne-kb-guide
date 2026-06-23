@@ -1,47 +1,14 @@
 {
-  "workout": {
-    "label": "Missed this morning",
-    "tone": "bad",
-    "detail": "Use the after-work rescue session."
-  },
-  "calories": {
-    "label": "[The user sent an image but I couldn't quite see it this time (>_<) You can try… logged",
-    "tone": "warn",
-    "detail": "See the food card for the day."
-  },
-  "foods": [
-    "Food: [The user sent an image but I couldn't quite see it this time (>_<) You can try…"
-  ],
-  "weight": {
-    "label": "216.6 lb",
-    "tone": "warn",
-    "detail": "Last recorded weigh-in."
-  },
-  "sleep": {
-    "label": "Short night",
-    "tone": "warn",
-    "detail": "Stayed up too late last night."
-  },
-  "score": 42,
-  "week": {
-    "workouts": "0 / 4 logged",
-    "avgCalories": "[The user sent an image but I couldn't quite see it this time (>_<) You can try… logged",
-    "weightTrend": "216.6 lb",
-    "streak": "0 days",
-    "completedWorkouts": 0,
-    "anchor": "2026-06-21"
-  },
-  "weekAnchor": "2026-06-21",
-  "workoutLogKey": null,
-  "slip": "Nothing logged for the week yet.",
-  "adjustment": "Get the first useful win on the board.",
-  "next": "Complete one session today.",
-  "updated": "2026-06-23T12:50:58-04:00",
   "schemaVersion": 3,
   "currentDate": "2026-06-23",
+  "updated": "2026-06-23T14:31:35-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
+  },
+  "week": {
+    "anchor": "2026-06-21",
+    "completedWorkouts": 0
   },
   "days": {
     "2026-06-22": {
@@ -91,7 +58,14 @@
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [],
+      "foods": [
+        {
+          "name": "Snack: Sabra Smart Snackers pretzel and hummus",
+          "tone": "warn",
+          "calories": 370,
+          "note": "10g protein, 45g carbs, 18g fat, 6g fiber, 850mg sodium. Count this as a mini-meal."
+        }
+      ],
       "weight": null,
       "sleep": {
         "label": "Not logged",
