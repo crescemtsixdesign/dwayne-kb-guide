@@ -1,8 +1,8 @@
 {
   "workout": {
-    "label": "Started, cut short",
-    "tone": "warn",
-    "detail": "Left bicep cramped during goblet squat. Switch to bodyweight or lighter front-loaded work."
+    "label": "Missed workout",
+    "tone": "bad",
+    "detail": "You gave up because the kettlebell hold was bothering the left bicep."
   },
   "calories": {
     "label": "3 food entries logged",
@@ -34,8 +34,8 @@
   },
   "weekAnchor": "2026-06-21",
   "workoutLogKey": null,
-  "slip": "You started the workout, but the goblet squat set off your left bicep.",
-  "adjustment": "Do not force the goblet hold. Switch to pain-free lower-body work or stop if the bicep keeps cramping.",
-  "next": "Use bodyweight squats, split squats, or a lighter hold only if the arm feels normal.",
-  "updated": "2026-06-23T01:07:16Z"
+  "slip": "You gave up on the workout because the kettlebell hold kept bothering the left bicep.",
+  "adjustment": "Stop trying to force KB work today. If you want movement, do a short walk or bodyweight legs only.",
+  "next": "Reset tomorrow and decide whether to train without the bell or take a full recovery day.",
+  "updated": "2026-06-23T01:13:53Z"
 }
