@@ -1,8 +1,8 @@
 {
   "workout": {
-    "label": "Missed this morning",
-    "tone": "bad",
-    "detail": "Use the after-work rescue session."
+    "label": "Started, cut short",
+    "tone": "warn",
+    "detail": "Left bicep cramped during goblet squat. Switch to bodyweight or lighter front-loaded work."
   },
   "calories": {
     "label": "3 food entries logged",
@@ -34,8 +34,8 @@
   },
   "weekAnchor": "2026-06-21",
   "workoutLogKey": null,
-  "slip": "You skipped the morning workout, but food is now logged.",
-  "adjustment": "Do the after-work rescue workout and keep the rest of the day honest.",
-  "next": "Get the workout done after work. Do not let the missed morning turn into a full miss.",
-  "updated": "2026-06-23T01:00:33Z"
+  "slip": "You started the workout, but the goblet squat set off your left bicep.",
+  "adjustment": "Do not force the goblet hold. Switch to pain-free lower-body work or stop if the bicep keeps cramping.",
+  "next": "Use bodyweight squats, split squats, or a lighter hold only if the arm feels normal.",
+  "updated": "2026-06-23T01:07:16Z"
 }
