@@ -5,9 +5,9 @@
     "detail": "You gave up because the kettlebell hold was bothering the left bicep."
   },
   "calories": {
-    "label": "3 food entries logged",
+    "label": "Food reported",
     "tone": "warn",
-    "detail": "Dinner estimated around 380 cal."
+    "detail": "See the food card for the day."
   },
   "foods": [
     "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
@@ -24,18 +24,18 @@
     "tone": "warn",
     "detail": "Stayed up too late last night."
   },
-  "score": 42,
+  "score": 43,
   "week": {
     "workouts": "0 / 4 logged",
-    "avgCalories": "Wasabi almonds logged",
-    "weightTrend": "No weekly trend yet",
+    "avgCalories": "Food reported",
+    "weightTrend": "216.6 lb",
     "streak": "0 days",
     "completedWorkouts": 0
   },
   "weekAnchor": "2026-06-21",
   "workoutLogKey": null,
-  "slip": "You gave up on the workout because the kettlebell hold kept bothering the left bicep.",
-  "adjustment": "Stop trying to force KB work today. If you want movement, do a short walk or bodyweight legs only.",
-  "next": "Reset tomorrow and decide whether to train without the bell or take a full recovery day.",
-  "updated": "2026-06-23T01:13:53Z"
+  "slip": "Nothing logged for the week yet.",
+  "adjustment": "Get the first useful win on the board.",
+  "next": "Complete one session today.",
+  "updated": "2026-06-23T06:04:21-04:00"
 }
