@@ -97,8 +97,8 @@
         {
           "name": "Lunch: quarter chicken and homemade coleslaw",
           "tone": "warn",
-          "calories": null,
-          "note": "Same meal as yesterday's dinner. Good protein anchor; portion and dressing matter."
+          "calories": 650,
+          "note": "Working estimate for quarter chicken plus homemade coleslaw. Good protein anchor; portion and dressing matter."
         }
       ],
       "weight": null,
