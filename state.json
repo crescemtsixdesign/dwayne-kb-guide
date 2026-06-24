@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-24",
-  "updated": "2026-06-24T06:54:40-04:00",
+  "updated": "2026-06-24T10:16:46-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -87,7 +87,14 @@
         "tone": "good",
         "detail": "KB workout started at 6:00am. Effort 7/10. Completed 2 sets per exercise as first real run-through."
       },
-      "foods": [],
+      "foods": [
+        {
+          "name": "Snack: about 2 cups popcorn",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Estimated ~60-200 calories depending on butter/oil; using 100 as a working estimate. Light snack, but not much protein."
+        }
+      ],
       "weight": null,
       "sleep": {
         "label": "Not logged",
