@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-24",
-  "updated": "2026-06-24T10:16:46-04:00",
+  "updated": "2026-06-24T16:14:57-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -93,6 +93,12 @@
           "tone": "warn",
           "calories": 100,
           "note": "Estimated ~60-200 calories depending on butter/oil; using 100 as a working estimate. Light snack, but not much protein."
+        },
+        {
+          "name": "Lunch: quarter chicken and homemade coleslaw",
+          "tone": "warn",
+          "calories": null,
+          "note": "Same meal as yesterday's dinner. Good protein anchor; portion and dressing matter."
         }
       ],
       "weight": null,
