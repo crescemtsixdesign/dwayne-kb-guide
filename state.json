@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-23",
-  "updated": "2026-06-23T19:14:18-04:00",
+  "currentDate": "2026-06-24",
+  "updated": "2026-06-24T06:54:40-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
     "anchor": "2026-06-21",
-    "completedWorkouts": 0
+    "completedWorkouts": 1
   },
   "days": {
     "2026-06-22": {
@@ -72,6 +72,22 @@
           "note": "Good protein base from grilled chicken; ranch, cheese, avocado, and croutons add calories. Keep dinner lean/protein-forward."
         }
       ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-24": {
+      "workout": {
+        "status": "done",
+        "label": "KB workout done",
+        "tone": "good",
+        "detail": "KB workout started at 6:00am. Effort 7/10. Completed 2 sets per exercise as first real run-through."
+      },
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
