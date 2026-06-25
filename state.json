@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-24",
-  "updated": "2026-06-24T16:14:57-04:00",
+  "updated": "2026-06-24T22:11:55-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -99,6 +99,36 @@
           "tone": "warn",
           "calories": 650,
           "note": "Working estimate for quarter chicken plus homemade coleslaw. Good protein anchor; portion and dressing matter."
+        },
+        {
+          "name": "Snack: other half of Publix cake",
+          "tone": "warn",
+          "calories": 300,
+          "note": "Working estimate for the other half of the cake."
+        },
+        {
+          "name": "Dinner: small chicken breast",
+          "tone": "warn",
+          "calories": 250,
+          "note": "Small portion; good protein anchor."
+        },
+        {
+          "name": "Dinner: small macaroni and cheese",
+          "tone": "warn",
+          "calories": 250,
+          "note": "Small serving; calorie-dense side."
+        },
+        {
+          "name": "Dinner: small potato salad",
+          "tone": "warn",
+          "calories": 200,
+          "note": "Small serving; calorie-dense side."
+        },
+        {
+          "name": "Dinner: small Jamaican rice and peas",
+          "tone": "warn",
+          "calories": 250,
+          "note": "Small serving; calorie-dense side."
         }
       ],
       "weight": null,
