@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-26T11:09:18-04:00",
+  "updated": "2026-06-26T14:58:23-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -288,6 +288,42 @@
         "calories": 650,
         "note": "User clarified this was also eaten on Jun 25."
       }
+    },
+    {
+      "id": "evt-20260626143858-food-89e4b0ac",
+      "recordedAt": "2026-06-26T14:38:58-04:00",
+      "date": "2026-06-26",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-26-snack-2-3-cups-popcorn",
+      "food": {
+        "id": "food-2026-06-26-snack-2-3-cups-popcorn",
+        "name": "Snack: 2-3 cups popcorn",
+        "tone": "warn",
+        "calories": 100,
+        "note": "Estimated working value for a small popcorn snack."
+      },
+      "rawText": "This morning I had A 2-3 cup popcorn snack",
+      "sessionId": "telegram:dm:2026-06-26-1438"
+    },
+    {
+      "id": "evt-20260626145823-food-6663ce6f",
+      "recordedAt": "2026-06-26T14:58:23-04:00",
+      "date": "2026-06-26",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-26-snack-ruffles-baked-cheddar-sour-cream-chips-1-b",
+      "food": {
+        "id": "food-2026-06-26-snack-ruffles-baked-cheddar-sour-cream-chips-1-b",
+        "name": "Snack: Ruffles Baked Cheddar & Sour Cream chips (1 bag)",
+        "tone": "warn",
+        "calories": 140,
+        "note": "Single-serve bag shown in image; label shows 140 calories per pkg."
+      },
+      "rawText": "I just ate this bag",
+      "sessionId": "telegram:dm:2026-06-26-1438"
     }
   ]
 }
