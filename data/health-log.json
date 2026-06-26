@@ -256,6 +256,38 @@
         "calories": 700,
         "note": "Backfilled from session search; user logged this on Jun 25."
       }
+    },
+    {
+      "id": "evt-20260626103439-food-6ff3b4a1",
+      "recordedAt": "2026-06-26T10:34:39-04:00",
+      "date": "2026-06-25",
+      "type": "food",
+      "action": "add",
+      "source": "chat correction",
+      "foodId": "food-2026-06-25-snack-about-2-cups-popcorn-0",
+      "food": {
+        "id": "food-2026-06-25-snack-about-2-cups-popcorn-0",
+        "name": "Snack: about 2 cups popcorn",
+        "tone": "warn",
+        "calories": 100,
+        "note": "User clarified this was also eaten on Jun 25."
+      }
+    },
+    {
+      "id": "evt-20260626103439-food-1be8f4c2",
+      "recordedAt": "2026-06-26T10:34:39-04:00",
+      "date": "2026-06-25",
+      "type": "food",
+      "action": "add",
+      "source": "chat correction",
+      "foodId": "food-2026-06-25-lunch-quarter-chicken-and-homemade-coleslaw-1",
+      "food": {
+        "id": "food-2026-06-25-lunch-quarter-chicken-and-homemade-coleslaw-1",
+        "name": "Lunch: quarter chicken and homemade coleslaw",
+        "tone": "warn",
+        "calories": 650,
+        "note": "User clarified this was also eaten on Jun 25."
+      }
     }
   ]
 }

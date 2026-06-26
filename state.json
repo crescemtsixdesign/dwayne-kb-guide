@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-26",
-  "updated": "2026-06-26T08:23:51-04:00",
+  "updated": "2026-06-26T10:34:39-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -175,6 +175,20 @@
         "detail": "Use chat to log done, missed, or modified."
       },
       "foods": [
+        {
+          "id": "food-2026-06-25-snack-about-2-cups-popcorn-0",
+          "name": "Snack: about 2 cups popcorn",
+          "tone": "warn",
+          "calories": 100,
+          "note": "User clarified this was also eaten on Jun 25."
+        },
+        {
+          "id": "food-2026-06-25-lunch-quarter-chicken-and-homemade-coleslaw-1",
+          "name": "Lunch: quarter chicken and homemade coleslaw",
+          "tone": "warn",
+          "calories": 650,
+          "note": "User clarified this was also eaten on Jun 25."
+        },
         {
           "id": "food-2026-06-25-dinner-dominos-pizza-nuggets",
           "name": "Dinner: 2 slices Domino's pizza and 2 nuggets",
