@@ -386,20 +386,26 @@ def save_store(store_path: Path, state_path: Path, log: dict[str, Any]) -> dict[
 def add_food(log: dict[str, Any], args: argparse.Namespace) -> str:
     date = day_key(args.date)
     item_id = args.id or food_id(date, args.name)
+    payload = {
+        "foodId": item_id,
+        "food": {
+            "id": item_id,
+            "name": args.name,
+            "tone": require_tone(args.tone),
+            "calories": args.calories,
+            "note": args.note or "Logged from chat.",
+        },
+    }
+    if args.raw_text:
+        payload["rawText"] = args.raw_text
+    if args.session_id:
+        payload["sessionId"] = args.session_id
     entry = make_event(
         "food",
         date,
-        {
-            "foodId": item_id,
-            "food": {
-                "id": item_id,
-                "name": args.name,
-                "tone": require_tone(args.tone),
-                "calories": args.calories,
-                "note": args.note or "Logged from chat.",
-            },
-        },
+        payload,
         action="upsert" if args.replace else "add",
+        source=args.source,
     )
     if not args.replace:
         current = materialize(log, today=date).get("days", {}).get(date, empty_day())
@@ -455,6 +461,36 @@ def validate_state(state: dict[str, Any]) -> None:
         workout = day.get("workout", {})
         if workout.get("status") not in VALID_WORKOUT_STATUSES | {"legacy"}:
             raise SystemExit(f"days[{key}].workout.status is invalid: {workout.get('status')!r}")
+
+
+def validate_log_health(log: dict[str, Any]) -> dict[str, int]:
+    """Validate food event payloads and summarize missing estimates."""
+    food_events = 0
+    chat_food_events = 0
+    missing_calorie_estimates = 0
+    for index, entry in enumerate(log.get("entries", [])):
+        if entry.get("type") != "food":
+            continue
+        food_events += 1
+        food = entry.get("food")
+        if not isinstance(food, dict) or not str(food.get("name", "")).strip():
+            raise SystemExit(f"health log food entry {index} must include food.name")
+        if food.get("tone", "warn") not in VALID_TONES:
+            raise SystemExit(f"health log food entry {index} has invalid food.tone: {food.get('tone')!r}")
+        calories = food.get("calories", food.get("estimatedCalories"))
+        if calories is None:
+            missing_calorie_estimates += 1
+        elif not isinstance(calories, int) or calories < 0:
+            raise SystemExit(f"health log food entry {index} calories must be a non-negative integer or null")
+        if entry.get("source") == "chat-health-sync hook":
+            chat_food_events += 1
+            if not str(entry.get("rawText", "")).strip():
+                raise SystemExit(f"chat-synced food entry {index} must include rawText")
+    return {
+        "food_events": food_events,
+        "chat_food_events": chat_food_events,
+        "missing_calorie_estimates": missing_calorie_estimates,
+    }
 
 
 def food_total(day: dict[str, Any]) -> tuple[int, int]:
@@ -540,6 +576,9 @@ def build_parser() -> argparse.ArgumentParser:
     food.add_argument("--tone", default="warn", choices=sorted(VALID_TONES))
     food.add_argument("--note", default="")
     food.add_argument("--id", default="", help="Stable food id for same-day updates")
+    food.add_argument("--raw-text", default="", help="Original chat text that produced this food event")
+    food.add_argument("--session-id", default="", help="Hermes session id for chat-synced food events")
+    food.add_argument("--source", default="health_log.py", help="Event source label")
     food.add_argument("--replace", action="store_true", help="Append a versioned replacement event for an existing item")
     food.set_defaults(func=add_food)
 
@@ -586,15 +625,22 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "validate":
         state = materialize(log)
         validate_state(state)
+        stats = validate_log_health(log)
         if args.dry_run:
             print(json.dumps({"store": normalize_log(log), "state": state}, indent=2, ensure_ascii=False))
             return 0
         save_store(store_path, state_path, log)
-        print(f"validated {store_path} and regenerated {state_path}")
+        print(
+            f"validated {store_path} and regenerated {state_path}; "
+            f"{stats['food_events']} food events "
+            f"({stats['chat_food_events']} chat-synced), "
+            f"{stats['missing_calorie_estimates']} missing calorie estimates"
+        )
     else:
         result = args.func(log, args)
         state = materialize(log)
         validate_state(state)
+        validate_log_health(log)
         if args.dry_run:
             print(result)
             print(json.dumps({"store": normalize_log(log), "state": state}, indent=2, ensure_ascii=False))
