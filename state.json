@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-24",
-  "updated": "2026-06-24T22:11:55-04:00",
+  "currentDate": "2026-06-26",
+  "updated": "2026-06-26T08:23:51-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,6 +11,22 @@
     "completedWorkouts": 1
   },
   "days": {
+    "2026-06-26": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
     "2026-06-22": {
       "workout": {
         "status": "missed",
@@ -23,19 +39,22 @@
           "name": "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
           "tone": "warn",
           "calories": null,
-          "note": "Good protein base; calorie-dense extras make portions matter."
+          "note": "Good protein base; calorie-dense extras make portions matter.",
+          "id": "food-2026-06-22-lunch-grilled-chicken-salad-ranch-croutons-chees-0"
         },
         {
           "name": "Snack: wasabi almonds",
           "tone": "warn",
           "calories": null,
-          "note": "Better than chips, but calorie dense. Portion matters."
+          "note": "Better than chips, but calorie dense. Portion matters.",
+          "id": "food-2026-06-22-snack-wasabi-almonds-1"
         },
         {
           "name": "Dinner: cheese sandwich (bread, cheese, mayo)",
           "tone": "warn",
           "calories": 380,
-          "note": "Logged estimate. Lower protein; keep it controlled."
+          "note": "Logged estimate. Lower protein; keep it controlled.",
+          "id": "food-2026-06-22-dinner-cheese-sandwich-bread-cheese-mayo-2"
         }
       ],
       "weight": {
@@ -63,13 +82,15 @@
           "name": "Snack: Sabra Smart Snackers pretzel and hummus",
           "tone": "warn",
           "calories": 370,
-          "note": "10g protein, 45g carbs, 18g fat, 6g fiber, 850mg sodium. Count this as a mini-meal."
+          "note": "10g protein, 45g carbs, 18g fat, 6g fiber, 850mg sodium. Count this as a mini-meal.",
+          "id": "food-2026-06-23-snack-sabra-smart-snackers-pretzel-and-hummus-0"
         },
         {
           "name": "Lunch: grilled chicken salad with ranch dressing, cheese, tomatoes, small avocado, croutons",
           "tone": "warn",
           "calories": null,
-          "note": "Good protein base from grilled chicken; ranch, cheese, avocado, and croutons add calories. Keep dinner lean/protein-forward."
+          "note": "Good protein base from grilled chicken; ranch, cheese, avocado, and croutons add calories. Keep dinner lean/protein-forward.",
+          "id": "food-2026-06-23-lunch-grilled-chicken-salad-with-ranch-dressing--1"
         }
       ],
       "weight": null,
@@ -92,43 +113,74 @@
           "name": "Snack: about 2 cups popcorn",
           "tone": "warn",
           "calories": 100,
-          "note": "Estimated ~60-200 calories depending on butter/oil; using 100 as a working estimate. Light snack, but not much protein."
+          "note": "Estimated ~60-200 calories depending on butter/oil; using 100 as a working estimate. Light snack, but not much protein.",
+          "id": "food-2026-06-24-snack-about-2-cups-popcorn-0"
         },
         {
           "name": "Lunch: quarter chicken and homemade coleslaw",
           "tone": "warn",
           "calories": 650,
-          "note": "Working estimate for quarter chicken plus homemade coleslaw. Good protein anchor; portion and dressing matter."
+          "note": "Working estimate for quarter chicken plus homemade coleslaw. Good protein anchor; portion and dressing matter.",
+          "id": "food-2026-06-24-lunch-quarter-chicken-and-homemade-coleslaw-1"
         },
         {
           "name": "Snack: other half of Publix cake",
           "tone": "warn",
           "calories": 300,
-          "note": "Working estimate for the other half of the cake."
+          "note": "Working estimate for the other half of the cake.",
+          "id": "food-2026-06-24-snack-other-half-of-publix-cake-2"
         },
         {
           "name": "Dinner: small chicken breast",
           "tone": "warn",
           "calories": 250,
-          "note": "Small portion; good protein anchor."
+          "note": "Small portion; good protein anchor.",
+          "id": "food-2026-06-24-dinner-small-chicken-breast-3"
         },
         {
           "name": "Dinner: small macaroni and cheese",
           "tone": "warn",
           "calories": 250,
-          "note": "Small serving; calorie-dense side."
+          "note": "Small serving; calorie-dense side.",
+          "id": "food-2026-06-24-dinner-small-macaroni-and-cheese-4"
         },
         {
           "name": "Dinner: small potato salad",
           "tone": "warn",
           "calories": 200,
-          "note": "Small serving; calorie-dense side."
+          "note": "Small serving; calorie-dense side.",
+          "id": "food-2026-06-24-dinner-small-potato-salad-5"
         },
         {
           "name": "Dinner: small Jamaican rice and peas",
           "tone": "warn",
           "calories": 250,
-          "note": "Small serving; calorie-dense side."
+          "note": "Small serving; calorie-dense side.",
+          "id": "food-2026-06-24-dinner-small-jamaican-rice-and-peas-6"
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-25": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-25-dinner-dominos-pizza-nuggets",
+          "name": "Dinner: 2 slices Domino's pizza and 2 nuggets",
+          "tone": "warn",
+          "calories": 700,
+          "note": "Backfilled from session search; user logged this on Jun 25."
         }
       ],
       "weight": null,

@@ -1,25 +1,34 @@
 #!/usr/bin/env python
 """Structured health logger for the GitHub Pages dashboard.
 
-This script is the primary writer for state.json. It avoids passive transcript
-parsing: callers pass the already-interpreted health event explicitly.
+Canonical storage lives in data/health-log.json as an append-only event log.
+state.json is a generated compatibility snapshot for the static dashboard and any
+older consumers. Callers still pass already-interpreted health events explicitly;
+this script does not parse chat transcripts.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
+import uuid
+from copy import deepcopy
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
 
 SCHEMA_VERSION = 3
+LOG_SCHEMA_VERSION = 1
 DAILY_CALORIE_TARGET = 2100
 WEEKLY_WORKOUT_TARGET = 4
-DEFAULT_STATE = Path(__file__).resolve().parents[1] / "state.json"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_STATE = REPO_ROOT / "state.json"
+DEFAULT_STORE = REPO_ROOT / "data" / "health-log.json"
 VALID_TONES = {"good", "warn", "bad"}
 VALID_WORKOUT_STATUSES = {"done", "modified", "missed", "not_logged"}
+EVENT_TYPES = {"food", "workout", "weight", "sleep", "note"}
 
 
 def now() -> datetime:
@@ -43,7 +52,7 @@ def day_key(value: str | None) -> str:
 
 
 def week_anchor(day: str | None = None) -> str:
-    d = datetime.strptime(day, "%Y-%m-%d").astimezone() if day else now()
+    d = datetime.strptime(day, "%Y-%m-%d") if day else now().replace(tzinfo=None)
     if d.weekday() == 6:  # Sunday
         start = d
     else:
@@ -78,6 +87,43 @@ def blank_state(today: str | None = None) -> dict[str, Any]:
     }
 
 
+def blank_log() -> dict[str, Any]:
+    return {
+        "schemaVersion": LOG_SCHEMA_VERSION,
+        "updated": now_iso(),
+        "targets": {"dailyCalories": DAILY_CALORIE_TARGET, "weeklyWorkouts": WEEKLY_WORKOUT_TARGET},
+        "entries": [],
+    }
+
+
+def require_tone(tone: str) -> str:
+    if tone not in VALID_TONES:
+        raise SystemExit(f"Invalid tone {tone!r}; choose one of {', '.join(sorted(VALID_TONES))}")
+    return tone
+
+
+def slug(value: str) -> str:
+    clean = re.sub(r"[^a-z0-9]+", "-", value.strip().lower()).strip("-")
+    return clean[:48] or "item"
+
+
+def food_id(date: str, name: str, index: int | None = None) -> str:
+    suffix = f"-{index}" if index is not None else ""
+    return f"food-{date}-{slug(name)}{suffix}"
+
+
+def event_id(kind: str) -> str:
+    return f"evt-{now().strftime('%Y%m%d%H%M%S')}-{kind}-{uuid.uuid4().hex[:8]}"
+
+
+def normalize_targets(raw: dict[str, Any] | None) -> dict[str, Any]:
+    targets = raw if isinstance(raw, dict) else {}
+    return {
+        "dailyCalories": targets.get("dailyCalories", DAILY_CALORIE_TARGET),
+        "weeklyWorkouts": targets.get("weeklyWorkouts", WEEKLY_WORKOUT_TARGET),
+    }
+
+
 def legacy_day_from_state(data: dict[str, Any], today: str) -> dict[str, Any]:
     day = empty_day()
     if isinstance(data.get("workout"), dict):
@@ -102,7 +148,7 @@ def legacy_day_from_state(data: dict[str, Any], today: str) -> dict[str, Any]:
     return day
 
 
-def normalize(data: dict[str, Any] | None) -> dict[str, Any]:
+def normalize_snapshot(data: dict[str, Any] | None) -> dict[str, Any]:
     today = day_key("today")
     raw = data or {}
     state = blank_state(today)
@@ -115,9 +161,7 @@ def normalize(data: dict[str, Any] | None) -> dict[str, Any]:
     state["schemaVersion"] = SCHEMA_VERSION
     state["currentDate"] = today
     state["updated"] = raw.get("updated") or state["updated"]
-    state["targets"] = raw.get("targets") if isinstance(raw.get("targets"), dict) else state["targets"]
-    state["targets"].setdefault("dailyCalories", DAILY_CALORIE_TARGET)
-    state["targets"].setdefault("weeklyWorkouts", WEEKLY_WORKOUT_TARGET)
+    state["targets"] = normalize_targets(raw.get("targets"))
     state.setdefault("days", {})
     state["days"].setdefault(today, empty_day())
 
@@ -125,99 +169,275 @@ def normalize(data: dict[str, Any] | None) -> dict[str, Any]:
         if not isinstance(day, dict):
             state["days"][key] = empty_day()
             continue
-        day.setdefault("workout", empty_day()["workout"])
+        defaults = empty_day()
+        day.setdefault("workout", defaults["workout"])
         day.setdefault("foods", [])
         day.setdefault("weight", None)
-        day.setdefault("sleep", empty_day()["sleep"])
+        day.setdefault("sleep", defaults["sleep"])
         day.setdefault("notes", [])
 
+    refresh_week(state)
+    return state
+
+
+def normalize_log(raw: dict[str, Any] | None) -> dict[str, Any]:
+    data = blank_log()
+    if not isinstance(raw, dict):
+        return data
+    data["updated"] = raw.get("updated") or data["updated"]
+    data["targets"] = normalize_targets(raw.get("targets"))
+    entries = raw.get("entries", [])
+    if not isinstance(entries, list):
+        raise SystemExit("health log entries must be a list")
+    clean_entries = []
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            raise SystemExit(f"health log entry {index} must be an object")
+        date = entry.get("date")
+        try:
+            datetime.strptime(date, "%Y-%m-%d")
+        except (TypeError, ValueError) as exc:
+            raise SystemExit(f"health log entry {index} has invalid date: {date!r}") from exc
+        kind = entry.get("type")
+        if kind not in EVENT_TYPES:
+            raise SystemExit(f"health log entry {index} has invalid type: {kind!r}")
+        clean = dict(entry)
+        clean.setdefault("id", f"evt-migrated-{index:04d}")
+        clean.setdefault("recordedAt", data["updated"])
+        clean.setdefault("action", "set" if kind in {"workout", "weight", "sleep"} else "add")
+        clean_entries.append(clean)
+    data["entries"] = clean_entries
+    return data
+
+
+def make_event(kind: str, date: str, payload: dict[str, Any], action: str = "set", source: str = "health_log.py") -> dict[str, Any]:
+    return {
+        "id": event_id(kind),
+        "recordedAt": now_iso(),
+        "date": date,
+        "type": kind,
+        "action": action,
+        "source": source,
+        **payload,
+    }
+
+
+def migrate_snapshot_to_log(state: dict[str, Any]) -> dict[str, Any]:
+    snapshot = normalize_snapshot(state)
+    log = blank_log()
+    log["updated"] = snapshot.get("updated") or log["updated"]
+    log["targets"] = normalize_targets(snapshot.get("targets"))
+    entries: list[dict[str, Any]] = []
+    for date, day in sorted(snapshot.get("days", {}).items()):
+        recorded_at = snapshot.get("updated") or now_iso()
+        workout = day.get("workout") if isinstance(day, dict) else None
+        if isinstance(workout, dict) and workout.get("status") != "not_logged":
+            entries.append({
+                "id": f"evt-migrated-{date}-workout",
+                "recordedAt": recorded_at,
+                "date": date,
+                "type": "workout",
+                "action": "set",
+                "source": "state.json migration",
+                "workout": workout,
+            })
+        for index, food in enumerate(day.get("foods", []) if isinstance(day, dict) else []):
+            if not isinstance(food, dict):
+                food = {"name": str(food), "tone": "warn", "calories": None, "note": "Migrated from old state."}
+            name = food.get("name", f"Food item {index + 1}")
+            entries.append({
+                "id": f"evt-migrated-{date}-food-{index:02d}",
+                "recordedAt": recorded_at,
+                "date": date,
+                "type": "food",
+                "action": "upsert",
+                "source": "state.json migration",
+                "foodId": food.get("id") or food_id(date, name, index),
+                "food": food,
+            })
+        weight = day.get("weight") if isinstance(day, dict) else None
+        if isinstance(weight, dict) and weight.get("label"):
+            entries.append({
+                "id": f"evt-migrated-{date}-weight",
+                "recordedAt": recorded_at,
+                "date": date,
+                "type": "weight",
+                "action": "set",
+                "source": "state.json migration",
+                "weight": weight,
+            })
+        sleep = day.get("sleep") if isinstance(day, dict) else None
+        if isinstance(sleep, dict) and sleep.get("label") and sleep.get("label") != "Not logged":
+            entries.append({
+                "id": f"evt-migrated-{date}-sleep",
+                "recordedAt": recorded_at,
+                "date": date,
+                "type": "sleep",
+                "action": "set",
+                "source": "state.json migration",
+                "sleep": sleep,
+            })
+        for index, note in enumerate(day.get("notes", []) if isinstance(day, dict) else []):
+            entries.append({
+                "id": f"evt-migrated-{date}-note-{index:02d}",
+                "recordedAt": recorded_at,
+                "date": date,
+                "type": "note",
+                "action": "add",
+                "source": "state.json migration",
+                "note": note,
+            })
+    log["entries"] = entries
+    return log
+
+
+def sort_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(enumerate(entries), key=lambda pair: (pair[1].get("date", ""), pair[1].get("recordedAt", ""), pair[0]))
+
+
+def materialize(log: dict[str, Any], today: str | None = None) -> dict[str, Any]:
+    current = today or day_key("today")
+    state = blank_state(current)
+    state["updated"] = log.get("updated") or state["updated"]
+    state["targets"] = normalize_targets(log.get("targets"))
+    state["days"] = {current: empty_day()}
+
+    for _, entry in sort_entries(log.get("entries", [])):
+        date = entry["date"]
+        day = state["days"].setdefault(date, empty_day())
+        kind = entry["type"]
+        action = entry.get("action", "set")
+        if kind == "food":
+            item = deepcopy(entry.get("food") or {})
+            if not item:
+                continue
+            item.setdefault("tone", "warn")
+            item.setdefault("calories", None)
+            item.setdefault("note", "Logged from canonical health store.")
+            item_id = entry.get("foodId") or item.get("id") or food_id(date, item.get("name", "food"))
+            item["id"] = item_id
+            foods = [f for f in day.get("foods", []) if isinstance(f, dict)]
+            existing_index = next((i for i, old in enumerate(foods) if old.get("id") == item_id), None)
+            if action == "delete":
+                day["foods"] = [old for old in foods if old.get("id") != item_id]
+            elif existing_index is not None:
+                foods[existing_index] = item
+                day["foods"] = foods
+            else:
+                foods.append(item)
+                day["foods"] = foods
+        elif kind == "workout":
+            day["workout"] = deepcopy(entry.get("workout") or empty_day()["workout"])
+        elif kind == "weight":
+            day["weight"] = deepcopy(entry.get("weight"))
+        elif kind == "sleep":
+            day["sleep"] = deepcopy(entry.get("sleep") or empty_day()["sleep"])
+        elif kind == "note" and action != "delete":
+            day.setdefault("notes", []).append(entry.get("note", ""))
+
+    refresh_week(state)
+    return state
+
+
+def refresh_week(state: dict[str, Any]) -> None:
+    today = state.get("currentDate") or day_key("today")
     anchor = week_anchor(today)
     completed = sum(
         1
-        for key, day in state["days"].items()
+        for key, day in state.get("days", {}).items()
         if key >= anchor and isinstance(day, dict) and day.get("workout", {}).get("status") == "done"
     )
     state["week"] = {"anchor": anchor, "completedWorkouts": completed}
 
-    # Intentionally do not preserve legacy top-level fields like workout/foods/score.
-    # The dashboard derives summary values from days[currentDate].
-    return state
 
-
-def load_state(path: Path) -> dict[str, Any]:
+def load_json(path: Path) -> dict[str, Any] | None:
     if not path.exists():
-        return blank_state()
+        return None
     try:
-        return normalize(json.loads(path.read_text(encoding="utf-8")))
+        return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         raise SystemExit(f"Invalid JSON in {path}: {exc}") from exc
 
 
-def save_state(path: Path, state: dict[str, Any]) -> None:
-    clean = normalize(state)
-    clean["updated"] = now_iso()
-    path.write_text(json.dumps(clean, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+def load_store(store_path: Path, state_path: Path) -> dict[str, Any]:
+    raw_log = load_json(store_path)
+    if raw_log is not None:
+        return normalize_log(raw_log)
+    raw_state = load_json(state_path)
+    return migrate_snapshot_to_log(raw_state or blank_state())
+
+
+def write_json(path: Path, data: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     json.loads(path.read_text(encoding="utf-8"))
 
 
-def require_tone(tone: str) -> str:
-    if tone not in VALID_TONES:
-        raise SystemExit(f"Invalid tone {tone!r}; choose one of {', '.join(sorted(VALID_TONES))}")
-    return tone
+def save_store(store_path: Path, state_path: Path, log: dict[str, Any]) -> dict[str, Any]:
+    clean_log = normalize_log(log)
+    clean_log["updated"] = now_iso()
+    state = materialize(clean_log)
+    validate_state(state)
+    write_json(store_path, clean_log)
+    write_json(state_path, state)
+    return state
 
 
-def add_food(state: dict[str, Any], args: argparse.Namespace) -> str:
+def add_food(log: dict[str, Any], args: argparse.Namespace) -> str:
     date = day_key(args.date)
-    day = state["days"].setdefault(date, empty_day())
-    entry = {
-        "name": args.name,
-        "tone": require_tone(args.tone),
-        "calories": args.calories,
-        "note": args.note or "Logged from chat.",
-    }
-    existing = [f for f in day.get("foods", []) if isinstance(f, dict)]
-    for idx, old in enumerate(existing):
-        if old.get("name", "").strip().lower() == args.name.strip().lower():
-            if args.replace:
-                existing[idx] = entry
-                day["foods"] = existing
-                return f"updated food for {date}: {args.name}"
+    item_id = args.id or food_id(date, args.name)
+    entry = make_event(
+        "food",
+        date,
+        {
+            "foodId": item_id,
+            "food": {
+                "id": item_id,
+                "name": args.name,
+                "tone": require_tone(args.tone),
+                "calories": args.calories,
+                "note": args.note or "Logged from chat.",
+            },
+        },
+        action="upsert" if args.replace else "add",
+    )
+    if not args.replace:
+        current = materialize(log, today=date).get("days", {}).get(date, empty_day())
+        if any(f.get("id") == item_id or f.get("name", "").strip().lower() == args.name.strip().lower() for f in current.get("foods", [])):
             return f"no change; food already exists for {date}: {args.name}"
-    day.setdefault("foods", []).append(entry)
-    return f"added food for {date}: {args.name}"
+    log.setdefault("entries", []).append(entry)
+    return f"logged food event for {date}: {args.name}"
 
 
-def set_workout(state: dict[str, Any], args: argparse.Namespace) -> str:
+def set_workout(log: dict[str, Any], args: argparse.Namespace) -> str:
     status = args.status
     if status not in VALID_WORKOUT_STATUSES:
         raise SystemExit(f"Invalid workout status {status!r}; choose done, modified, missed, not_logged")
     date = day_key(args.date)
-    day = state["days"].setdefault(date, empty_day())
     tone = {"done": "good", "modified": "warn", "missed": "bad", "not_logged": "warn"}[status]
     label = args.label or {"done": "Done", "modified": "Modified / cut short", "missed": "Missed workout", "not_logged": "No workout logged yet"}[status]
     detail = args.detail or "Workout saved from direct health logger."
-    day["workout"] = {"status": status, "label": label, "tone": tone, "detail": detail}
-    return f"set workout for {date}: {status}"
+    log.setdefault("entries", []).append(make_event("workout", date, {"workout": {"status": status, "label": label, "tone": tone, "detail": detail}}))
+    return f"logged workout event for {date}: {status}"
 
 
-def set_weight(state: dict[str, Any], args: argparse.Namespace) -> str:
+def set_weight(log: dict[str, Any], args: argparse.Namespace) -> str:
     date = day_key(args.date)
-    day = state["days"].setdefault(date, empty_day())
     value = float(args.value)
-    day["weight"] = {
-        "value": value,
-        "label": f"{value:.1f} lb",
-        "tone": require_tone(args.tone),
-        "detail": args.detail or "Weight saved from direct health logger.",
-    }
-    return f"set weight for {date}: {value:.1f} lb"
+    log.setdefault("entries", []).append(
+        make_event(
+            "weight",
+            date,
+            {"weight": {"value": value, "label": f"{value:.1f} lb", "tone": require_tone(args.tone), "detail": args.detail or "Weight saved from direct health logger."}},
+        )
+    )
+    return f"logged weight event for {date}: {value:.1f} lb"
 
 
-def set_sleep(state: dict[str, Any], args: argparse.Namespace) -> str:
+def set_sleep(log: dict[str, Any], args: argparse.Namespace) -> str:
     date = day_key(args.date)
-    day = state["days"].setdefault(date, empty_day())
-    day["sleep"] = {"label": args.label, "tone": require_tone(args.tone), "detail": args.detail or args.label}
-    return f"set sleep for {date}: {args.label}"
+    log.setdefault("entries", []).append(make_event("sleep", date, {"sleep": {"label": args.label, "tone": require_tone(args.tone), "detail": args.detail or args.label}}))
+    return f"logged sleep event for {date}: {args.label}"
 
 
 def validate_state(state: dict[str, Any]) -> None:
@@ -237,19 +457,62 @@ def validate_state(state: dict[str, Any]) -> None:
             raise SystemExit(f"days[{key}].workout.status is invalid: {workout.get('status')!r}")
 
 
+def food_total(day: dict[str, Any]) -> tuple[int, int]:
+    total = 0
+    missing = 0
+    for food in day.get("foods", []):
+        calories = food.get("calories", food.get("estimatedCalories")) if isinstance(food, dict) else None
+        if isinstance(calories, (int, float)):
+            total += int(calories)
+        else:
+            missing += 1
+    return total, missing
+
+
+def history_payload(state: dict[str, Any], date: str) -> dict[str, Any]:
+    day = state.get("days", {}).get(date, empty_day())
+    total, missing = food_total(day)
+    return {
+        "date": date,
+        "foodItems": len(day.get("foods", [])),
+        "knownCalories": total,
+        "missingCalorieEstimates": missing,
+        "workoutStatus": day.get("workout", {}).get("status", "not_logged"),
+        "weight": day.get("weight"),
+        "sleep": day.get("sleep"),
+        "day": day,
+    }
+
+
+def print_history(state: dict[str, Any], args: argparse.Namespace) -> None:
+    dates = [day_key(args.date)] if args.date else sorted(state.get("days", {}))
+    payloads = [history_payload(state, date) for date in dates]
+    if args.json:
+        print(json.dumps(payloads[0] if args.date else payloads, indent=2, ensure_ascii=False))
+        return
+    for payload in payloads:
+        missing = payload["missingCalorieEstimates"]
+        missing_text = f" + {missing} missing estimates" if missing else ""
+        weight_text = payload["weight"]["label"] if payload["weight"] else "not logged"
+        print(
+            f"{payload['date']}: {payload['foodItems']} food items, "
+            f"{payload['knownCalories']} known calories"
+            f"{missing_text}, "
+            f"workout {payload['workoutStatus']}, "
+            f"weight {weight_text}"
+        )
+
+
 def git_sync(repo: Path, commit_message: str) -> None:
-    commands = [
-        ["git", "add", "state.json"],
-        ["git", "status", "--porcelain", "state.json"],
-    ]
-    add = subprocess.run(commands[0], cwd=repo, capture_output=True, text=True, check=False)
+    paths = ["state.json", "data/health-log.json"]
+    add = subprocess.run(["git", "add", *paths], cwd=repo, capture_output=True, text=True, check=False)
     if add.returncode != 0:
         raise SystemExit(add.stderr or add.stdout or "git add failed")
-    status = subprocess.run(commands[1], cwd=repo, capture_output=True, text=True, check=False)
+    status = subprocess.run(["git", "status", "--porcelain", *paths], cwd=repo, capture_output=True, text=True, check=False)
     if status.returncode != 0:
         raise SystemExit(status.stderr or status.stdout or "git status failed")
     if not status.stdout.strip():
-        print("git: no state.json changes to commit")
+        print("git: no health data changes to commit")
         return
     for cmd in (["git", "commit", "-m", commit_message], ["git", "push", "origin", "main"]):
         proc = subprocess.run(cmd, cwd=repo, capture_output=True, text=True, check=False)
@@ -262,20 +525,22 @@ def git_sync(repo: Path, commit_message: str) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Direct structured writer for the health dashboard state.json")
-    parser.add_argument("--state", default=str(DEFAULT_STATE), help="Path to state.json")
-    parser.add_argument("--no-sync", action="store_true", help="Write state.json but do not git commit/push")
+    parser = argparse.ArgumentParser(description="Append-only structured writer for the health dashboard data store")
+    parser.add_argument("--state", default=str(DEFAULT_STATE), help="Path to generated state.json snapshot")
+    parser.add_argument("--store", default=str(DEFAULT_STORE), help="Path to canonical data/health-log.json event store")
+    parser.add_argument("--no-sync", action="store_true", help="Write files but do not git commit/push")
     parser.add_argument("--dry-run", action="store_true", help="Print resulting JSON without writing")
     parser.add_argument("--message", default="chore: direct health log update", help="Git commit message when syncing")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    food = sub.add_parser("food", help="Add a food entry")
+    food = sub.add_parser("food", help="Add or update a food entry")
     food.add_argument("--date", default="today")
     food.add_argument("--name", required=True)
     food.add_argument("--calories", type=int)
     food.add_argument("--tone", default="warn", choices=sorted(VALID_TONES))
     food.add_argument("--note", default="")
-    food.add_argument("--replace", action="store_true")
+    food.add_argument("--id", default="", help="Stable food id for same-day updates")
+    food.add_argument("--replace", action="store_true", help="Append a versioned replacement event for an existing item")
     food.set_defaults(func=add_food)
 
     workout = sub.add_parser("workout", help="Set workout status")
@@ -299,35 +564,46 @@ def build_parser() -> argparse.ArgumentParser:
     sleep.add_argument("--detail", default="")
     sleep.set_defaults(func=set_sleep)
 
-    sub.add_parser("validate", help="Validate and normalize state.json")
+    history = sub.add_parser("history", help="Read day-level history from the canonical store")
+    history.add_argument("--date", default="", help="today, yesterday, or YYYY-MM-DD; omit for all days")
+    history.add_argument("--json", action="store_true")
+
+    sub.add_parser("validate", help="Validate canonical store and regenerate state.json")
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    path = Path(args.state).resolve()
-    state = load_state(path)
+    state_path = Path(args.state).resolve()
+    store_path = Path(args.store).resolve()
+    log = load_store(store_path, state_path)
+
+    if args.command == "history":
+        print_history(materialize(log), args)
+        return 0
 
     if args.command == "validate":
+        state = materialize(log)
         validate_state(state)
         if args.dry_run:
-            print(json.dumps(normalize(state), indent=2, ensure_ascii=False))
+            print(json.dumps({"store": normalize_log(log), "state": state}, indent=2, ensure_ascii=False))
             return 0
-        save_state(path, state)
-        print(f"validated {path}")
+        save_store(store_path, state_path, log)
+        print(f"validated {store_path} and regenerated {state_path}")
     else:
-        result = args.func(state, args)
-        validate_state(normalize(state))
+        result = args.func(log, args)
+        state = materialize(log)
+        validate_state(state)
         if args.dry_run:
             print(result)
-            print(json.dumps(normalize(state), indent=2, ensure_ascii=False))
+            print(json.dumps({"store": normalize_log(log), "state": state}, indent=2, ensure_ascii=False))
             return 0
-        save_state(path, state)
+        save_store(store_path, state_path, log)
         print(result)
 
     if not args.no_sync and not args.dry_run:
-        git_sync(path.parent, args.message)
+        git_sync(state_path.parent, args.message)
     return 0
 
 

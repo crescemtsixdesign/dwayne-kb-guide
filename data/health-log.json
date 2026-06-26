@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-06-26T08:23:51-04:00",
+  "targets": {
+    "dailyCalories": 2100,
+    "weeklyWorkouts": 4
+  },
+  "entries": [
+    {
+      "id": "evt-migrated-2026-06-22-workout",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "workout",
+      "action": "set",
+      "source": "state.json migration",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Started the KB workout but stopped after the kettlebell hold bothered the left bicep."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-22-food-00",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-22-lunch-grilled-chicken-salad-ranch-croutons-chees-0",
+      "food": {
+        "name": "Lunch: grilled chicken salad, ranch, croutons, cheese, avocado",
+        "tone": "warn",
+        "calories": null,
+        "note": "Good protein base; calorie-dense extras make portions matter."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-22-food-01",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-22-snack-wasabi-almonds-1",
+      "food": {
+        "name": "Snack: wasabi almonds",
+        "tone": "warn",
+        "calories": null,
+        "note": "Better than chips, but calorie dense. Portion matters."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-22-food-02",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-22-dinner-cheese-sandwich-bread-cheese-mayo-2",
+      "food": {
+        "name": "Dinner: cheese sandwich (bread, cheese, mayo)",
+        "tone": "warn",
+        "calories": 380,
+        "note": "Logged estimate. Lower protein; keep it controlled."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-22-weight",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "weight",
+      "action": "set",
+      "source": "state.json migration",
+      "weight": {
+        "value": 216.6,
+        "label": "216.6 lb",
+        "tone": "warn",
+        "detail": "Last recorded weigh-in."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-22-sleep",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-22",
+      "type": "sleep",
+      "action": "set",
+      "source": "state.json migration",
+      "sleep": {
+        "label": "Short night",
+        "tone": "warn",
+        "detail": "Stayed up too late."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-23-food-00",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-23",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-23-snack-sabra-smart-snackers-pretzel-and-hummus-0",
+      "food": {
+        "name": "Snack: Sabra Smart Snackers pretzel and hummus",
+        "tone": "warn",
+        "calories": 370,
+        "note": "10g protein, 45g carbs, 18g fat, 6g fiber, 850mg sodium. Count this as a mini-meal."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-23-food-01",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-23",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-23-lunch-grilled-chicken-salad-with-ranch-dressing--1",
+      "food": {
+        "name": "Lunch: grilled chicken salad with ranch dressing, cheese, tomatoes, small avocado, croutons",
+        "tone": "warn",
+        "calories": null,
+        "note": "Good protein base from grilled chicken; ranch, cheese, avocado, and croutons add calories. Keep dinner lean/protein-forward."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-workout",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "workout",
+      "action": "set",
+      "source": "state.json migration",
+      "workout": {
+        "status": "done",
+        "label": "KB workout done",
+        "tone": "good",
+        "detail": "KB workout started at 6:00am. Effort 7/10. Completed 2 sets per exercise as first real run-through."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-00",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-snack-about-2-cups-popcorn-0",
+      "food": {
+        "name": "Snack: about 2 cups popcorn",
+        "tone": "warn",
+        "calories": 100,
+        "note": "Estimated ~60-200 calories depending on butter/oil; using 100 as a working estimate. Light snack, but not much protein."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-01",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-lunch-quarter-chicken-and-homemade-coleslaw-1",
+      "food": {
+        "name": "Lunch: quarter chicken and homemade coleslaw",
+        "tone": "warn",
+        "calories": 650,
+        "note": "Working estimate for quarter chicken plus homemade coleslaw. Good protein anchor; portion and dressing matter."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-02",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-snack-other-half-of-publix-cake-2",
+      "food": {
+        "name": "Snack: other half of Publix cake",
+        "tone": "warn",
+        "calories": 300,
+        "note": "Working estimate for the other half of the cake."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-03",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-dinner-small-chicken-breast-3",
+      "food": {
+        "name": "Dinner: small chicken breast",
+        "tone": "warn",
+        "calories": 250,
+        "note": "Small portion; good protein anchor."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-04",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-dinner-small-macaroni-and-cheese-4",
+      "food": {
+        "name": "Dinner: small macaroni and cheese",
+        "tone": "warn",
+        "calories": 250,
+        "note": "Small serving; calorie-dense side."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-05",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-dinner-small-potato-salad-5",
+      "food": {
+        "name": "Dinner: small potato salad",
+        "tone": "warn",
+        "calories": 200,
+        "note": "Small serving; calorie-dense side."
+      }
+    },
+    {
+      "id": "evt-migrated-2026-06-24-food-06",
+      "recordedAt": "2026-06-24T22:11:55-04:00",
+      "date": "2026-06-24",
+      "type": "food",
+      "action": "upsert",
+      "source": "state.json migration",
+      "foodId": "food-2026-06-24-dinner-small-jamaican-rice-and-peas-6",
+      "food": {
+        "name": "Dinner: small Jamaican rice and peas",
+        "tone": "warn",
+        "calories": 250,
+        "note": "Small serving; calorie-dense side."
+      }
+    },
+    {
+      "id": "evt-20260626082343-food-c2285232",
+      "recordedAt": "2026-06-26T08:23:43-04:00",
+      "date": "2026-06-25",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-06-25-dinner-dominos-pizza-nuggets",
+      "food": {
+        "id": "food-2026-06-25-dinner-dominos-pizza-nuggets",
+        "name": "Dinner: 2 slices Domino's pizza and 2 nuggets",
+        "tone": "warn",
+        "calories": 700,
+        "note": "Backfilled from session search; user logged this on Jun 25."
+      }
+    }
+  ]
+}
