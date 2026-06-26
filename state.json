@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-26",
-  "updated": "2026-06-26T10:34:39-04:00",
+  "updated": "2026-06-26T11:09:18-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -176,6 +176,13 @@
       },
       "foods": [
         {
+          "id": "food-2026-06-25-dinner-dominos-pizza-nuggets",
+          "name": "Dinner: 2 slices Domino's pizza and 2 nuggets",
+          "tone": "warn",
+          "calories": 700,
+          "note": "Backfilled from session search; user logged this on Jun 25."
+        },
+        {
           "id": "food-2026-06-25-snack-about-2-cups-popcorn-0",
           "name": "Snack: about 2 cups popcorn",
           "tone": "warn",
@@ -188,13 +195,6 @@
           "tone": "warn",
           "calories": 650,
           "note": "User clarified this was also eaten on Jun 25."
-        },
-        {
-          "id": "food-2026-06-25-dinner-dominos-pizza-nuggets",
-          "name": "Dinner: 2 slices Domino's pizza and 2 nuggets",
-          "tone": "warn",
-          "calories": 700,
-          "note": "Backfilled from session search; user logged this on Jun 25."
         }
       ],
       "weight": null,
