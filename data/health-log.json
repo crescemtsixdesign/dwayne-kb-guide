@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-26T14:58:23-04:00",
+  "updated": "2026-06-26T17:09:30-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -324,6 +324,24 @@
       },
       "rawText": "I just ate this bag",
       "sessionId": "telegram:dm:2026-06-26-1438"
+    },
+    {
+      "id": "evt-20260626170930-food-f1271c26",
+      "recordedAt": "2026-06-26T17:09:30-04:00",
+      "date": "2026-06-26",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-26-lunch-wawa-breaded-chicken-salad-with-extra-caes",
+      "food": {
+        "id": "food-2026-06-26-lunch-wawa-breaded-chicken-salad-with-extra-caes",
+        "name": "Lunch: Wawa breaded chicken salad with extra Caesar dressing",
+        "tone": "warn",
+        "calories": 900,
+        "note": "Working estimate for breaded chicken salad plus extra side of Caesar dressing."
+      },
+      "rawText": "just had a wawa breaded chicken salad with an extra side of Caesar dressing",
+      "sessionId": "telegram:dm:2026-06-26-1709"
     }
   ]
 }
