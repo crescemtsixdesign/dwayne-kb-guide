@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-27",
-  "updated": "2026-06-27T09:50:16-04:00",
+  "updated": "2026-06-27T15:45:45-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -25,6 +25,13 @@
           "tone": "warn",
           "calories": 270,
           "note": "Official Dunkin nutrition: 270 calories for 1 Boston Kreme donut."
+        },
+        {
+          "id": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
+          "name": "Lunch: Publix Cuban sub to go",
+          "tone": "warn",
+          "calories": 900,
+          "note": "Official Publix Cuban Sub listing shows 900 calories for the whole sub; if you meant half, that is a different log."
         }
       ],
       "weight": null,
