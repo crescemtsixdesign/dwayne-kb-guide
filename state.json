@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-27",
-  "updated": "2026-06-27T09:34:26-04:00",
+  "updated": "2026-06-27T09:50:16-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -18,7 +18,15 @@
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [],
+      "foods": [
+        {
+          "id": "food-2026-06-27-breakfast-dunkin-boston-kreme-donut",
+          "name": "Breakfast: Dunkin Boston Kreme donut",
+          "tone": "warn",
+          "calories": 270,
+          "note": "Official Dunkin nutrition: 270 calories for 1 Boston Kreme donut."
+        }
+      ],
       "weight": null,
       "sleep": {
         "label": "Not logged",

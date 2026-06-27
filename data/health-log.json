@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-27T09:34:26-04:00",
+  "updated": "2026-06-27T09:50:16-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -373,6 +373,22 @@
         "tone": "warn",
         "calories": 1020,
         "note": "Revised estimate: half Publix chicken tender sub is roughly 860 cal with white roll, cheese, and mayo; chips add about 160 cal."
+      }
+    },
+    {
+      "id": "evt-20260627095012-food-6e726939",
+      "recordedAt": "2026-06-27T09:50:12-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-breakfast-dunkin-boston-kreme-donut",
+      "food": {
+        "id": "food-2026-06-27-breakfast-dunkin-boston-kreme-donut",
+        "name": "Breakfast: Dunkin Boston Kreme donut",
+        "tone": "warn",
+        "calories": 270,
+        "note": "Official Dunkin nutrition: 270 calories for 1 Boston Kreme donut."
       }
     }
   ]
