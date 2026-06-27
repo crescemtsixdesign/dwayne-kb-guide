@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-26",
-  "updated": "2026-06-26T17:09:30-04:00",
+  "currentDate": "2026-06-27",
+  "updated": "2026-06-27T09:34:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,36 +11,14 @@
     "completedWorkouts": 1
   },
   "days": {
-    "2026-06-26": {
+    "2026-06-27": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [
-        {
-          "id": "food-2026-06-26-snack-2-3-cups-popcorn",
-          "name": "Snack: 2-3 cups popcorn",
-          "tone": "warn",
-          "calories": 100,
-          "note": "Estimated working value for a small popcorn snack."
-        },
-        {
-          "id": "food-2026-06-26-snack-ruffles-baked-cheddar-sour-cream-chips-1-b",
-          "name": "Snack: Ruffles Baked Cheddar & Sour Cream chips (1 bag)",
-          "tone": "warn",
-          "calories": 140,
-          "note": "Single-serve bag shown in image; label shows 140 calories per pkg."
-        },
-        {
-          "id": "food-2026-06-26-lunch-wawa-breaded-chicken-salad-with-extra-caes",
-          "name": "Lunch: Wawa breaded chicken salad with extra Caesar dressing",
-          "tone": "warn",
-          "calories": 900,
-          "note": "Working estimate for breaded chicken salad plus extra side of Caesar dressing."
-        }
-      ],
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -217,6 +195,51 @@
           "tone": "warn",
           "calories": 650,
           "note": "User clarified this was also eaten on Jun 25."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-26": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-26-snack-2-3-cups-popcorn",
+          "name": "Snack: 2-3 cups popcorn",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Estimated working value for a small popcorn snack."
+        },
+        {
+          "id": "food-2026-06-26-snack-ruffles-baked-cheddar-sour-cream-chips-1-b",
+          "name": "Snack: Ruffles Baked Cheddar & Sour Cream chips (1 bag)",
+          "tone": "warn",
+          "calories": 140,
+          "note": "Single-serve bag shown in image; label shows 140 calories per pkg."
+        },
+        {
+          "id": "food-2026-06-26-lunch-wawa-breaded-chicken-salad-with-extra-caes",
+          "name": "Lunch: Wawa breaded chicken salad with extra Caesar dressing",
+          "tone": "warn",
+          "calories": 900,
+          "note": "Working estimate for breaded chicken salad plus extra side of Caesar dressing."
+        },
+        {
+          "id": "food-2026-06-26-dinner-half-publix-chicken-tender-sub-serving-of",
+          "name": "Dinner: half Publix chicken tender sub + serving of Ruffles Cheddar & Sour Cream chips",
+          "tone": "warn",
+          "calories": 1020,
+          "note": "Revised estimate: half Publix chicken tender sub is roughly 860 cal with white roll, cheese, and mayo; chips add about 160 cal."
         }
       ],
       "weight": null,

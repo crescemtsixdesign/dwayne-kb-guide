@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-26T17:09:30-04:00",
+  "updated": "2026-06-27T09:34:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -342,6 +342,38 @@
       },
       "rawText": "just had a wawa breaded chicken salad with an extra side of Caesar dressing",
       "sessionId": "telegram:dm:2026-06-26-1709"
+    },
+    {
+      "id": "evt-20260627092614-food-e465e668",
+      "recordedAt": "2026-06-27T09:26:14-04:00",
+      "date": "2026-06-26",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-26-dinner-half-publix-chicken-tender-sub-serving-of",
+      "food": {
+        "id": "food-2026-06-26-dinner-half-publix-chicken-tender-sub-serving-of",
+        "name": "Dinner: half Publix chicken tender sub + serving of Ruffles Cheddar & Sour Cream chips",
+        "tone": "warn",
+        "calories": 470,
+        "note": "Estimated from a 6-inch chicken tender sub (~620 cal) plus one serving of chips (~160 cal)."
+      }
+    },
+    {
+      "id": "evt-20260627093224-food-90c2ba3a",
+      "recordedAt": "2026-06-27T09:32:24-04:00",
+      "date": "2026-06-26",
+      "type": "food",
+      "action": "upsert",
+      "source": "telegram",
+      "foodId": "food-2026-06-26-dinner-half-publix-chicken-tender-sub-serving-of",
+      "food": {
+        "id": "food-2026-06-26-dinner-half-publix-chicken-tender-sub-serving-of",
+        "name": "Dinner: half Publix chicken tender sub + serving of Ruffles Cheddar & Sour Cream chips",
+        "tone": "warn",
+        "calories": 1020,
+        "note": "Revised estimate: half Publix chicken tender sub is roughly 860 cal with white roll, cheese, and mayo; chips add about 160 cal."
+      }
     }
   ]
 }
