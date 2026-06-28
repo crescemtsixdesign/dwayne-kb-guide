@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-27T22:29:04-04:00",
+  "updated": "2026-06-28T13:25:14-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -502,6 +502,24 @@
         "calories": 650,
         "note": "Publix Deli Cuban Sub, Half listing shows 320-650 calories per half sub sandwich; logged here as 650 calories for the half sub."
       }
+    },
+    {
+      "id": "evt-20260628132514-food-07bc67f6",
+      "recordedAt": "2026-06-28T13:25:14-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-28-so-far",
+      "food": {
+        "id": "food-2026-06-28-so-far",
+        "name": "So far",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "So far today, I had two Publix chocolate chip cookies two KFC chicken tenders and a KFC biscuit",
+      "sessionId": "20260628_132257_1822f8a2"
     }
   ]
 }

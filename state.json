@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-27",
-  "updated": "2026-06-27T22:29:04-04:00",
+  "currentDate": "2026-06-28",
+  "updated": "2026-06-28T13:25:14-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
-    "anchor": "2026-06-21",
-    "completedWorkouts": 1
+    "anchor": "2026-06-28",
+    "completedWorkouts": 0
   },
   "days": {
-    "2026-06-27": {
+    "2026-06-28": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,53 +20,11 @@
       },
       "foods": [
         {
-          "id": "food-2026-06-27-breakfast-dunkin-boston-kreme-donut",
-          "name": "Breakfast: Dunkin Boston Kreme donut",
+          "id": "food-2026-06-28-so-far",
+          "name": "So far",
           "tone": "warn",
-          "calories": 270,
-          "note": "Official Dunkin nutrition: 270 calories for 1 Boston Kreme donut."
-        },
-        {
-          "id": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
-          "name": "Lunch: half Publix Cuban sub to go",
-          "tone": "warn",
-          "calories": 650,
-          "note": "Publix Deli Cuban Sub, Half listing shows 320-650 calories per half sub sandwich; logged here as 650 calories for the half sub."
-        },
-        {
-          "id": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
-          "name": "Lunch: 2 McDonald's cheeseburgers",
-          "tone": "warn",
-          "calories": 600,
-          "note": "McDonald's Cheeseburger: 300 calories each."
-        },
-        {
-          "id": "food-2026-06-27-lunch-mcdonald-s-medium-fries",
-          "name": "Lunch: McDonald's medium fries",
-          "tone": "warn",
-          "calories": 320,
-          "note": "McDonald's medium World Famous Fries: 320 calories."
-        },
-        {
-          "id": "food-2026-06-27-lunch-mcdonald-s-medium-sprite",
-          "name": "Lunch: McDonald's medium Sprite",
-          "tone": "warn",
-          "calories": 250,
-          "note": "McDonald's medium Sprite: 250 calories."
-        },
-        {
-          "id": "food-2026-06-27-snack-4-publix-sugar-cookies-with-sprinkles",
-          "name": "Snack: 4 Publix sugar cookies with sprinkles",
-          "tone": "warn",
-          "calories": 320,
-          "note": "Publix Sugar Cookie with Sprinkles: about 80 calories each."
-        },
-        {
-          "id": "food-2026-06-27-drink-12-oz-pepsi",
-          "name": "Drink: 12 oz Pepsi",
-          "tone": "warn",
-          "calories": 150,
-          "note": "Pepsi 12 fl oz serving: 150 calories."
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
@@ -290,6 +248,72 @@
           "tone": "warn",
           "calories": 1020,
           "note": "Revised estimate: half Publix chicken tender sub is roughly 860 cal with white roll, cheese, and mayo; chips add about 160 cal."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-27": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-27-breakfast-dunkin-boston-kreme-donut",
+          "name": "Breakfast: Dunkin Boston Kreme donut",
+          "tone": "warn",
+          "calories": 270,
+          "note": "Official Dunkin nutrition: 270 calories for 1 Boston Kreme donut."
+        },
+        {
+          "id": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
+          "name": "Lunch: half Publix Cuban sub to go",
+          "tone": "warn",
+          "calories": 650,
+          "note": "Publix Deli Cuban Sub, Half listing shows 320-650 calories per half sub sandwich; logged here as 650 calories for the half sub."
+        },
+        {
+          "id": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
+          "name": "Lunch: 2 McDonald's cheeseburgers",
+          "tone": "warn",
+          "calories": 600,
+          "note": "McDonald's Cheeseburger: 300 calories each."
+        },
+        {
+          "id": "food-2026-06-27-lunch-mcdonald-s-medium-fries",
+          "name": "Lunch: McDonald's medium fries",
+          "tone": "warn",
+          "calories": 320,
+          "note": "McDonald's medium World Famous Fries: 320 calories."
+        },
+        {
+          "id": "food-2026-06-27-lunch-mcdonald-s-medium-sprite",
+          "name": "Lunch: McDonald's medium Sprite",
+          "tone": "warn",
+          "calories": 250,
+          "note": "McDonald's medium Sprite: 250 calories."
+        },
+        {
+          "id": "food-2026-06-27-snack-4-publix-sugar-cookies-with-sprinkles",
+          "name": "Snack: 4 Publix sugar cookies with sprinkles",
+          "tone": "warn",
+          "calories": 320,
+          "note": "Publix Sugar Cookie with Sprinkles: about 80 calories each."
+        },
+        {
+          "id": "food-2026-06-27-drink-12-oz-pepsi",
+          "name": "Drink: 12 oz Pepsi",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Pepsi 12 fl oz serving: 150 calories."
         }
       ],
       "weight": null,
