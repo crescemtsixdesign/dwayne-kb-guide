@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-28T13:25:14-04:00",
+  "updated": "2026-06-28T13:25:16-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -514,6 +514,24 @@
       "food": {
         "id": "food-2026-06-28-so-far",
         "name": "So far",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "So far today, I had two Publix chocolate chip cookies two KFC chicken tenders and a KFC biscuit",
+      "sessionId": "20260628_132257_1822f8a2"
+    },
+    {
+      "id": "evt-20260628132516-food-674216d5",
+      "recordedAt": "2026-06-28T13:25:16-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-28-two-publix-chocolate-chip-cookies-two-kfc-chicke",
+      "food": {
+        "id": "food-2026-06-28-two-publix-chocolate-chip-cookies-two-kfc-chicke",
+        "name": "Two Publix chocolate chip cookies two KFC chicken tenders",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
