@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-27",
-  "updated": "2026-06-27T15:45:45-04:00",
+  "updated": "2026-06-27T22:23:10-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -32,6 +32,41 @@
           "tone": "warn",
           "calories": 900,
           "note": "Official Publix Cuban Sub listing shows 900 calories for the whole sub; if you meant half, that is a different log."
+        },
+        {
+          "id": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
+          "name": "Lunch: 2 McDonald's cheeseburgers",
+          "tone": "warn",
+          "calories": 600,
+          "note": "McDonald's Cheeseburger: 300 calories each."
+        },
+        {
+          "id": "food-2026-06-27-lunch-mcdonald-s-medium-fries",
+          "name": "Lunch: McDonald's medium fries",
+          "tone": "warn",
+          "calories": 320,
+          "note": "McDonald's medium World Famous Fries: 320 calories."
+        },
+        {
+          "id": "food-2026-06-27-lunch-mcdonald-s-medium-sprite",
+          "name": "Lunch: McDonald's medium Sprite",
+          "tone": "warn",
+          "calories": 250,
+          "note": "McDonald's medium Sprite: 250 calories."
+        },
+        {
+          "id": "food-2026-06-27-snack-4-publix-sugar-cookies-with-sprinkles",
+          "name": "Snack: 4 Publix sugar cookies with sprinkles",
+          "tone": "warn",
+          "calories": 320,
+          "note": "Publix Sugar Cookie with Sprinkles: about 80 calories each."
+        },
+        {
+          "id": "food-2026-06-27-drink-12-oz-pepsi",
+          "name": "Drink: 12 oz Pepsi",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Pepsi 12 fl oz serving: 150 calories."
         }
       ],
       "weight": null,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-27T15:45:45-04:00",
+  "updated": "2026-06-27T22:23:10-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -405,6 +405,86 @@
         "tone": "warn",
         "calories": 900,
         "note": "Official Publix Cuban Sub listing shows 900 calories for the whole sub; if you meant half, that is a different log."
+      }
+    },
+    {
+      "id": "evt-20260627222306-food-2f01f1c3",
+      "recordedAt": "2026-06-27T22:23:06-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
+      "food": {
+        "id": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
+        "name": "Lunch: 2 McDonald's cheeseburgers",
+        "tone": "warn",
+        "calories": 600,
+        "note": "McDonald's Cheeseburger: 300 calories each."
+      }
+    },
+    {
+      "id": "evt-20260627222306-food-3b9fd2fc",
+      "recordedAt": "2026-06-27T22:23:06-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-lunch-mcdonald-s-medium-fries",
+      "food": {
+        "id": "food-2026-06-27-lunch-mcdonald-s-medium-fries",
+        "name": "Lunch: McDonald's medium fries",
+        "tone": "warn",
+        "calories": 320,
+        "note": "McDonald's medium World Famous Fries: 320 calories."
+      }
+    },
+    {
+      "id": "evt-20260627222306-food-23d922d4",
+      "recordedAt": "2026-06-27T22:23:06-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-lunch-mcdonald-s-medium-sprite",
+      "food": {
+        "id": "food-2026-06-27-lunch-mcdonald-s-medium-sprite",
+        "name": "Lunch: McDonald's medium Sprite",
+        "tone": "warn",
+        "calories": 250,
+        "note": "McDonald's medium Sprite: 250 calories."
+      }
+    },
+    {
+      "id": "evt-20260627222306-food-fd3c62af",
+      "recordedAt": "2026-06-27T22:23:06-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-snack-4-publix-sugar-cookies-with-sprinkles",
+      "food": {
+        "id": "food-2026-06-27-snack-4-publix-sugar-cookies-with-sprinkles",
+        "name": "Snack: 4 Publix sugar cookies with sprinkles",
+        "tone": "warn",
+        "calories": 320,
+        "note": "Publix Sugar Cookie with Sprinkles: about 80 calories each."
+      }
+    },
+    {
+      "id": "evt-20260627222306-food-b2714d14",
+      "recordedAt": "2026-06-27T22:23:06-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-drink-12-oz-pepsi",
+      "food": {
+        "id": "food-2026-06-27-drink-12-oz-pepsi",
+        "name": "Drink: 12 oz Pepsi",
+        "tone": "warn",
+        "calories": 150,
+        "note": "Pepsi 12 fl oz serving: 150 calories."
       }
     }
   ]
