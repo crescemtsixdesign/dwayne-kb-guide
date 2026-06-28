@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-27T22:23:10-04:00",
+  "updated": "2026-06-27T22:29:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -485,6 +485,22 @@
         "tone": "warn",
         "calories": 150,
         "note": "Pepsi 12 fl oz serving: 150 calories."
+      }
+    },
+    {
+      "id": "evt-20260627222901-food-1ad46c4e",
+      "recordedAt": "2026-06-27T22:29:01-04:00",
+      "date": "2026-06-27",
+      "type": "food",
+      "action": "upsert",
+      "source": "telegram",
+      "foodId": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
+      "food": {
+        "id": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
+        "name": "Lunch: half Publix Cuban sub to go",
+        "tone": "warn",
+        "calories": 650,
+        "note": "Publix Deli Cuban Sub, Half listing shows 320-650 calories per half sub sandwich; logged here as 650 calories for the half sub."
       }
     }
   ]

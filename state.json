@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-27",
-  "updated": "2026-06-27T22:23:10-04:00",
+  "updated": "2026-06-27T22:29:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -28,10 +28,10 @@
         },
         {
           "id": "food-2026-06-27-lunch-publix-cuban-sub-to-go",
-          "name": "Lunch: Publix Cuban sub to go",
+          "name": "Lunch: half Publix Cuban sub to go",
           "tone": "warn",
-          "calories": 900,
-          "note": "Official Publix Cuban Sub listing shows 900 calories for the whole sub; if you meant half, that is a different log."
+          "calories": 650,
+          "note": "Publix Deli Cuban Sub, Half listing shows 320-650 calories per half sub sandwich; logged here as 650 calories for the half sub."
         },
         {
           "id": "food-2026-06-27-lunch-2-mcdonald-s-cheeseburgers",
