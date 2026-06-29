@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-28T13:25:18-04:00",
+  "updated": "2026-06-29T09:02:15-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -556,6 +556,56 @@
       },
       "rawText": "So far today, I had two Publix chocolate chip cookies two KFC chicken tenders and a KFC biscuit",
       "sessionId": "20260628_132257_1822f8a2"
+    },
+    {
+      "id": "evt-20260629090105-food-e13d94d6",
+      "recordedAt": "2026-06-29T09:01:05-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
+      "food": {
+        "id": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
+        "name": "Domino's pizza (3 slices, assumed cheese hand-tossed)",
+        "tone": "warn",
+        "calories": 330,
+        "note": "Logged from chat. Domino's cheese-only hand-tossed slice is 110 calories; 3 slices logged. If this was a different crust or topping, actual calories may be higher."
+      }
+    },
+    {
+      "id": "evt-20260629090105-food-a8a881f6",
+      "recordedAt": "2026-06-29T09:01:05-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-06-28-walmart-great-value-berry-punch-about-2-glasses",
+      "food": {
+        "id": "food-2026-06-28-walmart-great-value-berry-punch-about-2-glasses",
+        "name": "Walmart Great Value berry punch (about 2 glasses)",
+        "tone": "warn",
+        "calories": 180,
+        "note": "Approximate. Great Value Berry Punch is 90 calories per 8 oz serving; logged as about 2 standard glasses."
+      }
+    },
+    {
+      "id": "evt-20260629090215-food-794ef79f",
+      "recordedAt": "2026-06-29T09:02:15-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
+      "food": {
+        "id": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
+        "name": "Update ’s food log I had three slices of Domino’s Pizza",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Update yesterday’s food log I had three slices of Domino’s Pizza and I had about two glasses of Walmart brand berry punch",
+      "sessionId": "20260629_085340_23dd4e73"
     }
   ]
 }

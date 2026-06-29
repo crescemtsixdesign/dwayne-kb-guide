@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-28",
-  "updated": "2026-06-28T13:25:18-04:00",
+  "currentDate": "2026-06-29",
+  "updated": "2026-06-29T09:02:15-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,36 +11,14 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-06-28": {
+    "2026-06-29": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [
-        {
-          "id": "food-2026-06-28-so-far",
-          "name": "So far",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-06-28-two-publix-chocolate-chip-cookies-two-kfc-chicke",
-          "name": "Two Publix chocolate chip cookies two KFC chicken tenders",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-06-28-a-kfc-biscuit",
-          "name": "A KFC biscuit",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        }
-      ],
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -328,6 +306,65 @@
           "tone": "warn",
           "calories": 150,
           "note": "Pepsi 12 fl oz serving: 150 calories."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-28": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-28-so-far",
+          "name": "So far",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-06-28-two-publix-chocolate-chip-cookies-two-kfc-chicke",
+          "name": "Two Publix chocolate chip cookies two KFC chicken tenders",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-06-28-a-kfc-biscuit",
+          "name": "A KFC biscuit",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
+          "name": "Domino's pizza (3 slices, assumed cheese hand-tossed)",
+          "tone": "warn",
+          "calories": 330,
+          "note": "Logged from chat. Domino's cheese-only hand-tossed slice is 110 calories; 3 slices logged. If this was a different crust or topping, actual calories may be higher."
+        },
+        {
+          "id": "food-2026-06-28-walmart-great-value-berry-punch-about-2-glasses",
+          "name": "Walmart Great Value berry punch (about 2 glasses)",
+          "tone": "warn",
+          "calories": 180,
+          "note": "Approximate. Great Value Berry Punch is 90 calories per 8 oz serving; logged as about 2 standard glasses."
+        },
+        {
+          "id": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
+          "name": "Update ’s food log I had three slices of Domino’s Pizza",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
