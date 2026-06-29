@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-06-29",
-  "updated": "2026-06-29T09:02:18-04:00",
+  "updated": "2026-06-29T09:07:23-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -19,7 +19,12 @@
         "detail": "Use chat to log done, missed, or modified."
       },
       "foods": [],
-      "weight": null,
+      "weight": {
+        "value": 215.0,
+        "label": "215.0 lb",
+        "tone": "good",
+        "detail": "Morning weigh-in."
+      },
       "sleep": {
         "label": "Not logged",
         "tone": "warn",
@@ -347,10 +352,10 @@
         },
         {
           "id": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
-          "name": "Domino's pizza (3 slices, assumed cheese hand-tossed)",
+          "name": "Domino's pizza (3 slices, pepperoni + beef topping)",
           "tone": "warn",
-          "calories": 330,
-          "note": "Logged from chat. Domino's cheese-only hand-tossed slice is 110 calories; 3 slices logged. If this was a different crust or topping, actual calories may be higher."
+          "calories": 450,
+          "note": "Corrected from chat: three slices with pepperoni and beef toppings. Estimated at 150 calories per slice on Domino's hand-tossed slice basis; if the crust/size was different, the true total could shift."
         },
         {
           "id": "food-2026-06-28-walmart-great-value-berry-punch-about-2-glasses",
@@ -358,20 +363,6 @@
           "tone": "warn",
           "calories": 180,
           "note": "Approximate. Great Value Berry Punch is 90 calories per 8 oz serving; logged as about 2 standard glasses."
-        },
-        {
-          "id": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
-          "name": "Update ’s food log I had three slices of Domino’s Pizza",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-06-28-about-two-glasses-of-walmart-brand-berry-punch",
-          "name": "About two glasses of Walmart brand berry punch",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

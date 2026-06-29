@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-29T09:02:18-04:00",
+  "updated": "2026-06-29T09:07:23-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -590,40 +590,34 @@
       }
     },
     {
-      "id": "evt-20260629090215-food-794ef79f",
-      "recordedAt": "2026-06-29T09:02:15-04:00",
+      "id": "evt-20260629090608-food-4c6df3e0",
+      "recordedAt": "2026-06-29T09:06:08-04:00",
       "date": "2026-06-28",
       "type": "food",
-      "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
+      "action": "upsert",
+      "source": "telegram",
+      "foodId": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
       "food": {
-        "id": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
-        "name": "Update ’s food log I had three slices of Domino’s Pizza",
+        "id": "food-2026-06-28-domino-s-pizza-3-slices-assumed-cheese-hand-toss",
+        "name": "Domino's pizza (3 slices, pepperoni + beef topping)",
         "tone": "warn",
-        "calories": null,
-        "note": "Captured automatically from health chat; verify calories if estimated/missing."
-      },
-      "rawText": "Update yesterday’s food log I had three slices of Domino’s Pizza and I had about two glasses of Walmart brand berry punch",
-      "sessionId": "20260629_085340_23dd4e73"
+        "calories": 450,
+        "note": "Corrected from chat: three slices with pepperoni and beef toppings. Estimated at 150 calories per slice on Domino's hand-tossed slice basis; if the crust/size was different, the true total could shift."
+      }
     },
     {
-      "id": "evt-20260629090218-food-acd7e91e",
-      "recordedAt": "2026-06-29T09:02:18-04:00",
-      "date": "2026-06-28",
-      "type": "food",
-      "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-06-28-about-two-glasses-of-walmart-brand-berry-punch",
-      "food": {
-        "id": "food-2026-06-28-about-two-glasses-of-walmart-brand-berry-punch",
-        "name": "About two glasses of Walmart brand berry punch",
-        "tone": "warn",
-        "calories": null,
-        "note": "Captured automatically from health chat; verify calories if estimated/missing."
-      },
-      "rawText": "Update yesterday’s food log I had three slices of Domino’s Pizza and I had about two glasses of Walmart brand berry punch",
-      "sessionId": "20260629_085340_23dd4e73"
+      "id": "evt-20260629090608-weight-dde33234",
+      "recordedAt": "2026-06-29T09:06:08-04:00",
+      "date": "2026-06-29",
+      "type": "weight",
+      "action": "set",
+      "source": "health_log.py",
+      "weight": {
+        "value": 215.0,
+        "label": "215.0 lb",
+        "tone": "good",
+        "detail": "Morning weigh-in."
+      }
     }
   ]
 }
