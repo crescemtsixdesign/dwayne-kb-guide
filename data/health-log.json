@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-29T09:02:15-04:00",
+  "updated": "2026-06-29T09:02:18-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -600,6 +600,24 @@
       "food": {
         "id": "food-2026-06-28-update-s-food-log-i-had-three-slices-of-domino-s",
         "name": "Update ’s food log I had three slices of Domino’s Pizza",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Update yesterday’s food log I had three slices of Domino’s Pizza and I had about two glasses of Walmart brand berry punch",
+      "sessionId": "20260629_085340_23dd4e73"
+    },
+    {
+      "id": "evt-20260629090218-food-acd7e91e",
+      "recordedAt": "2026-06-29T09:02:18-04:00",
+      "date": "2026-06-28",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-28-about-two-glasses-of-walmart-brand-berry-punch",
+      "food": {
+        "id": "food-2026-06-28-about-two-glasses-of-walmart-brand-berry-punch",
+        "name": "About two glasses of Walmart brand berry punch",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
