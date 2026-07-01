@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-30T22:58:47-04:00",
+  "updated": "2026-07-01T11:12:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -755,6 +755,24 @@
       },
       "rawText": "I ate 2 slices of dominoes pizza. One slice had pepperoni and beef topping. One slide had chicken and bacon. I also ate just the top of 2 identical slices (no crust, just the cheese and toppings). I also ate 2 Burger King chicken nuggets.",
       "sessionId": "20260630_102927_5a6418ae"
+    },
+    {
+      "id": "evt-20260701111226-food-7c6c46b6",
+      "recordedAt": "2026-07-01T11:12:26-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-01-a-1oz-bag-of-smart-popcorn",
+      "food": {
+        "id": "food-2026-07-01-a-1oz-bag-of-smart-popcorn",
+        "name": "A 1oz bag of smart popcorn",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "i just ate a 1oz bag of smart popcorn",
+      "sessionId": "20260701_100415_64cae4f1"
     }
   ]
 }

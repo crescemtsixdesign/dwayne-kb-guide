@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-30",
-  "updated": "2026-06-30T22:58:47-04:00",
+  "currentDate": "2026-07-01",
+  "updated": "2026-07-01T11:12:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-06-30": {
+    "2026-07-01": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,8 +20,8 @@
       },
       "foods": [
         {
-          "id": "food-2026-06-30-2-slices-of-dominoes-pizza",
-          "name": "2 slices of dominoes pizza",
+          "id": "food-2026-07-01-a-1oz-bag-of-smart-popcorn",
+          "name": "A 1oz bag of smart popcorn",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -433,6 +433,30 @@
         "tone": "good",
         "detail": "Morning weigh-in."
       },
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-30": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-30-2-slices-of-dominoes-pizza",
+          "name": "2 slices of dominoes pizza",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
       "sleep": {
         "label": "Not logged",
         "tone": "warn",
