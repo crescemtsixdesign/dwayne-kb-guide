@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-06-29",
-  "updated": "2026-06-29T21:56:02-04:00",
+  "currentDate": "2026-06-30",
+  "updated": "2026-06-30T22:58:47-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-06-29": {
+    "2026-06-30": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,54 +20,14 @@
       },
       "foods": [
         {
-          "id": "food-2026-06-29-popcorn-1-cup",
-          "name": "Popcorn, 1 cup",
-          "tone": "good",
-          "calories": 31,
-          "note": "Assuming plain/air-popped; user said had a cup of popcorn."
-        },
-        {
-          "id": "food-2026-06-29-espresso-chocolate-drink-office-machine",
-          "name": "Espresso chocolate drink (office machine)",
-          "tone": "warn",
-          "calories": 100,
-          "note": "Estimated from photo: small cup, commercial machine, chocolate espresso drink."
-        },
-        {
-          "id": "food-2026-06-29-homemade-grilled-chicken-caesar-salad",
-          "name": "Homemade grilled chicken Caesar salad",
-          "tone": "warn",
-          "calories": 450,
-          "note": "Uses Ken's Lite Creamy Caesar dressing (100 kcal per 2 tbsp). Estimate adjusted lower from the original generic dressing assumption."
-        },
-        {
-          "id": "food-2026-06-29-very-small-avocado",
-          "name": "Very small avocado",
-          "tone": "warn",
-          "calories": 80,
-          "note": "Added to the Caesar salad; estimated for a very small avocado portion."
-        },
-        {
-          "id": "food-2026-06-29-kfc-classic-chicken-sandwich-combo-dinner",
-          "name": "KFC classic chicken sandwich combo dinner",
-          "tone": "warn",
-          "calories": 1400,
-          "note": "Classic chicken sandwich (650) + individual mac and cheese (140) + Baja Blast soda (~280) + small cole slaw (170) + half small fries (~160). User reported extra sides beyond the combo."
-        },
-        {
-          "id": "food-2026-06-29-dinner-my-wife-wanted-kfc",
-          "name": "Dinner: My wife wanted kfc",
+          "id": "food-2026-06-30-2-slices-of-dominoes-pizza",
+          "name": "2 slices of dominoes pizza",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
-      "weight": {
-        "value": 215.0,
-        "label": "215.0 lb",
-        "tone": "good",
-        "detail": "Morning weigh-in."
-      },
+      "weight": null,
       "sleep": {
         "label": "Not logged",
         "tone": "warn",
@@ -409,6 +369,70 @@
         }
       ],
       "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-06-29": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-06-29-popcorn-1-cup",
+          "name": "Popcorn, 1 cup",
+          "tone": "good",
+          "calories": 31,
+          "note": "Assuming plain/air-popped; user said had a cup of popcorn."
+        },
+        {
+          "id": "food-2026-06-29-espresso-chocolate-drink-office-machine",
+          "name": "Espresso chocolate drink (office machine)",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Estimated from photo: small cup, commercial machine, chocolate espresso drink."
+        },
+        {
+          "id": "food-2026-06-29-homemade-grilled-chicken-caesar-salad",
+          "name": "Homemade grilled chicken Caesar salad",
+          "tone": "warn",
+          "calories": 450,
+          "note": "Uses Ken's Lite Creamy Caesar dressing (100 kcal per 2 tbsp). Estimate adjusted lower from the original generic dressing assumption."
+        },
+        {
+          "id": "food-2026-06-29-very-small-avocado",
+          "name": "Very small avocado",
+          "tone": "warn",
+          "calories": 80,
+          "note": "Added to the Caesar salad; estimated for a very small avocado portion."
+        },
+        {
+          "id": "food-2026-06-29-kfc-classic-chicken-sandwich-combo-dinner",
+          "name": "KFC classic chicken sandwich combo dinner",
+          "tone": "warn",
+          "calories": 1400,
+          "note": "Classic chicken sandwich (650) + individual mac and cheese (140) + Baja Blast soda (~280) + small cole slaw (170) + half small fries (~160). User reported extra sides beyond the combo."
+        },
+        {
+          "id": "food-2026-06-29-dinner-my-wife-wanted-kfc",
+          "name": "Dinner: My wife wanted kfc",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": {
+        "value": 215.0,
+        "label": "215.0 lb",
+        "tone": "good",
+        "detail": "Morning weigh-in."
+      },
       "sleep": {
         "label": "Not logged",
         "tone": "warn",

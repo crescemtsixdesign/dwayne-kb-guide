@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-06-29T21:56:02-04:00",
+  "updated": "2026-06-30T22:58:47-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -737,6 +737,24 @@
       },
       "rawText": "for dinner my wife wanted kfc. i wasn't hungry but i ended up eating a kfc classic chicken sandwhich combo with mac & cheese side instead of fries and a baja blast soda. also a small side of kfc cole slaw, and half a small order of fries",
       "sessionId": "20260629_105727_7023f322"
+    },
+    {
+      "id": "evt-20260630225847-food-dfcafa82",
+      "recordedAt": "2026-06-30T22:58:47-04:00",
+      "date": "2026-06-30",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-06-30-2-slices-of-dominoes-pizza",
+      "food": {
+        "id": "food-2026-06-30-2-slices-of-dominoes-pizza",
+        "name": "2 slices of dominoes pizza",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "I ate 2 slices of dominoes pizza. One slice had pepperoni and beef topping. One slide had chicken and bacon. I also ate just the top of 2 identical slices (no crust, just the cheese and toppings). I also ate 2 Burger King chicken nuggets.",
+      "sessionId": "20260630_102927_5a6418ae"
     }
   ]
 }
