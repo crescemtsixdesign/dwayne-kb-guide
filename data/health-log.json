@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-01T11:12:26-04:00",
+  "updated": "2026-07-01T16:37:09-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -772,6 +772,24 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "i just ate a 1oz bag of smart popcorn",
+      "sessionId": "20260701_100415_64cae4f1"
+    },
+    {
+      "id": "evt-20260701163709-food-09edd948",
+      "recordedAt": "2026-07-01T16:37:09-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-01-lunch-jpg-just-had-this-for-lunch-from-wawa",
+      "food": {
+        "id": "food-2026-07-01-lunch-jpg-just-had-this-for-lunch-from-wawa",
+        "name": "Lunch: Jpg] Just had this for lunch from Wawa",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "[The user sent an image but I couldn't quite see it this time (>_<) You can try looking at it yourself with vision_analyze using image_url: C:\\Users\\coolf\\AppData\\Local\\hermes\\profiles\\health\\cache\\images\\img_e27ee3d7ca0b.jpg]\n\nJust had this for lunch from Wawa",
       "sessionId": "20260701_100415_64cae4f1"
     }
   ]
