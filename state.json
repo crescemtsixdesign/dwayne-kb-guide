@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-02",
-  "updated": "2026-07-02T10:02:05-04:00",
+  "updated": "2026-07-02T10:02:08-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -516,6 +516,13 @@
         {
           "id": "food-2026-07-01-dinner-cheese",
           "name": "Dinner: Cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-01-dinner-tomatoes",
+          "name": "Dinner: Tomatoes",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

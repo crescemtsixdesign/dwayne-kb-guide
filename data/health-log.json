@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-02T10:02:05-04:00",
+  "updated": "2026-07-02T10:02:08-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -905,6 +905,24 @@
       "food": {
         "id": "food-2026-07-01-dinner-cheese",
         "name": "Dinner: Cheese",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "some updates. No workout last night or this morning. Kids and Wife are out of town so Ive been taking advantage of this time to play video games with my friends. I will try to workout tomorrow.\n\nAs far as food, yesterday for dinner I ate a pretty large taco salad that was ground beef, lettuce, cheese, tomatoes, and some rice, along with some thousand island dressing. I also has a very small serving of ruffles sour crream and cheddatr chips later that night",
+      "sessionId": "20260702_095904_8c9540cc"
+    },
+    {
+      "id": "evt-20260702100208-food-8054f1aa",
+      "recordedAt": "2026-07-02T10:02:08-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-01-dinner-tomatoes",
+      "food": {
+        "id": "food-2026-07-01-dinner-tomatoes",
+        "name": "Dinner: Tomatoes",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
