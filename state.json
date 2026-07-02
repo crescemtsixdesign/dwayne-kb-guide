@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-01",
-  "updated": "2026-07-01T16:37:09-04:00",
+  "currentDate": "2026-07-02",
+  "updated": "2026-07-02T10:01:58-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,29 +11,14 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-01": {
+    "2026-07-02": {
       "workout": {
-        "status": "not_logged",
-        "label": "No workout logged yet",
-        "tone": "warn",
-        "detail": "Use chat to log done, missed, or modified."
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "No workout last night or this morning; will try tomorrow."
       },
-      "foods": [
-        {
-          "id": "food-2026-07-01-a-1oz-bag-of-smart-popcorn",
-          "name": "A 1oz bag of smart popcorn",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-01-lunch-jpg-just-had-this-for-lunch-from-wawa",
-          "name": "Lunch: Jpg] Just had this for lunch from Wawa",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        }
-      ],
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -458,6 +443,58 @@
         {
           "id": "food-2026-06-30-2-slices-of-dominoes-pizza",
           "name": "2 slices of dominoes pizza",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-01": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-01-a-1oz-bag-of-smart-popcorn",
+          "name": "A 1oz bag of smart popcorn",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-01-lunch-jpg-just-had-this-for-lunch-from-wawa",
+          "name": "Lunch: Jpg] Just had this for lunch from Wawa",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-01-large-taco-salad",
+          "name": "Large taco salad",
+          "tone": "warn",
+          "calories": 850,
+          "note": "Estimate assumes ground beef, lettuce, cheese, tomatoes, some rice, and thousand island dressing."
+        },
+        {
+          "id": "food-2026-07-01-small-serving-of-ruffles-cheddar-sour-cream-chip",
+          "name": "Small serving of Ruffles Cheddar & Sour Cream chips",
+          "tone": "warn",
+          "calories": 80,
+          "note": "Very small serving; official nutrition is 160 calories per 11 chips."
+        },
+        {
+          "id": "food-2026-07-01-dinner-as-far-as-food",
+          "name": "Dinner: As far as food",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

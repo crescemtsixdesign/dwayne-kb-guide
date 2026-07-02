@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-01T16:37:09-04:00",
+  "updated": "2026-07-02T10:01:58-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -791,6 +791,72 @@
       },
       "rawText": "[The user sent an image but I couldn't quite see it this time (>_<) You can try looking at it yourself with vision_analyze using image_url: C:\\Users\\coolf\\AppData\\Local\\hermes\\profiles\\health\\cache\\images\\img_e27ee3d7ca0b.jpg]\n\nJust had this for lunch from Wawa",
       "sessionId": "20260701_100415_64cae4f1"
+    },
+    {
+      "id": "evt-20260702100103-food-87d88430",
+      "recordedAt": "2026-07-02T10:01:03-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-01-large-taco-salad",
+      "food": {
+        "id": "food-2026-07-01-large-taco-salad",
+        "name": "Large taco salad",
+        "tone": "warn",
+        "calories": 850,
+        "note": "Estimate assumes ground beef, lettuce, cheese, tomatoes, some rice, and thousand island dressing."
+      },
+      "rawText": "yesterday for dinner I ate a pretty large taco salad that was ground beef, lettuce, cheese, tomatoes, and some rice, along with some thousand island dressing. I also has a very small serving of ruffles sour crream and cheddatr chips later that night"
+    },
+    {
+      "id": "evt-20260702100103-food-ec80a5f5",
+      "recordedAt": "2026-07-02T10:01:03-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-01-small-serving-of-ruffles-cheddar-sour-cream-chip",
+      "food": {
+        "id": "food-2026-07-01-small-serving-of-ruffles-cheddar-sour-cream-chip",
+        "name": "Small serving of Ruffles Cheddar & Sour Cream chips",
+        "tone": "warn",
+        "calories": 80,
+        "note": "Very small serving; official nutrition is 160 calories per 11 chips."
+      },
+      "rawText": "yesterday for dinner I ate a pretty large taco salad that was ground beef, lettuce, cheese, tomatoes, and some rice, along with some thousand island dressing. I also has a very small serving of ruffles sour crream and cheddatr chips later that night"
+    },
+    {
+      "id": "evt-20260702100103-workout-324b6986",
+      "recordedAt": "2026-07-02T10:01:03-04:00",
+      "date": "2026-07-02",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "No workout last night or this morning; will try tomorrow."
+      }
+    },
+    {
+      "id": "evt-20260702100158-food-c0285288",
+      "recordedAt": "2026-07-02T10:01:58-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-01-dinner-as-far-as-food",
+      "food": {
+        "id": "food-2026-07-01-dinner-as-far-as-food",
+        "name": "Dinner: As far as food",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "some updates. No workout last night or this morning. Kids and Wife are out of town so Ive been taking advantage of this time to play video games with my friends. I will try to workout tomorrow.\n\nAs far as food, yesterday for dinner I ate a pretty large taco salad that was ground beef, lettuce, cheese, tomatoes, and some rice, along with some thousand island dressing. I also has a very small serving of ruffles sour crream and cheddatr chips later that night",
+      "sessionId": "20260702_095904_8c9540cc"
     }
   ]
 }
