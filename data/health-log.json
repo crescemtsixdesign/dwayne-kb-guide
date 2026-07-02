@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-02T10:01:58-04:00",
+  "updated": "2026-07-02T10:02:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -852,6 +852,24 @@
         "id": "food-2026-07-01-dinner-as-far-as-food",
         "name": "Dinner: As far as food",
         "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "some updates. No workout last night or this morning. Kids and Wife are out of town so Ive been taking advantage of this time to play video games with my friends. I will try to workout tomorrow.\n\nAs far as food, yesterday for dinner I ate a pretty large taco salad that was ground beef, lettuce, cheese, tomatoes, and some rice, along with some thousand island dressing. I also has a very small serving of ruffles sour crream and cheddatr chips later that night",
+      "sessionId": "20260702_095904_8c9540cc"
+    },
+    {
+      "id": "evt-20260702100201-food-950a3786",
+      "recordedAt": "2026-07-02T10:02:01-04:00",
+      "date": "2026-07-01",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-01-dinner-a-pretty-large-taco-salad-that-was-ground",
+      "food": {
+        "id": "food-2026-07-01-dinner-a-pretty-large-taco-salad-that-was-ground",
+        "name": "Dinner: A pretty large taco salad that was ground beef",
+        "tone": "good",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },

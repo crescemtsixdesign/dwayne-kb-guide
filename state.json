@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-02",
-  "updated": "2026-07-02T10:01:58-04:00",
+  "updated": "2026-07-02T10:02:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -496,6 +496,13 @@
           "id": "food-2026-07-01-dinner-as-far-as-food",
           "name": "Dinner: As far as food",
           "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-01-dinner-a-pretty-large-taco-salad-that-was-ground",
+          "name": "Dinner: A pretty large taco salad that was ground beef",
+          "tone": "good",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
