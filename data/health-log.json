@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-03T16:45:39-04:00",
+  "updated": "2026-07-03T16:45:41-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1026,6 +1026,24 @@
       "food": {
         "id": "food-2026-07-02-also",
         "name": "Also",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Also, yesterday I had a serving of chocolate ice cream and a serving of vanilla ice cream. Add that to the log for yesterday and then tell me the final numbers for yesterday.",
+      "sessionId": "20260703_085603_54189ec6"
+    },
+    {
+      "id": "evt-20260703164541-food-d6354826",
+      "recordedAt": "2026-07-03T16:45:41-04:00",
+      "date": "2026-07-02",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-02-a-serving-of-chocolate-ice-cream",
+      "food": {
+        "id": "food-2026-07-02-a-serving-of-chocolate-ice-cream",
+        "name": "A serving of chocolate ice cream",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-03",
-  "updated": "2026-07-03T16:45:39-04:00",
+  "updated": "2026-07-03T16:45:41-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -582,6 +582,13 @@
         {
           "id": "food-2026-07-02-also",
           "name": "Also",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-02-a-serving-of-chocolate-ice-cream",
+          "name": "A serving of chocolate ice cream",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
