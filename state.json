@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-03",
-  "updated": "2026-07-03T16:45:43-04:00",
+  "updated": "2026-07-03T17:49:13-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -599,6 +599,13 @@
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-02-jose-cuervo-margaritas-2-servings",
+          "name": "Jose Cuervo margaritas (2 servings)",
+          "tone": "warn",
+          "calories": 388,
+          "note": "Estimated as 2 servings of Jose Cuervo classic margarita at ~194 cal each."
         }
       ],
       "weight": null,
