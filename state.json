@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-03",
-  "updated": "2026-07-03T16:45:03-04:00",
+  "updated": "2026-07-03T16:45:07-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -568,6 +568,13 @@
         {
           "id": "food-2026-07-02-chocolate-ice-cream",
           "name": "Chocolate ice cream",
+          "tone": "warn",
+          "calories": 160,
+          "note": "Estimated single serving."
+        },
+        {
+          "id": "food-2026-07-02-vanilla-ice-cream",
+          "name": "Vanilla ice cream",
           "tone": "warn",
           "calories": 160,
           "note": "Estimated single serving."
