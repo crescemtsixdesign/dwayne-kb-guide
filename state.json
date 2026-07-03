@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-03",
-  "updated": "2026-07-03T14:11:47-04:00",
+  "updated": "2026-07-03T16:45:03-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -564,6 +564,13 @@
           "tone": "warn",
           "calories": 1350,
           "note": "Estimated from photo: cauliflower bake with ground beef, pasta sauce, mozzarella, and ricotta; about 1/3-1/2 of the pan remained."
+        },
+        {
+          "id": "food-2026-07-02-chocolate-ice-cream",
+          "name": "Chocolate ice cream",
+          "tone": "warn",
+          "calories": 160,
+          "note": "Estimated single serving."
         }
       ],
       "weight": null,
