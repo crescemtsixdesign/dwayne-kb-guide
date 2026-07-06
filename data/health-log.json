@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-06T12:01:11-04:00",
+  "updated": "2026-07-06T12:51:21-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1223,6 +1223,58 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme.",
+      "sessionId": "20260706_093147_9506b2c9"
+    },
+    {
+      "id": "evt-20260706121318-food-e14b7a5f",
+      "recordedAt": "2026-07-06T12:13:18-04:00",
+      "date": "2026-07-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-06-walmart-movie-theater-popcorn",
+      "food": {
+        "id": "food-2026-07-06-walmart-movie-theater-popcorn",
+        "name": "Walmart movie theater popcorn",
+        "tone": "warn",
+        "calories": 225,
+        "note": "Estimated from Great Value classic butter movie theater popcorn; 2.5 cups."
+      },
+      "rawText": "today so far had 2.5 cups of walmart movie popcorn"
+    },
+    {
+      "id": "evt-20260706125115-food-29ebf0d7",
+      "recordedAt": "2026-07-06T12:51:15-04:00",
+      "date": "2026-07-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-06-half-s-mores-donut",
+      "food": {
+        "id": "food-2026-07-06-half-s-mores-donut",
+        "name": "Half s’mores donut",
+        "tone": "warn",
+        "calories": 275,
+        "note": "Unknown source; estimated as half of a standard frosted filled donut."
+      },
+      "rawText": "just ate what i assume is a smores donut but only ate half. no idea where it came form"
+    },
+    {
+      "id": "evt-20260706125121-food-564c4545",
+      "recordedAt": "2026-07-06T12:51:21-04:00",
+      "date": "2026-07-06",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-06-what-i-assume-is-a-smores-donut-but-only-ate-hal",
+      "food": {
+        "id": "food-2026-07-06-what-i-assume-is-a-smores-donut-but-only-ate-hal",
+        "name": "What i assume is a smores donut but only ate half",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just ate what i assume is a smores donut but only ate half. no idea where it came form",
       "sessionId": "20260706_093147_9506b2c9"
     }
   ]
