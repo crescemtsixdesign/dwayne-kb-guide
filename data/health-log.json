@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-03T17:49:13-04:00",
+  "updated": "2026-07-06T12:01:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1084,6 +1084,92 @@
         "calories": 388,
         "note": "Estimated as 2 servings of Jose Cuervo classic margarita at ~194 cal each."
       }
+    },
+    {
+      "id": "evt-20260706120051-food-05f775dc",
+      "recordedAt": "2026-07-06T12:00:51-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-05-breakfast-4-mini-waffles-hot-dog-link",
+      "food": {
+        "id": "food-2026-07-05-breakfast-4-mini-waffles-hot-dog-link",
+        "name": "Breakfast: 4 mini waffles + hot dog link",
+        "tone": "warn",
+        "calories": 300,
+        "note": "User report; estimated calories."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme."
+    },
+    {
+      "id": "evt-20260706120052-food-2161eaff",
+      "recordedAt": "2026-07-06T12:00:52-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-05-mcdonald-s-2-cheeseburger-meal-medium-fries-medi",
+      "food": {
+        "id": "food-2026-07-05-mcdonald-s-2-cheeseburger-meal-medium-fries-medi",
+        "name": "McDonald's 2 Cheeseburger Meal (medium fries, medium Coke)",
+        "tone": "warn",
+        "calories": 1190,
+        "note": "Official McDonald's nutrition info."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme."
+    },
+    {
+      "id": "evt-20260706120052-food-aa492775",
+      "recordedAt": "2026-07-06T12:00:52-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-05-lime-queso-burrito-w-ground-beef",
+      "food": {
+        "id": "food-2026-07-05-lime-queso-burrito-w-ground-beef",
+        "name": "LIME queso burrito w/ ground beef",
+        "tone": "warn",
+        "calories": 900,
+        "note": "LIME menu item; calories estimated from ingredients."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme."
+    },
+    {
+      "id": "evt-20260706120052-food-e453c627",
+      "recordedAt": "2026-07-06T12:00:52-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-05-chips-guac",
+      "food": {
+        "id": "food-2026-07-05-chips-guac",
+        "name": "Chips & guac",
+        "tone": "warn",
+        "calories": 500,
+        "note": "LIME side; calories estimated from portion."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme."
+    },
+    {
+      "id": "evt-20260706120104-food-f7906861",
+      "recordedAt": "2026-07-06T12:01:04-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-05-breakfast-4-mini-waffles",
+      "food": {
+        "id": "food-2026-07-05-breakfast-4-mini-waffles",
+        "name": "Breakfast: 4 mini waffles",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme.",
+      "sessionId": "20260706_093147_9506b2c9"
     }
   ]
 }

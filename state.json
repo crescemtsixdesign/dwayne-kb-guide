@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-03",
-  "updated": "2026-07-03T17:49:13-04:00",
+  "currentDate": "2026-07-06",
+  "updated": "2026-07-06T12:01:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
-    "anchor": "2026-06-28",
+    "anchor": "2026-07-05",
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-03": {
+    "2026-07-06": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -606,6 +606,58 @@
           "tone": "warn",
           "calories": 388,
           "note": "Estimated as 2 servings of Jose Cuervo classic margarita at ~194 cal each."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-05": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-05-breakfast-4-mini-waffles-hot-dog-link",
+          "name": "Breakfast: 4 mini waffles + hot dog link",
+          "tone": "warn",
+          "calories": 300,
+          "note": "User report; estimated calories."
+        },
+        {
+          "id": "food-2026-07-05-mcdonald-s-2-cheeseburger-meal-medium-fries-medi",
+          "name": "McDonald's 2 Cheeseburger Meal (medium fries, medium Coke)",
+          "tone": "warn",
+          "calories": 1190,
+          "note": "Official McDonald's nutrition info."
+        },
+        {
+          "id": "food-2026-07-05-lime-queso-burrito-w-ground-beef",
+          "name": "LIME queso burrito w/ ground beef",
+          "tone": "warn",
+          "calories": 900,
+          "note": "LIME menu item; calories estimated from ingredients."
+        },
+        {
+          "id": "food-2026-07-05-chips-guac",
+          "name": "Chips & guac",
+          "tone": "warn",
+          "calories": 500,
+          "note": "LIME side; calories estimated from portion."
+        },
+        {
+          "id": "food-2026-07-05-breakfast-4-mini-waffles",
+          "name": "Breakfast: 4 mini waffles",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
