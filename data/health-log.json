@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-06T12:01:09-04:00",
+  "updated": "2026-07-06T12:01:11-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1200,6 +1200,24 @@
       "food": {
         "id": "food-2026-07-05-breakfast-a-2-cheese-burger-meal-from-mcdonalds-",
         "name": "Breakfast: A 2 cheese burger meal from mcdonalds with a medium coke and medium fries",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "update yesterday (sunday) log. I had 4 mini waffles and a hot dog link for breakfast, for lunch I had a 2 cheese burger meal from mcdonalds with a medium coke and medium fries. For dinner had a queso burtito with ground beef with a side of chips and quac from Lyme.",
+      "sessionId": "20260706_093147_9506b2c9"
+    },
+    {
+      "id": "evt-20260706120111-food-002747fa",
+      "recordedAt": "2026-07-06T12:01:11-04:00",
+      "date": "2026-07-05",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-05-dinner-a-queso-burtito-with-ground-beef-with-a-s",
+      "food": {
+        "id": "food-2026-07-05-dinner-a-queso-burtito-with-ground-beef-with-a-s",
+        "name": "Dinner: A queso burtito with ground beef with a side of chips and quac from Lyme",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
