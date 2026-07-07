@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T11:15:27-04:00",
+  "updated": "2026-07-07T16:58:23-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1340,6 +1340,22 @@
         "tone": "good",
         "calories": 80,
         "note": "Official: 80 cal per 2 tbsp (Marketside brand). Good protein + fiber."
+      }
+    },
+    {
+      "id": "evt-20260707165823-food-bc9ecb14",
+      "recordedAt": "2026-07-07T16:58:23-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-07-grilled-chicken-salad-usual",
+      "food": {
+        "id": "food-2026-07-07-grilled-chicken-salad-usual",
+        "name": "Grilled chicken salad (usual)",
+        "tone": "warn",
+        "calories": 650,
+        "note": "Standard lunch. Estimate based on grilled chicken, greens, dressing."
       }
     }
   ]
