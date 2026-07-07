@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-06T12:51:21-04:00",
+  "updated": "2026-07-07T11:15:24-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1260,22 +1260,71 @@
       "rawText": "just ate what i assume is a smores donut but only ate half. no idea where it came form"
     },
     {
-      "id": "evt-20260706125121-food-564c4545",
-      "recordedAt": "2026-07-06T12:51:21-04:00",
+      "id": "evt-20260706143702-food-e2f63091",
+      "recordedAt": "2026-07-06T14:37:02-04:00",
       "date": "2026-07-06",
       "type": "food",
       "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-07-06-what-i-assume-is-a-smores-donut-but-only-ate-hal",
+      "source": "telegram",
+      "foodId": "food-2026-07-06-herr-s-sour-cream-onion-chips",
       "food": {
-        "id": "food-2026-07-06-what-i-assume-is-a-smores-donut-but-only-ate-hal",
-        "name": "What i assume is a smores donut but only ate half",
+        "id": "food-2026-07-06-herr-s-sour-cream-onion-chips",
+        "name": "Herr's sour cream & onion chips",
         "tone": "warn",
-        "calories": null,
-        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        "calories": 410,
+        "note": "Photo showed a full bag; estimated from bag label/container calories."
       },
-      "rawText": "just ate what i assume is a smores donut but only ate half. no idea where it came form",
-      "sessionId": "20260706_093147_9506b2c9"
+      "rawText": "Just had this for lunch along with a shorti sized chicken salad shorti sub from Wawa with American cheese, mayo, garlic aoli, and creamy chipotle sauce."
+    },
+    {
+      "id": "evt-20260706143702-food-4ded1b19",
+      "recordedAt": "2026-07-06T14:37:02-04:00",
+      "date": "2026-07-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-06-wawa-chicken-salad-shorti-with-american-cheese-m",
+      "food": {
+        "id": "food-2026-07-06-wawa-chicken-salad-shorti-with-american-cheese-m",
+        "name": "Wawa chicken salad shorti with American cheese, mayo, garlic aioli, and creamy chipotle sauce",
+        "tone": "warn",
+        "calories": 820,
+        "note": "Estimated from Wawa chicken salad shorti plus added cheese and sauces."
+      },
+      "rawText": "Just had this for lunch along with a shorti sized chicken salad shorti sub from Wawa with American cheese, mayo, garlic aoli, and creamy chipotle sauce."
+    },
+    {
+      "id": "evt-20260706195326-food-0c533a39",
+      "recordedAt": "2026-07-06T19:53:26-04:00",
+      "date": "2026-07-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-06-little-debbie-mini-glazed-donuts",
+      "food": {
+        "id": "food-2026-07-06-little-debbie-mini-glazed-donuts",
+        "name": "Little Debbie Mini Glazed Donuts",
+        "tone": "warn",
+        "calories": 350,
+        "note": "Identified from image; assumed one 3 oz package."
+      },
+      "rawText": "8 to 3 ounce package of mini donuts"
+    },
+    {
+      "id": "evt-20260707111524-food-24146cbf",
+      "recordedAt": "2026-07-07T11:15:24-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-07-1-big-celery-stalk",
+      "food": {
+        "id": "food-2026-07-07-1-big-celery-stalk",
+        "name": "1 big celery stalk",
+        "tone": "good",
+        "calories": 15,
+        "note": "Large stalk, very low cal."
+      }
     }
   ]
 }
