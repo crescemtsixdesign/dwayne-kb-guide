@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T11:15:24-04:00",
+  "updated": "2026-07-07T11:15:27-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1324,6 +1324,22 @@
         "tone": "good",
         "calories": 15,
         "note": "Large stalk, very low cal."
+      }
+    },
+    {
+      "id": "evt-20260707111527-food-a931b879",
+      "recordedAt": "2026-07-07T11:15:27-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-07-2-tbsp-marketside-hot-honey-hummus",
+      "food": {
+        "id": "food-2026-07-07-2-tbsp-marketside-hot-honey-hummus",
+        "name": "2 tbsp Marketside Hot Honey Hummus",
+        "tone": "good",
+        "calories": 80,
+        "note": "Official: 80 cal per 2 tbsp (Marketside brand). Good protein + fiber."
       }
     }
   ]
