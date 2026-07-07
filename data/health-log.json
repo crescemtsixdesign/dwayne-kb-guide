@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T16:58:23-04:00",
+  "updated": "2026-07-07T16:58:29-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1357,6 +1357,24 @@
         "calories": 650,
         "note": "Standard lunch. Estimate based on grilled chicken, greens, dressing."
       }
+    },
+    {
+      "id": "evt-20260707165829-food-44c4f763",
+      "recordedAt": "2026-07-07T16:58:29-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-07-lunch-the-same-grilled-chicken-salad-i-have-most",
+      "food": {
+        "id": "food-2026-07-07-lunch-the-same-grilled-chicken-salad-i-have-most",
+        "name": "Lunch: The same grilled chicken salad I have most days for lunch",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just had the same grilled chicken salad I have most days for lunch",
+      "sessionId": "20260707_111233_1ccf39c1"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-07",
-  "updated": "2026-07-07T16:58:23-04:00",
+  "updated": "2026-07-07T16:58:29-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -39,6 +39,13 @@
           "tone": "warn",
           "calories": 650,
           "note": "Standard lunch. Estimate based on grilled chicken, greens, dressing."
+        },
+        {
+          "id": "food-2026-07-07-lunch-the-same-grilled-chicken-salad-i-have-most",
+          "name": "Lunch: The same grilled chicken salad I have most days for lunch",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
