@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T18:40:26-04:00",
+  "updated": "2026-07-07T18:40:28-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1390,6 +1390,22 @@
         "tone": "bad",
         "calories": 1010,
         "note": "Wawa small = 16 oz. Official: 1,010 cal."
+      }
+    },
+    {
+      "id": "evt-20260707184028-food-320c0858",
+      "recordedAt": "2026-07-07T18:40:28-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-07-wawa-mozzarella-sticks-serving",
+      "food": {
+        "id": "food-2026-07-07-wawa-mozzarella-sticks-serving",
+        "name": "Wawa mozzarella sticks (serving)",
+        "tone": "bad",
+        "calories": 410,
+        "note": "Official: 410 cal per serving (4 pieces)."
       }
     }
   ]
