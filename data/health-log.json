@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T16:58:29-04:00",
+  "updated": "2026-07-07T18:40:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1375,6 +1375,22 @@
       },
       "rawText": "just had the same grilled chicken salad I have most days for lunch",
       "sessionId": "20260707_111233_1ccf39c1"
+    },
+    {
+      "id": "evt-20260707184026-food-82b6b7ee",
+      "recordedAt": "2026-07-07T18:40:26-04:00",
+      "date": "2026-07-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-07-small-wawa-chocolate-cookies-cream-shake",
+      "food": {
+        "id": "food-2026-07-07-small-wawa-chocolate-cookies-cream-shake",
+        "name": "Small Wawa chocolate cookies & cream shake",
+        "tone": "bad",
+        "calories": 1010,
+        "note": "Wawa small = 16 oz. Official: 1,010 cal."
+      }
     }
   ]
 }
