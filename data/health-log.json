@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-08T17:27:22-04:00",
+  "updated": "2026-07-08T17:27:24-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1515,6 +1515,24 @@
       "food": {
         "id": "food-2026-07-08-dinner-dinner-i-ate-2-servings-of-white-rice",
         "name": "Dinner: Dinner i ate 2 servings of white rice",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "dinner i ate 2 servings of white rice, a serving of curry chicken, a bbq chicken thigh, and a serving of home made mac and cheese",
+      "sessionId": "20260708_094333_3f9403ea"
+    },
+    {
+      "id": "evt-20260708172724-food-4c441cc9",
+      "recordedAt": "2026-07-08T17:27:24-04:00",
+      "date": "2026-07-08",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-08-dinner-a-serving-of-curry-chicken",
+      "food": {
+        "id": "food-2026-07-08-dinner-a-serving-of-curry-chicken",
+        "name": "Dinner: A serving of curry chicken",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
