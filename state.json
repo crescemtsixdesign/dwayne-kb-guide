@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T11:59:01-04:00",
+  "updated": "2026-07-08T11:59:07-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -25,6 +25,13 @@
           "tone": "good",
           "calories": 15,
           "note": "Same as yesterday — big stalk, very low cal."
+        },
+        {
+          "id": "food-2026-07-08-2-tbsp-marketside-hot-honey-hummus",
+          "name": "2 tbsp Marketside Hot Honey Hummus",
+          "tone": "good",
+          "calories": 80,
+          "note": "Repeat snack, same portion as yesterday."
         }
       ],
       "weight": null,
