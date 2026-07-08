@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-07",
-  "updated": "2026-07-07T18:40:28-04:00",
+  "currentDate": "2026-07-08",
+  "updated": "2026-07-08T11:59:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-07": {
+    "2026-07-08": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,46 +20,11 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-07-1-big-celery-stalk",
+          "id": "food-2026-07-08-1-big-celery-stalk",
           "name": "1 big celery stalk",
           "tone": "good",
           "calories": 15,
-          "note": "Large stalk, very low cal."
-        },
-        {
-          "id": "food-2026-07-07-2-tbsp-marketside-hot-honey-hummus",
-          "name": "2 tbsp Marketside Hot Honey Hummus",
-          "tone": "good",
-          "calories": 80,
-          "note": "Official: 80 cal per 2 tbsp (Marketside brand). Good protein + fiber."
-        },
-        {
-          "id": "food-2026-07-07-grilled-chicken-salad-usual",
-          "name": "Grilled chicken salad (usual)",
-          "tone": "warn",
-          "calories": 650,
-          "note": "Standard lunch. Estimate based on grilled chicken, greens, dressing."
-        },
-        {
-          "id": "food-2026-07-07-lunch-the-same-grilled-chicken-salad-i-have-most",
-          "name": "Lunch: The same grilled chicken salad I have most days for lunch",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-07-small-wawa-chocolate-cookies-cream-shake",
-          "name": "Small Wawa chocolate cookies & cream shake",
-          "tone": "bad",
-          "calories": 1010,
-          "note": "Wawa small = 16 oz. Official: 1,010 cal."
-        },
-        {
-          "id": "food-2026-07-07-wawa-mozzarella-sticks-serving",
-          "name": "Wawa mozzarella sticks (serving)",
-          "tone": "bad",
-          "calories": 410,
-          "note": "Official: 410 cal per serving (4 pieces)."
+          "note": "Same as yesterday — big stalk, very low cal."
         }
       ],
       "weight": null,
@@ -774,6 +739,65 @@
           "tone": "warn",
           "calories": 350,
           "note": "Identified from image; assumed one 3 oz package."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-07": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-07-1-big-celery-stalk",
+          "name": "1 big celery stalk",
+          "tone": "good",
+          "calories": 15,
+          "note": "Large stalk, very low cal."
+        },
+        {
+          "id": "food-2026-07-07-2-tbsp-marketside-hot-honey-hummus",
+          "name": "2 tbsp Marketside Hot Honey Hummus",
+          "tone": "good",
+          "calories": 80,
+          "note": "Official: 80 cal per 2 tbsp (Marketside brand). Good protein + fiber."
+        },
+        {
+          "id": "food-2026-07-07-grilled-chicken-salad-usual",
+          "name": "Grilled chicken salad (usual)",
+          "tone": "warn",
+          "calories": 650,
+          "note": "Standard lunch. Estimate based on grilled chicken, greens, dressing."
+        },
+        {
+          "id": "food-2026-07-07-lunch-the-same-grilled-chicken-salad-i-have-most",
+          "name": "Lunch: The same grilled chicken salad I have most days for lunch",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-07-small-wawa-chocolate-cookies-cream-shake",
+          "name": "Small Wawa chocolate cookies & cream shake",
+          "tone": "bad",
+          "calories": 1010,
+          "note": "Wawa small = 16 oz. Official: 1,010 cal."
+        },
+        {
+          "id": "food-2026-07-07-wawa-mozzarella-sticks-serving",
+          "name": "Wawa mozzarella sticks (serving)",
+          "tone": "bad",
+          "calories": 410,
+          "note": "Official: 410 cal per serving (4 pieces)."
         }
       ],
       "weight": null,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-07T18:40:28-04:00",
+  "updated": "2026-07-08T11:59:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1406,6 +1406,22 @@
         "tone": "bad",
         "calories": 410,
         "note": "Official: 410 cal per serving (4 pieces)."
+      }
+    },
+    {
+      "id": "evt-20260708115901-food-fa1bbc10",
+      "recordedAt": "2026-07-08T11:59:01-04:00",
+      "date": "2026-07-08",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-08-1-big-celery-stalk",
+      "food": {
+        "id": "food-2026-07-08-1-big-celery-stalk",
+        "name": "1 big celery stalk",
+        "tone": "good",
+        "calories": 15,
+        "note": "Same as yesterday — big stalk, very low cal."
       }
     }
   ]
