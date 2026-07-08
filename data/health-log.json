@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-08T17:27:11-04:00",
+  "updated": "2026-07-08T17:27:15-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1486,6 +1486,22 @@
         "tone": "warn",
         "calories": 275,
         "note": "~275 cal with skin + BBQ sauce."
+      }
+    },
+    {
+      "id": "evt-20260708172715-food-78976422",
+      "recordedAt": "2026-07-08T17:27:15-04:00",
+      "date": "2026-07-08",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-08-dinner-homemade-mac-and-cheese-1-serving",
+      "food": {
+        "id": "food-2026-07-08-dinner-homemade-mac-and-cheese-1-serving",
+        "name": "Dinner: homemade mac and cheese (1 serving)",
+        "tone": "warn",
+        "calories": 444,
+        "note": "~444 cal per cup. Calorie dense."
       }
     }
   ]
