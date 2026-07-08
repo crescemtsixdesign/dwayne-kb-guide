@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T17:27:15-04:00",
+  "updated": "2026-07-08T17:27:22-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -60,6 +60,13 @@
           "tone": "warn",
           "calories": 444,
           "note": "~444 cal per cup. Calorie dense."
+        },
+        {
+          "id": "food-2026-07-08-dinner-dinner-i-ate-2-servings-of-white-rice",
+          "name": "Dinner: Dinner i ate 2 servings of white rice",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
