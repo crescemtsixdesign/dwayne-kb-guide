@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T17:27:00-04:00",
+  "updated": "2026-07-08T17:27:06-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -39,6 +39,13 @@
           "tone": "warn",
           "calories": 400,
           "note": "~204 cal per cup cooked. Two cups."
+        },
+        {
+          "id": "food-2026-07-08-dinner-curry-chicken-1-serving",
+          "name": "Dinner: curry chicken (1 serving)",
+          "tone": "good",
+          "calories": 350,
+          "note": "Reasonable serving, good protein."
         }
       ],
       "weight": null,
