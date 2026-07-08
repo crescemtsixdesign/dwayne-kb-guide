@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T11:59:07-04:00",
+  "updated": "2026-07-08T17:27:00-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -32,6 +32,13 @@
           "tone": "good",
           "calories": 80,
           "note": "Repeat snack, same portion as yesterday."
+        },
+        {
+          "id": "food-2026-07-08-dinner-2-servings-white-rice",
+          "name": "Dinner: 2 servings white rice",
+          "tone": "warn",
+          "calories": 400,
+          "note": "~204 cal per cup cooked. Two cups."
         }
       ],
       "weight": null,
