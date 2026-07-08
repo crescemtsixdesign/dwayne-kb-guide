@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T17:27:26-04:00",
+  "updated": "2026-07-08T17:27:28-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -78,6 +78,13 @@
         {
           "id": "food-2026-07-08-dinner-a-bbq-chicken-thigh",
           "name": "Dinner: A bbq chicken thigh",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-dinner-a-serving-of-home-made-mac-and-cheese",
+          "name": "Dinner: A serving of home made mac and cheese",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
