@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-08T17:27:06-04:00",
+  "updated": "2026-07-08T17:27:11-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1470,6 +1470,22 @@
         "tone": "good",
         "calories": 350,
         "note": "Reasonable serving, good protein."
+      }
+    },
+    {
+      "id": "evt-20260708172711-food-dd444b15",
+      "recordedAt": "2026-07-08T17:27:11-04:00",
+      "date": "2026-07-08",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-07-08-dinner-bbq-chicken-thigh",
+      "food": {
+        "id": "food-2026-07-08-dinner-bbq-chicken-thigh",
+        "name": "Dinner: BBQ chicken thigh",
+        "tone": "warn",
+        "calories": 275,
+        "note": "~275 cal with skin + BBQ sauce."
       }
     }
   ]
