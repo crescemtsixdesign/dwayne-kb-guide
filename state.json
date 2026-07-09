@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-08",
-  "updated": "2026-07-08T22:07:48-04:00",
+  "currentDate": "2026-07-09",
+  "updated": "2026-07-09T13:39:09-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-08": {
+    "2026-07-09": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,109 +20,11 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-08-1-big-celery-stalk",
-          "name": "1 big celery stalk",
-          "tone": "good",
-          "calories": 15,
-          "note": "Same as yesterday — big stalk, very low cal."
-        },
-        {
-          "id": "food-2026-07-08-2-tbsp-marketside-hot-honey-hummus",
-          "name": "2 tbsp Marketside Hot Honey Hummus",
-          "tone": "good",
-          "calories": 80,
-          "note": "Repeat snack, same portion as yesterday."
-        },
-        {
-          "id": "food-2026-07-08-dinner-2-servings-white-rice",
-          "name": "Dinner: 2 servings white rice",
-          "tone": "warn",
-          "calories": 400,
-          "note": "~204 cal per cup cooked. Two cups."
-        },
-        {
-          "id": "food-2026-07-08-dinner-curry-chicken-1-serving",
-          "name": "Dinner: curry chicken (1 serving)",
-          "tone": "good",
-          "calories": 350,
-          "note": "Reasonable serving, good protein."
-        },
-        {
-          "id": "food-2026-07-08-dinner-bbq-chicken-thigh",
-          "name": "Dinner: BBQ chicken thigh",
-          "tone": "warn",
-          "calories": 275,
-          "note": "~275 cal with skin + BBQ sauce."
-        },
-        {
-          "id": "food-2026-07-08-dinner-homemade-mac-and-cheese-1-serving",
-          "name": "Dinner: homemade mac and cheese (1 serving)",
-          "tone": "warn",
-          "calories": 444,
-          "note": "~444 cal per cup. Calorie dense."
-        },
-        {
-          "id": "food-2026-07-08-dinner-dinner-i-ate-2-servings-of-white-rice",
-          "name": "Dinner: Dinner i ate 2 servings of white rice",
+          "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+          "name": "The chocolate expresso i had before",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-08-dinner-a-serving-of-curry-chicken",
-          "name": "Dinner: A serving of curry chicken",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-08-dinner-a-bbq-chicken-thigh",
-          "name": "Dinner: A bbq chicken thigh",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-08-dinner-a-serving-of-home-made-mac-and-cheese",
-          "name": "Dinner: A serving of home made mac and cheese",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-08-snack-better-good-gouda-mac-n-cheese-chips-1-ser",
-          "name": "Snack: Better Good Gouda Mac n Cheese chips (1 serving)",
-          "tone": "bad",
-          "calories": 150,
-          "note": "150 cal per 1oz serving. Chips after a full dinner = snack drift."
-        },
-        {
-          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m",
-          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
-          "tone": "warn",
-          "calories": 650,
-          "note": "Estimated: bread ~180, chicken ~130, cheese ~110, mayo ~90, CFA sauce ~140."
-        },
-        {
-          "id": "food-2026-07-08-a-serving-of-better-good-potato-chips-that-are-f",
-          "name": "A serving of better good potato chips that are flavored Gouda and mac & cheese",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m-2",
-          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
-          "tone": "warn",
-          "calories": 580,
-          "note": "Revised down from 650. Bread ~150, chicken ~90, cheese ~110, mayo ~90, CFA sauce ~140."
-        },
-        {
-          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-2",
-          "name": "Deli chicken sandwich (bread, chicken, Colby jack, 2 tbsp mayo, half CFA sauce)",
-          "tone": "warn",
-          "calories": 600,
-          "note": "Revised: bread 150, chicken 90, cheese 110, 2 tbsp mayo 180, half CFA sauce 70."
         }
       ],
       "weight": null,
@@ -896,6 +798,128 @@
           "tone": "bad",
           "calories": 410,
           "note": "Official: 410 cal per serving (4 pieces)."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-08": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-08-1-big-celery-stalk",
+          "name": "1 big celery stalk",
+          "tone": "good",
+          "calories": 15,
+          "note": "Same as yesterday — big stalk, very low cal."
+        },
+        {
+          "id": "food-2026-07-08-2-tbsp-marketside-hot-honey-hummus",
+          "name": "2 tbsp Marketside Hot Honey Hummus",
+          "tone": "good",
+          "calories": 80,
+          "note": "Repeat snack, same portion as yesterday."
+        },
+        {
+          "id": "food-2026-07-08-dinner-2-servings-white-rice",
+          "name": "Dinner: 2 servings white rice",
+          "tone": "warn",
+          "calories": 400,
+          "note": "~204 cal per cup cooked. Two cups."
+        },
+        {
+          "id": "food-2026-07-08-dinner-curry-chicken-1-serving",
+          "name": "Dinner: curry chicken (1 serving)",
+          "tone": "good",
+          "calories": 350,
+          "note": "Reasonable serving, good protein."
+        },
+        {
+          "id": "food-2026-07-08-dinner-bbq-chicken-thigh",
+          "name": "Dinner: BBQ chicken thigh",
+          "tone": "warn",
+          "calories": 275,
+          "note": "~275 cal with skin + BBQ sauce."
+        },
+        {
+          "id": "food-2026-07-08-dinner-homemade-mac-and-cheese-1-serving",
+          "name": "Dinner: homemade mac and cheese (1 serving)",
+          "tone": "warn",
+          "calories": 444,
+          "note": "~444 cal per cup. Calorie dense."
+        },
+        {
+          "id": "food-2026-07-08-dinner-dinner-i-ate-2-servings-of-white-rice",
+          "name": "Dinner: Dinner i ate 2 servings of white rice",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-dinner-a-serving-of-curry-chicken",
+          "name": "Dinner: A serving of curry chicken",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-dinner-a-bbq-chicken-thigh",
+          "name": "Dinner: A bbq chicken thigh",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-dinner-a-serving-of-home-made-mac-and-cheese",
+          "name": "Dinner: A serving of home made mac and cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-snack-better-good-gouda-mac-n-cheese-chips-1-ser",
+          "name": "Snack: Better Good Gouda Mac n Cheese chips (1 serving)",
+          "tone": "bad",
+          "calories": 150,
+          "note": "150 cal per 1oz serving. Chips after a full dinner = snack drift."
+        },
+        {
+          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m",
+          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
+          "tone": "warn",
+          "calories": 650,
+          "note": "Estimated: bread ~180, chicken ~130, cheese ~110, mayo ~90, CFA sauce ~140."
+        },
+        {
+          "id": "food-2026-07-08-a-serving-of-better-good-potato-chips-that-are-f",
+          "name": "A serving of better good potato chips that are flavored Gouda and mac & cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m-2",
+          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
+          "tone": "warn",
+          "calories": 580,
+          "note": "Revised down from 650. Bread ~150, chicken ~90, cheese ~110, mayo ~90, CFA sauce ~140."
+        },
+        {
+          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-2",
+          "name": "Deli chicken sandwich (bread, chicken, Colby jack, 2 tbsp mayo, half CFA sauce)",
+          "tone": "warn",
+          "calories": 600,
+          "note": "Revised: bread 150, chicken 90, cheese 110, 2 tbsp mayo 180, half CFA sauce 70."
         }
       ],
       "weight": null,

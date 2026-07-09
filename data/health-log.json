@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-08T22:07:48-04:00",
+  "updated": "2026-07-09T13:39:09-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1657,6 +1657,24 @@
         "calories": 600,
         "note": "Revised: bread 150, chicken 90, cheese 110, 2 tbsp mayo 180, half CFA sauce 70."
       }
+    },
+    {
+      "id": "evt-20260709133909-food-73110a47",
+      "recordedAt": "2026-07-09T13:39:09-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+      "food": {
+        "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+        "name": "The chocolate expresso i had before",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just had the chocolate expresso i had before today",
+      "sessionId": "20260709_095520_203be31e"
     }
   ]
 }
