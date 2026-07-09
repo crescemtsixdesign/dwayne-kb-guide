@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T22:01:20-04:00",
+  "updated": "2026-07-08T22:01:24-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -95,6 +95,13 @@
           "tone": "bad",
           "calories": 150,
           "note": "150 cal per 1oz serving. Chips after a full dinner = snack drift."
+        },
+        {
+          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m",
+          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
+          "tone": "warn",
+          "calories": 650,
+          "note": "Estimated: bread ~180, chicken ~130, cheese ~110, mayo ~90, CFA sauce ~140."
         }
       ],
       "weight": null,
