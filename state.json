@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T22:01:31-04:00",
+  "updated": "2026-07-08T22:03:45-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -109,6 +109,13 @@
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-08-deli-chicken-sandwich-bread-chicken-colby-jack-m-2",
+          "name": "Deli chicken sandwich (bread, chicken, Colby jack, mayo, Chick-fil-A sauce)",
+          "tone": "warn",
+          "calories": 580,
+          "note": "Revised down from 650. Bread ~150, chicken ~90, cheese ~110, mayo ~90, CFA sauce ~140."
         }
       ],
       "weight": null,
