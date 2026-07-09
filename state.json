@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-08",
-  "updated": "2026-07-08T22:01:24-04:00",
+  "updated": "2026-07-08T22:01:31-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -102,6 +102,13 @@
           "tone": "warn",
           "calories": 650,
           "note": "Estimated: bread ~180, chicken ~130, cheese ~110, mayo ~90, CFA sauce ~140."
+        },
+        {
+          "id": "food-2026-07-08-a-serving-of-better-good-potato-chips-that-are-f",
+          "name": "A serving of better good potato chips that are flavored Gouda and mac & cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-08T22:01:24-04:00",
+  "updated": "2026-07-08T22:01:31-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1607,6 +1607,24 @@
         "calories": 650,
         "note": "Estimated: bread ~180, chicken ~130, cheese ~110, mayo ~90, CFA sauce ~140."
       }
+    },
+    {
+      "id": "evt-20260708220131-food-54d0c3af",
+      "recordedAt": "2026-07-08T22:01:31-04:00",
+      "date": "2026-07-08",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-08-a-serving-of-better-good-potato-chips-that-are-f",
+      "food": {
+        "id": "food-2026-07-08-a-serving-of-better-good-potato-chips-that-are-f",
+        "name": "A serving of better good potato chips that are flavored Gouda and mac & cheese",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "I had a serving of better good potato chips that are flavored Gouda and mac & cheese. I also had a homemade sliced deli chicken sandwich with a slice of Colby jack cheese, some mayo, and Chick-fil-A sauce.",
+      "sessionId": "20260708_094333_3f9403ea"
     }
   ]
 }
