@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-09",
-  "updated": "2026-07-09T16:48:37-04:00",
+  "currentDate": "2026-07-10",
+  "updated": "2026-07-10T13:59:02-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-09": {
+    "2026-07-10": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,16 +20,9 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
-          "name": "The chocolate expresso i had before",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-09-lunch-has-this-for-lunch-from-wawa",
-          "name": "Lunch: Has this for lunch from Wawa",
-          "tone": "warn",
+          "id": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+          "name": "Snack: So far i had the usual cellary and hummas snack and i'm not i'm eating my usual grilled chicken salad with avacdo",
+          "tone": "good",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
@@ -927,6 +920,37 @@
           "tone": "warn",
           "calories": 600,
           "note": "Revised: bread 150, chicken 90, cheese 110, 2 tbsp mayo 180, half CFA sauce 70."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-09": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+          "name": "The chocolate expresso i had before",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-09-lunch-has-this-for-lunch-from-wawa",
+          "name": "Lunch: Has this for lunch from Wawa",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

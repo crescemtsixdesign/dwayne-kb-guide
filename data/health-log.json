@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-09T16:48:37-04:00",
+  "updated": "2026-07-10T13:59:02-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1693,6 +1693,24 @@
       },
       "rawText": "Has this for lunch from Wawa",
       "sessionId": "20260709_095520_203be31e"
+    },
+    {
+      "id": "evt-20260710135902-food-8571054b",
+      "recordedAt": "2026-07-10T13:59:02-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+      "food": {
+        "id": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+        "name": "Snack: So far i had the usual cellary and hummas snack and i'm not i'm eating my usual grilled chicken salad with avacdo",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "no workout today, to tired. i'll try and restart next week. So far today i had the usual cellary and hummas snack and i'm not i'm eating my usual grilled chicken salad with avacdo",
+      "sessionId": "20260710_135839_cb7c2286"
     }
   ]
 }
