@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-11",
-  "updated": "2026-07-11T11:10:33-04:00",
+  "updated": "2026-07-11T16:25:31-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -43,6 +43,27 @@
         {
           "id": "food-2026-07-11-frank",
           "name": "Frank",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-11-sliver-of-butter-on-waffles",
+          "name": "Sliver of butter on waffles",
+          "tone": "warn",
+          "calories": 25,
+          "note": "Small amount estimated for a sliver of butter."
+        },
+        {
+          "id": "food-2026-07-11-4-slices-domino-s-pepperoni-sausage-pizza-assume",
+          "name": "4 slices Domino's pepperoni & sausage pizza (assumed medium hand-tossed)",
+          "tone": "warn",
+          "calories": 920,
+          "note": "Official nutrition lookup used 230 cal per slice for Domino's pepperoni & Italian sausage medium hand-tossed pizza. Size not specified, so logged as an assumption."
+        },
+        {
+          "id": "food-2026-07-11-lunch-4-slices-of-dominoes-pepperoni-and-sausage",
+          "name": "Lunch: 4 slices of dominoes pepperoni and sausage pizza for lunch",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
