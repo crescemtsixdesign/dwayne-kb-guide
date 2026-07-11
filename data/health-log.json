@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-10T13:59:02-04:00",
+  "updated": "2026-07-11T11:10:30-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1711,6 +1711,232 @@
       },
       "rawText": "no workout today, to tired. i'll try and restart next week. So far today i had the usual cellary and hummas snack and i'm not i'm eating my usual grilled chicken salad with avacdo",
       "sessionId": "20260710_135839_cb7c2286"
+    },
+    {
+      "id": "evt-20260711103448-food-9142cd9f",
+      "recordedAt": "2026-07-11T10:34:48-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "upsert",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+      "food": {
+        "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
+        "name": "Chocolate espresso drink from work",
+        "tone": "warn",
+        "calories": 100,
+        "note": "Upper-end estimate from the 7/9 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103448-food-d0b14da3",
+      "recordedAt": "2026-07-11T10:34:48-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "upsert",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-09-lunch-has-this-for-lunch-from-wawa",
+      "food": {
+        "id": "food-2026-07-09-lunch-has-this-for-lunch-from-wawa",
+        "name": "Wawa lunch combo (Junior chicken salad hoagie + medium chicken corn chowder)",
+        "tone": "warn",
+        "calories": 920,
+        "note": "Upper-end estimate from the 7/9 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-a2ea48b4",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-09-2-publix-sugar-cookies-with-sprinkles",
+      "food": {
+        "id": "food-2026-07-09-2-publix-sugar-cookies-with-sprinkles",
+        "name": "2 Publix sugar cookies with sprinkles",
+        "tone": "warn",
+        "calories": 160,
+        "note": "Logged from the 7/9 session recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-3bffc303",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-09-harvest-cheddar-sun-chips-1-5-oz-bag",
+      "food": {
+        "id": "food-2026-07-09-harvest-cheddar-sun-chips-1-5-oz-bag",
+        "name": "Harvest Cheddar Sun Chips (1.5 oz bag)",
+        "tone": "warn",
+        "calories": 210,
+        "note": "Logged from the 7/9 session recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-1ebe40e9",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-09",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-09-2-slices-domino-s-pizza-with-pepperoni-and-sausa",
+      "food": {
+        "id": "food-2026-07-09-2-slices-domino-s-pizza-with-pepperoni-and-sausa",
+        "name": "2 slices Domino's pizza with pepperoni and sausage + white grape juice",
+        "tone": "warn",
+        "calories": 700,
+        "note": "Logged from the 7/9 session recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-d6613fed",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "upsert",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+      "food": {
+        "id": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+        "name": "Celery + hummus snack",
+        "tone": "good",
+        "calories": 150,
+        "note": "Upper-end estimate from the 7/10 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-439c336e",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-grilled-chicken-salad-with-avocado",
+      "food": {
+        "id": "food-2026-07-10-grilled-chicken-salad-with-avocado",
+        "name": "Grilled chicken salad with avocado",
+        "tone": "warn",
+        "calories": 600,
+        "note": "Upper-end estimate from the 7/10 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103449-food-bfc124c5",
+      "recordedAt": "2026-07-11T10:34:49-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-thousand-island-dressing-2-wawa-side-cups",
+      "food": {
+        "id": "food-2026-07-10-thousand-island-dressing-2-wawa-side-cups",
+        "name": "Thousand Island dressing (2 Wawa side cups)",
+        "tone": "warn",
+        "calories": 280,
+        "note": "Upper-end estimate from the 7/10 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103450-food-99385f47",
+      "recordedAt": "2026-07-11T10:34:50-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-chocolate-espresso-from-work",
+      "food": {
+        "id": "food-2026-07-10-chocolate-espresso-from-work",
+        "name": "Chocolate espresso from work",
+        "tone": "warn",
+        "calories": 200,
+        "note": "Upper-end estimate from the 7/10 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103450-food-73802a9d",
+      "recordedAt": "2026-07-11T10:34:50-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-2-chicken-wing-drummers",
+      "food": {
+        "id": "food-2026-07-10-2-chicken-wing-drummers",
+        "name": "2 chicken wing drummers",
+        "tone": "warn",
+        "calories": 300,
+        "note": "Upper-end estimate from the 7/10 recap."
+      }
+    },
+    {
+      "id": "evt-20260711103450-food-08975707",
+      "recordedAt": "2026-07-11T10:34:50-04:00",
+      "date": "2026-07-10",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-10-better-good-gouda-mac-n-cheese-chips-1-serving",
+      "food": {
+        "id": "food-2026-07-10-better-good-gouda-mac-n-cheese-chips-1-serving",
+        "name": "Better Good Gouda Mac n Cheese chips (1 serving)",
+        "tone": "bad",
+        "calories": 150,
+        "note": "Added per user request."
+      }
+    },
+    {
+      "id": "evt-20260711111022-food-1452ca6f",
+      "recordedAt": "2026-07-11T11:10:22-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-8-mini-waffles-homemade-from-pancake-mix",
+      "food": {
+        "id": "food-2026-07-11-8-mini-waffles-homemade-from-pancake-mix",
+        "name": "8 mini waffles (homemade from pancake mix)",
+        "tone": "warn",
+        "calories": 300,
+        "note": "Estimated upper-end calories; no syrup/butter mentioned."
+      }
+    },
+    {
+      "id": "evt-20260711111022-food-f20f40cb",
+      "recordedAt": "2026-07-11T11:10:22-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-hebrew-national-beef-hotdog",
+      "food": {
+        "id": "food-2026-07-11-hebrew-national-beef-hotdog",
+        "name": "Hebrew National beef hotdog",
+        "tone": "warn",
+        "calories": 150,
+        "note": "Official nutrition lookup: 150 calories per frank."
+      }
+    },
+    {
+      "id": "evt-20260711111030-food-009dbd37",
+      "recordedAt": "2026-07-11T11:10:30-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
+      "food": {
+        "id": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
+        "name": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog, Frank",
+      "sessionId": "20260711_102047_53421ba5"
     }
   ]
 }

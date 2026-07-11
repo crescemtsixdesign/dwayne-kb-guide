@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-10",
-  "updated": "2026-07-10T13:59:02-04:00",
+  "currentDate": "2026-07-11",
+  "updated": "2026-07-11T11:10:30-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-10": {
+    "2026-07-11": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,9 +20,23 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
-          "name": "Snack: So far i had the usual cellary and hummas snack and i'm not i'm eating my usual grilled chicken salad with avacdo",
-          "tone": "good",
+          "id": "food-2026-07-11-8-mini-waffles-homemade-from-pancake-mix",
+          "name": "8 mini waffles (homemade from pancake mix)",
+          "tone": "warn",
+          "calories": 300,
+          "note": "Estimated upper-end calories; no syrup/butter mentioned."
+        },
+        {
+          "id": "food-2026-07-11-hebrew-national-beef-hotdog",
+          "name": "Hebrew National beef hotdog",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Official nutrition lookup: 150 calories per frank."
+        },
+        {
+          "id": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
+          "name": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog",
+          "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
@@ -940,17 +954,97 @@
       "foods": [
         {
           "id": "food-2026-07-09-the-chocolate-expresso-i-had-before",
-          "name": "The chocolate expresso i had before",
+          "name": "Chocolate espresso drink from work",
           "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+          "calories": 100,
+          "note": "Upper-end estimate from the 7/9 recap."
         },
         {
           "id": "food-2026-07-09-lunch-has-this-for-lunch-from-wawa",
-          "name": "Lunch: Has this for lunch from Wawa",
+          "name": "Wawa lunch combo (Junior chicken salad hoagie + medium chicken corn chowder)",
           "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+          "calories": 920,
+          "note": "Upper-end estimate from the 7/9 recap."
+        },
+        {
+          "id": "food-2026-07-09-2-publix-sugar-cookies-with-sprinkles",
+          "name": "2 Publix sugar cookies with sprinkles",
+          "tone": "warn",
+          "calories": 160,
+          "note": "Logged from the 7/9 session recap."
+        },
+        {
+          "id": "food-2026-07-09-harvest-cheddar-sun-chips-1-5-oz-bag",
+          "name": "Harvest Cheddar Sun Chips (1.5 oz bag)",
+          "tone": "warn",
+          "calories": 210,
+          "note": "Logged from the 7/9 session recap."
+        },
+        {
+          "id": "food-2026-07-09-2-slices-domino-s-pizza-with-pepperoni-and-sausa",
+          "name": "2 slices Domino's pizza with pepperoni and sausage + white grape juice",
+          "tone": "warn",
+          "calories": 700,
+          "note": "Logged from the 7/9 session recap."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-10": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-10-snack-so-far-i-had-the-usual-cellary-and-hummas-",
+          "name": "Celery + hummus snack",
+          "tone": "good",
+          "calories": 150,
+          "note": "Upper-end estimate from the 7/10 recap."
+        },
+        {
+          "id": "food-2026-07-10-grilled-chicken-salad-with-avocado",
+          "name": "Grilled chicken salad with avocado",
+          "tone": "warn",
+          "calories": 600,
+          "note": "Upper-end estimate from the 7/10 recap."
+        },
+        {
+          "id": "food-2026-07-10-thousand-island-dressing-2-wawa-side-cups",
+          "name": "Thousand Island dressing (2 Wawa side cups)",
+          "tone": "warn",
+          "calories": 280,
+          "note": "Upper-end estimate from the 7/10 recap."
+        },
+        {
+          "id": "food-2026-07-10-chocolate-espresso-from-work",
+          "name": "Chocolate espresso from work",
+          "tone": "warn",
+          "calories": 200,
+          "note": "Upper-end estimate from the 7/10 recap."
+        },
+        {
+          "id": "food-2026-07-10-2-chicken-wing-drummers",
+          "name": "2 chicken wing drummers",
+          "tone": "warn",
+          "calories": 300,
+          "note": "Upper-end estimate from the 7/10 recap."
+        },
+        {
+          "id": "food-2026-07-10-better-good-gouda-mac-n-cheese-chips-1-serving",
+          "name": "Better Good Gouda Mac n Cheese chips (1 serving)",
+          "tone": "bad",
+          "calories": 150,
+          "note": "Added per user request."
         }
       ],
       "weight": null,
