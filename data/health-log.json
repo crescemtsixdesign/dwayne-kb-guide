@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-11T11:10:30-04:00",
+  "updated": "2026-07-11T11:10:33-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -1931,6 +1931,24 @@
       "food": {
         "id": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
         "name": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog, Frank",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260711111033-food-4ce7f4ef",
+      "recordedAt": "2026-07-11T11:10:33-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-11-frank",
+      "food": {
+        "id": "food-2026-07-11-frank",
+        "name": "Frank",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
