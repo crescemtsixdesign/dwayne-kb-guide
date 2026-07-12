@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-12T16:04:46-04:00",
+  "updated": "2026-07-12T16:04:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2167,6 +2167,24 @@
       "food": {
         "id": "food-2026-07-12-lunch-also",
         "name": "Lunch: Also",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Also, for lunch, I had a serving of the better good chips",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260712160448-food-93e7c524",
+      "recordedAt": "2026-07-12T16:04:48-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-12-lunch-for-lunch",
+      "food": {
+        "id": "food-2026-07-12-lunch-for-lunch",
+        "name": "Lunch: For lunch",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
