@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-12T14:27:12-04:00",
+  "updated": "2026-07-12T16:04:46-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2138,6 +2138,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "Today I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter. Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese and 4 tablespoons of mayonnaise.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260712160442-food-ca239d4f",
+      "recordedAt": "2026-07-12T16:04:42-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-12-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+      "food": {
+        "id": "food-2026-07-12-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+        "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips (1 serving)",
+        "tone": "bad",
+        "calories": 150,
+        "note": "Official lookup: 150 calories per 1 oz serving (22 chips)."
+      }
+    },
+    {
+      "id": "evt-20260712160446-food-d15503a1",
+      "recordedAt": "2026-07-12T16:04:46-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-12-lunch-also",
+      "food": {
+        "id": "food-2026-07-12-lunch-also",
+        "name": "Lunch: Also",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Also, for lunch, I had a serving of the better good chips",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
