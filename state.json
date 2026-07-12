@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-12",
-  "updated": "2026-07-12T16:04:50-04:00",
+  "updated": "2026-07-12T16:19:32-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -85,6 +85,20 @@
         {
           "id": "food-2026-07-12-lunch-a-serving-of-the-better-good-chips",
           "name": "Lunch: A serving of the better good chips",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-powerade-in-a-large-7-eleven-big-gulp-about-half",
+          "name": "Powerade in a large 7-Eleven Big Gulp (about half full, half ice)",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Assumed regular Powerade; 7-Eleven Big Gulp large estimated ~30 oz, about 15 oz liquid after ice. Powerade is 80 cal per 12 oz."
+        },
+        {
+          "id": "food-2026-07-12-earlier",
+          "name": "Earlier",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
