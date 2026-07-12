@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-12",
-  "updated": "2026-07-12T14:27:10-04:00",
+  "updated": "2026-07-12T14:27:12-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -50,6 +50,13 @@
         {
           "id": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
           "name": "Lunch: Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-lunch-4-tablespoons-of-mayonnaise",
+          "name": "Lunch: 4 tablespoons of mayonnaise",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

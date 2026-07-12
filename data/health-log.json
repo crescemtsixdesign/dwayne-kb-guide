@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-12T14:27:10-04:00",
+  "updated": "2026-07-12T14:27:12-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2115,6 +2115,24 @@
       "food": {
         "id": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
         "name": "Lunch: Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Today I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter. Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese and 4 tablespoons of mayonnaise.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260712142712-food-a58fee9a",
+      "recordedAt": "2026-07-12T14:27:12-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-12-lunch-4-tablespoons-of-mayonnaise",
+      "food": {
+        "id": "food-2026-07-12-lunch-4-tablespoons-of-mayonnaise",
+        "name": "Lunch: 4 tablespoons of mayonnaise",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
