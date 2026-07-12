@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-12T14:27:07-04:00",
+  "updated": "2026-07-12T14:27:10-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2097,6 +2097,24 @@
       "food": {
         "id": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
         "name": "Breakfast: I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Today I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter. Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese and 4 tablespoons of mayonnaise.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260712142710-food-87cbedc9",
+      "recordedAt": "2026-07-12T14:27:10-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
+      "food": {
+        "id": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
+        "name": "Lunch: Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
