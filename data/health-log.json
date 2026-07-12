@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-11T16:25:31-04:00",
+  "updated": "2026-07-12T14:27:07-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2004,6 +2004,104 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "Ate 4 slices of dominoes pepperoni and sausage pizza for lunch",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260712080231-food-38a98eb5",
+      "recordedAt": "2026-07-12T08:02:31-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-homemade-taco-bowl-tortilla-shell-rice-beans-chi",
+      "food": {
+        "id": "food-2026-07-11-homemade-taco-bowl-tortilla-shell-rice-beans-chi",
+        "name": "Homemade taco bowl (tortilla shell, rice, beans, chicken, cheese, sour cream)",
+        "tone": "warn",
+        "calories": 700,
+        "note": "Upper-end estimate; portion sizes not specified."
+      }
+    },
+    {
+      "id": "evt-20260712080231-food-7eb9141a",
+      "recordedAt": "2026-07-12T08:02:31-04:00",
+      "date": "2026-07-11",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-2-publix-sprinkle-sugar-cookies",
+      "food": {
+        "id": "food-2026-07-11-2-publix-sprinkle-sugar-cookies",
+        "name": "2 Publix sprinkle sugar cookies",
+        "tone": "warn",
+        "calories": 160,
+        "note": "Official product lookup: 80 calories each."
+      }
+    },
+    {
+      "id": "evt-20260712142701-food-d0f984a5",
+      "recordedAt": "2026-07-12T14:27:01-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-12-breakfast-6-mini-waffles-hebrew-national-beef-fr",
+      "food": {
+        "id": "food-2026-07-12-breakfast-6-mini-waffles-hebrew-national-beef-fr",
+        "name": "Breakfast: 6 mini waffles, Hebrew National beef frank, sliver of butter",
+        "tone": "warn",
+        "calories": 400,
+        "note": "Estimated using prior mini-waffle calories and a small butter portion."
+      }
+    },
+    {
+      "id": "evt-20260712142701-food-98807048",
+      "recordedAt": "2026-07-12T14:27:01-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-12-typical-sliced-deli-chicken-sandwich-with-colby-",
+      "food": {
+        "id": "food-2026-07-12-typical-sliced-deli-chicken-sandwich-with-colby-",
+        "name": "Typical sliced deli chicken sandwich with Colby jack cheese",
+        "tone": "warn",
+        "calories": 430,
+        "note": "Upper-end estimate for bread + deli chicken + cheese; mayo logged separately."
+      }
+    },
+    {
+      "id": "evt-20260712142701-food-81377160",
+      "recordedAt": "2026-07-12T14:27:01-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-12-mayonnaise-4-tablespoons",
+      "food": {
+        "id": "food-2026-07-12-mayonnaise-4-tablespoons",
+        "name": "Mayonnaise, 4 tablespoons",
+        "tone": "bad",
+        "calories": 360,
+        "note": "4 tbsp at about 90 cal each."
+      }
+    },
+    {
+      "id": "evt-20260712142707-food-63e0a73c",
+      "recordedAt": "2026-07-12T14:27:07-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
+      "food": {
+        "id": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
+        "name": "Breakfast: I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Today I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter. Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese and 4 tablespoons of mayonnaise.",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]

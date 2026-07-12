@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-11",
-  "updated": "2026-07-11T16:25:31-04:00",
+  "currentDate": "2026-07-12",
+  "updated": "2026-07-12T14:27:07-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
-    "anchor": "2026-07-05",
+    "anchor": "2026-07-12",
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-11": {
+    "2026-07-12": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,50 +20,29 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-11-8-mini-waffles-homemade-from-pancake-mix",
-          "name": "8 mini waffles (homemade from pancake mix)",
+          "id": "food-2026-07-12-breakfast-6-mini-waffles-hebrew-national-beef-fr",
+          "name": "Breakfast: 6 mini waffles, Hebrew National beef frank, sliver of butter",
           "tone": "warn",
-          "calories": 300,
-          "note": "Estimated upper-end calories; no syrup/butter mentioned."
+          "calories": 400,
+          "note": "Estimated using prior mini-waffle calories and a small butter portion."
         },
         {
-          "id": "food-2026-07-11-hebrew-national-beef-hotdog",
-          "name": "Hebrew National beef hotdog",
+          "id": "food-2026-07-12-typical-sliced-deli-chicken-sandwich-with-colby-",
+          "name": "Typical sliced deli chicken sandwich with Colby jack cheese",
           "tone": "warn",
-          "calories": 150,
-          "note": "Official nutrition lookup: 150 calories per frank."
+          "calories": 430,
+          "note": "Upper-end estimate for bread + deli chicken + cheese; mayo logged separately."
         },
         {
-          "id": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
-          "name": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+          "id": "food-2026-07-12-mayonnaise-4-tablespoons",
+          "name": "Mayonnaise, 4 tablespoons",
+          "tone": "bad",
+          "calories": 360,
+          "note": "4 tbsp at about 90 cal each."
         },
         {
-          "id": "food-2026-07-11-frank",
-          "name": "Frank",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-11-sliver-of-butter-on-waffles",
-          "name": "Sliver of butter on waffles",
-          "tone": "warn",
-          "calories": 25,
-          "note": "Small amount estimated for a sliver of butter."
-        },
-        {
-          "id": "food-2026-07-11-4-slices-domino-s-pepperoni-sausage-pizza-assume",
-          "name": "4 slices Domino's pepperoni & sausage pizza (assumed medium hand-tossed)",
-          "tone": "warn",
-          "calories": 920,
-          "note": "Official nutrition lookup used 230 cal per slice for Domino's pepperoni & Italian sausage medium hand-tossed pizza. Size not specified, so logged as an assumption."
-        },
-        {
-          "id": "food-2026-07-11-lunch-4-slices-of-dominoes-pepperoni-and-sausage",
-          "name": "Lunch: 4 slices of dominoes pepperoni and sausage pizza for lunch",
+          "id": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
+          "name": "Breakfast: I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -1073,6 +1052,86 @@
           "tone": "bad",
           "calories": 150,
           "note": "Added per user request."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-11": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-11-8-mini-waffles-homemade-from-pancake-mix",
+          "name": "8 mini waffles (homemade from pancake mix)",
+          "tone": "warn",
+          "calories": 300,
+          "note": "Estimated upper-end calories; no syrup/butter mentioned."
+        },
+        {
+          "id": "food-2026-07-11-hebrew-national-beef-hotdog",
+          "name": "Hebrew National beef hotdog",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Official nutrition lookup: 150 calories per frank."
+        },
+        {
+          "id": "food-2026-07-11-ok-this-morning-saturday-morning-i-had-about-eig",
+          "name": "OK this morning Saturday morning I had about eight mini waffles homemade from pancake mix and one Hebrew national beef hotdog",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-11-frank",
+          "name": "Frank",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-11-sliver-of-butter-on-waffles",
+          "name": "Sliver of butter on waffles",
+          "tone": "warn",
+          "calories": 25,
+          "note": "Small amount estimated for a sliver of butter."
+        },
+        {
+          "id": "food-2026-07-11-4-slices-domino-s-pepperoni-sausage-pizza-assume",
+          "name": "4 slices Domino's pepperoni & sausage pizza (assumed medium hand-tossed)",
+          "tone": "warn",
+          "calories": 920,
+          "note": "Official nutrition lookup used 230 cal per slice for Domino's pepperoni & Italian sausage medium hand-tossed pizza. Size not specified, so logged as an assumption."
+        },
+        {
+          "id": "food-2026-07-11-lunch-4-slices-of-dominoes-pepperoni-and-sausage",
+          "name": "Lunch: 4 slices of dominoes pepperoni and sausage pizza for lunch",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-11-homemade-taco-bowl-tortilla-shell-rice-beans-chi",
+          "name": "Homemade taco bowl (tortilla shell, rice, beans, chicken, cheese, sour cream)",
+          "tone": "warn",
+          "calories": 700,
+          "note": "Upper-end estimate; portion sizes not specified."
+        },
+        {
+          "id": "food-2026-07-11-2-publix-sprinkle-sugar-cookies",
+          "name": "2 Publix sprinkle sugar cookies",
+          "tone": "warn",
+          "calories": 160,
+          "note": "Official product lookup: 80 calories each."
         }
       ],
       "weight": null,
