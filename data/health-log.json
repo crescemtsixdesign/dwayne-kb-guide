@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-13T11:42:04-04:00",
+  "updated": "2026-07-13T12:02:21-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2278,6 +2278,102 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "no workout yet today possibly tonight. Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken. I also had 2 servings of the jose curvo premade margatia mix as well as 2 publix sprinkle cookies",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260713114418-food-d2a69ed2",
+      "recordedAt": "2026-07-13T11:44:18-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-homemade-pasta-dish-with-heavy-cream-sauce-and-g",
+      "food": {
+        "id": "food-2026-07-11-homemade-pasta-dish-with-heavy-cream-sauce-and-g",
+        "name": "Homemade pasta dish with heavy cream sauce and grilled chicken",
+        "tone": "warn",
+        "calories": 700,
+        "note": "One serving; upper-end estimate."
+      }
+    },
+    {
+      "id": "evt-20260713114418-food-18b792a3",
+      "recordedAt": "2026-07-13T11:44:18-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-jose-cuervo-margarita-mix-2-servings",
+      "food": {
+        "id": "food-2026-07-11-jose-cuervo-margarita-mix-2-servings",
+        "name": "Jose Cuervo margarita mix, 2 servings",
+        "tone": "warn",
+        "calories": 220,
+        "note": "110 calories per 4 fl oz serving; 2 servings logged."
+      }
+    },
+    {
+      "id": "evt-20260713114418-food-2fea8090",
+      "recordedAt": "2026-07-13T11:44:18-04:00",
+      "date": "2026-07-12",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-11-2-publix-sprinkle-sugar-cookies-2",
+      "food": {
+        "id": "food-2026-07-11-2-publix-sprinkle-sugar-cookies-2",
+        "name": "2 Publix sprinkle sugar cookies",
+        "tone": "warn",
+        "calories": 160,
+        "note": "80 calories each."
+      }
+    },
+    {
+      "id": "evt-20260713115741-weight-1fad5f4e",
+      "recordedAt": "2026-07-13T11:57:41-04:00",
+      "date": "2026-07-13",
+      "type": "weight",
+      "action": "set",
+      "source": "health_log.py",
+      "weight": {
+        "value": 213.6,
+        "label": "213.6 lb",
+        "tone": "good",
+        "detail": "Weekly Monday weigh-in."
+      }
+    },
+    {
+      "id": "evt-20260713120216-food-85b6ef5e",
+      "recordedAt": "2026-07-13T12:02:16-04:00",
+      "date": "2026-07-13",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-13-celery-hummus-snack",
+      "food": {
+        "id": "food-2026-07-13-celery-hummus-snack",
+        "name": "Celery + hummus snack",
+        "tone": "good",
+        "calories": 150,
+        "note": "Typical snack estimate."
+      }
+    },
+    {
+      "id": "evt-20260713120221-food-fe22dc8a",
+      "recordedAt": "2026-07-13T12:02:21-04:00",
+      "date": "2026-07-13",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-13-snack-no-thanks-but-update-todays-food",
+      "food": {
+        "id": "food-2026-07-13-snack-no-thanks-but-update-todays-food",
+        "name": "Snack: No thanks but update todays food",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "no thanks but update todays food, i had the typical celery and humas snack",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
