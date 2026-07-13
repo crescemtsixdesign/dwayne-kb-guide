@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-12",
-  "updated": "2026-07-12T16:19:34-04:00",
+  "currentDate": "2026-07-13",
+  "updated": "2026-07-13T11:42:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-12": {
+    "2026-07-13": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,93 +20,9 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-12-breakfast-6-mini-waffles-hebrew-national-beef-fr",
-          "name": "Breakfast: 6 mini waffles, Hebrew National beef frank, sliver of butter",
-          "tone": "warn",
-          "calories": 400,
-          "note": "Estimated using prior mini-waffle calories and a small butter portion."
-        },
-        {
-          "id": "food-2026-07-12-typical-sliced-deli-chicken-sandwich-with-colby-",
-          "name": "Typical sliced deli chicken sandwich with Colby jack cheese",
-          "tone": "warn",
-          "calories": 430,
-          "note": "Upper-end estimate for bread + deli chicken + cheese; mayo logged separately."
-        },
-        {
-          "id": "food-2026-07-12-mayonnaise-4-tablespoons",
-          "name": "Mayonnaise, 4 tablespoons",
-          "tone": "bad",
-          "calories": 360,
-          "note": "4 tbsp at about 90 cal each."
-        },
-        {
-          "id": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
-          "name": "Breakfast: I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
-          "name": "Lunch: Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-lunch-4-tablespoons-of-mayonnaise",
-          "name": "Lunch: 4 tablespoons of mayonnaise",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
-          "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips (1 serving)",
-          "tone": "bad",
-          "calories": 150,
-          "note": "Official lookup: 150 calories per 1 oz serving (22 chips)."
-        },
-        {
-          "id": "food-2026-07-12-lunch-also",
-          "name": "Lunch: Also",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-lunch-for-lunch",
-          "name": "Lunch: For lunch",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-lunch-a-serving-of-the-better-good-chips",
-          "name": "Lunch: A serving of the better good chips",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-powerade-in-a-large-7-eleven-big-gulp-about-half",
-          "name": "Powerade in a large 7-Eleven Big Gulp (about half full, half ice)",
-          "tone": "warn",
-          "calories": 100,
-          "note": "Assumed regular Powerade; 7-Eleven Big Gulp large estimated ~30 oz, about 15 oz liquid after ice. Powerade is 80 cal per 12 oz."
-        },
-        {
-          "id": "food-2026-07-12-earlier",
-          "name": "Earlier",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-12-a-7-eleven-big-gulp-size-large-half-full-of-ice-",
-          "name": "A 7-Eleven big gulp size large half full of ice the other half was with Powerade",
-          "tone": "warn",
+          "id": "food-2026-07-13-dinner-also-last-night-on-sunday-for-dinner-i-ha",
+          "name": "Dinner: Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken",
+          "tone": "good",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
@@ -1195,6 +1111,114 @@
           "tone": "warn",
           "calories": 160,
           "note": "Official product lookup: 80 calories each."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-12": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-12-breakfast-6-mini-waffles-hebrew-national-beef-fr",
+          "name": "Breakfast: 6 mini waffles, Hebrew National beef frank, sliver of butter",
+          "tone": "warn",
+          "calories": 400,
+          "note": "Estimated using prior mini-waffle calories and a small butter portion."
+        },
+        {
+          "id": "food-2026-07-12-typical-sliced-deli-chicken-sandwich-with-colby-",
+          "name": "Typical sliced deli chicken sandwich with Colby jack cheese",
+          "tone": "warn",
+          "calories": 430,
+          "note": "Upper-end estimate for bread + deli chicken + cheese; mayo logged separately."
+        },
+        {
+          "id": "food-2026-07-12-mayonnaise-4-tablespoons",
+          "name": "Mayonnaise, 4 tablespoons",
+          "tone": "bad",
+          "calories": 360,
+          "note": "4 tbsp at about 90 cal each."
+        },
+        {
+          "id": "food-2026-07-12-breakfast-i-have-6-mini-waffles-and-hotdog-frank",
+          "name": "Breakfast: I have 6 mini waffles and hotdog frank for breakfast with a sliver of butter",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-lunch-then-for-lunch-i-had-my-typical-sliced-del",
+          "name": "Lunch: Then for lunch I had my typical sliced deli chicken sandwich with Colby jack cheese",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-lunch-4-tablespoons-of-mayonnaise",
+          "name": "Lunch: 4 tablespoons of mayonnaise",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+          "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips (1 serving)",
+          "tone": "bad",
+          "calories": 150,
+          "note": "Official lookup: 150 calories per 1 oz serving (22 chips)."
+        },
+        {
+          "id": "food-2026-07-12-lunch-also",
+          "name": "Lunch: Also",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-lunch-for-lunch",
+          "name": "Lunch: For lunch",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-lunch-a-serving-of-the-better-good-chips",
+          "name": "Lunch: A serving of the better good chips",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-powerade-in-a-large-7-eleven-big-gulp-about-half",
+          "name": "Powerade in a large 7-Eleven Big Gulp (about half full, half ice)",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Assumed regular Powerade; 7-Eleven Big Gulp large estimated ~30 oz, about 15 oz liquid after ice. Powerade is 80 cal per 12 oz."
+        },
+        {
+          "id": "food-2026-07-12-earlier",
+          "name": "Earlier",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-12-a-7-eleven-big-gulp-size-large-half-full-of-ice-",
+          "name": "A 7-Eleven big gulp size large half full of ice the other half was with Powerade",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

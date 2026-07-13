@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-12T16:19:34-04:00",
+  "updated": "2026-07-13T11:42:04-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2260,6 +2260,24 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "Earlier today, I had a 7-Eleven big gulp size large half full of ice the other half was with Powerade",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260713114204-food-481c402d",
+      "recordedAt": "2026-07-13T11:42:04-04:00",
+      "date": "2026-07-13",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-13-dinner-also-last-night-on-sunday-for-dinner-i-ha",
+      "food": {
+        "id": "food-2026-07-13-dinner-also-last-night-on-sunday-for-dinner-i-ha",
+        "name": "Dinner: Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "no workout yet today possibly tonight. Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken. I also had 2 servings of the jose curvo premade margatia mix as well as 2 publix sprinkle cookies",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
