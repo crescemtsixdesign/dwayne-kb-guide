@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-13",
-  "updated": "2026-07-13T17:40:45-04:00",
+  "updated": "2026-07-13T17:40:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -65,6 +65,13 @@
           "id": "food-2026-07-13-lunch-my-typical-lunch-salad",
           "name": "Lunch: My typical lunch salad",
           "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-lunch-also-had-a-cholate-expresso-from-the-offic",
+          "name": "Lunch: Also had a cholate expresso from the office coffee machine",
+          "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }

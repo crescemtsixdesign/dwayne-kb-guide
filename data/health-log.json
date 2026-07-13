@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-13T17:40:45-04:00",
+  "updated": "2026-07-13T17:40:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2438,6 +2438,24 @@
         "id": "food-2026-07-13-lunch-my-typical-lunch-salad",
         "name": "Lunch: My typical lunch salad",
         "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "for lunch today had my typical lunch salad and also had a cholate expresso from the office coffee machine",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260713174048-food-fa994f85",
+      "recordedAt": "2026-07-13T17:40:48-04:00",
+      "date": "2026-07-13",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-13-lunch-also-had-a-cholate-expresso-from-the-offic",
+      "food": {
+        "id": "food-2026-07-13-lunch-also-had-a-cholate-expresso-from-the-offic",
+        "name": "Lunch: Also had a cholate expresso from the office coffee machine",
+        "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
