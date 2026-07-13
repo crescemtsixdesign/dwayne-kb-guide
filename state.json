@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-13",
-  "updated": "2026-07-13T12:02:21-04:00",
+  "updated": "2026-07-13T12:02:23-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -36,6 +36,13 @@
         {
           "id": "food-2026-07-13-snack-no-thanks-but-update-todays-food",
           "name": "Snack: No thanks but update todays food",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-snack-the-typical-celery-and-humas-snack",
+          "name": "Snack: The typical celery and humas snack",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
