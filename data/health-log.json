@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-13T17:40:48-04:00",
+  "updated": "2026-07-15T12:58:45-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2460,6 +2460,180 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "for lunch today had my typical lunch salad and also had a cholate expresso from the office coffee machine",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260713175218-food-bf36bb98",
+      "recordedAt": "2026-07-13T17:52:18-04:00",
+      "date": "2026-07-13",
+      "type": "food",
+      "action": "upsert",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-13-typical-lunch-salad",
+      "food": {
+        "id": "food-2026-07-13-typical-lunch-salad",
+        "name": "Typical lunch salad",
+        "tone": "warn",
+        "calories": 670,
+        "note": "Upper-end estimate using dressing at about 1.5 Wawa side cups (~210 cal)."
+      }
+    },
+    {
+      "id": "evt-20260714070731-workout-c3c3a6fa",
+      "recordedAt": "2026-07-14T07:07:31-04:00",
+      "date": "2026-07-13",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Couldn’t wake up."
+      }
+    },
+    {
+      "id": "evt-20260714111144-food-79199c8e",
+      "recordedAt": "2026-07-14T11:11:44-04:00",
+      "date": "2026-07-14",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-13-walmart-popcorn-2-5-cups",
+      "food": {
+        "id": "food-2026-07-13-walmart-popcorn-2-5-cups",
+        "name": "Walmart popcorn, 2.5 cups",
+        "tone": "warn",
+        "calories": 350,
+        "note": "Estimated from Great Value popcorn at about 140 cal per oz; 2.5 cups logged as an upper-end snack estimate."
+      }
+    },
+    {
+      "id": "evt-20260714132521-food-c25fa109",
+      "recordedAt": "2026-07-14T13:25:21-04:00",
+      "date": "2026-07-14",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-13-blue-diamond-bold-wasabi-soy-sauce-almonds-1-5-oz",
+      "food": {
+        "id": "food-2026-07-13-blue-diamond-bold-wasabi-soy-sauce-almonds-1-5-oz",
+        "name": "Blue Diamond Bold Wasabi & Soy Sauce almonds (1.5 oz bag)",
+        "tone": "warn",
+        "calories": 255,
+        "note": "Official SmartLabel: 170 cal per 1 oz serving; 1.5 oz bag logged as 1.5 servings."
+      }
+    },
+    {
+      "id": "evt-20260714145917-food-1d3f9c39",
+      "recordedAt": "2026-07-14T14:59:17-04:00",
+      "date": "2026-07-14",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-14-homemade-mac-cheese-2-servings-chicken-thigh-chi",
+      "food": {
+        "id": "food-2026-07-14-homemade-mac-cheese-2-servings-chicken-thigh-chi",
+        "name": "Homemade mac & cheese (2 servings) + chicken thigh + chicken wing",
+        "tone": "bad",
+        "calories": 900,
+        "note": "Upper-end estimate for 2 servings homemade mac & cheese plus one chicken thigh and one chicken wing."
+      }
+    },
+    {
+      "id": "evt-20260714152039-food-64d53971",
+      "recordedAt": "2026-07-14T15:20:39-04:00",
+      "date": "2026-07-14",
+      "type": "food",
+      "action": "upsert",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-14-homemade-mac-cheese-2-servings-chicken-thigh-chi",
+      "food": {
+        "id": "food-2026-07-14-homemade-mac-cheese-2-servings-chicken-thigh-chi",
+        "name": "Homemade mac and cheese (about 1 cup) + chicken thigh + chicken wing",
+        "tone": "bad",
+        "calories": 700,
+        "note": "Two small squares of mac and cheese; upper-end estimate for the full plate including one chicken thigh and one chicken wing."
+      }
+    },
+    {
+      "id": "evt-20260715104835-workout-5e1074d6",
+      "recordedAt": "2026-07-15T10:48:35-04:00",
+      "date": "2026-07-14",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Tired; stayed up late last night."
+      }
+    },
+    {
+      "id": "evt-20260715110647-food-c18673fa",
+      "recordedAt": "2026-07-15T11:06:47-04:00",
+      "date": "2026-07-14",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-14-minute-maid-berry-punch-1-glass",
+      "food": {
+        "id": "food-2026-07-14-minute-maid-berry-punch-1-glass",
+        "name": "Minute Maid Berry Punch, 1 glass",
+        "tone": "warn",
+        "calories": 80,
+        "note": "Official nutrition: 80 cal per 8 fl oz; logged as one standard glass."
+      }
+    },
+    {
+      "id": "evt-20260715121634-food-c388d198",
+      "recordedAt": "2026-07-15T12:16:34-04:00",
+      "date": "2026-07-15",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-15-jamaican-rice-and-peas-chicken-side-salad",
+      "food": {
+        "id": "food-2026-07-15-jamaican-rice-and-peas-chicken-side-salad",
+        "name": "Jamaican rice and peas, chicken, side salad",
+        "tone": "bad",
+        "calories": 1000,
+        "note": "Upper-end estimate from photo: large serving of rice and peas, several chicken pieces, side salad with creamy dressing."
+      }
+    },
+    {
+      "id": "evt-20260715125841-food-04c758b7",
+      "recordedAt": "2026-07-15T12:58:41-04:00",
+      "date": "2026-07-15",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-15-3-sugar-cookies-1-chocolate-chip-cookie-half-bro",
+      "food": {
+        "id": "food-2026-07-15-3-sugar-cookies-1-chocolate-chip-cookie-half-bro",
+        "name": "3 sugar cookies, 1 chocolate chip cookie, half brownie square",
+        "tone": "bad",
+        "calories": 510,
+        "note": "Upper-end estimate: 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square."
+      }
+    },
+    {
+      "id": "evt-20260715125845-food-cf678867",
+      "recordedAt": "2026-07-15T12:58:45-04:00",
+      "date": "2026-07-15",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-15-also-i-had-3-sugar-cookies",
+      "food": {
+        "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
+        "name": "Also i had 3 sugar cookies",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "also today i had 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]

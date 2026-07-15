@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-13",
-  "updated": "2026-07-13T17:40:48-04:00",
+  "currentDate": "2026-07-15",
+  "updated": "2026-07-15T12:58:45-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-13": {
+    "2026-07-15": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,68 +20,28 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-13-dinner-also-last-night-on-sunday-for-dinner-i-ha",
-          "name": "Dinner: Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+          "id": "food-2026-07-15-jamaican-rice-and-peas-chicken-side-salad",
+          "name": "Jamaican rice and peas, chicken, side salad",
+          "tone": "bad",
+          "calories": 1000,
+          "note": "Upper-end estimate from photo: large serving of rice and peas, several chicken pieces, side salad with creamy dressing."
         },
         {
-          "id": "food-2026-07-13-celery-hummus-snack",
-          "name": "Celery + hummus snack",
-          "tone": "good",
-          "calories": 150,
-          "note": "Typical snack estimate."
+          "id": "food-2026-07-15-3-sugar-cookies-1-chocolate-chip-cookie-half-bro",
+          "name": "3 sugar cookies, 1 chocolate chip cookie, half brownie square",
+          "tone": "bad",
+          "calories": 510,
+          "note": "Upper-end estimate: 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square."
         },
         {
-          "id": "food-2026-07-13-snack-no-thanks-but-update-todays-food",
-          "name": "Snack: No thanks but update todays food",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-13-snack-the-typical-celery-and-humas-snack",
-          "name": "Snack: The typical celery and humas snack",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-13-typical-lunch-salad",
-          "name": "Typical lunch salad",
-          "tone": "warn",
-          "calories": 600,
-          "note": "Upper-end estimate for a typical deli chicken salad-style lunch."
-        },
-        {
-          "id": "food-2026-07-13-chocolate-espresso-from-the-office-coffee-machin",
-          "name": "Chocolate espresso from the office coffee machine",
-          "tone": "warn",
-          "calories": 100,
-          "note": "Estimated from prior office-machine espresso drink log."
-        },
-        {
-          "id": "food-2026-07-13-lunch-my-typical-lunch-salad",
-          "name": "Lunch: My typical lunch salad",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-13-lunch-also-had-a-cholate-expresso-from-the-offic",
-          "name": "Lunch: Also had a cholate expresso from the office coffee machine",
+          "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
+          "name": "Also i had 3 sugar cookies",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
-      "weight": {
-        "value": 213.6,
-        "label": "213.6 lb",
-        "tone": "good",
-        "detail": "Weekly Monday weigh-in."
-      },
+      "weight": null,
       "sleep": {
         "label": "Not logged",
         "tone": "warn",
@@ -1294,6 +1254,129 @@
           "tone": "warn",
           "calories": 160,
           "note": "80 calories each."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-13": {
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Couldn’t wake up."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-13-dinner-also-last-night-on-sunday-for-dinner-i-ha",
+          "name": "Dinner: Also last night on sunday for dinner I had a serving of a home made pasta dish with a heavy cream sauce and grilled chicken",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-celery-hummus-snack",
+          "name": "Celery + hummus snack",
+          "tone": "good",
+          "calories": 150,
+          "note": "Typical snack estimate."
+        },
+        {
+          "id": "food-2026-07-13-snack-no-thanks-but-update-todays-food",
+          "name": "Snack: No thanks but update todays food",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-snack-the-typical-celery-and-humas-snack",
+          "name": "Snack: The typical celery and humas snack",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-typical-lunch-salad",
+          "name": "Typical lunch salad",
+          "tone": "warn",
+          "calories": 670,
+          "note": "Upper-end estimate using dressing at about 1.5 Wawa side cups (~210 cal)."
+        },
+        {
+          "id": "food-2026-07-13-chocolate-espresso-from-the-office-coffee-machin",
+          "name": "Chocolate espresso from the office coffee machine",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Estimated from prior office-machine espresso drink log."
+        },
+        {
+          "id": "food-2026-07-13-lunch-my-typical-lunch-salad",
+          "name": "Lunch: My typical lunch salad",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-13-lunch-also-had-a-cholate-expresso-from-the-offic",
+          "name": "Lunch: Also had a cholate expresso from the office coffee machine",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": {
+        "value": 213.6,
+        "label": "213.6 lb",
+        "tone": "good",
+        "detail": "Weekly Monday weigh-in."
+      },
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-14": {
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Tired; stayed up late last night."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-13-walmart-popcorn-2-5-cups",
+          "name": "Walmart popcorn, 2.5 cups",
+          "tone": "warn",
+          "calories": 350,
+          "note": "Estimated from Great Value popcorn at about 140 cal per oz; 2.5 cups logged as an upper-end snack estimate."
+        },
+        {
+          "id": "food-2026-07-13-blue-diamond-bold-wasabi-soy-sauce-almonds-1-5-oz",
+          "name": "Blue Diamond Bold Wasabi & Soy Sauce almonds (1.5 oz bag)",
+          "tone": "warn",
+          "calories": 255,
+          "note": "Official SmartLabel: 170 cal per 1 oz serving; 1.5 oz bag logged as 1.5 servings."
+        },
+        {
+          "id": "food-2026-07-14-homemade-mac-cheese-2-servings-chicken-thigh-chi",
+          "name": "Homemade mac and cheese (about 1 cup) + chicken thigh + chicken wing",
+          "tone": "bad",
+          "calories": 700,
+          "note": "Two small squares of mac and cheese; upper-end estimate for the full plate including one chicken thigh and one chicken wing."
+        },
+        {
+          "id": "food-2026-07-14-minute-maid-berry-punch-1-glass",
+          "name": "Minute Maid Berry Punch, 1 glass",
+          "tone": "warn",
+          "calories": 80,
+          "note": "Official nutrition: 80 cal per 8 fl oz; logged as one standard glass."
         }
       ],
       "weight": null,
