@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-15",
-  "updated": "2026-07-15T12:58:45-04:00",
+  "updated": "2026-07-15T12:58:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -36,6 +36,13 @@
         {
           "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
           "name": "Also i had 3 sugar cookies",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-15-1-chocolate-chip-cookie",
+          "name": "1 chocolate chip cookie",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

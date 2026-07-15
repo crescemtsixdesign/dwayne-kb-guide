@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-15T12:58:45-04:00",
+  "updated": "2026-07-15T12:58:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2629,6 +2629,24 @@
       "food": {
         "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
         "name": "Also i had 3 sugar cookies",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "also today i had 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260715125848-food-3d0283c2",
+      "recordedAt": "2026-07-15T12:58:48-04:00",
+      "date": "2026-07-15",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-15-1-chocolate-chip-cookie",
+      "food": {
+        "id": "food-2026-07-15-1-chocolate-chip-cookie",
+        "name": "1 chocolate chip cookie",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
