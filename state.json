@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-16",
-  "updated": "2026-07-16T11:07:54-04:00",
+  "updated": "2026-07-16T15:25:50-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -30,6 +30,27 @@
           "id": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
           "name": "Lunch: The remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
           "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-16-walmart-popcorn-2-cups",
+          "name": "Walmart popcorn, 2 cups",
+          "tone": "warn",
+          "calories": 280,
+          "note": "Estimated using prior Walmart popcorn rate of about 140 calories per cup."
+        },
+        {
+          "id": "food-2026-07-16-typical-grilled-chicken-salad-no-avocado",
+          "name": "Typical grilled chicken salad, no avocado",
+          "tone": "warn",
+          "calories": 590,
+          "note": "Same typical lunch salad as before, but without avocado."
+        },
+        {
+          "id": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
+          "name": "Lunch: My typical lunch grilled chicken salad",
+          "tone": "good",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }

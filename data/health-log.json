@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-16T11:07:54-04:00",
+  "updated": "2026-07-16T15:25:50-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2718,6 +2718,56 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "this morning  i ate the remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260716115724-food-ed5135fd",
+      "recordedAt": "2026-07-16T11:57:24-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-walmart-popcorn-2-cups",
+      "food": {
+        "id": "food-2026-07-16-walmart-popcorn-2-cups",
+        "name": "Walmart popcorn, 2 cups",
+        "tone": "warn",
+        "calories": 280,
+        "note": "Estimated using prior Walmart popcorn rate of about 140 calories per cup."
+      }
+    },
+    {
+      "id": "evt-20260716152543-food-5a67d128",
+      "recordedAt": "2026-07-16T15:25:43-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-typical-grilled-chicken-salad-no-avocado",
+      "food": {
+        "id": "food-2026-07-16-typical-grilled-chicken-salad-no-avocado",
+        "name": "Typical grilled chicken salad, no avocado",
+        "tone": "warn",
+        "calories": 590,
+        "note": "Same typical lunch salad as before, but without avocado."
+      }
+    },
+    {
+      "id": "evt-20260716152550-food-f71a71a1",
+      "recordedAt": "2026-07-16T15:25:50-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
+      "food": {
+        "id": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
+        "name": "Lunch: My typical lunch grilled chicken salad",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just ate my typical lunch grilled chicken salad, no avacado",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
