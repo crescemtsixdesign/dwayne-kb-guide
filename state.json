@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-16",
-  "updated": "2026-07-16T15:25:50-04:00",
+  "updated": "2026-07-16T15:25:53-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -51,6 +51,13 @@
           "id": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
           "name": "Lunch: My typical lunch grilled chicken salad",
           "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-16-lunch-no-avacado",
+          "name": "Lunch: No avacado",
+          "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
