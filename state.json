@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-15",
-  "updated": "2026-07-15T12:58:50-04:00",
+  "currentDate": "2026-07-16",
+  "updated": "2026-07-16T11:07:54-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-15": {
+    "2026-07-16": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,36 +20,15 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-15-jamaican-rice-and-peas-chicken-side-salad",
-          "name": "Jamaican rice and peas, chicken, side salad",
-          "tone": "bad",
-          "calories": 1000,
-          "note": "Upper-end estimate from photo: large serving of rice and peas, several chicken pieces, side salad with creamy dressing."
-        },
-        {
-          "id": "food-2026-07-15-3-sugar-cookies-1-chocolate-chip-cookie-half-bro",
-          "name": "3 sugar cookies, 1 chocolate chip cookie, half brownie square",
-          "tone": "bad",
-          "calories": 510,
-          "note": "Upper-end estimate: 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square."
-        },
-        {
-          "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
-          "name": "Also i had 3 sugar cookies",
+          "id": "food-2026-07-16-remaining-serving-of-homemade-chicken-pasta-with",
+          "name": "Remaining serving of homemade chicken pasta with cream sauce",
           "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+          "calories": 700,
+          "note": "Remaining serving from the earlier homemade pasta dish with heavy cream sauce and grilled chicken."
         },
         {
-          "id": "food-2026-07-15-1-chocolate-chip-cookie",
-          "name": "1 chocolate chip cookie",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-15-and-half-a-brownie-square",
-          "name": "And half a brownie square",
+          "id": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
+          "name": "Lunch: The remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -1391,6 +1370,58 @@
           "tone": "warn",
           "calories": 80,
           "note": "Official nutrition: 80 cal per 8 fl oz; logged as one standard glass."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-15": {
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Forgot to set the alarm."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-15-jamaican-rice-and-peas-chicken-side-salad",
+          "name": "Jamaican rice and peas, chicken, side salad",
+          "tone": "bad",
+          "calories": 1000,
+          "note": "Upper-end estimate from photo: large serving of rice and peas, several chicken pieces, side salad with creamy dressing."
+        },
+        {
+          "id": "food-2026-07-15-3-sugar-cookies-1-chocolate-chip-cookie-half-bro",
+          "name": "3 sugar cookies, 1 chocolate chip cookie, half brownie square",
+          "tone": "bad",
+          "calories": 510,
+          "note": "Upper-end estimate: 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square."
+        },
+        {
+          "id": "food-2026-07-15-also-i-had-3-sugar-cookies",
+          "name": "Also i had 3 sugar cookies",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-15-1-chocolate-chip-cookie",
+          "name": "1 chocolate chip cookie",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-15-and-half-a-brownie-square",
+          "name": "And half a brownie square",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

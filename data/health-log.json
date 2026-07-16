@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-15T12:58:50-04:00",
+  "updated": "2026-07-16T11:07:54-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2670,6 +2670,54 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "also today i had 3 sugar cookies, 1 chocolate chip cookie, and half a brownie square",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260716110635-workout-5c2e48ab",
+      "recordedAt": "2026-07-16T11:06:35-04:00",
+      "date": "2026-07-15",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Forgot to set the alarm."
+      }
+    },
+    {
+      "id": "evt-20260716110749-food-245bc095",
+      "recordedAt": "2026-07-16T11:07:49-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-remaining-serving-of-homemade-chicken-pasta-with",
+      "food": {
+        "id": "food-2026-07-16-remaining-serving-of-homemade-chicken-pasta-with",
+        "name": "Remaining serving of homemade chicken pasta with cream sauce",
+        "tone": "warn",
+        "calories": 700,
+        "note": "Remaining serving from the earlier homemade pasta dish with heavy cream sauce and grilled chicken."
+      }
+    },
+    {
+      "id": "evt-20260716110754-food-4e6f5bf2",
+      "recordedAt": "2026-07-16T11:07:54-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
+      "food": {
+        "id": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
+        "name": "Lunch: The remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "this morning  i ate the remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
