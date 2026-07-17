@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-17T13:09:43-04:00",
+  "updated": "2026-07-17T15:48:51-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2954,6 +2954,56 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES, 1 FRIED EGG, 1 SLICE CHEESE, 2 SLICES WHOLE WHEAT BREAD, SOME MAYO AND KETCHUP",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260717135716-food-8ce419f0",
+      "recordedAt": "2026-07-17T13:57:16-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-17-chili-s-loaded-baked-potato-soup-small-side",
+      "food": {
+        "id": "food-2026-07-17-chili-s-loaded-baked-potato-soup-small-side",
+        "name": "Chili's loaded baked potato soup, small side",
+        "tone": "warn",
+        "calories": 235,
+        "note": "Chili's nutrition: 235 cal per cup / small side estimate."
+      }
+    },
+    {
+      "id": "evt-20260717154845-food-29da594d",
+      "recordedAt": "2026-07-17T15:48:45-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-17-skillet-chicken-and-potatoes-1-serving",
+      "food": {
+        "id": "food-2026-07-17-skillet-chicken-and-potatoes-1-serving",
+        "name": "Skillet chicken and potatoes, 1 serving",
+        "tone": "warn",
+        "calories": 600,
+        "note": "Estimated as a typical serving of chicken and potatoes cooked in skillet oil/butter."
+      }
+    },
+    {
+      "id": "evt-20260717154851-food-951ea28d",
+      "recordedAt": "2026-07-17T15:48:51-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-a-serving-of-skillet-chicken-and-potatoes",
+      "food": {
+        "id": "food-2026-07-17-a-serving-of-skillet-chicken-and-potatoes",
+        "name": "A serving of skillet chicken and potatoes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just ate a serving of skillet chicken and potatoes",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
