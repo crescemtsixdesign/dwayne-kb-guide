@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-16T15:25:53-04:00",
+  "updated": "2026-07-17T13:09:33-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2786,6 +2786,102 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "just ate my typical lunch grilled chicken salad, no avacado",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260717101622-workout-ed4a5dd2",
+      "recordedAt": "2026-07-17T10:16:22-04:00",
+      "date": "2026-07-16",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Did work project instead."
+      }
+    },
+    {
+      "id": "evt-20260717101953-food-f4bf2a4e",
+      "recordedAt": "2026-07-17T10:19:53-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-typical-sliced-deli-chicken-sandwich",
+      "food": {
+        "id": "food-2026-07-16-typical-sliced-deli-chicken-sandwich",
+        "name": "Typical sliced deli chicken sandwich",
+        "tone": "warn",
+        "calories": 430,
+        "note": "Using the same typical deli chicken sandwich estimate as prior logs."
+      }
+    },
+    {
+      "id": "evt-20260717101953-food-03a95f16",
+      "recordedAt": "2026-07-17T10:19:53-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+      "food": {
+        "id": "food-2026-07-16-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+        "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips, 1 serving",
+        "tone": "warn",
+        "calories": 150,
+        "note": "Official Walmart estimate: 150 cal per serving."
+      }
+    },
+    {
+      "id": "evt-20260717101953-food-1ffa0b47",
+      "recordedAt": "2026-07-17T10:19:53-04:00",
+      "date": "2026-07-16",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-16-publix-rich-creamy-premium-chocolate-ice-cream-1",
+      "food": {
+        "id": "food-2026-07-16-publix-rich-creamy-premium-chocolate-ice-cream-1",
+        "name": "Publix Rich & Creamy Premium Chocolate ice cream, 1 serving",
+        "tone": "warn",
+        "calories": 210,
+        "note": "Official Publix nutrition: 210 cal per serving."
+      }
+    },
+    {
+      "id": "evt-20260717130917-food-5ca31a62",
+      "recordedAt": "2026-07-17T13:09:17-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-17-ham-sandwich-with-ham-slices-fried-egg-cheese-wh",
+      "food": {
+        "id": "food-2026-07-17-ham-sandwich-with-ham-slices-fried-egg-cheese-wh",
+        "name": "Ham sandwich with ham slices, fried egg, cheese, whole wheat bread, mayo and ketchup",
+        "tone": "warn",
+        "calories": 560,
+        "note": "Estimated using 2 slices whole wheat bread, ham slices, 1 fried egg, 1 slice cheese, mayo, and ketchup."
+      }
+    },
+    {
+      "id": "evt-20260717130933-food-3602716f",
+      "recordedAt": "2026-07-17T13:09:33-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
+      "food": {
+        "id": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
+        "name": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES, 1 FRIED EGG, 1 SLICE CHEESE, 2 SLICES WHOLE WHEAT BREAD, SOME MAYO AND KETCHUP",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]

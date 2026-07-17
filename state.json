@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-16",
-  "updated": "2026-07-16T15:25:53-04:00",
+  "currentDate": "2026-07-17",
+  "updated": "2026-07-17T13:09:33-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-16": {
+    "2026-07-17": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,43 +20,15 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-16-remaining-serving-of-homemade-chicken-pasta-with",
-          "name": "Remaining serving of homemade chicken pasta with cream sauce",
+          "id": "food-2026-07-17-ham-sandwich-with-ham-slices-fried-egg-cheese-wh",
+          "name": "Ham sandwich with ham slices, fried egg, cheese, whole wheat bread, mayo and ketchup",
           "tone": "warn",
-          "calories": 700,
-          "note": "Remaining serving from the earlier homemade pasta dish with heavy cream sauce and grilled chicken."
+          "calories": 560,
+          "note": "Estimated using 2 slices whole wheat bread, ham slices, 1 fried egg, 1 slice cheese, mayo, and ketchup."
         },
         {
-          "id": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
-          "name": "Lunch: The remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-16-walmart-popcorn-2-cups",
-          "name": "Walmart popcorn, 2 cups",
-          "tone": "warn",
-          "calories": 280,
-          "note": "Estimated using prior Walmart popcorn rate of about 140 calories per cup."
-        },
-        {
-          "id": "food-2026-07-16-typical-grilled-chicken-salad-no-avocado",
-          "name": "Typical grilled chicken salad, no avocado",
-          "tone": "warn",
-          "calories": 590,
-          "note": "Same typical lunch salad as before, but without avocado."
-        },
-        {
-          "id": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
-          "name": "Lunch: My typical lunch grilled chicken salad",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-16-lunch-no-avacado",
-          "name": "Lunch: No avacado",
+          "id": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
+          "name": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -1450,6 +1422,86 @@
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-16": {
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Did work project instead."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-16-remaining-serving-of-homemade-chicken-pasta-with",
+          "name": "Remaining serving of homemade chicken pasta with cream sauce",
+          "tone": "warn",
+          "calories": 700,
+          "note": "Remaining serving from the earlier homemade pasta dish with heavy cream sauce and grilled chicken."
+        },
+        {
+          "id": "food-2026-07-16-lunch-the-remaining-serving-of-the-home-made-chi",
+          "name": "Lunch: The remaining serving of the home made chicken pasta with cream sauce I ate for lunch a few days ago",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-16-walmart-popcorn-2-cups",
+          "name": "Walmart popcorn, 2 cups",
+          "tone": "warn",
+          "calories": 280,
+          "note": "Estimated using prior Walmart popcorn rate of about 140 calories per cup."
+        },
+        {
+          "id": "food-2026-07-16-typical-grilled-chicken-salad-no-avocado",
+          "name": "Typical grilled chicken salad, no avocado",
+          "tone": "warn",
+          "calories": 590,
+          "note": "Same typical lunch salad as before, but without avocado."
+        },
+        {
+          "id": "food-2026-07-16-lunch-my-typical-lunch-grilled-chicken-salad",
+          "name": "Lunch: My typical lunch grilled chicken salad",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-16-lunch-no-avacado",
+          "name": "Lunch: No avacado",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-16-typical-sliced-deli-chicken-sandwich",
+          "name": "Typical sliced deli chicken sandwich",
+          "tone": "warn",
+          "calories": 430,
+          "note": "Using the same typical deli chicken sandwich estimate as prior logs."
+        },
+        {
+          "id": "food-2026-07-16-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+          "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips, 1 serving",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Official Walmart estimate: 150 cal per serving."
+        },
+        {
+          "id": "food-2026-07-16-publix-rich-creamy-premium-chocolate-ice-cream-1",
+          "name": "Publix Rich & Creamy Premium Chocolate ice cream, 1 serving",
+          "tone": "warn",
+          "calories": 210,
+          "note": "Official Publix nutrition: 210 cal per serving."
         }
       ],
       "weight": null,
