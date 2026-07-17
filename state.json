@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-17",
-  "updated": "2026-07-17T13:09:36-04:00",
+  "updated": "2026-07-17T13:09:38-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -37,6 +37,13 @@
           "id": "food-2026-07-17-1-fried-egg",
           "name": "1 FRIED EGG",
           "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-1-slice-cheese",
+          "name": "1 SLICE CHEESE",
+          "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
