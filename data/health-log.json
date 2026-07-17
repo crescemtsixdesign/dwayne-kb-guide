@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-17T13:09:33-04:00",
+  "updated": "2026-07-17T13:09:36-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -2878,6 +2878,24 @@
         "id": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
         "name": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES",
         "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES, 1 FRIED EGG, 1 SLICE CHEESE, 2 SLICES WHOLE WHEAT BREAD, SOME MAYO AND KETCHUP",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260717130936-food-031274eb",
+      "recordedAt": "2026-07-17T13:09:36-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-1-fried-egg",
+      "food": {
+        "id": "food-2026-07-17-1-fried-egg",
+        "name": "1 FRIED EGG",
+        "tone": "good",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
