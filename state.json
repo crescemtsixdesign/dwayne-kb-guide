@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-17",
-  "updated": "2026-07-17T13:09:41-04:00",
+  "updated": "2026-07-17T13:09:43-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -50,6 +50,13 @@
         {
           "id": "food-2026-07-17-2-slices-whole-wheat-bread",
           "name": "2 SLICES WHOLE WHEAT BREAD",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-some-mayo-and-ketchup",
+          "name": "SOME MAYO AND KETCHUP",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
