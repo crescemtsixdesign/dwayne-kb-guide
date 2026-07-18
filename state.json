@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-18",
-  "updated": "2026-07-18T16:35:56-04:00",
+  "updated": "2026-07-18T18:19:39-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -36,6 +36,20 @@
         {
           "id": "food-2026-07-18-a-quarter-of-their-mac-and-cheese-side",
           "name": "A quarter of their Mac and cheese side",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-18-2-kfc-snackers",
+          "name": "2 KFC snackers",
+          "tone": "bad",
+          "calories": 620,
+          "note": "Estimated at 310 calories each based on KFC Snacker with Crispy Strip."
+        },
+        {
+          "id": "food-2026-07-18-lunch-2-kfc-snackers",
+          "name": "Lunch: 2 KFC snackers",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

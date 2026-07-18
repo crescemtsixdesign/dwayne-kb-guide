@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-18T16:35:56-04:00",
+  "updated": "2026-07-18T18:19:39-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3142,6 +3142,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "This morning I had a half a Maui steak from j Alexander and a quarter of their Mac and cheese side.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260718181934-food-279adfb2",
+      "recordedAt": "2026-07-18T18:19:34-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-18-2-kfc-snackers",
+      "food": {
+        "id": "food-2026-07-18-2-kfc-snackers",
+        "name": "2 KFC snackers",
+        "tone": "bad",
+        "calories": 620,
+        "note": "Estimated at 310 calories each based on KFC Snacker with Crispy Strip."
+      }
+    },
+    {
+      "id": "evt-20260718181939-food-e9a8f346",
+      "recordedAt": "2026-07-18T18:19:39-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-18-lunch-2-kfc-snackers",
+      "food": {
+        "id": "food-2026-07-18-lunch-2-kfc-snackers",
+        "name": "Lunch: 2 KFC snackers",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "For lunch I had 2 KFC snackers",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
