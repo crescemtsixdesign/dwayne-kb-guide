@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-17T15:48:51-04:00",
+  "updated": "2026-07-17T20:44:16-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3004,6 +3004,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "just ate a serving of skillet chicken and potatoes",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260717204409-food-4567b5ce",
+      "recordedAt": "2026-07-17T20:44:09-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-17-dinner-2-servings-mashed-potatoes-and-1-pork-cho",
+      "food": {
+        "id": "food-2026-07-17-dinner-2-servings-mashed-potatoes-and-1-pork-cho",
+        "name": "Dinner: 2 servings mashed potatoes and 1 pork chop",
+        "tone": "warn",
+        "calories": 712,
+        "note": "Mashed potatoes estimated at 237 cal per cup x 2 servings; pork chop estimated at ~238 cal."
+      }
+    },
+    {
+      "id": "evt-20260717204416-food-e8cb3bad",
+      "recordedAt": "2026-07-17T20:44:16-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-dinner-2-sevings-of-mashed-potatoes",
+      "food": {
+        "id": "food-2026-07-17-dinner-2-sevings-of-mashed-potatoes",
+        "name": "Dinner: 2 sevings of mashed potatoes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "ate 2 sevings of mashed potatoes and 1 pork chop for dinner",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
