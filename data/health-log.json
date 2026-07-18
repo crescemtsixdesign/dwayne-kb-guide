@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-18T11:40:55-04:00",
+  "updated": "2026-07-18T16:35:53-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3090,6 +3090,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "Add to yesterday I had 4 Publix sprinkle cookies.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260718163548-food-780c57a6",
+      "recordedAt": "2026-07-18T16:35:48-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-18-half-maui-steak-from-j-alexander-s-quarter-side-",
+      "food": {
+        "id": "food-2026-07-18-half-maui-steak-from-j-alexander-s-quarter-side-",
+        "name": "Half Maui steak from J. Alexander's + quarter side of mac and cheese",
+        "tone": "warn",
+        "calories": 560,
+        "note": "Upper-end estimate: half of Steak Maui plus about a quarter of the NYO mac & cheese side."
+      }
+    },
+    {
+      "id": "evt-20260718163553-food-5bff18c7",
+      "recordedAt": "2026-07-18T16:35:53-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-18-a-half-a-maui-steak-from-j-alexander",
+      "food": {
+        "id": "food-2026-07-18-a-half-a-maui-steak-from-j-alexander",
+        "name": "A half a Maui steak from j Alexander",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "This morning I had a half a Maui steak from j Alexander and a quarter of their Mac and cheese side.",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
