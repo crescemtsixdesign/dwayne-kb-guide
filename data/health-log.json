@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-17T20:44:16-04:00",
+  "updated": "2026-07-17T20:44:19-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3033,6 +3033,24 @@
       "food": {
         "id": "food-2026-07-17-dinner-2-sevings-of-mashed-potatoes",
         "name": "Dinner: 2 sevings of mashed potatoes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "ate 2 sevings of mashed potatoes and 1 pork chop for dinner",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260717204419-food-1da7d28a",
+      "recordedAt": "2026-07-17T20:44:19-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-dinner-1-pork-chop-for-dinner",
+      "food": {
+        "id": "food-2026-07-17-dinner-1-pork-chop-for-dinner",
+        "name": "Dinner: 1 pork chop for dinner",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
