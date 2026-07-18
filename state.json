@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-17",
-  "updated": "2026-07-17T20:44:19-04:00",
+  "currentDate": "2026-07-18",
+  "updated": "2026-07-18T11:40:55-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,99 +11,14 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-17": {
+    "2026-07-18": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [
-        {
-          "id": "food-2026-07-17-ham-sandwich-with-ham-slices-fried-egg-cheese-wh",
-          "name": "Ham sandwich with ham slices, fried egg, cheese, whole wheat bread, mayo and ketchup",
-          "tone": "warn",
-          "calories": 560,
-          "note": "Estimated using 2 slices whole wheat bread, ham slices, 1 fried egg, 1 slice cheese, mayo, and ketchup."
-        },
-        {
-          "id": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
-          "name": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-1-fried-egg",
-          "name": "1 FRIED EGG",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-1-slice-cheese",
-          "name": "1 SLICE CHEESE",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-2-slices-whole-wheat-bread",
-          "name": "2 SLICES WHOLE WHEAT BREAD",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-some-mayo-and-ketchup",
-          "name": "SOME MAYO AND KETCHUP",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-chili-s-loaded-baked-potato-soup-small-side",
-          "name": "Chili's loaded baked potato soup, small side",
-          "tone": "warn",
-          "calories": 235,
-          "note": "Chili's nutrition: 235 cal per cup / small side estimate."
-        },
-        {
-          "id": "food-2026-07-17-skillet-chicken-and-potatoes-1-serving",
-          "name": "Skillet chicken and potatoes, 1 serving",
-          "tone": "warn",
-          "calories": 600,
-          "note": "Estimated as a typical serving of chicken and potatoes cooked in skillet oil/butter."
-        },
-        {
-          "id": "food-2026-07-17-a-serving-of-skillet-chicken-and-potatoes",
-          "name": "A serving of skillet chicken and potatoes",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-dinner-2-servings-mashed-potatoes-and-1-pork-cho",
-          "name": "Dinner: 2 servings mashed potatoes and 1 pork chop",
-          "tone": "warn",
-          "calories": 712,
-          "note": "Mashed potatoes estimated at 237 cal per cup x 2 servings; pork chop estimated at ~238 cal."
-        },
-        {
-          "id": "food-2026-07-17-dinner-2-sevings-of-mashed-potatoes",
-          "name": "Dinner: 2 sevings of mashed potatoes",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-17-dinner-1-pork-chop-for-dinner",
-          "name": "Dinner: 1 pork chop for dinner",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        }
-      ],
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -1572,6 +1487,121 @@
           "tone": "warn",
           "calories": 210,
           "note": "Official Publix nutrition: 210 cal per serving."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-17": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-17-ham-sandwich-with-ham-slices-fried-egg-cheese-wh",
+          "name": "Ham sandwich with ham slices, fried egg, cheese, whole wheat bread, mayo and ketchup",
+          "tone": "warn",
+          "calories": 560,
+          "note": "Estimated using 2 slices whole wheat bread, ham slices, 1 fried egg, 1 slice cheese, mayo, and ketchup."
+        },
+        {
+          "id": "food-2026-07-17-this-mornig-i-had-a-ham-sandwhich-with-ham-slice",
+          "name": "THIS MORNIG I HAD A HAM SANDWHICH WITH HAM SLICES",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-1-fried-egg",
+          "name": "1 FRIED EGG",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-1-slice-cheese",
+          "name": "1 SLICE CHEESE",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-2-slices-whole-wheat-bread",
+          "name": "2 SLICES WHOLE WHEAT BREAD",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-some-mayo-and-ketchup",
+          "name": "SOME MAYO AND KETCHUP",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-chili-s-loaded-baked-potato-soup-small-side",
+          "name": "Chili's loaded baked potato soup, small side",
+          "tone": "warn",
+          "calories": 235,
+          "note": "Chili's nutrition: 235 cal per cup / small side estimate."
+        },
+        {
+          "id": "food-2026-07-17-skillet-chicken-and-potatoes-1-serving",
+          "name": "Skillet chicken and potatoes, 1 serving",
+          "tone": "warn",
+          "calories": 600,
+          "note": "Estimated as a typical serving of chicken and potatoes cooked in skillet oil/butter."
+        },
+        {
+          "id": "food-2026-07-17-a-serving-of-skillet-chicken-and-potatoes",
+          "name": "A serving of skillet chicken and potatoes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-dinner-2-servings-mashed-potatoes-and-1-pork-cho",
+          "name": "Dinner: 2 servings mashed potatoes and 1 pork chop",
+          "tone": "warn",
+          "calories": 712,
+          "note": "Mashed potatoes estimated at 237 cal per cup x 2 servings; pork chop estimated at ~238 cal."
+        },
+        {
+          "id": "food-2026-07-17-dinner-2-sevings-of-mashed-potatoes",
+          "name": "Dinner: 2 sevings of mashed potatoes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-dinner-1-pork-chop-for-dinner",
+          "name": "Dinner: 1 pork chop for dinner",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-17-4-publix-sprinkle-cookies",
+          "name": "4 Publix sprinkle cookies",
+          "tone": "bad",
+          "calories": 320,
+          "note": "Added to yesterday's log. Estimate at 80 calories each."
+        },
+        {
+          "id": "food-2026-07-17-add-to-i-had-4-publix-sprinkle-cookies",
+          "name": "Add to I had 4 Publix sprinkle cookies",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,

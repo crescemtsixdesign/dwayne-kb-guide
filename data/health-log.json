@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-17T20:44:19-04:00",
+  "updated": "2026-07-18T11:40:55-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3056,6 +3056,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "ate 2 sevings of mashed potatoes and 1 pork chop for dinner",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260718114050-food-619b83f7",
+      "recordedAt": "2026-07-18T11:40:50-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-17-4-publix-sprinkle-cookies",
+      "food": {
+        "id": "food-2026-07-17-4-publix-sprinkle-cookies",
+        "name": "4 Publix sprinkle cookies",
+        "tone": "bad",
+        "calories": 320,
+        "note": "Added to yesterday's log. Estimate at 80 calories each."
+      }
+    },
+    {
+      "id": "evt-20260718114055-food-3de741b1",
+      "recordedAt": "2026-07-18T11:40:55-04:00",
+      "date": "2026-07-17",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-17-add-to-i-had-4-publix-sprinkle-cookies",
+      "food": {
+        "id": "food-2026-07-17-add-to-i-had-4-publix-sprinkle-cookies",
+        "name": "Add to I had 4 Publix sprinkle cookies",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Add to yesterday I had 4 Publix sprinkle cookies.",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
