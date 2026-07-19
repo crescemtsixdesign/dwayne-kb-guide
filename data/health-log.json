@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-18T21:07:04-04:00",
+  "updated": "2026-07-18T21:07:07-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3223,6 +3223,24 @@
       "food": {
         "id": "food-2026-07-18-dinner-a-serving-of-sweet-and-sour-chicken",
         "name": "Dinner: A serving of sweet and sour chicken",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "For dinner I had  2 servings of pork fried rice and a serving of sweet and sour chicken. Then for desert I had a small triple chocolate fudge ice cream from carvel",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260718210707-food-8a57cc11",
+      "recordedAt": "2026-07-18T21:07:07-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-18-then-for-desert-i-had-a-small-triple-chocolate-f",
+      "food": {
+        "id": "food-2026-07-18-then-for-desert-i-had-a-small-triple-chocolate-f",
+        "name": "Then for desert I had a small triple chocolate fudge ice cream from carvel",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
