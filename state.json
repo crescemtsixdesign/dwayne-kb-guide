@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-18",
-  "updated": "2026-07-18T18:19:39-04:00",
+  "updated": "2026-07-18T21:07:02-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -50,6 +50,20 @@
         {
           "id": "food-2026-07-18-lunch-2-kfc-snackers",
           "name": "Lunch: 2 KFC snackers",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-18-dinner-2-servings-pork-fried-rice-sweet-and-sour",
+          "name": "Dinner: 2 servings pork fried rice + sweet and sour chicken + small triple chocolate fudge ice cream",
+          "tone": "bad",
+          "calories": 1830,
+          "note": "Pork fried rice estimated at 460 per serving x2; sweet and sour chicken estimated at 413; small Carvel triple chocolate fudge ice cream estimated conservatively at ~500."
+        },
+        {
+          "id": "food-2026-07-18-dinner-2-servings-of-pork-fried-rice",
+          "name": "Dinner: 2 servings of pork fried rice",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-18T18:19:39-04:00",
+  "updated": "2026-07-18T21:07:02-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3176,6 +3176,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "For lunch I had 2 KFC snackers",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260718210655-food-0b24ca18",
+      "recordedAt": "2026-07-18T21:06:55-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-18-dinner-2-servings-pork-fried-rice-sweet-and-sour",
+      "food": {
+        "id": "food-2026-07-18-dinner-2-servings-pork-fried-rice-sweet-and-sour",
+        "name": "Dinner: 2 servings pork fried rice + sweet and sour chicken + small triple chocolate fudge ice cream",
+        "tone": "bad",
+        "calories": 1830,
+        "note": "Pork fried rice estimated at 460 per serving x2; sweet and sour chicken estimated at 413; small Carvel triple chocolate fudge ice cream estimated conservatively at ~500."
+      }
+    },
+    {
+      "id": "evt-20260718210702-food-de066163",
+      "recordedAt": "2026-07-18T21:07:02-04:00",
+      "date": "2026-07-18",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-18-dinner-2-servings-of-pork-fried-rice",
+      "food": {
+        "id": "food-2026-07-18-dinner-2-servings-of-pork-fried-rice",
+        "name": "Dinner: 2 servings of pork fried rice",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "For dinner I had  2 servings of pork fried rice and a serving of sweet and sour chicken. Then for desert I had a small triple chocolate fudge ice cream from carvel",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
