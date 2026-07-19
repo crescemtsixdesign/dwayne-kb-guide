@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-18T21:07:07-04:00",
+  "updated": "2026-07-19T12:53:20-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3246,6 +3246,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "For dinner I had  2 servings of pork fried rice and a serving of sweet and sour chicken. Then for desert I had a small triple chocolate fudge ice cream from carvel",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260719125310-food-fcf41ca2",
+      "recordedAt": "2026-07-19T12:53:10-04:00",
+      "date": "2026-07-19",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-19-breakfast-sandwich-with-wheat-bread-egg-cheese-a",
+      "food": {
+        "id": "food-2026-07-19-breakfast-sandwich-with-wheat-bread-egg-cheese-a",
+        "name": "Breakfast sandwich with wheat bread, egg, cheese, and butter",
+        "tone": "warn",
+        "calories": 290,
+        "note": "2 slices wheat bread, 1 egg, 1 slice cheese, and about 1/4 tsp butter."
+      }
+    },
+    {
+      "id": "evt-20260719125320-food-eba0be02",
+      "recordedAt": "2026-07-19T12:53:20-04:00",
+      "date": "2026-07-19",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-19-breakfast-a-breakfast-sandwich-with-two-slices-o",
+      "food": {
+        "id": "food-2026-07-19-breakfast-a-breakfast-sandwich-with-two-slices-o",
+        "name": "Breakfast: A breakfast sandwich with two slices of wheat bread",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "This morning I had a breakfast sandwich with two slices of wheat bread, one egg one slice of cheese and a quarter teaspoon of butter",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
