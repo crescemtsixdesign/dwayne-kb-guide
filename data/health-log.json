@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-19T12:53:23-04:00",
+  "updated": "2026-07-19T12:53:25-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3294,6 +3294,24 @@
         "id": "food-2026-07-19-breakfast-one-egg-one-slice-of-cheese",
         "name": "Breakfast: One egg one slice of cheese",
         "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "This morning I had a breakfast sandwich with two slices of wheat bread, one egg one slice of cheese and a quarter teaspoon of butter",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260719125325-food-3921ee01",
+      "recordedAt": "2026-07-19T12:53:25-04:00",
+      "date": "2026-07-19",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-19-breakfast-a-quarter-teaspoon-of-butter",
+      "food": {
+        "id": "food-2026-07-19-breakfast-a-quarter-teaspoon-of-butter",
+        "name": "Breakfast: A quarter teaspoon of butter",
+        "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
