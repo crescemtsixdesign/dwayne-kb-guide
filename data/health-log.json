@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-19T20:14:44-04:00",
+  "updated": "2026-07-20T12:00:45-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3434,6 +3434,84 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "For lunch today I had typical sliced deli chicken sandwich this time with American cheese instead of Colby jack and a side of better good chips. Then for a snack I had 2 cups of Walmart pop corn, 1.5 servings of minute made berry punch and one serving of baby bell Gouda cheese.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260719222647-food-cba6711b",
+      "recordedAt": "2026-07-19T22:26:47-04:00",
+      "date": "2026-07-19",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-19-full-small-domino-s-memphis-bbq-chicken-pizza",
+      "food": {
+        "id": "food-2026-07-19-full-small-domino-s-memphis-bbq-chicken-pizza",
+        "name": "Full small Domino's Memphis BBQ Chicken pizza",
+        "tone": "bad",
+        "calories": 1450,
+        "note": "Small hand-tossed Memphis BBQ Chicken pizza estimated at about 363 calories per slice x 4 slices."
+      }
+    },
+    {
+      "id": "evt-20260720113224-workout-e78646ec",
+      "recordedAt": "2026-07-20T11:32:24-04:00",
+      "date": "2026-07-19",
+      "type": "workout",
+      "action": "set",
+      "source": "health_log.py",
+      "workout": {
+        "status": "missed",
+        "label": "Missed workout",
+        "tone": "bad",
+        "detail": "Too tired."
+      }
+    },
+    {
+      "id": "evt-20260720113225-weight-c86a4346",
+      "recordedAt": "2026-07-20T11:32:25-04:00",
+      "date": "2026-07-19",
+      "type": "weight",
+      "action": "set",
+      "source": "health_log.py",
+      "weight": {
+        "value": 212.0,
+        "label": "212.0 lb",
+        "tone": "good",
+        "detail": "Weighed in today."
+      }
+    },
+    {
+      "id": "evt-20260720120039-food-3f2a5492",
+      "recordedAt": "2026-07-20T12:00:39-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-20-4-cuban-cheese-croquettes",
+      "food": {
+        "id": "food-2026-07-20-4-cuban-cheese-croquettes",
+        "name": "4 Cuban cheese croquettes",
+        "tone": "bad",
+        "calories": 560,
+        "note": "Estimated at about 140 calories each for cheese croquettes."
+      }
+    },
+    {
+      "id": "evt-20260720120045-food-246fa4e2",
+      "recordedAt": "2026-07-20T12:00:45-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-20-4-cuban-cheese-croquettes-2",
+      "food": {
+        "id": "food-2026-07-20-4-cuban-cheese-croquettes-2",
+        "name": "4 cuban cheese croquettes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "just ate 4 cuban cheese croquettes",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
