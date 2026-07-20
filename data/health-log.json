@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-20T12:00:45-04:00",
+  "updated": "2026-07-20T17:08:57-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3512,6 +3512,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "just ate 4 cuban cheese croquettes",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260720170846-food-fdeaa2b8",
+      "recordedAt": "2026-07-20T17:08:46-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-20-wawa-cold-junior-hoagie-combo-with-chicken-salad",
+      "food": {
+        "id": "food-2026-07-20-wawa-cold-junior-hoagie-combo-with-chicken-salad",
+        "name": "Wawa cold junior hoagie combo with chicken salad hoagie and medium chicken corn chowder",
+        "tone": "bad",
+        "calories": 920,
+        "note": "Logged from receipt/image: cold junior hoagie combo total."
+      }
+    },
+    {
+      "id": "evt-20260720170857-food-c1424bcc",
+      "recordedAt": "2026-07-20T17:08:57-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-20-lunch-this-from-wawa-for-lunch",
+      "food": {
+        "id": "food-2026-07-20-lunch-this-from-wawa-for-lunch",
+        "name": "Lunch: This from Wawa for lunch",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Ate this from Wawa for lunch. A hogue and a medium chicken corn chowder",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]

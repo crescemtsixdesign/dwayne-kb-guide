@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-20",
-  "updated": "2026-07-20T12:00:45-04:00",
+  "updated": "2026-07-20T17:08:57-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -29,6 +29,20 @@
         {
           "id": "food-2026-07-20-4-cuban-cheese-croquettes-2",
           "name": "4 cuban cheese croquettes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-20-wawa-cold-junior-hoagie-combo-with-chicken-salad",
+          "name": "Wawa cold junior hoagie combo with chicken salad hoagie and medium chicken corn chowder",
+          "tone": "bad",
+          "calories": 920,
+          "note": "Logged from receipt/image: cold junior hoagie combo total."
+        },
+        {
+          "id": "food-2026-07-20-lunch-this-from-wawa-for-lunch",
+          "name": "Lunch: This from Wawa for lunch",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
