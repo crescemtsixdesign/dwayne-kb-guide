@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-19T20:14:39-04:00",
+  "updated": "2026-07-19T20:14:42-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3393,6 +3393,24 @@
       "food": {
         "id": "food-2026-07-19-lunch-typical-sliced-deli-chicken-sandwich-this-",
         "name": "Lunch: Typical sliced deli chicken sandwich this time with American cheese instead of Colby jack",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "For lunch today I had typical sliced deli chicken sandwich this time with American cheese instead of Colby jack and a side of better good chips. Then for a snack I had 2 cups of Walmart pop corn, 1.5 servings of minute made berry punch and one serving of baby bell Gouda cheese.",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260719201442-food-765f3c1d",
+      "recordedAt": "2026-07-19T20:14:42-04:00",
+      "date": "2026-07-19",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-19-lunch-a-side-of-better-good-chips",
+      "food": {
+        "id": "food-2026-07-19-lunch-a-side-of-better-good-chips",
+        "name": "Lunch: A side of better good chips",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
