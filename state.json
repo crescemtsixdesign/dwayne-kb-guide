@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-19",
-  "updated": "2026-07-19T12:53:25-04:00",
+  "updated": "2026-07-19T20:14:39-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -43,6 +43,41 @@
         {
           "id": "food-2026-07-19-breakfast-a-quarter-teaspoon-of-butter",
           "name": "Breakfast: A quarter teaspoon of butter",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-19-typical-sliced-deli-chicken-sandwich-with-americ",
+          "name": "Typical sliced deli chicken sandwich with American cheese",
+          "tone": "warn",
+          "calories": 430,
+          "note": "Similar to the usual deli chicken sandwich; American cheese instead of Colby jack doesn't change it much."
+        },
+        {
+          "id": "food-2026-07-19-bettergoods-smoked-gouda-mac-n-cheese-flavored-w",
+          "name": "Bettergoods Smoked Gouda Mac N' Cheese flavored wavy potato chips, 1 serving",
+          "tone": "warn",
+          "calories": 150,
+          "note": "Official Walmart estimate: 150 cal per serving."
+        },
+        {
+          "id": "food-2026-07-19-minute-maid-berry-punch-1-5-servings",
+          "name": "Minute Maid Berry Punch, 1.5 servings",
+          "tone": "warn",
+          "calories": 120,
+          "note": "Minute Maid Berry Punch is 80 cal per 8 oz serving; logged as 1.5 servings."
+        },
+        {
+          "id": "food-2026-07-19-babybel-gouda-cheese-1-piece",
+          "name": "Babybel Gouda cheese, 1 piece",
+          "tone": "warn",
+          "calories": 60,
+          "note": "Babybel Gouda is 60 calories per 20g piece."
+        },
+        {
+          "id": "food-2026-07-19-lunch-typical-sliced-deli-chicken-sandwich-this-",
+          "name": "Lunch: Typical sliced deli chicken sandwich this time with American cheese instead of Colby jack",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
