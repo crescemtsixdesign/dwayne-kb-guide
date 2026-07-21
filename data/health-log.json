@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-21T15:20:03-04:00",
+  "updated": "2026-07-21T15:20:06-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3594,6 +3594,24 @@
         "id": "food-2026-07-21-lunch-my-typical-grilled-chicken-salad",
         "name": "Lunch: My typical grilled chicken salad",
         "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "for lunch had my typical grilled chicken salad, no avacado",
+      "sessionId": "20260721_101442_10c1ce08"
+    },
+    {
+      "id": "evt-20260721152006-food-44b99460",
+      "recordedAt": "2026-07-21T15:20:06-04:00",
+      "date": "2026-07-21",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-21-lunch-no-avacado",
+      "food": {
+        "id": "food-2026-07-21-lunch-no-avacado",
+        "name": "Lunch: No avacado",
+        "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
