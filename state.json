@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-20",
-  "updated": "2026-07-20T21:13:48-04:00",
+  "currentDate": "2026-07-21",
+  "updated": "2026-07-21T15:20:03-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-20": {
+    "2026-07-21": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,44 +20,9 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-20-4-cuban-cheese-croquettes",
-          "name": "4 Cuban cheese croquettes",
-          "tone": "bad",
-          "calories": 560,
-          "note": "Estimated at about 140 calories each for cheese croquettes."
-        },
-        {
-          "id": "food-2026-07-20-4-cuban-cheese-croquettes-2",
-          "name": "4 cuban cheese croquettes",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-20-wawa-cold-junior-hoagie-combo-with-chicken-salad",
-          "name": "Wawa cold junior hoagie combo with chicken salad hoagie and medium chicken corn chowder",
-          "tone": "bad",
-          "calories": 920,
-          "note": "Logged from receipt/image: cold junior hoagie combo total."
-        },
-        {
-          "id": "food-2026-07-20-lunch-this-from-wawa-for-lunch",
-          "name": "Lunch: This from Wawa for lunch",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-20-white-grapes-1-cup",
-          "name": "White grapes, 1 cup",
+          "id": "food-2026-07-21-lunch-my-typical-grilled-chicken-salad",
+          "name": "Lunch: My typical grilled chicken salad",
           "tone": "good",
-          "calories": 110,
-          "note": "About 1 cup of white grapes."
-        },
-        {
-          "id": "food-2026-07-20-a-cup-of-white-grapes",
-          "name": "A cup of white grapes",
-          "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
@@ -1834,6 +1799,65 @@
         "tone": "good",
         "detail": "Weighed in today."
       },
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-20": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-20-4-cuban-cheese-croquettes",
+          "name": "4 Cuban cheese croquettes",
+          "tone": "bad",
+          "calories": 560,
+          "note": "Estimated at about 140 calories each for cheese croquettes."
+        },
+        {
+          "id": "food-2026-07-20-4-cuban-cheese-croquettes-2",
+          "name": "4 cuban cheese croquettes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-20-wawa-cold-junior-hoagie-combo-with-chicken-salad",
+          "name": "Wawa cold junior hoagie combo with chicken salad hoagie and medium chicken corn chowder",
+          "tone": "bad",
+          "calories": 920,
+          "note": "Logged from receipt/image: cold junior hoagie combo total."
+        },
+        {
+          "id": "food-2026-07-20-lunch-this-from-wawa-for-lunch",
+          "name": "Lunch: This from Wawa for lunch",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-20-white-grapes-1-cup",
+          "name": "White grapes, 1 cup",
+          "tone": "good",
+          "calories": 110,
+          "note": "About 1 cup of white grapes."
+        },
+        {
+          "id": "food-2026-07-20-a-cup-of-white-grapes",
+          "name": "A cup of white grapes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
       "sleep": {
         "label": "Not logged",
         "tone": "warn",
