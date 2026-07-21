@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-20T17:08:57-04:00",
+  "updated": "2026-07-20T21:13:48-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3546,6 +3546,40 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "Ate this from Wawa for lunch. A hogue and a medium chicken corn chowder",
+      "sessionId": "20260711_102047_53421ba5"
+    },
+    {
+      "id": "evt-20260720211342-food-0f81aae0",
+      "recordedAt": "2026-07-20T21:13:42-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-20-white-grapes-1-cup",
+      "food": {
+        "id": "food-2026-07-20-white-grapes-1-cup",
+        "name": "White grapes, 1 cup",
+        "tone": "good",
+        "calories": 110,
+        "note": "About 1 cup of white grapes."
+      }
+    },
+    {
+      "id": "evt-20260720211348-food-f2b14e42",
+      "recordedAt": "2026-07-20T21:13:48-04:00",
+      "date": "2026-07-20",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-20-a-cup-of-white-grapes",
+      "food": {
+        "id": "food-2026-07-20-a-cup-of-white-grapes",
+        "name": "A cup of white grapes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Just ate a cup of white grapes",
       "sessionId": "20260711_102047_53421ba5"
     }
   ]
