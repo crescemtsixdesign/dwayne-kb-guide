@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-21",
-  "updated": "2026-07-21T21:16:44-04:00",
+  "updated": "2026-07-21T21:16:47-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -43,6 +43,13 @@
         {
           "id": "food-2026-07-21-dinner-for-dinner",
           "name": "Dinner: For dinner",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-dinner-two-jamaican-beef-patties",
+          "name": "Dinner: Two Jamaican beef patties",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
