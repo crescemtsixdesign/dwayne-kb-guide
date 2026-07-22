@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-21T21:16:47-04:00",
+  "updated": "2026-07-21T21:16:49-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3665,6 +3665,24 @@
       "food": {
         "id": "food-2026-07-21-dinner-two-jamaican-beef-patties",
         "name": "Dinner: Two Jamaican beef patties",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "For dinner, I ate two Jamaican beef patties, but they weren’t that large like a traditional Jamaican beef patty, but they weren’t small like a cocktail sized patty somewhere in the middle",
+      "sessionId": "20260721_101442_10c1ce08"
+    },
+    {
+      "id": "evt-20260721211649-food-b3b7cebb",
+      "recordedAt": "2026-07-21T21:16:49-04:00",
+      "date": "2026-07-21",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-21-dinner-but-they-weren-t-that-large-like-a-tradit",
+      "food": {
+        "id": "food-2026-07-21-dinner-but-they-weren-t-that-large-like-a-tradit",
+        "name": "Dinner: But they weren’t that large like a traditional Jamaican beef patty",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
