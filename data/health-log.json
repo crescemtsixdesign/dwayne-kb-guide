@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-21T21:16:52-04:00",
+  "updated": "2026-07-22T12:17:10-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3707,6 +3707,24 @@
       },
       "rawText": "For dinner, I ate two Jamaican beef patties, but they weren’t that large like a traditional Jamaican beef patty, but they weren’t small like a cocktail sized patty somewhere in the middle",
       "sessionId": "20260721_101442_10c1ce08"
+    },
+    {
+      "id": "evt-20260722121710-food-c9ce0e79",
+      "recordedAt": "2026-07-22T12:17:10-04:00",
+      "date": "2026-07-22",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-22-snack-also-just-ate-the-typical-celary-and-humma",
+      "food": {
+        "id": "food-2026-07-22-snack-also-just-ate-the-typical-celary-and-humma",
+        "name": "Snack: Also just ate the typical celary and hummas snack",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "no workout could not get up... also just ate the typical celary and hummas snack",
+      "sessionId": "20260722_121650_995ee40d"
     }
   ]
 }

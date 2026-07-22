@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-21",
-  "updated": "2026-07-21T21:16:52-04:00",
+  "currentDate": "2026-07-22",
+  "updated": "2026-07-22T12:17:10-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-21": {
+    "2026-07-22": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,50 +20,8 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-21-lunch-my-typical-grilled-chicken-salad",
-          "name": "Lunch: My typical grilled chicken salad",
-          "tone": "good",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-lunch-no-avacado",
-          "name": "Lunch: No avacado",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-snack-a-cup-of-white-grapes-as-a-snack",
-          "name": "Snack: A cup of white grapes as a snack",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-dinner-for-dinner",
-          "name": "Dinner: For dinner",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-dinner-two-jamaican-beef-patties",
-          "name": "Dinner: Two Jamaican beef patties",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-dinner-but-they-weren-t-that-large-like-a-tradit",
-          "name": "Dinner: But they weren’t that large like a traditional Jamaican beef patty",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-21-dinner-but-they-weren-t-small-like-a-cocktail-si",
-          "name": "Dinner: But they weren’t small like a cocktail sized patty somewhere in the middle",
+          "id": "food-2026-07-22-snack-also-just-ate-the-typical-celary-and-humma",
+          "name": "Snack: Also just ate the typical celary and hummas snack",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -1894,6 +1852,72 @@
         {
           "id": "food-2026-07-20-a-cup-of-white-grapes",
           "name": "A cup of white grapes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-21": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-21-lunch-my-typical-grilled-chicken-salad",
+          "name": "Lunch: My typical grilled chicken salad",
+          "tone": "good",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-lunch-no-avacado",
+          "name": "Lunch: No avacado",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-snack-a-cup-of-white-grapes-as-a-snack",
+          "name": "Snack: A cup of white grapes as a snack",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-dinner-for-dinner",
+          "name": "Dinner: For dinner",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-dinner-two-jamaican-beef-patties",
+          "name": "Dinner: Two Jamaican beef patties",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-dinner-but-they-weren-t-that-large-like-a-tradit",
+          "name": "Dinner: But they weren’t that large like a traditional Jamaican beef patty",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-21-dinner-but-they-weren-t-small-like-a-cocktail-si",
+          "name": "Dinner: But they weren’t small like a cocktail sized patty somewhere in the middle",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
