@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-23T11:13:12-04:00",
+  "updated": "2026-07-23T12:45:30-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3796,6 +3796,24 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "last night i had a serving of ruffles sour cream and chedder chips, about 4 mini trick or treat size krunch bars, a mini trick or treat midnight dark milky way",
+      "sessionId": "20260723_110957_e85cd0e1"
+    },
+    {
+      "id": "evt-20260723124530-food-439c5ecf",
+      "recordedAt": "2026-07-23T12:45:30-04:00",
+      "date": "2026-07-23",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+      "food": {
+        "id": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+        "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "ok now for today 7/23. I ate 2 cups of walmart popcorn and i just had  chicken enchilada soup (serving size might be 1-2 cups)",
       "sessionId": "20260723_110957_e85cd0e1"
     }
   ]
