@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-23",
-  "updated": "2026-07-23T11:13:06-04:00",
+  "updated": "2026-07-23T11:13:09-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -22,6 +22,13 @@
         {
           "id": "food-2026-07-23-last-night-i-had-a-serving-of-ruffles-sour-cream",
           "name": "Last night i had a serving of ruffles sour cream and chedder chips",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-about-4-mini-trick-or-treat-size-krunch-bars",
+          "name": "About 4 mini trick or treat size krunch bars",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
