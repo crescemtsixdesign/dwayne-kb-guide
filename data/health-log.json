@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-22T12:17:10-04:00",
+  "updated": "2026-07-22T20:47:59-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3724,6 +3724,24 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "no workout could not get up... also just ate the typical celary and hummas snack",
+      "sessionId": "20260722_121650_995ee40d"
+    },
+    {
+      "id": "evt-20260722204759-food-5cba1821",
+      "recordedAt": "2026-07-22T20:47:59-04:00",
+      "date": "2026-07-22",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-22-1-5-servings-of-beef-fried-rice-from-of-changs-a",
+      "food": {
+        "id": "food-2026-07-22-1-5-servings-of-beef-fried-rice-from-of-changs-a",
+        "name": "1.5 servings of beef fried rice from of changs and 1 serving of honey chicken from of changs",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Just ate 1.5 servings of beef fried rice from of changs and 1 serving of honey chicken from of changs",
       "sessionId": "20260722_121650_995ee40d"
     }
   ]
