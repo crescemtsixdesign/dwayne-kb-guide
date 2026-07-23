@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-22T20:47:59-04:00",
+  "updated": "2026-07-23T11:13:06-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3743,6 +3743,24 @@
       },
       "rawText": "Just ate 1.5 servings of beef fried rice from of changs and 1 serving of honey chicken from of changs",
       "sessionId": "20260722_121650_995ee40d"
+    },
+    {
+      "id": "evt-20260723111306-food-1a258e30",
+      "recordedAt": "2026-07-23T11:13:06-04:00",
+      "date": "2026-07-23",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-23-last-night-i-had-a-serving-of-ruffles-sour-cream",
+      "food": {
+        "id": "food-2026-07-23-last-night-i-had-a-serving-of-ruffles-sour-cream",
+        "name": "Last night i had a serving of ruffles sour cream and chedder chips",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "last night i had a serving of ruffles sour cream and chedder chips, about 4 mini trick or treat size krunch bars, a mini trick or treat midnight dark milky way",
+      "sessionId": "20260723_110957_e85cd0e1"
     }
   ]
 }
