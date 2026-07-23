@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-23T12:45:30-04:00",
+  "updated": "2026-07-23T12:45:33-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3808,6 +3808,24 @@
       "foodId": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
       "food": {
         "id": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+        "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "ok now for today 7/23. I ate 2 cups of walmart popcorn and i just had  chicken enchilada soup (serving size might be 1-2 cups)",
+      "sessionId": "20260723_110957_e85cd0e1"
+    },
+    {
+      "id": "evt-20260723124533-food-f16f9767",
+      "recordedAt": "2026-07-23T12:45:33-04:00",
+      "date": "2026-01-02",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-01-02-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+      "food": {
+        "id": "food-2026-01-02-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
         "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
         "tone": "warn",
         "calories": null,

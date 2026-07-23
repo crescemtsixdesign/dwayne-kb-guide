@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-23",
-  "updated": "2026-07-23T12:45:30-04:00",
+  "updated": "2026-07-23T12:45:33-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -42,6 +42,30 @@
         },
         {
           "id": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+          "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-01-02": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-01-02-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
           "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
           "tone": "warn",
           "calories": null,
