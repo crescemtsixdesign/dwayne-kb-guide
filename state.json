@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-23",
-  "updated": "2026-07-23T11:13:09-04:00",
+  "updated": "2026-07-23T11:13:12-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -29,6 +29,13 @@
         {
           "id": "food-2026-07-23-about-4-mini-trick-or-treat-size-krunch-bars",
           "name": "About 4 mini trick or treat size krunch bars",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-a-mini-trick-or-treat-midnight-dark-milky-way",
+          "name": "A mini trick or treat midnight dark milky way",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
