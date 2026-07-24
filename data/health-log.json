@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-24T10:18:46-04:00",
+  "updated": "2026-07-24T17:30:59-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3850,6 +3850,120 @@
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
       "rawText": "remind me what i ate yesterday",
+      "sessionId": "20260724_082454_8c452c82"
+    },
+    {
+      "id": "evt-20260724101954-food-5a51e3c0",
+      "recordedAt": "2026-07-24T10:19:54-04:00",
+      "date": "2026-07-23",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-23-sweet-and-sour-chicken-1-serving",
+      "food": {
+        "id": "food-2026-07-23-sweet-and-sour-chicken-1-serving",
+        "name": "Sweet and sour chicken, 1 serving",
+        "tone": "warn",
+        "calories": 400,
+        "note": "Standard Chinese takeout serving, breaded/deep-fried with sauce."
+      }
+    },
+    {
+      "id": "evt-20260724101954-food-ddc9f68f",
+      "recordedAt": "2026-07-24T10:19:54-04:00",
+      "date": "2026-07-23",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-23-pork-fried-rice-1-serving",
+      "food": {
+        "id": "food-2026-07-23-pork-fried-rice-1-serving",
+        "name": "Pork fried rice, 1 serving",
+        "tone": "warn",
+        "calories": 350,
+        "note": "Standard Chinese takeout serving, rice fried with egg, pork, soy sauce."
+      }
+    },
+    {
+      "id": "evt-20260724102134-food-55f65136",
+      "recordedAt": "2026-07-24T10:21:34-04:00",
+      "date": "2026-07-24",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-24-sabra-pretzel-and-hummus-snack-cup",
+      "food": {
+        "id": "food-2026-07-24-sabra-pretzel-and-hummus-snack-cup",
+        "name": "Sabra pretzel and hummus snack cup",
+        "tone": "good",
+        "calories": 210,
+        "note": "Sabra Snackers pretzels + hummus single-serve cup."
+      }
+    },
+    {
+      "id": "evt-20260724172239-food-905945a6",
+      "recordedAt": "2026-07-24T17:22:39-04:00",
+      "date": "2026-07-24",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-24-garlic-single-steakburger",
+      "food": {
+        "id": "food-2026-07-24-garlic-single-steakburger",
+        "name": "Garlic Single Steakburger",
+        "tone": "warn",
+        "calories": 580,
+        "note": "Steak 'n Shake - official 580 cal per EveryBite menu."
+      }
+    },
+    {
+      "id": "evt-20260724172240-food-f9d8d8d4",
+      "recordedAt": "2026-07-24T17:22:40-04:00",
+      "date": "2026-07-24",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-24-side-fries-regular-frisco-sauce",
+      "food": {
+        "id": "food-2026-07-24-side-fries-regular-frisco-sauce",
+        "name": "Side fries (regular) + Frisco sauce",
+        "tone": "warn",
+        "calories": 620,
+        "note": "Steak 'n Shake regular fries 440 cal + frisco sauce 180 cal."
+      }
+    },
+    {
+      "id": "evt-20260724173055-food-a197e7b2",
+      "recordedAt": "2026-07-24T17:30:55-04:00",
+      "date": "2026-07-24",
+      "type": "food",
+      "action": "add",
+      "source": "health_log.py",
+      "foodId": "food-2026-07-24-milky-way-bar-full-size",
+      "food": {
+        "id": "food-2026-07-24-milky-way-bar-full-size",
+        "name": "Milky Way bar (full size)",
+        "tone": "warn",
+        "calories": 240,
+        "note": "Standard 1.84 oz bar, 240 cal official."
+      }
+    },
+    {
+      "id": "evt-20260724173059-food-b98b9535",
+      "recordedAt": "2026-07-24T17:30:59-04:00",
+      "date": "2026-07-24",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-24-a-milky-way-bar",
+      "food": {
+        "id": "food-2026-07-24-a-milky-way-bar",
+        "name": "A milky way bar",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Just ate a milky way bar",
       "sessionId": "20260724_082454_8c452c82"
     }
   ]

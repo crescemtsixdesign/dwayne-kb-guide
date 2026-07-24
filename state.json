@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-07-24",
-  "updated": "2026-07-24T10:18:46-04:00",
+  "updated": "2026-07-24T17:30:59-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -18,7 +18,43 @@
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [],
+      "foods": [
+        {
+          "id": "food-2026-07-24-sabra-pretzel-and-hummus-snack-cup",
+          "name": "Sabra pretzel and hummus snack cup",
+          "tone": "good",
+          "calories": 210,
+          "note": "Sabra Snackers pretzels + hummus single-serve cup."
+        },
+        {
+          "id": "food-2026-07-24-garlic-single-steakburger",
+          "name": "Garlic Single Steakburger",
+          "tone": "warn",
+          "calories": 580,
+          "note": "Steak 'n Shake - official 580 cal per EveryBite menu."
+        },
+        {
+          "id": "food-2026-07-24-side-fries-regular-frisco-sauce",
+          "name": "Side fries (regular) + Frisco sauce",
+          "tone": "warn",
+          "calories": 620,
+          "note": "Steak 'n Shake regular fries 440 cal + frisco sauce 180 cal."
+        },
+        {
+          "id": "food-2026-07-24-milky-way-bar-full-size",
+          "name": "Milky Way bar (full size)",
+          "tone": "warn",
+          "calories": 240,
+          "note": "Standard 1.84 oz bar, 240 cal official."
+        },
+        {
+          "id": "food-2026-07-24-a-milky-way-bar",
+          "name": "A milky way bar",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -2020,6 +2056,20 @@
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-sweet-and-sour-chicken-1-serving",
+          "name": "Sweet and sour chicken, 1 serving",
+          "tone": "warn",
+          "calories": 400,
+          "note": "Standard Chinese takeout serving, breaded/deep-fried with sauce."
+        },
+        {
+          "id": "food-2026-07-23-pork-fried-rice-1-serving",
+          "name": "Pork fried rice, 1 serving",
+          "tone": "warn",
+          "calories": 350,
+          "note": "Standard Chinese takeout serving, rice fried with egg, pork, soy sauce."
         }
       ],
       "weight": null,
