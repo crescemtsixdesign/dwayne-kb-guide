@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-23",
-  "updated": "2026-07-23T12:45:33-04:00",
+  "currentDate": "2026-07-24",
+  "updated": "2026-07-24T10:18:46-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,43 +11,14 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-23": {
+    "2026-07-24": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
         "tone": "warn",
         "detail": "Use chat to log done, missed, or modified."
       },
-      "foods": [
-        {
-          "id": "food-2026-07-23-last-night-i-had-a-serving-of-ruffles-sour-cream",
-          "name": "Last night i had a serving of ruffles sour cream and chedder chips",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-23-about-4-mini-trick-or-treat-size-krunch-bars",
-          "name": "About 4 mini trick or treat size krunch bars",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-23-a-mini-trick-or-treat-midnight-dark-milky-way",
-          "name": "A mini trick or treat midnight dark milky way",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
-          "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        }
-      ],
+      "foods": [],
       "weight": null,
       "sleep": {
         "label": "Not logged",
@@ -1994,6 +1965,58 @@
         {
           "id": "food-2026-07-22-1-5-servings-of-beef-fried-rice-from-of-changs-a",
           "name": "1.5 servings of beef fried rice from of changs and 1 serving of honey chicken from of changs",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-23": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-23-last-night-i-had-a-serving-of-ruffles-sour-cream",
+          "name": "Last night i had a serving of ruffles sour cream and chedder chips",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-about-4-mini-trick-or-treat-size-krunch-bars",
+          "name": "About 4 mini trick or treat size krunch bars",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-a-mini-trick-or-treat-midnight-dark-milky-way",
+          "name": "A mini trick or treat midnight dark milky way",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
+          "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-07-23-remind-me-what-i-ate",
+          "name": "Remind me what i ate",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

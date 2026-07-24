@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-23T12:45:33-04:00",
+  "updated": "2026-07-24T10:18:46-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3833,6 +3833,24 @@
       },
       "rawText": "ok now for today 7/23. I ate 2 cups of walmart popcorn and i just had  chicken enchilada soup (serving size might be 1-2 cups)",
       "sessionId": "20260723_110957_e85cd0e1"
+    },
+    {
+      "id": "evt-20260724101846-food-1b8ac783",
+      "recordedAt": "2026-07-24T10:18:46-04:00",
+      "date": "2026-07-23",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-23-remind-me-what-i-ate",
+      "food": {
+        "id": "food-2026-07-23-remind-me-what-i-ate",
+        "name": "Remind me what i ate",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "remind me what i ate yesterday",
+      "sessionId": "20260724_082454_8c452c82"
     }
   ]
 }
