@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-24",
-  "updated": "2026-07-24T17:30:59-04:00",
+  "currentDate": "2026-07-27",
+  "updated": "2026-07-27T12:31:09-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
-    "anchor": "2026-07-19",
+    "anchor": "2026-07-26",
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-24": {
+    "2026-07-27": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,36 +20,8 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-24-sabra-pretzel-and-hummus-snack-cup",
-          "name": "Sabra pretzel and hummus snack cup",
-          "tone": "good",
-          "calories": 210,
-          "note": "Sabra Snackers pretzels + hummus single-serve cup."
-        },
-        {
-          "id": "food-2026-07-24-garlic-single-steakburger",
-          "name": "Garlic Single Steakburger",
-          "tone": "warn",
-          "calories": 580,
-          "note": "Steak 'n Shake - official 580 cal per EveryBite menu."
-        },
-        {
-          "id": "food-2026-07-24-side-fries-regular-frisco-sauce",
-          "name": "Side fries (regular) + Frisco sauce",
-          "tone": "warn",
-          "calories": 620,
-          "note": "Steak 'n Shake regular fries 440 cal + frisco sauce 180 cal."
-        },
-        {
-          "id": "food-2026-07-24-milky-way-bar-full-size",
-          "name": "Milky Way bar (full size)",
-          "tone": "warn",
-          "calories": 240,
-          "note": "Standard 1.84 oz bar, 240 cal official."
-        },
-        {
-          "id": "food-2026-07-24-a-milky-way-bar",
-          "name": "A milky way bar",
+          "id": "food-2026-07-27-snack-so-far-i-had-a-sabra-preztel-and-hummas-sn",
+          "name": "Snack: So far i had a sabra preztel and hummas snack",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -2070,6 +2042,58 @@
           "tone": "warn",
           "calories": 350,
           "note": "Standard Chinese takeout serving, rice fried with egg, pork, soy sauce."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-24": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-24-sabra-pretzel-and-hummus-snack-cup",
+          "name": "Sabra pretzel and hummus snack cup",
+          "tone": "good",
+          "calories": 210,
+          "note": "Sabra Snackers pretzels + hummus single-serve cup."
+        },
+        {
+          "id": "food-2026-07-24-garlic-single-steakburger",
+          "name": "Garlic Single Steakburger",
+          "tone": "warn",
+          "calories": 580,
+          "note": "Steak 'n Shake - official 580 cal per EveryBite menu."
+        },
+        {
+          "id": "food-2026-07-24-side-fries-regular-frisco-sauce",
+          "name": "Side fries (regular) + Frisco sauce",
+          "tone": "warn",
+          "calories": 620,
+          "note": "Steak 'n Shake regular fries 440 cal + frisco sauce 180 cal."
+        },
+        {
+          "id": "food-2026-07-24-milky-way-bar-full-size",
+          "name": "Milky Way bar (full size)",
+          "tone": "warn",
+          "calories": 240,
+          "note": "Standard 1.84 oz bar, 240 cal official."
+        },
+        {
+          "id": "food-2026-07-24-a-milky-way-bar",
+          "name": "A milky way bar",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
       ],
       "weight": null,
