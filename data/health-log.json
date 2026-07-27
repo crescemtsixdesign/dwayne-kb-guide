@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-27T12:31:12-04:00",
+  "updated": "2026-07-27T12:31:14-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -3995,6 +3995,24 @@
       "food": {
         "id": "food-2026-07-27-lunch-3-publix-chicken-ceaser-pinwheel-pieces",
         "name": "Lunch: 3 publix chicken ceaser pinwheel pieces",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "so far today i had a sabra preztel and hummas snack. for lunch i had 3 publix chicken ceaser pinwheel pieces, a 12 oz minute maid cranberry apple rasberry juice, and 16oz panaera break creamy tomatoe soup from the grocery store",
+      "sessionId": "20260727_121047_8437d9c6"
+    },
+    {
+      "id": "evt-20260727123114-food-5e5a323e",
+      "recordedAt": "2026-07-27T12:31:14-04:00",
+      "date": "2026-07-27",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-27-lunch-a-12-oz-minute-maid-cranberry-apple-rasber",
+      "food": {
+        "id": "food-2026-07-27-lunch-a-12-oz-minute-maid-cranberry-apple-rasber",
+        "name": "Lunch: A 12 oz minute maid cranberry apple rasberry juice",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
