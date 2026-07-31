@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-29",
-  "updated": "2026-07-29T10:24:07-04:00",
+  "currentDate": "2026-07-31",
+  "updated": "2026-07-31T09:48:41-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-29": {
+    "2026-07-31": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,8 +20,8 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-29-and-i-ate-2-cups-of-walmart-popcorn",
-          "name": "And I ate 2 cups of walmart popcorn",
+          "id": "food-2026-07-31-3-cuban-cheese-croquettes",
+          "name": "3 cuban cheese croquettes",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -2136,6 +2136,30 @@
         {
           "id": "food-2026-07-27-lunch-16oz-panaera-break-creamy-tomatoe-soup-fro",
           "name": "Lunch: 16oz panaera break creamy tomatoe soup from the grocery store",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-29": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-29-and-i-ate-2-cups-of-walmart-popcorn",
+          "name": "And I ate 2 cups of walmart popcorn",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

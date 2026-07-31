@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-29T10:24:07-04:00",
+  "updated": "2026-07-31T09:48:41-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4055,6 +4055,24 @@
       },
       "rawText": "ok back on track today. no workout though. and I ate 2 cups of walmart popcorn",
       "sessionId": "20260729_102257_ef88b2d6"
+    },
+    {
+      "id": "evt-20260731094841-food-914af901",
+      "recordedAt": "2026-07-31T09:48:41-04:00",
+      "date": "2026-07-31",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-07-31-3-cuban-cheese-croquettes",
+      "food": {
+        "id": "food-2026-07-31-3-cuban-cheese-croquettes",
+        "name": "3 cuban cheese croquettes",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "this morning i had 3 cuban cheese croquettes",
+      "sessionId": "20260731_074144_6a13d036"
     }
   ]
 }
