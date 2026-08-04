@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-07-31T09:48:41-04:00",
+  "updated": "2026-08-04T10:05:31-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4073,6 +4073,41 @@
       },
       "rawText": "this morning i had 3 cuban cheese croquettes",
       "sessionId": "20260731_074144_6a13d036"
+    },
+    {
+      "id": "evt-20260804100437-food-55251973",
+      "recordedAt": "2026-08-04T10:04:37-04:00",
+      "date": "2026-08-03",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-03-wawa-chicken-salad-shorti-medium-chicken-corn-ch",
+      "food": {
+        "id": "food-2026-08-03-wawa-chicken-salad-shorti-medium-chicken-corn-ch",
+        "name": "Wawa chicken salad Shorti + medium chicken corn chowder",
+        "tone": "warn",
+        "calories": 920,
+        "note": "Usual lunch combo; based on prior session estimate. Medium chicken corn chowder is 310 cal; Shorti component estimated at about 610 cal with usual toppings."
+      },
+      "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch"
+    },
+    {
+      "id": "evt-20260804100531-food-7d1f3e3b",
+      "recordedAt": "2026-08-04T10:05:31-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
+      "food": {
+        "id": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
+        "name": "Lunch: The wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch, check previous sessions",
+      "sessionId": "20260804_100048_42270a9d"
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-07-31",
-  "updated": "2026-07-31T09:48:41-04:00",
+  "currentDate": "2026-08-04",
+  "updated": "2026-08-04T10:05:31-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
   },
   "week": {
-    "anchor": "2026-07-26",
+    "anchor": "2026-08-02",
     "completedWorkouts": 0
   },
   "days": {
-    "2026-07-31": {
+    "2026-08-04": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,9 +20,9 @@
       },
       "foods": [
         {
-          "id": "food-2026-07-31-3-cuban-cheese-croquettes",
-          "name": "3 cuban cheese croquettes",
-          "tone": "warn",
+          "id": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
+          "name": "Lunch: The wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch",
+          "tone": "good",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
         }
@@ -2163,6 +2163,54 @@
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-07-31": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-07-31-3-cuban-cheese-croquettes",
+          "name": "3 cuban cheese croquettes",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-08-03": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-08-03-wawa-chicken-salad-shorti-medium-chicken-corn-ch",
+          "name": "Wawa chicken salad Shorti + medium chicken corn chowder",
+          "tone": "warn",
+          "calories": 920,
+          "note": "Usual lunch combo; based on prior session estimate. Medium chicken corn chowder is 310 cal; Shorti component estimated at about 610 cal with usual toppings."
         }
       ],
       "weight": null,
