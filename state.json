@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-08-04",
-  "updated": "2026-08-04T10:05:34-04:00",
+  "updated": "2026-08-04T12:57:29-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -53,6 +53,13 @@
         {
           "id": "food-2026-01-02-2-cups-of-walmart-popcorn-and-i-just-had-chicken",
           "name": "2 cups of walmart popcorn and i just had chicken enchilada soup (serving size might be 1-2 cups)",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-01-02-1-2-cups-of-potatoe-soup",
+          "name": "1-2 CUPS OF POTATOE SOUP",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -2218,6 +2225,48 @@
           "tone": "warn",
           "calories": 920,
           "note": "Usual lunch combo; based on prior session estimate. Medium chicken corn chowder is 310 cal; Shorti component estimated at about 610 cal with usual toppings."
+        },
+        {
+          "id": "food-2026-08-03-walmart-classic-butter-movie-theater-popcorn-2-5",
+          "name": "Walmart Classic Butter Movie Theater Popcorn, 2.5 cups",
+          "tone": "warn",
+          "calories": 180,
+          "note": "Logged from August 3 session; 2.5 cups."
+        },
+        {
+          "id": "food-2026-08-03-sabra-snackers-classic-guacamole-with-rolled-tor",
+          "name": "Sabra Snackers Classic Guacamole with Rolled Tortilla Chips, 2.8 oz",
+          "tone": "warn",
+          "calories": 220,
+          "note": "Official Sabra nutrition: 220 calories per 1 container (79 g)."
+        },
+        {
+          "id": "food-2026-08-03-office-chocolate-espresso",
+          "name": "Office Chocolate Espresso",
+          "tone": "warn",
+          "calories": 100,
+          "note": "Established recurring value for the small office-machine cup."
+        },
+        {
+          "id": "food-2026-08-03-m-m-s-peanut-fun-size-packages-2",
+          "name": "M&M's Peanut, fun-size packages (2)",
+          "tone": "warn",
+          "calories": 180,
+          "note": "Provisional estimate: 90 calories per fun-size package; exact package nutrition not found in search. Update if package label differs."
+        },
+        {
+          "id": "food-2026-08-03-m-m-s-milk-chocolate-fun-size-packages-2",
+          "name": "M&M's Milk Chocolate, fun-size packages (2)",
+          "tone": "warn",
+          "calories": 120,
+          "note": "60 calories per fun-size package based on USDA-linked nutrition data."
+        },
+        {
+          "id": "food-2026-08-03-great-value-cheddar-sour-cream-potato-chips-1-5-",
+          "name": "Great Value Cheddar & Sour Cream Potato Chips, 1.5 servings",
+          "tone": "warn",
+          "calories": 225,
+          "note": "150 calories per 28 g serving; 1.5 servings = 225 calories."
         }
       ],
       "weight": null,
