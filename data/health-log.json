@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-04T10:05:31-04:00",
+  "updated": "2026-08-04T10:05:34-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4103,6 +4103,24 @@
         "id": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
         "name": "Lunch: The wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch",
         "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch, check previous sessions",
+      "sessionId": "20260804_100048_42270a9d"
+    },
+    {
+      "id": "evt-20260804100534-food-ba2cf9da",
+      "recordedAt": "2026-08-04T10:05:34-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-04-lunch-check-previous-sessions",
+      "food": {
+        "id": "food-2026-08-04-lunch-check-previous-sessions",
+        "name": "Lunch: Check previous sessions",
+        "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
