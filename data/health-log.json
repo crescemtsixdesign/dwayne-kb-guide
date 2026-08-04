@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-04T12:57:29-04:00",
+  "updated": "2026-08-04T12:57:32-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4240,6 +4240,24 @@
       "food": {
         "id": "food-2026-01-02-1-2-cups-of-potatoe-soup",
         "name": "1-2 CUPS OF POTATOE SOUP",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "OK LETS START ON TODAY'S NUMBERS. I JUST ATE 1-2 CUPS OF POTATOE SOUP, NOT SURE HOW TO EYEBALL 1 CUP OR 2 CUPS",
+      "sessionId": "20260804_100048_42270a9d"
+    },
+    {
+      "id": "evt-20260804125732-food-c2d055b4",
+      "recordedAt": "2026-08-04T12:57:32-04:00",
+      "date": "2026-01-02",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-01-02-not-sure-how-to-eyeball-1-cup-or-2-cups",
+      "food": {
+        "id": "food-2026-01-02-not-sure-how-to-eyeball-1-cup-or-2-cups",
+        "name": "NOT SURE HOW TO EYEBALL 1 CUP OR 2 CUPS",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."

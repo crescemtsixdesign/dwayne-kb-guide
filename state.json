@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-08-04",
-  "updated": "2026-08-04T12:57:29-04:00",
+  "updated": "2026-08-04T12:57:32-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -60,6 +60,13 @@
         {
           "id": "food-2026-01-02-1-2-cups-of-potatoe-soup",
           "name": "1-2 CUPS OF POTATOE SOUP",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-01-02-not-sure-how-to-eyeball-1-cup-or-2-cups",
+          "name": "NOT SURE HOW TO EYEBALL 1 CUP OR 2 CUPS",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
