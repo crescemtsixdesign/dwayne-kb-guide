@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-08-05",
-  "updated": "2026-08-05T15:00:21-04:00",
+  "updated": "2026-08-05T15:00:24-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -50,6 +50,13 @@
         {
           "id": "food-2026-08-05-snack-for-i-had-the-hummas-ands-cellary-snack",
           "name": "Snack: For i had the hummas ands cellary snack",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-08-05-lunch-then-for-lunch-i-went-to-bj-brewhouse-and-",
+          "name": "Lunch: Then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
