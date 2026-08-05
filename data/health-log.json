@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-05T08:58:39-04:00",
+  "updated": "2026-08-05T15:00:21-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4315,21 +4315,106 @@
       "rawText": "I had my grilled chicken salad for dinner"
     },
     {
-      "id": "evt-20260805085839-food-7480f332",
-      "recordedAt": "2026-08-05T08:58:39-04:00",
+      "id": "evt-20260805085923-food-9112e392",
+      "recordedAt": "2026-08-05T08:59:23-04:00",
       "date": "2026-08-04",
       "type": "food",
       "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-08-04-update-s-calories-i-had-my-grilled-chicken-salad",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-kit-kat-halloween-mini-bars-3-single-sticks",
       "food": {
-        "id": "food-2026-08-04-update-s-calories-i-had-my-grilled-chicken-salad",
-        "name": "Update ’s calories I had my grilled chicken salad for diner",
+        "id": "food-2026-08-04-kit-kat-halloween-mini-bars-3-single-sticks",
+        "name": "Kit Kat Halloween mini bars, 3 single sticks",
+        "tone": "warn",
+        "calories": 130,
+        "note": "Three trick-or-treat mini-sized Kit Kats, counted as individual single sticks; estimated at about 42 calories each and rounded up."
+      },
+      "rawText": "three trick-or-treat mini sized Kit Kats, the single sticks"
+    },
+    {
+      "id": "evt-20260805150011-food-a1330df1",
+      "recordedAt": "2026-08-05T15:00:11-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-05-celery-and-hummus-snack",
+      "food": {
+        "id": "food-2026-08-05-celery-and-hummus-snack",
+        "name": "Celery and hummus snack",
         "tone": "good",
+        "calories": 95,
+        "note": "Established repeat snack: celery with 2 tbsp hummus."
+      },
+      "rawText": "hummus and celery snack"
+    },
+    {
+      "id": "evt-20260805150011-food-eb40d4d3",
+      "recordedAt": "2026-08-05T15:00:11-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-05-bj-s-barbeque-chicken-mini-pizza-and-house-salad",
+      "food": {
+        "id": "food-2026-08-05-bj-s-barbeque-chicken-mini-pizza-and-house-salad",
+        "name": "BJ's Barbeque Chicken mini pizza and house salad combo with bacon and 2 Thousand Island servings",
+        "tone": "bad",
+        "calories": 1260,
+        "note": "Official BJ's June 2026 guide: Barbeque Chicken Deep Dish Pizza, Mini with House Salad = 770 calories. Added 400 calories for 2 servings Thousand Island dressing at 200 each, plus approximately 90 calories for bacon topping on the mini pizza."
+      },
+      "rawText": "BJ Brewhouse mini personal BBQ chicken and bacon pizza and house salad with 2 servings Thousand Island dressing"
+    },
+    {
+      "id": "evt-20260805150011-food-b1715789",
+      "recordedAt": "2026-08-05T15:00:11-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-05-bj-s-mini-triple-chocolate-pizookie",
+      "food": {
+        "id": "food-2026-08-05-bj-s-mini-triple-chocolate-pizookie",
+        "name": "BJ's Mini Triple Chocolate Pizookie",
+        "tone": "bad",
+        "calories": 610,
+        "note": "Official BJ's June 2026 guide: Mini Triple Chocolate Pizookie made with Ghirardelli = 610 calories."
+      },
+      "rawText": "triple chocolate mini Pizookie"
+    },
+    {
+      "id": "evt-20260805150012-food-9eb4b476",
+      "recordedAt": "2026-08-05T15:00:12-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-05-bj-s-chocolate-ice-cream-1-scoop",
+      "food": {
+        "id": "food-2026-08-05-bj-s-chocolate-ice-cream-1-scoop",
+        "name": "BJ's chocolate ice cream, 1 scoop",
+        "tone": "bad",
+        "calories": 220,
+        "note": "Official BJ's June 2026 guide: Ghirardelli Double Chocolate Chip Ice Cream, 1 scoop = 220 calories."
+      },
+      "rawText": "with chocolate ice cream"
+    },
+    {
+      "id": "evt-20260805150021-food-1d116cb9",
+      "recordedAt": "2026-08-05T15:00:21-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-05-snack-for-i-had-the-hummas-ands-cellary-snack",
+      "food": {
+        "id": "food-2026-08-05-snack-for-i-had-the-hummas-ands-cellary-snack",
+        "name": "Snack: For i had the hummas ands cellary snack",
+        "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
       },
-      "rawText": "Update yesterday’s calories I had my grilled chicken salad for diner",
+      "rawText": "for today i had the hummas ands cellary snack. then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo. the salaid was with 2 servings of thousand island dressing. the personal pizza was the bbq chicken and bacon pizza. then for desert i had the triple chocolate mini pizzoke with chocolate icecream",
       "sessionId": "20260805_081029_537f287a"
     }
   ]
