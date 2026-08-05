@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-04T12:57:32-04:00",
+  "updated": "2026-08-05T08:58:39-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4092,42 +4092,6 @@
       "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch"
     },
     {
-      "id": "evt-20260804100531-food-7d1f3e3b",
-      "recordedAt": "2026-08-04T10:05:31-04:00",
-      "date": "2026-08-04",
-      "type": "food",
-      "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
-      "food": {
-        "id": "food-2026-08-04-lunch-the-wawa-chicken-salad-shorti-and-wawa-chi",
-        "name": "Lunch: The wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch",
-        "tone": "good",
-        "calories": null,
-        "note": "Captured automatically from health chat; verify calories if estimated/missing."
-      },
-      "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch, check previous sessions",
-      "sessionId": "20260804_100048_42270a9d"
-    },
-    {
-      "id": "evt-20260804100534-food-ba2cf9da",
-      "recordedAt": "2026-08-04T10:05:34-04:00",
-      "date": "2026-08-04",
-      "type": "food",
-      "action": "add",
-      "source": "chat-health-sync hook",
-      "foodId": "food-2026-08-04-lunch-check-previous-sessions",
-      "food": {
-        "id": "food-2026-08-04-lunch-check-previous-sessions",
-        "name": "Lunch: Check previous sessions",
-        "tone": "warn",
-        "calories": null,
-        "note": "Captured automatically from health chat; verify calories if estimated/missing."
-      },
-      "rawText": "i had the wawa chicken salad shorti and wawa chicken corn chowder soup i usually have for lunch, check previous sessions",
-      "sessionId": "20260804_100048_42270a9d"
-    },
-    {
       "id": "evt-20260804100649-food-c95c503f",
       "recordedAt": "2026-08-04T10:06:49-04:00",
       "date": "2026-08-03",
@@ -4264,6 +4228,109 @@
       },
       "rawText": "OK LETS START ON TODAY'S NUMBERS. I JUST ATE 1-2 CUPS OF POTATOE SOUP, NOT SURE HOW TO EYEBALL 1 CUP OR 2 CUPS",
       "sessionId": "20260804_100048_42270a9d"
+    },
+    {
+      "id": "evt-20260804154110-food-1f16aebc",
+      "recordedAt": "2026-08-04T15:41:10-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-wawa-chicken-corn-chowder-about-2-cups",
+      "food": {
+        "id": "food-2026-08-04-wawa-chicken-corn-chowder-about-2-cups",
+        "name": "Wawa Chicken Corn Chowder, about 2 cups",
+        "tone": "warn",
+        "calories": 420,
+        "note": "Estimated as about 16 oz / 2 cups, scaled from Wawa nutrition: medium 310 cal per 12 oz; small 210 cal. Portion estimate is approximate."
+      },
+      "rawText": "I ate probably 2 cups of Wawa chicken corn chowder"
+    },
+    {
+      "id": "evt-20260804154150-food-039d82da",
+      "recordedAt": "2026-08-04T15:41:50-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "upsert",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-wawa-chicken-corn-chowder-about-2-cups",
+      "food": {
+        "id": "food-2026-08-04-wawa-chicken-corn-chowder-about-2-cups",
+        "name": "Cream-based potato soup, about 2 cups",
+        "tone": "warn",
+        "calories": 400,
+        "note": "User corrected that today's soup was not Wawa; estimated as about 2 cups of cream-based potato soup. Provisional upper-end estimate."
+      },
+      "rawText": "The soup today was NOT from Wawa. I believe it’s a cream based soup"
+    },
+    {
+      "id": "evt-20260804154306-food-5da2faa9",
+      "recordedAt": "2026-08-04T15:43:06-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-benton-s-birthday-cake-crunchy-mini-cookies-1-po",
+      "food": {
+        "id": "food-2026-08-04-benton-s-birthday-cake-crunchy-mini-cookies-1-po",
+        "name": "Benton's Birthday Cake Crunchy Mini Cookies, 1 pouch (19 g)",
+        "tone": "warn",
+        "calories": 80,
+        "note": "Package label: 80 calories per 1 pouch (19 g)."
+      },
+      "rawText": "Just ate these cookies"
+    },
+    {
+      "id": "evt-20260804154306-food-5aa96f3a",
+      "recordedAt": "2026-08-04T15:43:06-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-homemade-macaroni-and-cheese-1-serving",
+      "food": {
+        "id": "food-2026-08-04-homemade-macaroni-and-cheese-1-serving",
+        "name": "Homemade macaroni and cheese, 1 serving",
+        "tone": "warn",
+        "calories": 400,
+        "note": "Provisional upper-end estimate assuming about 1 cup / standard serving; homemade recipe and portion size unknown."
+      },
+      "rawText": "and a serving of home made Mac and cheese"
+    },
+    {
+      "id": "evt-20260805085831-food-ec0b38ed",
+      "recordedAt": "2026-08-05T08:58:31-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-04-grilled-chicken-salad-usual-dinner",
+      "food": {
+        "id": "food-2026-08-04-grilled-chicken-salad-usual-dinner",
+        "name": "Grilled chicken salad (usual), dinner",
+        "tone": "warn",
+        "calories": 650,
+        "note": "Usual grilled chicken salad with chicken breast, dressing, croutons, and cheese; upper-end estimate based on established recurring meal."
+      },
+      "rawText": "I had my grilled chicken salad for dinner"
+    },
+    {
+      "id": "evt-20260805085839-food-7480f332",
+      "recordedAt": "2026-08-05T08:58:39-04:00",
+      "date": "2026-08-04",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-04-update-s-calories-i-had-my-grilled-chicken-salad",
+      "food": {
+        "id": "food-2026-08-04-update-s-calories-i-had-my-grilled-chicken-salad",
+        "name": "Update ’s calories I had my grilled chicken salad for diner",
+        "tone": "good",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "Update yesterday’s calories I had my grilled chicken salad for diner",
+      "sessionId": "20260805_081029_537f287a"
     }
   ]
 }
