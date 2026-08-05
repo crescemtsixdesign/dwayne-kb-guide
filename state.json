@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "currentDate": "2026-08-05",
-  "updated": "2026-08-05T15:00:24-04:00",
+  "updated": "2026-08-05T15:00:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -57,6 +57,13 @@
         {
           "id": "food-2026-08-05-lunch-then-for-lunch-i-went-to-bj-brewhouse-and-",
           "name": "Lunch: Then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo",
+          "tone": "warn",
+          "calories": null,
+          "note": "Captured automatically from health chat; verify calories if estimated/missing."
+        },
+        {
+          "id": "food-2026-08-05-then-for-desert-i-had-the-triple-chocolate-mini-",
+          "name": "Then for desert i had the triple chocolate mini pizzoke with chocolate icecream",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."

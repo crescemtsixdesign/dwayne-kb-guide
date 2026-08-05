@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-05T15:00:24-04:00",
+  "updated": "2026-08-05T15:00:26-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4428,6 +4428,24 @@
       "food": {
         "id": "food-2026-08-05-lunch-then-for-lunch-i-went-to-bj-brewhouse-and-",
         "name": "Lunch: Then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "for today i had the hummas ands cellary snack. then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo. the salaid was with 2 servings of thousand island dressing. the personal pizza was the bbq chicken and bacon pizza. then for desert i had the triple chocolate mini pizzoke with chocolate icecream",
+      "sessionId": "20260805_081029_537f287a"
+    },
+    {
+      "id": "evt-20260805150026-food-b2c6ea33",
+      "recordedAt": "2026-08-05T15:00:26-04:00",
+      "date": "2026-08-05",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-05-then-for-desert-i-had-the-triple-chocolate-mini-",
+      "food": {
+        "id": "food-2026-08-05-then-for-desert-i-had-the-triple-chocolate-mini-",
+        "name": "Then for desert i had the triple chocolate mini pizzoke with chocolate icecream",
         "tone": "warn",
         "calories": null,
         "note": "Captured automatically from health chat; verify calories if estimated/missing."
