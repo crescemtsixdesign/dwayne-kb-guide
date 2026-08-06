@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-08-05",
-  "updated": "2026-08-05T15:00:26-04:00",
+  "currentDate": "2026-08-06",
+  "updated": "2026-08-06T11:03:15-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-08-05": {
+    "2026-08-06": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,50 +20,8 @@
       },
       "foods": [
         {
-          "id": "food-2026-08-05-celery-and-hummus-snack",
-          "name": "Celery and hummus snack",
-          "tone": "good",
-          "calories": 95,
-          "note": "Established repeat snack: celery with 2 tbsp hummus."
-        },
-        {
-          "id": "food-2026-08-05-bj-s-barbeque-chicken-mini-pizza-and-house-salad",
-          "name": "BJ's Barbeque Chicken mini pizza and house salad combo with bacon and 2 Thousand Island servings",
-          "tone": "bad",
-          "calories": 1260,
-          "note": "Official BJ's June 2026 guide: Barbeque Chicken Deep Dish Pizza, Mini with House Salad = 770 calories. Added 400 calories for 2 servings Thousand Island dressing at 200 each, plus approximately 90 calories for bacon topping on the mini pizza."
-        },
-        {
-          "id": "food-2026-08-05-bj-s-mini-triple-chocolate-pizookie",
-          "name": "BJ's Mini Triple Chocolate Pizookie",
-          "tone": "bad",
-          "calories": 610,
-          "note": "Official BJ's June 2026 guide: Mini Triple Chocolate Pizookie made with Ghirardelli = 610 calories."
-        },
-        {
-          "id": "food-2026-08-05-bj-s-chocolate-ice-cream-1-scoop",
-          "name": "BJ's chocolate ice cream, 1 scoop",
-          "tone": "bad",
-          "calories": 220,
-          "note": "Official BJ's June 2026 guide: Ghirardelli Double Chocolate Chip Ice Cream, 1 scoop = 220 calories."
-        },
-        {
-          "id": "food-2026-08-05-snack-for-i-had-the-hummas-ands-cellary-snack",
-          "name": "Snack: For i had the hummas ands cellary snack",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-08-05-lunch-then-for-lunch-i-went-to-bj-brewhouse-and-",
-          "name": "Lunch: Then for lunch i went to bj brewhouse and have the mini personal pizza and house salad combo",
-          "tone": "warn",
-          "calories": null,
-          "note": "Captured automatically from health chat; verify calories if estimated/missing."
-        },
-        {
-          "id": "food-2026-08-05-then-for-desert-i-had-the-triple-chocolate-mini-",
-          "name": "Then for desert i had the triple chocolate mini pizzoke with chocolate icecream",
+          "id": "food-2026-08-06-so-far-i-had-the-cellary-and-hummas",
+          "name": "So far i had the cellary and hummas",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -2361,6 +2319,58 @@
           "tone": "warn",
           "calories": 130,
           "note": "Three trick-or-treat mini-sized Kit Kats, counted as individual single sticks; estimated at about 42 calories each and rounded up."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-08-05": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-08-05-celery-and-hummus-snack",
+          "name": "Celery and hummus snack",
+          "tone": "good",
+          "calories": 95,
+          "note": "Established repeat snack: celery with 2 tbsp hummus."
+        },
+        {
+          "id": "food-2026-08-05-bj-s-barbeque-chicken-mini-pizza-and-house-salad",
+          "name": "BJ's Barbeque Chicken mini pizza and house salad combo with 2 Thousand Island side cups",
+          "tone": "bad",
+          "calories": 970,
+          "note": "Official BJ's June 2026 guide: Barbeque Chicken Deep Dish Pizza, Mini with House Salad = 770 calories; the listed pizza does not include bacon. Two small side cups of Thousand Island estimated at approximately 100 calories each (200 total) because BJ's guide lists 200 per order but does not specify side-cup volume."
+        },
+        {
+          "id": "food-2026-08-05-bj-s-mini-triple-chocolate-pizookie",
+          "name": "BJ's Mini Triple Chocolate Pizookie",
+          "tone": "bad",
+          "calories": 610,
+          "note": "Official BJ's June 2026 guide: Mini Triple Chocolate Pizookie made with Ghirardelli = 610 calories."
+        },
+        {
+          "id": "food-2026-08-05-bj-s-chocolate-ice-cream-1-scoop",
+          "name": "BJ's chocolate ice cream, 1 scoop",
+          "tone": "bad",
+          "calories": 220,
+          "note": "Official BJ's June 2026 guide: Ghirardelli Double Chocolate Chip Ice Cream, 1 scoop = 220 calories."
+        },
+        {
+          "id": "food-2026-08-05-good-gather-mexican-street-corn-popcorn-2-cups",
+          "name": "Good & Gather Mexican Street Corn Popcorn, 2 cups",
+          "tone": "warn",
+          "calories": 120,
+          "note": "Target listing for the exact 4.5 oz product: 150 calories per 2.5 cups; 2 cups calculated as 120 calories."
         }
       ],
       "weight": null,
