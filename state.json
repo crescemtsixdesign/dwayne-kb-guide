@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "currentDate": "2026-08-06",
-  "updated": "2026-08-06T11:03:15-04:00",
+  "currentDate": "2026-08-07",
+  "updated": "2026-08-07T10:10:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -11,7 +11,7 @@
     "completedWorkouts": 0
   },
   "days": {
-    "2026-08-06": {
+    "2026-08-07": {
       "workout": {
         "status": "not_logged",
         "label": "No workout logged yet",
@@ -20,8 +20,15 @@
       },
       "foods": [
         {
-          "id": "food-2026-08-06-so-far-i-had-the-cellary-and-hummas",
-          "name": "So far i had the cellary and hummas",
+          "id": "food-2026-08-07-celery-hummus-snack",
+          "name": "Celery + hummus snack",
+          "tone": "good",
+          "calories": 150,
+          "note": "Usual recurring snack; 150-calorie upper-end reference from Obsidian Meal Bank."
+        },
+        {
+          "id": "food-2026-08-07-ok-for-so-far-i-ate-the-hummas-and-cellary-form-",
+          "name": "Ok for so far i ate the hummas and cellary form the food bank",
           "tone": "warn",
           "calories": null,
           "note": "Captured automatically from health chat; verify calories if estimated/missing."
@@ -2371,6 +2378,58 @@
           "tone": "warn",
           "calories": 120,
           "note": "Target listing for the exact 4.5 oz product: 150 calories per 2.5 cups; 2 cups calculated as 120 calories."
+        }
+      ],
+      "weight": null,
+      "sleep": {
+        "label": "Not logged",
+        "tone": "warn",
+        "detail": "No sleep update yet."
+      },
+      "notes": []
+    },
+    "2026-08-06": {
+      "workout": {
+        "status": "not_logged",
+        "label": "No workout logged yet",
+        "tone": "warn",
+        "detail": "Use chat to log done, missed, or modified."
+      },
+      "foods": [
+        {
+          "id": "food-2026-08-06-so-far-i-had-the-cellary-and-hummas",
+          "name": "Celery + hummus snack",
+          "tone": "good",
+          "calories": 150,
+          "note": "Usual recurring snack; upper-end estimate from Obsidian Meal Bank. Replaced the unresolved auto-captured placeholder."
+        },
+        {
+          "id": "food-2026-08-06-typical-grilled-chicken-lunch-salad",
+          "name": "Typical grilled chicken lunch salad",
+          "tone": "good",
+          "calories": 650,
+          "note": "Usual build: grilled chicken, dressing, croutons, and cheese; avocado not specified. Upper-end recurring reference from Obsidian Meal Bank."
+        },
+        {
+          "id": "food-2026-08-06-work-cafeteria-cream-of-broccoli-soup-2-cups",
+          "name": "Work cafeteria cream of broccoli soup, 2 cups",
+          "tone": "warn",
+          "calories": 450,
+          "note": "Upper-end estimate for 2 cups of cafeteria cream of broccoli soup."
+        },
+        {
+          "id": "food-2026-08-06-bj-s-bacon-guacamole-deluxe-burger-half",
+          "name": "BJ's Bacon-Guacamole Deluxe Burger, half",
+          "tone": "warn",
+          "calories": 660,
+          "note": "BJ's June 2026 official nutrition guide lists Bacon-Guacamole Deluxe Burger with Fries at 1320 calories; half burger is estimated as half of the listed combo value."
+        },
+        {
+          "id": "food-2026-08-06-bj-s-fries-half-side",
+          "name": "BJ's fries, half side",
+          "tone": "warn",
+          "calories": 175,
+          "note": "BJ's June 2026 official nutrition guide lists Fries at 350 calories per side; half side = 175 calories."
         }
       ],
       "weight": null,

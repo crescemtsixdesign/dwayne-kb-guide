@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-08-06T11:03:15-04:00",
+  "updated": "2026-08-07T10:10:01-04:00",
   "targets": {
     "dailyCalories": 2100,
     "weeklyWorkouts": 4
@@ -4450,6 +4450,126 @@
       },
       "rawText": "this morning so far i had the cellary and hummas",
       "sessionId": "20260806_101321_d6b63c1e"
+    },
+    {
+      "id": "evt-20260807100128-food-99f554db",
+      "recordedAt": "2026-08-07T10:01:28-04:00",
+      "date": "2026-08-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-06-typical-grilled-chicken-lunch-salad",
+      "food": {
+        "id": "food-2026-08-06-typical-grilled-chicken-lunch-salad",
+        "name": "Typical grilled chicken lunch salad",
+        "tone": "good",
+        "calories": 650,
+        "note": "Usual build: grilled chicken, dressing, croutons, and cheese; avocado not specified. Upper-end recurring reference from Obsidian Meal Bank."
+      },
+      "rawText": "add the typical grilled chicken lunch salad"
+    },
+    {
+      "id": "evt-20260807100146-food-126fd8aa",
+      "recordedAt": "2026-08-07T10:01:46-04:00",
+      "date": "2026-08-06",
+      "type": "food",
+      "action": "upsert",
+      "source": "telegram",
+      "foodId": "food-2026-08-06-so-far-i-had-the-cellary-and-hummas",
+      "food": {
+        "id": "food-2026-08-06-so-far-i-had-the-cellary-and-hummas",
+        "name": "Celery + hummus snack",
+        "tone": "good",
+        "calories": 150,
+        "note": "Usual recurring snack; upper-end estimate from Obsidian Meal Bank. Replaced the unresolved auto-captured placeholder."
+      },
+      "rawText": "this morning so far i had the cellary and hummas"
+    },
+    {
+      "id": "evt-20260807100146-food-30e1c305",
+      "recordedAt": "2026-08-07T10:01:46-04:00",
+      "date": "2026-08-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-06-work-cafeteria-cream-of-broccoli-soup-2-cups",
+      "food": {
+        "id": "food-2026-08-06-work-cafeteria-cream-of-broccoli-soup-2-cups",
+        "name": "Work cafeteria cream of broccoli soup, 2 cups",
+        "tone": "warn",
+        "calories": 450,
+        "note": "Upper-end estimate for 2 cups of cafeteria cream of broccoli soup."
+      },
+      "rawText": "had 2 cups of cream of brocolli soup from our work cafetaria"
+    },
+    {
+      "id": "evt-20260807100756-food-70527b6e",
+      "recordedAt": "2026-08-07T10:07:56-04:00",
+      "date": "2026-08-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-06-bj-s-bacon-guacamole-deluxe-burger-half",
+      "food": {
+        "id": "food-2026-08-06-bj-s-bacon-guacamole-deluxe-burger-half",
+        "name": "BJ's Bacon-Guacamole Deluxe Burger, half",
+        "tone": "warn",
+        "calories": 660,
+        "note": "BJ's June 2026 official nutrition guide lists Bacon-Guacamole Deluxe Burger with Fries at 1320 calories; half burger is estimated as half of the listed combo value."
+      },
+      "rawText": "half a bacon guacamole burger from bj brewhouse"
+    },
+    {
+      "id": "evt-20260807100758-food-1206c6dc",
+      "recordedAt": "2026-08-07T10:07:58-04:00",
+      "date": "2026-08-06",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-06-bj-s-fries-half-side",
+      "food": {
+        "id": "food-2026-08-06-bj-s-fries-half-side",
+        "name": "BJ's fries, half side",
+        "tone": "warn",
+        "calories": 175,
+        "note": "BJ's June 2026 official nutrition guide lists Fries at 350 calories per side; half side = 175 calories."
+      },
+      "rawText": "half a side of fries from bj brewhouse"
+    },
+    {
+      "id": "evt-20260807100958-food-01c003de",
+      "recordedAt": "2026-08-07T10:09:58-04:00",
+      "date": "2026-08-07",
+      "type": "food",
+      "action": "add",
+      "source": "telegram",
+      "foodId": "food-2026-08-07-celery-hummus-snack",
+      "food": {
+        "id": "food-2026-08-07-celery-hummus-snack",
+        "name": "Celery + hummus snack",
+        "tone": "good",
+        "calories": 150,
+        "note": "Usual recurring snack; 150-calorie upper-end reference from Obsidian Meal Bank."
+      },
+      "rawText": "ate the hummas and cellary from the food bank"
+    },
+    {
+      "id": "evt-20260807101001-food-eca6d0af",
+      "recordedAt": "2026-08-07T10:10:01-04:00",
+      "date": "2026-08-07",
+      "type": "food",
+      "action": "add",
+      "source": "chat-health-sync hook",
+      "foodId": "food-2026-08-07-ok-for-so-far-i-ate-the-hummas-and-cellary-form-",
+      "food": {
+        "id": "food-2026-08-07-ok-for-so-far-i-ate-the-hummas-and-cellary-form-",
+        "name": "Ok for so far i ate the hummas and cellary form the food bank",
+        "tone": "warn",
+        "calories": null,
+        "note": "Captured automatically from health chat; verify calories if estimated/missing."
+      },
+      "rawText": "ok for today so far i ate the hummas and cellary form the food bank",
+      "sessionId": "20260807_095914_aa4da588"
     }
   ]
 }
